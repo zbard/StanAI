@@ -523,8 +523,66 @@ def foodHeuristic(state, problem,log=False):
     print position
     print foodie
 
+  heuristic = [0]
+
+  heuristic.append(count_heuristic(foodie,log))
+  heuristic.append(separated_food_heuristic(foodie,log))
+  heuristic.append(farthest_food_heuristic(foodie,position,log))
+  heuristic.append(row_diam_heuristic(foodie,position,log))
+
+  position_flip = (position[1],position[0])
+  foodie_flip = []
+
+  for k in foodie:
+      foodie_flip.append((k[1],k[0]))
+  
+  #col_diam_heuristic
+  heuristic.append(row_diam_heuristic(foodie_flip,position_flip,log))
+
+  heuristic.sort()
+
+  if log:
+      print "all heuristics", heuristic
+      print "Max heuristic iz ", heuristic[-1]
+  return heuristic[-1]
+ 
+############ START OF HELPER FOOD HEURISTICS ################
+
+def count_heuristic(foodie,log):
+    if log:
+        print "Food count is",len(foodie)
+    return len(foodie)
+
+
+def separated_food_heuristic(foodie,log):
+    count = 0
+    
+    for i in foodie:
+        for j in foodie:
+            temp = abs(i[0] - j[0]) + abs(i[1] - j[1])
+            if temp > count:
+                count = temp
+
+    if log:
+        print "Max seprated food heur",count
+    return count
+
+def farthest_food_heuristic(foodie,p,log):
+    count = 0
+    for i in foodie:
+        temp = abs(i[0] - p[0]) + abs(i[1] - p[1])
+        if temp > count:
+            count = temp
+
+    if log:
+        print "Max farthest food",count
+    return count
+
+
+def row_diam_heuristic(foodie,position,log=False): 
   rows = []
   columns = []
+  count = 0
 
   for k in foodie:
       rows += [k[1]]
@@ -560,15 +618,16 @@ def foodHeuristic(state, problem,log=False):
           temp += 1
       if temp == 0:
           temp += 1
-      count += temp    
-
-  heuristic = count - 1
+      count += temp 
+  
+  count -= 1
   # coz 2-1 = 1 : ridicoulous this is
   if log:
-    print "hur hur",heuristic
-  return heuristic
- 
+    print "row heuristic",count
+  return count
 
+############ END OF HELPER FOOD HEURISTICS ################
+ 
 class ClosestDotSearchAgent(SearchAgent):
   "Search for all food using a sequence of searches"
   def registerInitialState(self, state):
