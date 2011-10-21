@@ -1,0 +1,21 @@
+started astar at ((4, 3), <game.Grid instance at 0x8d70bac>)
+Warning - inconsistencey. Heuristic decreases by greater than cost
+Original node  ((1, 2), <game.Grid instance at 0x91f28cc>) ,and its h: IN HEURISTIC FUNC
+(1, 2)
+[(1, 1)]
+first and last row 1 1
+first and last row 1 2
+hur hur 2
+2
+Successor node  ((1, 1), <game.Grid instance at 0x91f2dac>) ,and its h: IN HEURISTIC FUNC
+(1, 1)
+[]
+Goal State
+0
+Path found with total cost of 27 in 1.2 seconds
+Search nodes expanded: 2569
+Pacman emerges victorious! Score: 573
+Average Score: 573.0
+Scores:        573
+Win Rate:      1/1 (1.00)
+Record:        Win
