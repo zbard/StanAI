@@ -518,6 +518,9 @@ def foodHeuristic(state, problem,log=False):
   no_of_food = 0
   count = 0;
   foodie = foodGrid.asList()
+  wallie = problem.walls.asList()
+  max_x = foodGrid.width - 1
+  max_y = foodGrid.height - 1
   if log:
     print "IN HEURISTIC FUNC"
     print position
@@ -538,6 +541,7 @@ def foodHeuristic(state, problem,log=False):
   
   #col_diam_heuristic
   heuristic.append(row_diam_heuristic(foodie_flip,position_flip,log))
+  heuristic.append(infinite_pacman_heuristic(foodie, wallie, position, max_x, max_y, log))
 
   heuristic.sort()
 
@@ -547,6 +551,53 @@ def foodHeuristic(state, problem,log=False):
   return heuristic[-1]
  
 ############ START OF HELPER FOOD HEURISTICS ################
+
+def infinite_pacman_heuristic(foodie, walli, p, max_x, max_y, log):
+        count = 0
+        pacmen_pos = set([p])
+        temp_pac = [(0,0),(0,0),(0,0),(0,0)]
+        foodie_set = set(foodie)
+        foodie_set.difference_update(pacmen_pos)
+
+        if not foodie_set:
+            return 0
+        if log:
+            print "In inf pacmen"
+            print "cells occupied by pacmen frontier", pacmen_pos
+            print "foodie cells left", foodie_set
+
+        while True:
+            count += 1
+            temp_pacmen_pos = []
+            for temp in pacmen_pos:
+              temp_pac[0] = temp[0]-1,temp[1]
+              temp_pac[1] = temp[0]+1,temp[1]
+              temp_pac[2] = temp[0],temp[1]+1
+              temp_pac[3] = temp[0],temp[1]-1
+              for k in temp_pac:
+                if k in walli:
+                    continue
+                elif k[0] < 0:
+                    continue
+                elif k[0] > max_x:
+                    continue
+                elif k[1] < 0:
+                    continue
+                elif k[1] > max_y:
+                    continue
+                temp_pacmen_pos.append(k)
+             
+            pacmen_pos = set(temp_pacmen_pos)
+            foodie_set.difference_update(pacmen_pos)
+            if log:
+                print "cells occupied by pacmen frontier", pacmen_pos
+                print "foodie cells left", foodie_set
+            if not foodie_set:
+                break
+        
+        if log:
+            print "Infinite pacmen heuristic ",count
+        return count
 
 def wall_rows_heuristic(foodie,walli,p,log):
     max_up = p[1]
