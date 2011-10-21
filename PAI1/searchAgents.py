@@ -548,6 +548,22 @@ def foodHeuristic(state, problem,log=False):
  
 ############ START OF HELPER FOOD HEURISTICS ################
 
+def wall_rows_heuristic(foodie,walli,p,log):
+    max_up = p[1]
+    min_up = p[1]
+    up_count = 0
+    down_count = 0
+    
+    #find food most up from pos
+    for k in foodie:
+        if k[1] > max_up[1]:
+            max_up = k[1]
+
+    #find food most down from pos
+    for k in foodie:
+        if k[1] < max_up[1]:
+            min_up = k[1]
+
 def count_heuristic(foodie,log):
     if log:
         print "Food count is",len(foodie)
@@ -601,7 +617,7 @@ def row_diam_heuristic(foodie,position,log=False):
   
  
   if log:
-    print "first and last row",first_row_with_food, last_row_with_food
+    print "first and last row/col",first_row_with_food, last_row_with_food
   
   if (position[1] < first_row_with_food):
     first_row_with_food = position[1]
@@ -610,7 +626,7 @@ def row_diam_heuristic(foodie,position,log=False):
     last_row_with_food = position[1]
  
   if log:
-    print "first and last row",first_row_with_food, last_row_with_food
+    print "first and last row/col",first_row_with_food, last_row_with_food
 
   for i in xrange(first_row_with_food, last_row_with_food+1):
       temp = rows.count(i)
@@ -623,7 +639,7 @@ def row_diam_heuristic(foodie,position,log=False):
   count -= 1
   # coz 2-1 = 1 : ridicoulous this is
   if log:
-    print "row heuristic",count
+    print "row/col heuristic",count
   return count
 
 ############ END OF HELPER FOOD HEURISTICS ################
