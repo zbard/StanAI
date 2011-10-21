@@ -226,7 +226,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
   
   node = 0
   current = problem.getStartState()
-  print "started astar at",current
+  #print "started astar at",current
   Explored[current] = 1
   succ = problem.getSuccessors(current)
   for k in succ:

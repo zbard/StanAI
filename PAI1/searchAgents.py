@@ -277,17 +277,14 @@ class CornersProblem(search.SearchProblem):
         print 'Warning: no food in corner ' + str(corner)
     self._expanded = 0 # Number of search nodes expanded
     
-    "*** YOUR CODE HERE ***"
     
   def getStartState(self):
     "Returns the start state (in your state space, not the full Pacman state space)"
-    "*** YOUR CODE HERE ***"
     # assume doesn't start at corner
     return (self.startingPosition,(False,False,False,False))
 
   def isGoalState(self, state):
     "Returns whether this search state is a goal state of the problem"
-    "*** YOUR CODE HERE ***"
     if state[1] == (True,True,True,True):
         return True
     else:
@@ -422,9 +419,6 @@ def cornersHeuristic(state, problem, log = False):
   return min_dist  
 
 
-  "*** YOUR CODE HERE ***"
-  return 0 # Default to trivial solution
-
 class AStarCornersAgent(SearchAgent):
   "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
   def __init__(self):
@@ -486,6 +480,48 @@ class AStarFoodSearchAgent(SearchAgent):
   def __init__(self):
     self.searchFunction = lambda prob: search.aStarSearch(prob, foodHeuristic)
     self.searchType = FoodSearchProblem
+
+
+def simplefoodHeuristic(state, problem,log=False):
+  position = state
+  foodGrid = problem.food
+  
+  "*** YOUR CODE HERE ***"
+  no_of_food = 0
+  count = 0;
+  foodie = foodGrid.asList()
+  wallie = problem.walls.asList()
+  max_x = foodGrid.width - 1
+  max_y = foodGrid.height - 1
+  if log:
+    print "IN HEURISTIC FUNC"
+    print position
+    print foodie
+
+  heuristic = [0]
+
+  heuristic.append(count_heuristic(foodie,log))
+  #heuristic.append(separated_food_heuristic(foodie,log))
+  heuristic.append(farthest_food_heuristic(foodie,position,log))
+  heuristic.append(row_diam_heuristic(foodie,position,log))
+
+  position_flip = (position[1],position[0])
+  foodie_flip = []
+
+  for k in foodie:
+      foodie_flip.append((k[1],k[0]))
+  
+  #col_diam_heuristic
+  heuristic.append(row_diam_heuristic(foodie_flip,position_flip,log))
+  #heuristic.append(infinite_pacman_heuristic(foodie, wallie, position, max_x, max_y, log))
+
+  heuristic.sort()
+
+  if log:
+      print "all heuristics", heuristic
+      print "Max heuristic iz ", heuristic[-1]
+  return heuristic[-1]
+
 
 def foodHeuristic(state, problem,log=False):
   """
@@ -710,6 +746,9 @@ class ClosestDotSearchAgent(SearchAgent):
           raise Exception, 'findPathToClosestDot returned an illegal move: %s!\n%s' % t
         currentState = currentState.generateSuccessor(0, action)
     self.actionIndex = 0
+
+    problem = AnyFoodSearchProblem(currentState)
+    problem.explicitdraw()
     print 'Path found with cost %d.' % len(self.actions)
     
   def findPathToClosestDot(self, gameState):
@@ -720,10 +759,14 @@ class ClosestDotSearchAgent(SearchAgent):
     walls = gameState.getWalls()
     problem = AnyFoodSearchProblem(gameState)
 
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    #return search.astar(problem,simplefoodHeuristic) # Same as UCS
+    return search.ucs(problem)
   
 class AnyFoodSearchProblem(PositionSearchProblem):
+  # Make display not vanish on multiple init
+  _visited = {}
+  _visitedlist = []
+  _expanded = 0
   """
     A search problem for finding a path to any food.
     
@@ -747,17 +790,27 @@ class AnyFoodSearchProblem(PositionSearchProblem):
     self.walls = gameState.getWalls()
     self.startState = gameState.getPacmanPosition()
     self.costFn = lambda x: 1
-    self._visited, self._visitedlist, self._expanded = {}, [], 0
-    
+  
+  def explicitdraw(self):
+    # For display purposes
+    import __main__
+    if '_display' in dir(__main__):
+       if 'drawExpandedCells' in dir(__main__._display): #@UndefinedVariable
+         __main__._display.drawExpandedCells(self._visitedlist) #@UndefinedVariable
+
   def isGoalState(self, state):
     """
     The state is Pacman's position. Fill this in with a goal test
     that will complete the problem definition.
     """
     x,y = state
+    foodList = self.food.asList()
+    isGoal = (x,y) in foodList
+    # For display purposes only
+    if isGoal:
+        self._visitedlist.append(state)
+    return isGoal
     
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
 
 ##################
 # Mini-contest 1 #
