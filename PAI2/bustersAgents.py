@@ -108,4 +108,31 @@ class GreedyBustersAgent(BustersAgent):
                                         in enumerate(self.ghostBeliefs)
                                         if livingGhosts[i+1]]
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    #util.raiseNotDefined()
+
+    max_prob_ghost_pos = []
+
+    for beliefs in livingGhostPositionDistributions:
+        max_prob_ghost_pos.append(beliefs.argMax())
+
+    if not max_prob_ghost_pos:
+        print "No ghosts left - yet AI trying :("
+
+    temp_action = 0
+    temp_dist = 999999
+    for action in legal:
+      successorPosition = Actions.getSuccessor(pacmanPosition, action)
+      for ghostPosition in max_prob_ghost_pos:
+        trueDistance = self.distancer.getDistance(ghostPosition, successorPosition)
+        if trueDistance < temp_dist:
+            temp_dist = trueDistance 
+            temp_action = action
+
+    if temp_action == 0:
+        print "axe ERROR : no move found !!"
+    return temp_action
+   
+     
+
+    
+
