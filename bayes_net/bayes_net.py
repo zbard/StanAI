@@ -2,42 +2,37 @@
 
 
 class Event:
-    def __init__(self, name, parents, prob_table):
-        # conditions of event, and all their probabilities.
+    def __init__(self, name, parents, prob_table,values=[False,True]):
+        # conditions(parents) of event, and its cond probabilities.
+        # prob_table is list of probabilities.
+        # prob_table(i) is the i'th probability in the -
+        # probability matrix [Parent1.value Parent2.value .... Self.Value]
         self.name = name
         # parents = [parent_events]
         self.parents = parents
-        self.values = [False,True]
-        # prob table is row wise list of lists. It represents 
-        # row [parent1=val1,parent2=val1 ....,self=value]
+        self.values = values
         self.prob_table = prob_table
         #check if all conditions have probability    
     
     def get_probability(self,all_events):
         var_values = all_events
-        condition = ""
+        condition = 0
 
-        for parent in self.parents:
-            #for values in parents.values <if there were multiple vals>
-            if (parent.name,False) in var_values:
-                condition += '0'
-            elif (parent.name,True) in var_values:
-                condition += '1'
-            else:
-                print "Unable to calculate conditional prob"
+        nodes = self.parents + [self]
+
+        for node in nodes:
+            is_node_present = False
+            for value in node.values:
+                if (node.name,value) in var_values:
+                    condition = condition*len(node.values)
+                    condition += node.values.index(value)
+                    is_node_present = True
+                    break
+            if not is_node_present:
+                print "Can't compute conditional value"
                 return 1
 
-        if (self.name,False) in var_values:
-            condition += '0'
-        else:
-            condition += '1'
-        
-        cond_index = 0
-
-        for i in condition:
-            cond_index = cond_index*2 + int(i)
-       
-        return self.prob_table[cond_index]
+        return self.prob_table[condition]
         
     
 
