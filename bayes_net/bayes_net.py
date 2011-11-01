@@ -45,15 +45,21 @@ class Bayes_net:
         # evidence is list of tuples (var_name, value[either True or False])
         #returns node not having a value in evidence
         hidden = []
+        # check for unknown nodes
+        evidence_check = evidence + []
 
         for event in self.events:
             is_present = False
             for var_name,value in evidence:
                 if event.name == var_name:
                     is_present = True
+                    evidence_check.remove((var_name,value))
                     break
             if not is_present:    
                 hidden.append(event)
+
+        if evidence_check:
+            print "Warning : Unknown var,value tuples.",evidence_check
 
         return hidden
 
@@ -73,7 +79,6 @@ def enumeration_ask(evidence, rest, bn):
     # evidence is list of tuples (var_name, value[either True or False])
     # rest is unassigned hidden variables list
     prob = 0
-
 
     # if all variable values are known
     if not rest:
