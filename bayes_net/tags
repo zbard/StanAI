@@ -1,0 +1,79 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Bayes_net	bayes_net.py	/^class Bayes_net:$/;"	c
+Counter	util.py	/^class Counter(dict):$/;"	c
+Event	bayes_net.py	/^class Event:$/;"	c
+PriorityQueue	util.py	/^class PriorityQueue:$/;"	c
+PriorityQueueWithFunction	util.py	/^class PriorityQueueWithFunction(PriorityQueue):$/;"	c
+Queue	util.py	/^class Queue:$/;"	c
+Stack	util.py	/^class Stack:$/;"	c
+TimeoutFunction	util.py	/^class TimeoutFunction:$/;"	c
+TimeoutFunctionException	util.py	/^class TimeoutFunctionException(Exception):$/;"	c
+__add__	util.py	/^  def __add__( self, y ):$/;"	m	class:Counter	file:
+__call__	util.py	/^    def __call__(self, *args):$/;"	m	class:TimeoutFunction	file:
+__getitem__	util.py	/^  def __getitem__(self, idx):$/;"	m	class:Counter	file:
+__init__	bag_of_words.py	/^    def __init__(self,classes,k=1,file_suffix=".txt"):$/;"	m	class:bag_of_words
+__init__	bayes_net.py	/^    def __init__(self, name, parents, prob_table,values=[False,True]):$/;"	m	class:Event
+__init__	bayes_net.py	/^    def __init__(self,events):$/;"	m	class:Bayes_net
+__init__	util.py	/^    def __init__(self, function, timeout):$/;"	m	class:TimeoutFunction
+__init__	util.py	/^  def  __init__(self):  $/;"	m	class:PriorityQueue
+__init__	util.py	/^  def  __init__(self, priorityFunction):$/;"	m	class:PriorityQueueWithFunction
+__init__	util.py	/^  def __init__(self):$/;"	m	class:Queue
+__init__	util.py	/^  def __init__(self):$/;"	m	class:Stack
+__mul__	util.py	/^  def __mul__(self, y ):$/;"	m	class:Counter	file:
+__radd__	util.py	/^  def __radd__(self, y):$/;"	m	class:Counter	file:
+__sub__	util.py	/^  def __sub__( self, y ):$/;"	m	class:Counter	file:
+argMax	util.py	/^  def argMax(self):$/;"	m	class:Counter
+arrayInvert	util.py	/^def arrayInvert(array):$/;"	f
+bag_of_words	bag_of_words.py	/^class bag_of_words:$/;"	c
+chooseFromDistribution	util.py	/^def chooseFromDistribution( distribution ):$/;"	f
+copy	util.py	/^  def copy(self):$/;"	m	class:Counter
+create_bayes_net	bag_of_words.py	/^    def create_bayes_net(self):$/;"	m	class:bag_of_words
+divideAll	util.py	/^  def divideAll(self, divisor):$/;"	m	class:Counter
+enumeration_all	bayes_net.py	/^def enumeration_all(var_values, bn):$/;"	f
+enumeration_ask	bayes_net.py	/^def enumeration_ask(evidence, rest, bn):$/;"	f
+enumeration_custom	bayes_net.py	/^def enumeration_custom(query,evidence,bn):$/;"	f
+example	bag_of_words.py	/^example = bag_of_words(["movie","song"],1)$/;"	v
+example	bag_of_words.py	/^example = bag_of_words(["spam","ham"],0)$/;"	v
+example	bag_of_words.py	/^example = bag_of_words(["spam","ham"],1)$/;"	v
+flipCoin	util.py	/^def flipCoin( p ):$/;"	f
+getHidden	bayes_net.py	/^    def getHidden(self,evidence):$/;"	m	class:Bayes_net
+getProbability	util.py	/^def getProbability(value, distribution, values):$/;"	f
+get_probability	bayes_net.py	/^    def get_probability(self,all_events):$/;"	m	class:Event
+handle_timeout	util.py	/^    def handle_timeout(self, signum, frame):$/;"	m	class:TimeoutFunction
+hw2_bayes_net	test.py	/^def hw2_bayes_net():$/;"	f
+incrementAll	util.py	/^  def incrementAll(self, keys, count):$/;"	m	class:Counter
+initializer	util.py	/^    PriorityQueue.__init__(self)        # super-class initializer$/;"	c	function:PriorityQueueWithFunction.__init__
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:PriorityQueue
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:Queue
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:Stack
+lookup	util.py	/^def lookup(name, namespace):$/;"	f
+manhattanDistance	util.py	/^def manhattanDistance( xy1, xy2 ):$/;"	f
+matrixAsList	util.py	/^def matrixAsList( matrix, value = True ):$/;"	f
+nSample	util.py	/^def nSample(distribution, values, n):$/;"	f
+nearestPoint	util.py	/^def nearestPoint( pos ):$/;"	f
+normalize	util.py	/^  def normalize(self):$/;"	m	class:Counter
+normalize	util.py	/^def normalize(vectorOrCounter):$/;"	f
+pause	util.py	/^def pause():$/;"	f
+pop	util.py	/^  def pop(self):$/;"	m	class:PriorityQueue
+pop	util.py	/^  def pop(self):$/;"	m	class:Queue
+pop	util.py	/^  def pop(self):$/;"	m	class:Stack
+probability_of_msg	bag_of_words.py	/^    def probability_of_msg(self,wordlist,msg_class):$/;"	m	class:bag_of_words
+probability_of_not_word	bag_of_words.py	/^    def probability_of_not_word(self,word,root_class = None):$/;"	m	class:bag_of_words
+probability_of_word	bag_of_words.py	/^    def probability_of_word(self,word,root_class = None):$/;"	m	class:bag_of_words
+push	util.py	/^  def push(self, item):$/;"	m	class:PriorityQueueWithFunction
+push	util.py	/^  def push(self, item, priority):$/;"	m	class:PriorityQueue
+push	util.py	/^  def push(self,item):$/;"	m	class:Queue
+push	util.py	/^  def push(self,item):$/;"	m	class:Stack
+raiseNotDefined	util.py	/^def raiseNotDefined():$/;"	f
+sample	util.py	/^def sample(distribution, values = None):$/;"	f
+sampleFromCounter	util.py	/^def sampleFromCounter(ctr):$/;"	f
+sanity_test	test.py	/^def sanity_test():$/;"	f
+sign	util.py	/^def sign( x ):$/;"	f
+sortedKeys	util.py	/^  def sortedKeys(self):$/;"	m	class:Counter
+totalCount	util.py	/^  def totalCount(self):$/;"	m	class:Counter
+two_cancer_example	test.py	/^def two_cancer_example():$/;"	f
