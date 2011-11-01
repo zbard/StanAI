@@ -3,16 +3,43 @@
 
 class Event:
     def __init__(self, name, parents, prob_table):
-        # conditions of event, and their probabilities. This needs all probabilities
+        # conditions of event, and all their probabilities.
         self.name = name
         # parents = [parent_events]
         self.parents = parents
-        self.values = [True,False]
-        self.prob_table = {}
-        for condition, probability in prob_table:
-            # condition is a set: (parent_name,parent_value)*,value) tuples
-            self.prob_table[set(condition)] = probability
+        self.values = [False,True]
+        # prob table is row wise list of lists. It represents 
+        # row [parent1=val1,parent2=val1 ....,self=value]
+        self.prob_table = prob_table
         #check if all conditions have probability    
+    
+    def get_probability(self,all_events):
+        var_values = all_events
+        condition = ""
+
+        for parent in self.parents:
+            #for values in parents.values <if there were multiple vals>
+            if (parent.name,False) in var_values:
+                condition += '0'
+            elif (parent.name,True) in var_values:
+                condition += '1'
+            else:
+                print "Unable to calculate conditional prob"
+                return 1
+
+        if (self.name,False) in var_values:
+            condition += '0'
+        else:
+            condition += '1'
+        
+        cond_index = 0
+
+        for i in condition:
+            cond_index = cond_index*2 + int(i)
+       
+        return self.prob_table[cond_index]
+        
+    
 
 class Bayes_net:
     def __init__(self,events):
@@ -25,10 +52,13 @@ class Bayes_net:
         hidden = []
 
         for event in self.events:
+            is_present = False
             for var_name,value in evidence:
-                if event.name = var_name:
-                    hidden.append(event)
+                if event.name == var_name:
+                    is_present = True
                     break
+            if not is_present:    
+                hidden.append(event)
 
         return hidden
 
@@ -40,21 +70,9 @@ def enumeration_all(var_values, bn):
     prob = 1
 
     for event in bn.events:
-        condition = []
-        # Should probably move this to Event class. 
-        for parent in event.parents:
-            #for values in parents.values <if there were multiple vals>
-            if (parent.name,True) in var_values:
-                condition.append((parent.name,True))
-            else
-                #if (parent.name,False) in var_values
-                condition.append((parent.name,False))
-        if (event.name,True) in var_values:
-            condition.append(True)
-        else
-            condition.append(False)
-        prob = prob * event.prob_table(set(condition))
+        prob = prob * event.get_probability(var_values) 
 
+    return prob
 
 def enumeration_ask(evidence, rest, bn):
     # evidence is list of tuples (var_name, value[either True or False])
@@ -64,7 +82,7 @@ def enumeration_ask(evidence, rest, bn):
 
     # if all variable values are known
     if not rest:
-        return enumeration_all(evidence,bn):
+        return enumeration_all(evidence,bn)
 
     next_event = rest[0]
 
@@ -88,4 +106,13 @@ def enumeration_custom(query,evidence,bn):
     prob_normalise = enumeration_ask(evidence, bn.getHidden(evidence),bn)
 
     return (prob_intersection/prob_normalise)
+
+A_prob_table = [.5,.5]
+node1 = Event("A",[],A_prob_table)
+B_prob_table = [.4,.6,.7,.3]
+node2 = Event("B",[node1],B_prob_table)
+bn = Bayes_net([node1,node2])
+print enumeration_custom([("A",True)],[("B",True)],bn)
+
+
 
