@@ -1,3 +1,7 @@
+# bag of words implemented using bayesian networks.
+# Root node is message type, children are words.
+# Since bayes_net.py doesn't take care of cond. indep. , very very slow.
+
 from util import Counter
 from bayes_net import *
 

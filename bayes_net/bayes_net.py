@@ -1,5 +1,6 @@
 # Code for a Bayes net
-
+# Note that it doesn't do variable elimination (or use cond. independence)
+# and hence is slower than molasses.
 
 class Event:
     def __init__(self, name, parents, prob_table,values=[False,True]):
