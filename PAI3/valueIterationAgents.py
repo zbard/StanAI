@@ -37,6 +37,22 @@ class ValueIterationAgent(ValueEstimationAgent):
     self.values = util.Counter() # A Counter is a dict with default 0
      
     "*** YOUR CODE HERE ***"
+    # Init : Not required
+
+    # Value iteration
+    for i in range(iterations):
+        old_values = self.values.copy()
+        for state in mdp.getStates():
+            value_state_action = []
+            for action in mdp.getPossibleActions(state):
+                val = 0 
+                transition = mdp.getTransitionStatesAndProbs(state,action)
+                for sstate,prob_s_a_ss in transition:
+                    val += prob_s_a_ss*(mdp.getReward(state,action,sstate) + discount*old_values[sstate])
+                value_state_action.append(val)
+            if value_state_action : self.values[state] = max(value_state_action)
+            
+
     
   def getValue(self, state):
     """
@@ -54,7 +70,12 @@ class ValueIterationAgent(ValueEstimationAgent):
       to derive it on the fly.
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    qvalue = 0
+    transition = self.mdp.getTransitionStatesAndProbs(state,action)
+    for sstate,prob_s_a_ss in transition:
+        qvalue += prob_s_a_ss*(self.mdp.getReward(state,action,sstate) + self.discount*self.values[sstate])
+    return qvalue
+
 
   def getPolicy(self, state):
     """
@@ -64,8 +85,21 @@ class ValueIterationAgent(ValueEstimationAgent):
       there are no legal actions, which is the case at the
       terminal state, you should return None.
     """
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    actions = self.mdp.getPossibleActions(state)
+
+    if not actions:
+        return None
+    
+    best_action = actions[0]
+    best_QValue = self.getQValue(state,actions[0])
+    for action in actions[1:]:
+        temp = self.getQValue(state,action)
+        if temp > best_QValue :
+            best_QValue = temp
+            best_action = action
+    
+    return best_action
+    
 
   def getAction(self, state):
     "Returns the policy at the state (no exploration)."
