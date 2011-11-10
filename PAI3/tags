@@ -1,0 +1,634 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Actions	game.py	/^class Actions:$/;"	c
+Agent	game.py	/^class Agent:$/;"	c
+AgentState	game.py	/^class AgentState:$/;"	c
+Application	graphicsCrawlerDisplay.py	/^class Application:$/;"	c
+ApproximateQAgent	qlearningAgents.py	/^class ApproximateQAgent(PacmanQAgent):$/;"	c
+BACKGROUND_COLOR	graphicsDisplay.py	/^BACKGROUND_COLOR = formatColor(0,0,0)$/;"	v
+BACKGROUND_COLOR	graphicsGridworldDisplay.py	/^BACKGROUND_COLOR = formatColor(0,0,0)    $/;"	v
+CAPSULE_COLOR	graphicsDisplay.py	/^CAPSULE_COLOR = formatColor(1,1,1)$/;"	v
+CAPSULE_SIZE	graphicsDisplay.py	/^CAPSULE_SIZE = 0.25$/;"	v
+COLLISION_TOLERANCE	pacman.py	/^COLLISION_TOLERANCE = 0.7 # How close ghosts must be to Pacman to kill$/;"	v
+ClassicGameRules	pacman.py	/^class ClassicGameRules:$/;"	c
+Configuration	game.py	/^class Configuration:$/;"	c
+Counter	util.py	/^class Counter(dict):$/;"	c
+CrawlingRobot	crawler.py	/^class CrawlingRobot:$/;"	c
+CrawlingRobotEnvironment	crawler.py	/^class CrawlingRobotEnvironment(environment.Environment):$/;"	c
+DEFAULT_GRID_SIZE	graphicsDisplay.py	/^DEFAULT_GRID_SIZE = 30.0$/;"	v
+DISPLAY_MOVES	textDisplay.py	/^DISPLAY_MOVES = False$/;"	v
+DRAW_EVERY	textDisplay.py	/^DRAW_EVERY = 1$/;"	v
+DirectionalGhost	ghostAgents.py	/^class DirectionalGhost( GhostAgent ):$/;"	c
+Directions	game.py	/^class Directions:$/;"	c
+EAST	game.py	/^  EAST = 'East'$/;"	v	class:Directions
+EAST_KEY	keyboardAgents.py	/^  EAST_KEY  = "l" $/;"	v	class:KeyboardAgent2
+EAST_KEY	keyboardAgents.py	/^  EAST_KEY  = 'd' $/;"	v	class:KeyboardAgent
+EDGE_COLOR	graphicsGridworldDisplay.py	/^EDGE_COLOR = formatColor(1,1,1)$/;"	v
+Environment	environment.py	/^class Environment:$/;"	c
+FOOD_COLOR	graphicsDisplay.py	/^FOOD_COLOR = formatColor(1,1,1)$/;"	v
+FOOD_SIZE	graphicsDisplay.py	/^FOOD_SIZE = 0.1$/;"	v
+FRAME_NUMBER	graphicsDisplay.py	/^FRAME_NUMBER = 0$/;"	v
+FeatureExtractor	featureExtractors.py	/^class FeatureExtractor:  $/;"	c
+FirstPersonPacmanGraphics	graphicsDisplay.py	/^class FirstPersonPacmanGraphics(PacmanGraphics):$/;"	c
+GHOST_COLORS	graphicsDisplay.py	/^GHOST_COLORS = []$/;"	v
+GHOST_SHAPE	graphicsDisplay.py	/^GHOST_SHAPE = [$/;"	v
+GHOST_SIZE	graphicsDisplay.py	/^GHOST_SIZE = 0.65$/;"	v
+GHOST_SPEED	pacman.py	/^  GHOST_SPEED=1.0$/;"	v	class:GhostRules
+GHOST_VEC_COLORS	graphicsDisplay.py	/^GHOST_VEC_COLORS = map(colorToVector, GHOST_COLORS)$/;"	v
+GRID_HEIGHT	graphicsGridworldDisplay.py	/^GRID_HEIGHT = -1$/;"	v
+GRID_SIZE	graphicsGridworldDisplay.py	/^GRID_SIZE = -1$/;"	v
+Game	game.py	/^class Game:$/;"	c
+GameState	pacman.py	/^class GameState:$/;"	c
+GameStateData	game.py	/^class GameStateData:$/;"	c
+GhostAgent	ghostAgents.py	/^class GhostAgent( Agent ):$/;"	c
+GhostRules	pacman.py	/^class GhostRules:$/;"	c
+GraphicsGridworldDisplay	graphicsGridworldDisplay.py	/^class GraphicsGridworldDisplay:$/;"	c
+GreedyAgent	pacmanAgents.py	/^class GreedyAgent(Agent):$/;"	c
+Grid	game.py	/^class Grid:$/;"	c
+Grid	gridworld.py	/^class Grid:$/;"	c
+Gridworld	gridworld.py	/^class Gridworld(mdp.MarkovDecisionProcess):$/;"	c
+GridworldEnvironment	gridworld.py	/^class GridworldEnvironment(environment.Environment):$/;"	c
+INFO_PANE_COLOR	graphicsDisplay.py	/^INFO_PANE_COLOR = formatColor(.4,.4,0)$/;"	v
+INFO_PANE_HEIGHT	graphicsDisplay.py	/^INFO_PANE_HEIGHT = 35$/;"	v
+IdentityExtractor	featureExtractors.py	/^class IdentityExtractor(FeatureExtractor):$/;"	c
+InfoPane	graphicsDisplay.py	/^class InfoPane:$/;"	c
+KeyboardAgent	keyboardAgents.py	/^class KeyboardAgent(Agent):$/;"	c
+KeyboardAgent2	keyboardAgents.py	/^class KeyboardAgent2(KeyboardAgent):$/;"	c
+LASER_COLOR	graphicsDisplay.py	/^LASER_COLOR = formatColor(1,0,0)$/;"	v
+LASER_SIZE	graphicsDisplay.py	/^LASER_SIZE = 0.02$/;"	v
+LEFT	game.py	/^  LEFT =       {NORTH: WEST,$/;"	v	class:Directions
+LOCATION_COLOR	graphicsGridworldDisplay.py	/^LOCATION_COLOR = formatColor(0,0,1)$/;"	v
+Layout	layout.py	/^class Layout:$/;"	c
+LeftTurnAgent	pacmanAgents.py	/^class LeftTurnAgent(game.Agent):$/;"	c
+MARGIN	graphicsGridworldDisplay.py	/^MARGIN = -1$/;"	v
+MUTED_TEXT_COLOR	graphicsGridworldDisplay.py	/^MUTED_TEXT_COLOR = formatColor(0.7,0.7,0.7)$/;"	v
+MarkovDecisionProcess	mdp.py	/^class MarkovDecisionProcess:$/;"	c
+NORTH	game.py	/^  NORTH = 'North'$/;"	v	class:Directions
+NORTH_KEY	keyboardAgents.py	/^  NORTH_KEY = 'i' $/;"	v	class:KeyboardAgent2
+NORTH_KEY	keyboardAgents.py	/^  NORTH_KEY = 'w' $/;"	v	class:KeyboardAgent
+NullGraphics	textDisplay.py	/^class NullGraphics:$/;"	c
+OBSTACLE_COLOR	graphicsGridworldDisplay.py	/^OBSTACLE_COLOR = formatColor(0.5,0.5,0.5)$/;"	v
+OLD_STDERR	game.py	/^  OLD_STDERR = None$/;"	v	class:Game
+OLD_STDOUT	game.py	/^  OLD_STDOUT = None$/;"	v	class:Game
+PACMAN_CAPTURE_OUTLINE_WIDTH	graphicsDisplay.py	/^PACMAN_CAPTURE_OUTLINE_WIDTH = 4$/;"	v
+PACMAN_COLOR	graphicsDisplay.py	/^PACMAN_COLOR = formatColor(255.0\/255.0,255.0\/255.0,61.0\/255)$/;"	v
+PACMAN_OUTLINE_WIDTH	graphicsDisplay.py	/^PACMAN_OUTLINE_WIDTH = 2$/;"	v
+PACMAN_SCALE	graphicsDisplay.py	/^PACMAN_SCALE = 0.5$/;"	v
+PACMAN_SPEED	pacman.py	/^  PACMAN_SPEED=1$/;"	v	class:PacmanRules
+POSTSCRIPT_OUTPUT_DIR	graphicsDisplay.py	/^POSTSCRIPT_OUTPUT_DIR = 'frames'$/;"	v
+PacmanGraphics	graphicsDisplay.py	/^class PacmanGraphics:$/;"	c
+PacmanGraphics	textDisplay.py	/^class PacmanGraphics:$/;"	c
+PacmanQAgent	qlearningAgents.py	/^class PacmanQAgent(QLearningAgent):$/;"	c
+PacmanRules	pacman.py	/^class PacmanRules:$/;"	c
+PriorityQueue	util.py	/^class PriorityQueue:$/;"	c
+PriorityQueueWithFunction	util.py	/^class PriorityQueueWithFunction(PriorityQueue):$/;"	c
+QLearningAgent	qlearningAgents.py	/^class QLearningAgent(ReinforcementAgent):$/;"	c
+QUIET	textDisplay.py	/^QUIET = False # Supresses output$/;"	v
+Queue	util.py	/^class Queue:$/;"	c
+REVERSE	game.py	/^  REVERSE = {NORTH: SOUTH,$/;"	v	class:Directions
+RIGHT	game.py	/^  RIGHT =      dict([(y,x) for x, y in LEFT.items()])$/;"	v	class:Directions
+RandomAgent	gridworld.py	/^    class RandomAgent:$/;"	c
+RandomGhost	ghostAgents.py	/^class RandomGhost( GhostAgent ):$/;"	c
+ReinforcementAgent	learningAgents.py	/^class ReinforcementAgent(ValueEstimationAgent):$/;"	c
+SAVE_POSTSCRIPT	graphicsDisplay.py	/^SAVE_POSTSCRIPT = False$/;"	v
+SCARED_COLOR	graphicsDisplay.py	/^SCARED_COLOR = formatColor(1,1,1)$/;"	v
+SCARED_TIME	pacman.py	/^SCARED_TIME = 40    # Moves ghosts are scared$/;"	v
+SCORE_COLOR	graphicsDisplay.py	/^SCORE_COLOR = formatColor(.9, .9, .9)$/;"	v
+SLEEP_TIME	textDisplay.py	/^SLEEP_TIME = 0 # This can be overwritten by __init__$/;"	v
+SOUTH	game.py	/^  SOUTH = 'South'$/;"	v	class:Directions
+SOUTH_KEY	keyboardAgents.py	/^  SOUTH_KEY = 'k'$/;"	v	class:KeyboardAgent2
+SOUTH_KEY	keyboardAgents.py	/^  SOUTH_KEY = 's'$/;"	v	class:KeyboardAgent
+STOP	game.py	/^  STOP = 'Stop'$/;"	v	class:Directions
+STOP_KEY	keyboardAgents.py	/^  STOP_KEY = 'q'$/;"	v	class:KeyboardAgent
+STOP_KEY	keyboardAgents.py	/^  STOP_KEY = 'u'$/;"	v	class:KeyboardAgent2
+SimpleExtractor	featureExtractors.py	/^class SimpleExtractor(FeatureExtractor):$/;"	c
+Stack	util.py	/^class Stack:$/;"	c
+TEAM_COLORS	graphicsDisplay.py	/^TEAM_COLORS = GHOST_COLORS[:2]$/;"	v
+TEXT_COLOR	graphicsGridworldDisplay.py	/^TEXT_COLOR = formatColor(1,1,1)$/;"	v
+TIME_PENALTY	pacman.py	/^TIME_PENALTY = 1 # Number of points lost each round$/;"	v
+TOLERANCE	game.py	/^  TOLERANCE = .001$/;"	v	class:Actions
+TextGridworldDisplay	textGridworldDisplay.py	/^class TextGridworldDisplay:$/;"	c
+TimeoutFunction	util.py	/^class TimeoutFunction:$/;"	c
+TimeoutFunctionException	util.py	/^class TimeoutFunctionException(Exception):$/;"	c
+VISIBILITY_MATRIX_CACHE	layout.py	/^VISIBILITY_MATRIX_CACHE = {}$/;"	v
+ValueEstimationAgent	learningAgents.py	/^class ValueEstimationAgent(Agent):$/;"	c
+ValueIterationAgent	valueIterationAgents.py	/^class ValueIterationAgent(ValueEstimationAgent):$/;"	c
+WALL_COLOR	graphicsDisplay.py	/^WALL_COLOR = formatColor(0.0\/255.0, 51.0\/255.0, 255.0\/255.0)$/;"	v
+WALL_RADIUS	graphicsDisplay.py	/^WALL_RADIUS = 0.15$/;"	v
+WEST	game.py	/^  WEST = 'West'$/;"	v	class:Directions
+WEST_KEY	keyboardAgents.py	/^  WEST_KEY  = 'a' $/;"	v	class:KeyboardAgent
+WEST_KEY	keyboardAgents.py	/^  WEST_KEY  = 'j' $/;"	v	class:KeyboardAgent2
+WINDOW_SIZE	graphicsGridworldDisplay.py	/^WINDOW_SIZE = -1$/;"	v
+_BOINC_ENABLED	game.py	/^  _BOINC_ENABLED = False$/;"	v
+_BOINC_ENABLED	game.py	/^  _BOINC_ENABLED = True$/;"	v
+__add__	util.py	/^  def __add__( self, y ):$/;"	m	class:Counter	file:
+__aggregate	gridworld.py	/^  def __aggregate(self, statesAndProbs):$/;"	m	class:Gridworld	file:
+__call__	util.py	/^    def __call__(self, *args):$/;"	m	class:TimeoutFunction	file:
+__eq__	game.py	/^  def __eq__( self, other ):$/;"	m	class:AgentState	file:
+__eq__	game.py	/^  def __eq__( self, other ):$/;"	m	class:GameStateData	file:
+__eq__	game.py	/^  def __eq__(self, other):$/;"	m	class:Configuration	file:
+__eq__	game.py	/^  def __eq__(self, other):$/;"	m	class:Grid	file:
+__eq__	gridworld.py	/^  def __eq__(self, other):$/;"	m	class:Grid	file:
+__eq__	pacman.py	/^  def __eq__( self, other ):$/;"	m	class:GameState	file:
+__getCosAndSin	crawler.py	/^    def __getCosAndSin(self, angle):$/;"	m	class:CrawlingRobot	file:
+__getitem__	game.py	/^  def __getitem__(self, i):$/;"	m	class:Grid	file:
+__getitem__	gridworld.py	/^  def __getitem__(self, i):$/;"	m	class:Grid	file:
+__getitem__	util.py	/^  def __getitem__(self, idx):$/;"	m	class:Counter	file:
+__hash__	game.py	/^  def __hash__( self ):$/;"	m	class:GameStateData	file:
+__hash__	game.py	/^  def __hash__(self):$/;"	m	class:AgentState	file:
+__hash__	game.py	/^  def __hash__(self):$/;"	m	class:Configuration	file:
+__hash__	game.py	/^  def __hash__(self):$/;"	m	class:Grid	file:
+__hash__	gridworld.py	/^  def __hash__(self):$/;"	m	class:Grid	file:
+__hash__	pacman.py	/^  def __hash__( self ):$/;"	m	class:GameState	file:
+__initGUI	graphicsCrawlerDisplay.py	/^    def __initGUI(self, win):$/;"	m	class:Application	file:
+__init__	crawler.py	/^    def __init__(self, canvas):$/;"	m	class:CrawlingRobot
+__init__	crawler.py	/^   def __init__(self, crawlingRobot):$/;"	m	class:CrawlingRobotEnvironment
+__init__	game.py	/^  def __init__( self, agents, display, rules, startingIndex=0, muteAgents=False, catchExceptions=False ):$/;"	m	class:Game
+__init__	game.py	/^  def __init__( self, prevState = None ):$/;"	m	class:GameStateData
+__init__	game.py	/^  def __init__( self, startConfiguration, isPacman ):$/;"	m	class:AgentState
+__init__	game.py	/^  def __init__(self, index=0):$/;"	m	class:Agent
+__init__	game.py	/^  def __init__(self, pos, direction):$/;"	m	class:Configuration
+__init__	game.py	/^  def __init__(self, width, height, initialValue=False, bitRepresentation=None):$/;"	m	class:Grid
+__init__	ghostAgents.py	/^  def __init__( self, index ):$/;"	m	class:GhostAgent
+__init__	ghostAgents.py	/^  def __init__( self, index, prob_attack=0.8, prob_scaredFlee=0.8 ):$/;"	m	class:DirectionalGhost
+__init__	graphicsCrawlerDisplay.py	/^    def __init__(self, win):$/;"	m	class:Application
+__init__	graphicsDisplay.py	/^  def __init__(self, layout, gridSize):$/;"	m	class:InfoPane
+__init__	graphicsDisplay.py	/^  def __init__(self, zoom = 1.0, showGhosts = True, capture = False, frameTime=0):$/;"	m	class:FirstPersonPacmanGraphics
+__init__	graphicsDisplay.py	/^  def __init__(self, zoom=1.0, frameTime=0.0, capture=False):$/;"	m	class:PacmanGraphics
+__init__	graphicsGridworldDisplay.py	/^  def __init__(self, gridworld, size=120, speed=1.0):$/;"	m	class:GraphicsGridworldDisplay
+__init__	gridworld.py	/^  def __init__(self, grid):$/;"	m	class:Gridworld
+__init__	gridworld.py	/^  def __init__(self, gridWorld):$/;"	m	class:GridworldEnvironment
+__init__	gridworld.py	/^  def __init__(self, width, height, initialValue=' '):$/;"	m	class:Grid
+__init__	keyboardAgents.py	/^  def __init__( self, index = 0 ):$/;"	m	class:KeyboardAgent
+__init__	layout.py	/^  def __init__(self, layoutText):$/;"	m	class:Layout
+__init__	learningAgents.py	/^  def __init__(self, actionFn = None, numTraining=100, epsilon=0.5, alpha=0.5, gamma=1):$/;"	m	class:ReinforcementAgent
+__init__	learningAgents.py	/^  def __init__(self, alpha=1.0, epsilon=0.05, gamma=0.8, numTraining = 10):$/;"	m	class:ValueEstimationAgent
+__init__	pacman.py	/^  def __init__( self, prevState = None ):$/;"	m	class:GameState
+__init__	pacman.py	/^  def __init__(self, timeout=30):$/;"	m	class:ClassicGameRules
+__init__	pacmanAgents.py	/^  def __init__(self, evalFn="scoreEvaluation"):$/;"	m	class:GreedyAgent
+__init__	qlearningAgents.py	/^  def __init__(self, **args):$/;"	m	class:QLearningAgent
+__init__	qlearningAgents.py	/^  def __init__(self, epsilon=0.05,gamma=0.8,alpha=0.2, numTraining=0, **args):$/;"	m	class:PacmanQAgent
+__init__	qlearningAgents.py	/^  def __init__(self, extractor='IdentityExtractor', **args):$/;"	m	class:ApproximateQAgent
+__init__	textDisplay.py	/^  def __init__(self, speed=None):$/;"	m	class:PacmanGraphics
+__init__	textGridworldDisplay.py	/^  def __init__(self, gridworld):$/;"	m	class:TextGridworldDisplay
+__init__	util.py	/^    def __init__(self, function, timeout):$/;"	m	class:TimeoutFunction
+__init__	util.py	/^  def  __init__(self):  $/;"	m	class:PriorityQueue
+__init__	util.py	/^  def  __init__(self, priorityFunction):$/;"	m	class:PriorityQueueWithFunction
+__init__	util.py	/^  def __init__(self):$/;"	m	class:Queue
+__init__	util.py	/^  def __init__(self):$/;"	m	class:Stack
+__init__	valueIterationAgents.py	/^  def __init__(self, mdp, discount = 0.9, iterations = 100):$/;"	m	class:ValueIterationAgent
+__isAllowed	gridworld.py	/^  def __isAllowed(self, y, x):$/;"	m	class:Gridworld	file:
+__mul__	util.py	/^  def __mul__(self, y ):$/;"	m	class:Counter	file:
+__radd__	util.py	/^  def __radd__(self, y):$/;"	m	class:Counter	file:
+__setitem__	game.py	/^  def __setitem__(self, key, item):$/;"	m	class:Grid	file:
+__setitem__	gridworld.py	/^  def __setitem__(self, key, item):$/;"	m	class:Grid	file:
+__str__	game.py	/^  def __str__( self ):$/;"	m	class:AgentState	file:
+__str__	game.py	/^  def __str__( self ):$/;"	m	class:GameStateData	file:
+__str__	game.py	/^  def __str__(self):$/;"	m	class:Configuration	file:
+__str__	game.py	/^  def __str__(self):$/;"	m	class:Grid	file:
+__str__	gridworld.py	/^  def __str__(self):$/;"	m	class:Grid	file:
+__str__	layout.py	/^  def __str__(self):$/;"	m	class:Layout	file:
+__str__	pacman.py	/^  def __str__( self ):$/;"	m	class:GameState	file:
+__sub__	util.py	/^  def __sub__( self, y ):$/;"	m	class:Counter	file:
+_adjust_coords	graphicsUtils.py	/^def _adjust_coords(coord_list, x, y):$/;"	f
+_agentCrash	game.py	/^  def _agentCrash( self, agentIndex, quiet=False):$/;"	m	class:Game
+_canvas	graphicsUtils.py	/^_canvas = None      # The canvas which holds graphics$/;"	v
+_canvas_col	graphicsUtils.py	/^_canvas_col = None      # Current colour (set to black below)$/;"	v
+_canvas_tfonts	graphicsUtils.py	/^    _canvas_tfonts = ['times', 'lucidasans-24']$/;"	v
+_canvas_tserifs	graphicsUtils.py	/^_canvas_tserifs = 0$/;"	v
+_canvas_tsize	graphicsUtils.py	/^_canvas_tsize = 12$/;"	v
+_canvas_x	graphicsUtils.py	/^_canvas_x = None      # Current position on canvas$/;"	v
+_canvas_xs	graphicsUtils.py	/^_canvas_xs = None      # Size of canvas object$/;"	v
+_canvas_y	graphicsUtils.py	/^_canvas_y = None$/;"	v
+_canvas_ys	graphicsUtils.py	/^_canvas_ys = None$/;"	v
+_cellIndexToPosition	game.py	/^  def _cellIndexToPosition(self, index):$/;"	m	class:Grid
+_clear_keys	graphicsUtils.py	/^def _clear_keys(event=None):$/;"	f
+_ctrl_leftclick	graphicsUtils.py	/^def _ctrl_leftclick(event):$/;"	f
+_ctrl_leftclick_loc	graphicsUtils.py	/^_ctrl_leftclick_loc = None$/;"	v
+_destroy_window	graphicsUtils.py	/^def _destroy_window(event=None):$/;"	f
+_directions	game.py	/^  _directions = {Directions.NORTH: (0, 1),$/;"	v	class:Actions
+_directionsAsList	game.py	/^  _directionsAsList = _directions.items()$/;"	v	class:Actions
+_foodWallStr	game.py	/^  def _foodWallStr( self, hasFood, hasWall ):$/;"	m	class:GameStateData
+_getLegacyText	gridworld.py	/^  def _getLegacyText(self):$/;"	m	class:Grid
+_ghostStr	game.py	/^  def _ghostStr( self, dir ):$/;"	m	class:GameStateData
+_got_release	graphicsUtils.py	/^_got_release = None$/;"	v
+_keypress	graphicsUtils.py	/^def _keypress(event):$/;"	f
+_keyrelease	graphicsUtils.py	/^def _keyrelease(event):$/;"	f
+_keysdown	graphicsUtils.py	/^_keysdown = {}$/;"	v
+_keyswaiting	graphicsUtils.py	/^_keyswaiting = {}$/;"	v
+_leftclick	graphicsUtils.py	/^def _leftclick(event):$/;"	f
+_leftclick_loc	graphicsUtils.py	/^_leftclick_loc = None$/;"	v
+_pacStr	game.py	/^  def _pacStr( self, dir ):$/;"	m	class:GameStateData
+_rightclick	graphicsUtils.py	/^def _rightclick(event):$/;"	f
+_rightclick_loc	graphicsUtils.py	/^_rightclick_loc = None$/;"	v
+_root_window	graphicsUtils.py	/^_root_window = None      # The root window for graphics output$/;"	v
+_unpackBits	game.py	/^  def _unpackBits(self, bits):$/;"	m	class:Grid
+_unpackInt	game.py	/^  def _unpackInt(self, packed, size):$/;"	m	class:Grid
+a	gridworld.py	/^    a = RandomAgent()$/;"	v
+a	gridworld.py	/^    a = qlearningAgents.QLearningAgent(**qLearnOpts)$/;"	v
+a	gridworld.py	/^    a = valueIterationAgents.ValueIterationAgent(mdp, opts.discount, opts.iters)$/;"	v
+a	gridworld.py	/^  a = None$/;"	v
+actionFn	gridworld.py	/^    actionFn = lambda state: mdp.getPossibleActions(state)$/;"	v
+add	graphicsDisplay.py	/^def add(x, y):$/;"	f
+agentCrash	pacman.py	/^  def agentCrash(self, game, agentIndex):$/;"	m	class:ClassicGameRules
+animatePacman	graphicsDisplay.py	/^  def animatePacman(self, pacman, prevPacman, image):$/;"	m	class:PacmanGraphics
+animatePolicy	graphicsCrawlerDisplay.py	/^    def animatePolicy(self):$/;"	m	class:Application
+applyAction	pacman.py	/^  applyAction = staticmethod( applyAction )$/;"	v	class:GhostRules
+applyAction	pacman.py	/^  applyAction = staticmethod( applyAction )$/;"	v	class:PacmanRules
+applyAction	pacman.py	/^  def applyAction( state, action ):$/;"	m	class:PacmanRules
+applyAction	pacman.py	/^  def applyAction( state, action, ghostIndex):$/;"	m	class:GhostRules
+argMax	util.py	/^  def argMax(self):$/;"	m	class:Counter
+args	pacman.py	/^  args = readCommand( sys.argv[1:] ) # Get game components based on input$/;"	v
+arrayInvert	util.py	/^def arrayInvert(array):$/;"	f
+asList	game.py	/^  def asList(self, key = True):$/;"	m	class:Grid
+begin_graphics	graphicsUtils.py	/^def begin_graphics(width=640, height=480, color=formatColor(0, 0, 0), title=None):$/;"	f
+blank	graphicsGridworldDisplay.py	/^def blank():$/;"	f
+border	textGridworldDisplay.py	/^def border(text):    $/;"	f
+canKill	pacman.py	/^  canKill = staticmethod( canKill )$/;"	v	class:GhostRules
+canKill	pacman.py	/^  def canKill( pacmanPosition, ghostPosition ):$/;"	m	class:GhostRules
+changeColor	graphicsUtils.py	/^def changeColor(id, newColor):$/;"	f
+changeText	graphicsUtils.py	/^def changeText(id, newText, font=None, size=12, style='normal'):$/;"	f
+checkDeath	pacman.py	/^  checkDeath = staticmethod( checkDeath )$/;"	v	class:GhostRules
+checkDeath	pacman.py	/^  def checkDeath( state, agentIndex):$/;"	m	class:GhostRules
+chooseFromDistribution	util.py	/^def chooseFromDistribution( distribution ):$/;"	f
+circle	graphicsUtils.py	/^def circle(pos, r, outlineColor, fillColor, endpoints=None, style='pieslice', width=2):$/;"	f
+clearExpandedCells	graphicsDisplay.py	/^  def clearExpandedCells(self):$/;"	m	class:PacmanGraphics
+clearIcon	graphicsDisplay.py	/^  def clearIcon(self):$/;"	m	class:InfoPane
+clearMessage	graphicsDisplay.py	/^  def clearMessage(self):$/;"	m	class:InfoPane
+clear_screen	graphicsUtils.py	/^def clear_screen(background=None):$/;"	f
+closestFood	featureExtractors.py	/^def closestFood(pos, food, walls):$/;"	f
+collide	pacman.py	/^  collide = staticmethod( collide )$/;"	v	class:GhostRules
+collide	pacman.py	/^  def collide( state, ghostState, agentIndex):$/;"	m	class:GhostRules
+colorToVector	graphicsUtils.py	/^def colorToVector(color):$/;"	f
+consume	pacman.py	/^  consume = staticmethod( consume )$/;"	v	class:PacmanRules
+consume	pacman.py	/^  def consume( position, state ):$/;"	m	class:PacmanRules
+copy	game.py	/^  def copy( self ):$/;"	m	class:AgentState
+copy	game.py	/^  def copy(self):$/;"	m	class:Grid
+copy	gridworld.py	/^  def copy(self):$/;"	m	class:Grid
+copy	util.py	/^  def copy(self):$/;"	m	class:Counter
+copyAgentStates	game.py	/^  def copyAgentStates( self, agentStates ):$/;"	m	class:GameStateData
+count	game.py	/^  def count(self, item =True ):$/;"	m	class:Grid
+decisionCallback	gridworld.py	/^    decisionCallback = a.getAction  $/;"	v
+decisionCallback	gridworld.py	/^    decisionCallback = lambda state : getUserAction(state, mdp.getPossibleActions)$/;"	v
+decrementTimer	pacman.py	/^  decrementTimer = staticmethod( decrementTimer )$/;"	v	class:GhostRules
+decrementTimer	pacman.py	/^  def decrementTimer( ghostState):$/;"	m	class:GhostRules
+deepCopy	game.py	/^  def deepCopy( self ):$/;"	m	class:GameStateData
+deepCopy	game.py	/^  def deepCopy(self):$/;"	m	class:Grid
+deepCopy	gridworld.py	/^  def deepCopy(self):$/;"	m	class:Grid
+deepCopy	layout.py	/^  def deepCopy(self):$/;"	m	class:Layout
+deepCopy	pacman.py	/^  def deepCopy( self ):$/;"	m	class:GameState
+default	pacman.py	/^def default(str):$/;"	f
+directionToVector	game.py	/^  def directionToVector(direction, speed = 1.0):$/;"	m	class:Actions
+directionToVector	game.py	/^  directionToVector = staticmethod(directionToVector)$/;"	v	class:Actions
+displacement	crawler.py	/^    def displacement(self, oldArmDegree, oldHandDegree, armDegree, handDegree):$/;"	m	class:CrawlingRobot
+display	gridworld.py	/^    display = graphicsGridworldDisplay.GraphicsGridworldDisplay(mdp, opts.gridSize, opts.speed)$/;"	v
+display	gridworld.py	/^  display = textGridworldDisplay.TextGridworldDisplay(mdp)$/;"	v
+displayCallback	gridworld.py	/^      displayCallback = lambda state: display.displayNullValues(state)$/;"	v	class:.RandomAgent
+displayCallback	gridworld.py	/^  displayCallback = lambda x: None$/;"	v
+displayNullValues	graphicsGridworldDisplay.py	/^  def displayNullValues(self, currentState = None, message = ''):$/;"	m	class:GraphicsGridworldDisplay
+displayNullValues	textGridworldDisplay.py	/^  def displayNullValues(self, agent, currentState = None, message = None):$/;"	m	class:TextGridworldDisplay
+displayQValues	graphicsGridworldDisplay.py	/^  def displayQValues(self, agent, currentState = None, message = 'Agent Q-Values'):$/;"	m	class:GraphicsGridworldDisplay
+displayQValues	textGridworldDisplay.py	/^  def displayQValues(self, agent, currentState = None, message = None):$/;"	m	class:TextGridworldDisplay
+displayValues	graphicsGridworldDisplay.py	/^  def displayValues(self, agent, currentState = None, message = 'Agent Values'):$/;"	m	class:GraphicsGridworldDisplay
+displayValues	textGridworldDisplay.py	/^  def displayValues(self, agent, currentState = None, message = None):$/;"	m	class:TextGridworldDisplay
+divideAll	util.py	/^  def divideAll(self, divisor):$/;"	m	class:Counter
+doAction	crawler.py	/^   def doAction(self, action):$/;"	m	class:CrawlingRobotEnvironment
+doAction	environment.py	/^  def doAction(self, action):$/;"	m	class:Environment
+doAction	gridworld.py	/^  def doAction(self, action):$/;"	m	class:GridworldEnvironment
+doAction	learningAgents.py	/^  def doAction(self,state,action):$/;"	m	class:ReinforcementAgent
+draw	crawler.py	/^    def draw(self, stepCount, stepDelay):$/;"	m	class:CrawlingRobot
+draw	textDisplay.py	/^  def draw(self, state):$/;"	m	class:NullGraphics
+draw	textDisplay.py	/^  def draw(self, state):$/;"	m	class:PacmanGraphics
+drawAgentObjects	graphicsDisplay.py	/^  def drawAgentObjects(self, state):$/;"	m	class:PacmanGraphics
+drawCapsules	graphicsDisplay.py	/^  def drawCapsules(self, capsules ):$/;"	m	class:PacmanGraphics
+drawDistributions	graphicsDisplay.py	/^  def drawDistributions(self, state):$/;"	m	class:PacmanGraphics
+drawExpandedCells	graphicsDisplay.py	/^  def drawExpandedCells(self, cells):$/;"	m	class:PacmanGraphics
+drawFood	graphicsDisplay.py	/^  def drawFood(self, foodMatrix ):$/;"	m	class:PacmanGraphics
+drawGhost	graphicsDisplay.py	/^  def drawGhost(self):$/;"	m	class:InfoPane
+drawGhost	graphicsDisplay.py	/^  def drawGhost(self, ghost, agentIndex):$/;"	m	class:PacmanGraphics
+drawNullSquare	graphicsGridworldDisplay.py	/^def drawNullSquare(grid,x, y, isObstacle, isTerminal, isCurrent):      $/;"	f
+drawNullValues	graphicsGridworldDisplay.py	/^def drawNullValues(gridworld, currentState = None, message = ''):$/;"	f
+drawPacman	graphicsDisplay.py	/^  def drawPacman(self):$/;"	m	class:InfoPane
+drawPacman	graphicsDisplay.py	/^  def drawPacman(self, pacman, index):$/;"	m	class:PacmanGraphics
+drawPane	graphicsDisplay.py	/^  def drawPane(self):$/;"	m	class:InfoPane
+drawQValues	graphicsGridworldDisplay.py	/^def drawQValues(gridworld, qValues, currentState = None, message = 'State-Action Q-Values'):$/;"	f
+drawSquare	graphicsGridworldDisplay.py	/^def drawSquare(x, y, val, min, max, valStr, action, isObstacle, isTerminal, isCurrent):$/;"	f
+drawSquareQ	graphicsGridworldDisplay.py	/^def drawSquareQ(x, y, qVals, minVal, maxVal, valStrs, bestActions, isCurrent):$/;"	f
+drawStaticObjects	graphicsDisplay.py	/^  def drawStaticObjects(self, state):$/;"	m	class:PacmanGraphics
+drawValues	graphicsGridworldDisplay.py	/^def drawValues(gridworld, values, policy, currentState = None, message = 'State Values'):$/;"	f
+drawWalls	graphicsDisplay.py	/^  def drawWalls(self, wallMatrix):$/;"	m	class:PacmanGraphics
+drawWarning	graphicsDisplay.py	/^  def drawWarning(self):$/;"	m	class:InfoPane
+draw_background	graphicsUtils.py	/^def draw_background():$/;"	f
+edit	graphicsUtils.py	/^def edit(id, *args):$/;"	f
+end_graphics	graphicsUtils.py	/^def end_graphics():$/;"	f
+env	gridworld.py	/^  env = gridworld.GridworldEnvironment(mdp)$/;"	v
+exit	graphicsCrawlerDisplay.py	/^    def exit(self):$/;"	m	class:Application
+final	learningAgents.py	/^  def final(self, state):$/;"	m	class:ReinforcementAgent
+final	qlearningAgents.py	/^  def final(self, state):$/;"	m	class:ApproximateQAgent
+finish	graphicsDisplay.py	/^  def finish(self):$/;"	m	class:PacmanGraphics
+finish	textDisplay.py	/^  def finish(self):$/;"	m	class:NullGraphics
+finish	textDisplay.py	/^  def finish(self):$/;"	m	class:PacmanGraphics
+flipCoin	util.py	/^def flipCoin( p ):$/;"	f
+formatColor	graphicsUtils.py	/^def formatColor(r, g, b):$/;"	f
+g	graphicsUtils.py	/^  g = polygon(ghost_shape, formatColor(1, 1, 1))$/;"	v
+generatePacmanSuccessor	pacman.py	/^  def generatePacmanSuccessor( self, action ):$/;"	m	class:GameState
+generateSuccessor	game.py	/^  def generateSuccessor(self, vector):$/;"	m	class:Configuration
+generateSuccessor	pacman.py	/^  def generateSuccessor( self, agentIndex, action):$/;"	m	class:GameState
+getAction	game.py	/^  def getAction(self, state):$/;"	m	class:Agent
+getAction	ghostAgents.py	/^  def getAction( self, state ):$/;"	m	class:GhostAgent
+getAction	gridworld.py	/^      def getAction(self, state):$/;"	m	class:.RandomAgent
+getAction	keyboardAgents.py	/^  def getAction( self, state):$/;"	m	class:KeyboardAgent
+getAction	learningAgents.py	/^  def getAction(self, state):$/;"	m	class:ValueEstimationAgent
+getAction	pacmanAgents.py	/^  def getAction(self, state):$/;"	m	class:GreedyAgent
+getAction	pacmanAgents.py	/^  def getAction(self, state):$/;"	m	class:LeftTurnAgent
+getAction	qlearningAgents.py	/^  def getAction(self, state):$/;"	m	class:PacmanQAgent
+getAction	qlearningAgents.py	/^  def getAction(self, state):$/;"	m	class:QLearningAgent
+getAction	valueIterationAgents.py	/^  def getAction(self, state):$/;"	m	class:ValueIterationAgent
+getAngles	crawler.py	/^    def getAngles(self):$/;"	m	class:CrawlingRobot
+getBookGrid	gridworld.py	/^def getBookGrid():$/;"	f
+getBridgeGrid	gridworld.py	/^def getBridgeGrid():$/;"	f
+getCapsules	pacman.py	/^  def getCapsules(self):$/;"	m	class:GameState
+getCliffGrid	gridworld.py	/^def getCliffGrid():$/;"	f
+getCliffGrid2	gridworld.py	/^def getCliffGrid2():$/;"	f
+getColor	graphicsGridworldDisplay.py	/^def getColor(val, minVal, max):$/;"	f
+getCurrentState	crawler.py	/^   def getCurrentState(self):$/;"	m	class:CrawlingRobotEnvironment
+getCurrentState	environment.py	/^  def getCurrentState(self):$/;"	m	class:Environment
+getCurrentState	gridworld.py	/^  def getCurrentState(self):$/;"	m	class:GridworldEnvironment
+getDirection	game.py	/^  def getDirection(self):$/;"	m	class:AgentState
+getDirection	game.py	/^  def getDirection(self):$/;"	m	class:Configuration
+getDirection	graphicsDisplay.py	/^  def getDirection(self, agentState):$/;"	m	class:PacmanGraphics
+getDiscountGrid	gridworld.py	/^def getDiscountGrid():$/;"	f
+getDistribution	ghostAgents.py	/^  def getDistribution( self, state ):$/;"	m	class:DirectionalGhost
+getDistribution	ghostAgents.py	/^  def getDistribution( self, state ):$/;"	m	class:RandomGhost
+getDistribution	ghostAgents.py	/^  def getDistribution(self, state):$/;"	m	class:GhostAgent
+getEndpoints	graphicsDisplay.py	/^  def getEndpoints(self, direction, position=(0,0)):$/;"	m	class:PacmanGraphics
+getFeatures	featureExtractors.py	/^  def getFeatures(self, state, action):    $/;"	m	class:FeatureExtractor
+getFeatures	featureExtractors.py	/^  def getFeatures(self, state, action):$/;"	m	class:IdentityExtractor
+getFeatures	featureExtractors.py	/^  def getFeatures(self, state, action):$/;"	m	class:SimpleExtractor
+getFood	pacman.py	/^  def getFood(self):$/;"	m	class:GameState
+getFurthestCorner	layout.py	/^  def getFurthestCorner(self, pacPos):$/;"	m	class:Layout
+getGhostColor	graphicsDisplay.py	/^  def getGhostColor(self, ghost, ghostIndex):$/;"	m	class:FirstPersonPacmanGraphics
+getGhostColor	graphicsDisplay.py	/^  def getGhostColor(self, ghost, ghostIndex):$/;"	m	class:PacmanGraphics
+getGhostPosition	pacman.py	/^  def getGhostPosition( self, agentIndex ):$/;"	m	class:GameState
+getGhostPositions	pacman.py	/^  def getGhostPositions(self):$/;"	m	class:GameState
+getGhostState	pacman.py	/^  def getGhostState( self, agentIndex ):$/;"	m	class:GameState
+getGhostStates	pacman.py	/^  def getGhostStates( self ):$/;"	m	class:GameState
+getLayout	layout.py	/^def getLayout(name, back = 2):$/;"	f
+getLegalActions	learningAgents.py	/^  def getLegalActions(self,state):$/;"	m	class:ReinforcementAgent
+getLegalActions	pacman.py	/^  def getLegalActions( self, agentIndex=0 ):$/;"	m	class:GameState
+getLegalActions	pacman.py	/^  def getLegalActions( state ):$/;"	m	class:PacmanRules
+getLegalActions	pacman.py	/^  def getLegalActions( state, ghostIndex ):$/;"	m	class:GhostRules
+getLegalActions	pacman.py	/^  getLegalActions = staticmethod( getLegalActions )$/;"	v	class:GhostRules
+getLegalActions	pacman.py	/^  getLegalActions = staticmethod( getLegalActions )$/;"	v	class:PacmanRules
+getLegalNeighbors	game.py	/^  def getLegalNeighbors(position, walls):$/;"	m	class:Actions
+getLegalNeighbors	game.py	/^  getLegalNeighbors = staticmethod(getLegalNeighbors)$/;"	v	class:Actions
+getLegalPacmanActions	pacman.py	/^  def getLegalPacmanActions( self ):$/;"	m	class:GameState
+getMaxStartupTime	pacman.py	/^  def getMaxStartupTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMaxTimeWarnings	pacman.py	/^  def getMaxTimeWarnings(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMaxTotalTime	pacman.py	/^  def getMaxTotalTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMazeGrid	gridworld.py	/^def getMazeGrid():$/;"	f
+getMinAndMaxArmAngles	crawler.py	/^    def getMinAndMaxArmAngles(self):$/;"	m	class:CrawlingRobot
+getMinAndMaxHandAngles	crawler.py	/^    def getMinAndMaxHandAngles(self):$/;"	m	class:CrawlingRobot
+getMove	keyboardAgents.py	/^  def getMove(self, legal):$/;"	m	class:KeyboardAgent
+getMove	keyboardAgents.py	/^  def getMove(self, legal):$/;"	m	class:KeyboardAgent2
+getMoveTimeout	pacman.py	/^  def getMoveTimeout(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMoveWarningTime	pacman.py	/^  def getMoveWarningTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getNumAgents	pacman.py	/^  def getNumAgents( self ):$/;"	m	class:GameState
+getNumFood	pacman.py	/^  def getNumFood( self ):$/;"	m	class:GameState
+getNumGhosts	layout.py	/^  def getNumGhosts(self):$/;"	m	class:Layout
+getPacmanPosition	pacman.py	/^  def getPacmanPosition( self ):$/;"	m	class:GameState
+getPacmanState	pacman.py	/^  def getPacmanState( self ):$/;"	m	class:GameState
+getPolicy	gridworld.py	/^      def getPolicy(self, state):$/;"	m	class:.RandomAgent
+getPolicy	learningAgents.py	/^  def getPolicy(self, state):$/;"	m	class:ValueEstimationAgent
+getPolicy	qlearningAgents.py	/^  def getPolicy(self, state):$/;"	m	class:QLearningAgent
+getPolicy	valueIterationAgents.py	/^  def getPolicy(self, state):$/;"	m	class:ValueIterationAgent
+getPosition	game.py	/^  def getPosition(self):$/;"	m	class:AgentState
+getPosition	game.py	/^  def getPosition(self):$/;"	m	class:Configuration
+getPosition	graphicsDisplay.py	/^  def getPosition(self, agentState):$/;"	m	class:PacmanGraphics
+getPosition	graphicsDisplay.py	/^  def getPosition(self, ghostState):$/;"	m	class:FirstPersonPacmanGraphics
+getPossibleActions	crawler.py	/^   def getPossibleActions(self, state):$/;"	m	class:CrawlingRobotEnvironment
+getPossibleActions	environment.py	/^  def getPossibleActions(self, state):$/;"	m	class:Environment
+getPossibleActions	game.py	/^  def getPossibleActions(config, walls):$/;"	m	class:Actions
+getPossibleActions	game.py	/^  getPossibleActions = staticmethod(getPossibleActions)$/;"	v	class:Actions
+getPossibleActions	gridworld.py	/^  def getPossibleActions(self, state):        $/;"	m	class:GridworldEnvironment
+getPossibleActions	gridworld.py	/^  def getPossibleActions(self, state):$/;"	m	class:Gridworld
+getPossibleActions	mdp.py	/^  def getPossibleActions(self, state):$/;"	m	class:MarkovDecisionProcess
+getProbability	util.py	/^def getProbability(value, distribution, values):$/;"	f
+getProgress	game.py	/^  def getProgress(self):$/;"	m	class:Game
+getProgress	pacman.py	/^  def getProgress(self, game):$/;"	m	class:ClassicGameRules
+getQValue	gridworld.py	/^      def getQValue(self, state, action):$/;"	m	class:.RandomAgent
+getQValue	learningAgents.py	/^  def getQValue(self, state, action):$/;"	m	class:ValueEstimationAgent
+getQValue	qlearningAgents.py	/^  def getQValue(self, state, action):$/;"	m	class:ApproximateQAgent
+getQValue	qlearningAgents.py	/^  def getQValue(self, state, action):$/;"	m	class:QLearningAgent
+getQValue	valueIterationAgents.py	/^  def getQValue(self, state, action):$/;"	m	class:ValueIterationAgent
+getRandomCorner	layout.py	/^  def getRandomCorner(self):$/;"	m	class:Layout
+getRandomLegalPosition	layout.py	/^  def getRandomLegalPosition(self):$/;"	m	class:Layout
+getReward	gridworld.py	/^  def getReward(self, state, action, nextState):$/;"	m	class:Gridworld
+getReward	mdp.py	/^  def getReward(self, state, action, nextState):$/;"	m	class:MarkovDecisionProcess
+getRobotPosition	crawler.py	/^    def getRobotPosition(self):$/;"	m	class:CrawlingRobot
+getRotationAngle	crawler.py	/^    def getRotationAngle(self):$/;"	m	class:CrawlingRobot
+getScore	pacman.py	/^  def getScore( self ):$/;"	m	class:GameState
+getStartState	gridworld.py	/^  def getStartState(self):$/;"	m	class:Gridworld
+getStartState	mdp.py	/^  def getStartState(self):$/;"	m	class:MarkovDecisionProcess
+getStates	gridworld.py	/^  def getStates(self):$/;"	m	class:Gridworld
+getStates	mdp.py	/^  def getStates(self):$/;"	m	class:MarkovDecisionProcess
+getSuccessor	game.py	/^  def getSuccessor(position, action):$/;"	m	class:Actions
+getSuccessor	game.py	/^  getSuccessor = staticmethod(getSuccessor)$/;"	v	class:Actions
+getTransitionStatesAndProbs	gridworld.py	/^  def getTransitionStatesAndProbs(self, state, action):$/;"	m	class:Gridworld
+getTransitionStatesAndProbs	mdp.py	/^  def getTransitionStatesAndProbs(self, state, action):$/;"	m	class:MarkovDecisionProcess
+getUserAction	gridworld.py	/^def getUserAction(state, actionFunction):$/;"	f
+getValue	gridworld.py	/^      def getValue(self, state):$/;"	m	class:.RandomAgent
+getValue	learningAgents.py	/^  def getValue(self, state):$/;"	m	class:ValueEstimationAgent
+getValue	qlearningAgents.py	/^  def getValue(self, state):$/;"	m	class:QLearningAgent
+getValue	valueIterationAgents.py	/^  def getValue(self, state):$/;"	m	class:ValueIterationAgent
+getWalls	pacman.py	/^  def getWalls(self):$/;"	m	class:GameState
+ghost_shape	graphicsUtils.py	/^  ghost_shape = [(x * 10 + 20, y * 10 + 20) for x, y in ghost_shape]$/;"	v
+ghost_shape	graphicsUtils.py	/^ghost_shape = [                $/;"	v
+gridWorldEnv	gridworld.py	/^    gridWorldEnv = GridworldEnvironment(mdp)$/;"	v
+handle_timeout	util.py	/^    def handle_timeout(self, signum, frame):$/;"	m	class:TimeoutFunction
+hasFood	pacman.py	/^  def hasFood(self, x, y):$/;"	m	class:GameState
+hasWall	pacman.py	/^  def hasWall(self, x, y):$/;"	m	class:GameState
+image	graphicsUtils.py	/^def image(pos, file="..\/..\/blueghost.gif"):$/;"	f
+incrementAll	util.py	/^  def incrementAll(self, keys, count):$/;"	m	class:Counter
+incrementAlpha	graphicsCrawlerDisplay.py	/^    def incrementAlpha(self, inc):$/;"	m	class:Application
+incrementEpsilon	graphicsCrawlerDisplay.py	/^    def incrementEpsilon(self, inc):$/;"	m	class:Application
+incrementGamma	graphicsCrawlerDisplay.py	/^    def incrementGamma(self, inc):$/;"	m	class:Application
+incrementSpeed	graphicsCrawlerDisplay.py	/^    def incrementSpeed(self, inc):$/;"	m	class:Application
+indent	textGridworldDisplay.py	/^def indent(rows, hasHeader=False, headerChar='-', delim=' | ', justify='left',$/;"	f
+initialize	game.py	/^  def initialize( self, layout, numGhostAgents ):$/;"	m	class:GameStateData
+initialize	graphicsDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:FirstPersonPacmanGraphics
+initialize	graphicsDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:PacmanGraphics
+initialize	pacman.py	/^  def initialize( self, layout, numGhostAgents=1000 ):$/;"	m	class:GameState
+initialize	textDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:NullGraphics
+initialize	textDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:PacmanGraphics
+initializeGhostDistances	graphicsDisplay.py	/^  def initializeGhostDistances(self, distances):$/;"	m	class:InfoPane
+initializeVisibilityMatrix	layout.py	/^  def initializeVisibilityMatrix(self):$/;"	m	class:Layout
+initializer	util.py	/^    PriorityQueue.__init__(self)        # super-class initializer$/;"	c	function:PriorityQueueWithFunction.__init__
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:PriorityQueue
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:Queue
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:Stack
+isInTesting	learningAgents.py	/^  def isInTesting(self):$/;"	m	class:ReinforcementAgent
+isInTraining	learningAgents.py	/^  def isInTraining(self):$/;"	m	class:ReinforcementAgent
+isInteger	game.py	/^  def isInteger(self):$/;"	m	class:Configuration
+isLose	pacman.py	/^  def isLose( self ):$/;"	m	class:GameState
+isTerminal	environment.py	/^  def isTerminal(self):$/;"	m	class:Environment
+isTerminal	gridworld.py	/^  def isTerminal(self, state):$/;"	m	class:Gridworld
+isTerminal	mdp.py	/^  def isTerminal(self, state):$/;"	m	class:MarkovDecisionProcess
+isVisibleFrom	layout.py	/^  def isVisibleFrom(self, ghostPos, pacPos, pacDirection):$/;"	m	class:Layout
+isWall	graphicsDisplay.py	/^  def isWall(self, x, y, walls):$/;"	m	class:PacmanGraphics
+isWall	layout.py	/^  def isWall(self, pos):$/;"	m	class:Layout
+isWin	pacman.py	/^  def isWin( self ):$/;"	m	class:GameState
+keys_pressed	graphicsUtils.py	/^def keys_pressed(d_o_e=Tkinter.tkinter.dooneevent,$/;"	f
+keys_waiting	graphicsUtils.py	/^def keys_waiting():$/;"	f
+line	graphicsUtils.py	/^def line(here, there, color=formatColor(0, 0, 0), width=2):$/;"	f
+loadAgent	pacman.py	/^def loadAgent(pacman, nographics):$/;"	f
+lookAhead	graphicsDisplay.py	/^  def lookAhead(self, config, state):$/;"	m	class:FirstPersonPacmanGraphics
+lookup	util.py	/^def lookup(name, namespace):$/;"	f
+lose	pacman.py	/^  def lose( self, state, game ):$/;"	m	class:ClassicGameRules
+makeGrid	gridworld.py	/^def makeGrid(gridString):$/;"	f
+make_window	graphicsDisplay.py	/^  def make_window(self, width, height):$/;"	m	class:PacmanGraphics
+manhattanDistance	util.py	/^def manhattanDistance( xy1, xy2 ):$/;"	f
+matrixAsList	util.py	/^def matrixAsList( matrix, value = True ):$/;"	f
+mdp	gridworld.py	/^  mdp = mdpFunction()$/;"	v
+mdpFunction	gridworld.py	/^  mdpFunction = getattr(gridworld, "get"+opts.grid)$/;"	v
+messageCallback	gridworld.py	/^    messageCallback = lambda x: None$/;"	v
+messageCallback	gridworld.py	/^  messageCallback = lambda x: printString(x)$/;"	v
+moveArm	crawler.py	/^    def moveArm(self, newArmAngle):$/;"	m	class:CrawlingRobot
+moveCircle	graphicsUtils.py	/^def moveCircle(id, pos, r, endpoints=None):$/;"	f
+moveEyes	graphicsDisplay.py	/^  def moveEyes(self, pos, dir, eyes):$/;"	m	class:PacmanGraphics
+moveGhost	graphicsDisplay.py	/^  def moveGhost(self, ghost, ghostIndex, prevGhost, ghostImageParts):$/;"	m	class:PacmanGraphics
+moveHand	crawler.py	/^    def moveHand(self, newHandAngle):$/;"	m	class:CrawlingRobot
+movePacman	graphicsDisplay.py	/^  def movePacman(self, position, direction, image):$/;"	m	class:PacmanGraphics
+move_by	graphicsUtils.py	/^def move_by(object, x, y=None,$/;"	f
+move_to	graphicsUtils.py	/^def move_to(object, x, y=None,$/;"	f
+mute	game.py	/^  def mute(self):$/;"	m	class:Game
+nSample	util.py	/^def nSample(distribution, values, n):$/;"	f
+nearestPoint	util.py	/^def nearestPoint( pos ):$/;"	f
+newGame	pacman.py	/^  def newGame( self, layout, pacmanAgent, ghostAgents, display, quiet = False, catchExceptions=False):$/;"	m	class:ClassicGameRules
+normalize	util.py	/^  def normalize(self):$/;"	m	class:Counter
+normalize	util.py	/^def normalize(vectorOrCounter):$/;"	f
+observationFunction	learningAgents.py	/^  def observationFunction(self, state):$/;"	m	class:ReinforcementAgent
+observeTransition	learningAgents.py	/^  def observeTransition(self, state,action,nextState,deltaReward):$/;"	m	class:ReinforcementAgent
+opts	gridworld.py	/^  opts = parseOptions()$/;"	v
+packBits	game.py	/^  def packBits(self):$/;"	m	class:Grid
+parseAgentArgs	pacman.py	/^def parseAgentArgs(str):$/;"	f
+parseOptions	gridworld.py	/^def parseOptions():$/;"	f
+pause	graphicsGridworldDisplay.py	/^  def pause(self):$/;"	m	class:GraphicsGridworldDisplay
+pause	textDisplay.py	/^  def pause(self):$/;"	m	class:NullGraphics
+pause	textDisplay.py	/^  def pause(self):$/;"	m	class:PacmanGraphics
+pause	textGridworldDisplay.py	/^  def pause(self):$/;"	m	class:TextGridworldDisplay
+pause	util.py	/^def pause():$/;"	f
+pauseCallback	gridworld.py	/^    pauseCallback = lambda : display.pause()$/;"	v
+pauseCallback	gridworld.py	/^  pauseCallback = lambda : None$/;"	v
+placeGhost	pacman.py	/^  def placeGhost(state, ghostState):$/;"	m	class:GhostRules
+placeGhost	pacman.py	/^  placeGhost = staticmethod( placeGhost )$/;"	v	class:GhostRules
+polygon	graphicsUtils.py	/^def polygon(coords, outlineColor, fillColor=None, filled=1, smoothed=1, behind=0, width=1):$/;"	f
+pop	util.py	/^  def pop(self):$/;"	m	class:PriorityQueue
+pop	util.py	/^  def pop(self):$/;"	m	class:Queue
+pop	util.py	/^  def pop(self):$/;"	m	class:Stack
+prettyPrintNullValues	textGridworldDisplay.py	/^def prettyPrintNullValues(gridWorld, currentState = None):$/;"	f
+prettyPrintQValues	textGridworldDisplay.py	/^def prettyPrintQValues(gridWorld, qValues, currentState=None):$/;"	f
+prettyPrintValues	textGridworldDisplay.py	/^def prettyPrintValues(gridWorld, values, policy=None, currentState = None):$/;"	f
+printString	gridworld.py	/^def printString(x): print x$/;"	f
+process	pacman.py	/^  def process(self, state, game):$/;"	m	class:ClassicGameRules
+processLayoutChar	layout.py	/^  def processLayoutChar(self, x, y, layoutChar):$/;"	m	class:Layout
+processLayoutText	layout.py	/^  def processLayoutText(self, layoutText):$/;"	m	class:Layout
+push	util.py	/^  def push(self, item):$/;"	m	class:PriorityQueueWithFunction
+push	util.py	/^  def push(self, item, priority):$/;"	m	class:PriorityQueue
+push	util.py	/^  def push(self,item):$/;"	m	class:Queue
+push	util.py	/^  def push(self,item):$/;"	m	class:Stack
+qLearnOpts	gridworld.py	/^    qLearnOpts = {'gamma': opts.discount, $/;"	v
+question2a	analysis.py	/^def question2a():$/;"	f
+question2b	analysis.py	/^def question2b():$/;"	f
+question2c	analysis.py	/^def question2c():$/;"	f
+question2d	analysis.py	/^def question2d():$/;"	f
+question2e	analysis.py	/^def question2e():$/;"	f
+raiseNotDefined	util.py	/^def raiseNotDefined():$/;"	f
+readCommand	pacman.py	/^def readCommand( argv ):$/;"	f
+reconstituteGrid	game.py	/^def reconstituteGrid(bitRep):$/;"	f
+refresh	graphicsUtils.py	/^def refresh():$/;"	f
+registerInitialState	learningAgents.py	/^  def registerInitialState(self, state):$/;"	m	class:ReinforcementAgent
+remap_arrows	graphicsUtils.py	/^def remap_arrows(event):$/;"	f
+removeCapsule	graphicsDisplay.py	/^  def removeCapsule(self, cell, capsuleImages ):$/;"	m	class:PacmanGraphics
+removeFood	graphicsDisplay.py	/^  def removeFood(self, cell, foodImages ):$/;"	m	class:PacmanGraphics
+remove_from_screen	graphicsUtils.py	/^def remove_from_screen(x,$/;"	f
+replayGame	pacman.py	/^def replayGame( layout, actions, display ):$/;"	f
+reset	crawler.py	/^   def reset(self):$/;"	m	class:CrawlingRobotEnvironment
+reset	environment.py	/^  def reset(self):$/;"	m	class:Environment
+reset	gridworld.py	/^  def reset(self):$/;"	m	class:GridworldEnvironment
+response	analysis.py	/^    response = getattr(analysis, q)()$/;"	v
+returns	gridworld.py	/^  returns = 0$/;"	v
+reverseDirection	game.py	/^  def reverseDirection(action):$/;"	m	class:Actions
+reverseDirection	game.py	/^  reverseDirection = staticmethod(reverseDirection)$/;"	v	class:Actions
+robotType	graphicsCrawlerDisplay.py	/^robotType = 'crawler'$/;"	v
+rowWrapper	textGridworldDisplay.py	/^    def rowWrapper(row):$/;"	f	function:indent
+run	game.py	/^  def run( self ):$/;"	m	class:Game
+run	graphicsCrawlerDisplay.py	/^    def run(self):$/;"	m	class:Application
+run	graphicsCrawlerDisplay.py	/^def run():$/;"	f
+runEpisode	gridworld.py	/^def runEpisode(agent, environment, discount, decision, display, message, pause, episode):$/;"	f
+runGames	pacman.py	/^def runGames( layout, pacman, ghosts, display, numGames, record, numTraining = 0, catchExceptions=False, timeout=30 ):$/;"	f
+sample	util.py	/^def sample(distribution, values = None):$/;"	f
+sampleFromCounter	util.py	/^def sampleFromCounter(ctr):$/;"	f
+saveFrame	graphicsDisplay.py	/^def saveFrame():$/;"	f
+scoreEvaluation	pacmanAgents.py	/^def scoreEvaluation(state):$/;"	f
+setAngles	crawler.py	/^    def setAngles(self, armAngle, handAngle):$/;"	m	class:CrawlingRobot
+setDiscount	learningAgents.py	/^  def setDiscount(self, discount):$/;"	m	class:ReinforcementAgent
+setEpsilon	learningAgents.py	/^  def setEpsilon(self, epsilon):$/;"	m	class:ReinforcementAgent
+setLearningRate	learningAgents.py	/^  def setLearningRate(self, alpha):$/;"	m	class:ReinforcementAgent
+setLivingReward	gridworld.py	/^  def setLivingReward(self, reward):$/;"	m	class:Gridworld
+setNoise	gridworld.py	/^  def setNoise(self, noise):$/;"	m	class:Gridworld
+setTeam	graphicsDisplay.py	/^  def setTeam(self, isBlue):$/;"	m	class:InfoPane
+setUpGammaButtonAndLabel	graphicsCrawlerDisplay.py	/^    def setUpGammaButtonAndLabel(self, win):$/;"	m	class:Application
+setup	graphicsGridworldDisplay.py	/^def setup(gridworld, title = "Gridworld Display", size = 120):$/;"	f
+setupAlphaButtonAndLabel	graphicsCrawlerDisplay.py	/^    def setupAlphaButtonAndLabel(self, win):$/;"	m	class:Application
+setupEpsilonButtonAndLabel	graphicsCrawlerDisplay.py	/^    def setupEpsilonButtonAndLabel(self, win):$/;"	m	class:Application
+setupSpeedButtonAndLabel	graphicsCrawlerDisplay.py	/^    def setupSpeedButtonAndLabel(self, win):$/;"	m	class:Application
+shallowCopy	game.py	/^  def shallowCopy(self):$/;"	m	class:Grid
+shallowCopy	gridworld.py	/^  def shallowCopy(self):$/;"	m	class:Grid
+sigmoid	graphicsCrawlerDisplay.py	/^    def sigmoid(self, x):$/;"	m	class:Application
+sign	util.py	/^def sign( x ):$/;"	f
+skip5kSteps	graphicsCrawlerDisplay.py	/^    def skip5kSteps(self):$/;"	m	class:Application
+sleep	graphicsUtils.py	/^def sleep(secs):$/;"	f
+sortedKeys	util.py	/^  def sortedKeys(self):$/;"	m	class:Counter
+square	graphicsGridworldDisplay.py	/^def square(pos, size, color, filled, width):$/;"	f
+square	graphicsUtils.py	/^def square(pos, r, color, filled=1, behind=0):$/;"	f
+start	graphicsCrawlerDisplay.py	/^    def start(self):$/;"	m	class:Application
+start	graphicsGridworldDisplay.py	/^  def start(self):$/;"	m	class:GraphicsGridworldDisplay
+start	textGridworldDisplay.py	/^  def start(self):$/;"	m	class:TextGridworldDisplay
+startEpisode	learningAgents.py	/^  def startEpisode(self):$/;"	m	class:ReinforcementAgent
+startGraphics	graphicsDisplay.py	/^  def startGraphics(self, state):$/;"	m	class:PacmanGraphics
+step	graphicsCrawlerDisplay.py	/^    def step(self):$/;"	m	class:Application
+stopEpisode	learningAgents.py	/^  def stopEpisode(self):$/;"	m	class:ReinforcementAgent
+swapImages	graphicsDisplay.py	/^  def swapImages(self, agentIndex, newState):$/;"	m	class:PacmanGraphics
+text	graphicsUtils.py	/^def text(pos, color, contents, font='Helvetica', size=12, style='normal', anchor="nw"):$/;"	f
+toScreen	graphicsDisplay.py	/^  def toScreen(self, pos, y = None):$/;"	m	class:InfoPane
+to_grid	graphicsGridworldDisplay.py	/^def to_grid(point):$/;"	f
+to_screen	graphicsDisplay.py	/^  def to_screen(self, point):$/;"	m	class:PacmanGraphics
+to_screen	graphicsGridworldDisplay.py	/^def to_screen(point):$/;"	f
+to_screen2	graphicsDisplay.py	/^  def to_screen2(self, point):$/;"	m	class:PacmanGraphics
+totalCount	util.py	/^  def totalCount(self):$/;"	m	class:Counter
+tryToLoad	layout.py	/^def tryToLoad(fullname):$/;"	f
+unmute	game.py	/^  def unmute(self):$/;"	m	class:Game
+update	graphicsDisplay.py	/^  def update(self, newState):$/;"	m	class:PacmanGraphics
+update	gridworld.py	/^      def update(self, state, action, nextState, reward):$/;"	m	class:.RandomAgent
+update	learningAgents.py	/^  def update(self, state, action, nextState, reward):$/;"	m	class:ReinforcementAgent
+update	qlearningAgents.py	/^  def update(self, state, action, nextState, reward):$/;"	m	class:ApproximateQAgent
+update	qlearningAgents.py	/^  def update(self, state, action, nextState, reward):$/;"	m	class:QLearningAgent
+update	textDisplay.py	/^  def update(self, state):$/;"	m	class:NullGraphics
+update	textDisplay.py	/^  def update(self, state):$/;"	m	class:PacmanGraphics
+updateDistributions	graphicsDisplay.py	/^  def updateDistributions(self, distributions):$/;"	m	class:PacmanGraphics
+updateGhostDistances	graphicsDisplay.py	/^  def updateGhostDistances(self, distances):$/;"	m	class:InfoPane
+updateMessage	graphicsDisplay.py	/^  def updateMessage(self, message):$/;"	m	class:InfoPane
+updateScore	graphicsDisplay.py	/^  def updateScore(self, score):$/;"	m	class:InfoPane
+update_gui	graphicsCrawlerDisplay.py	/^  def update_gui():$/;"	f	function:run
+vectorToDirection	game.py	/^  def vectorToDirection(vector):$/;"	m	class:Actions
+vectorToDirection	game.py	/^  vectorToDirection = staticmethod(vectorToDirection)$/;"	v	class:Actions
+wait_for_click	graphicsUtils.py	/^def wait_for_click():$/;"	f
+wait_for_keys	graphicsUtils.py	/^def wait_for_keys():$/;"	f
+win	pacman.py	/^  def win( self, state, game ):$/;"	m	class:ClassicGameRules
+wrap_always	textGridworldDisplay.py	/^def wrap_always(text, width):$/;"	f
+writePostscript	graphicsUtils.py	/^def writePostscript(filename):$/;"	f
