@@ -86,3 +86,43 @@ class SimpleExtractor(FeatureExtractor):
       features["closest-food"] = float(dist) / (walls.width * walls.height) 
     features.divideAll(10.0)
     return features
+
+
+
+class MyExtractor(FeatureExtractor):
+  def getFeatures(self, state, action):
+    walls = state.getWalls()
+    
+    SimpleExtractorObject = SimpleExtractor()
+    # All this to avoid StaticMethod decorator, or subclassing
+    features = SimpleExtractorObject.getFeatures(state,action)
+
+    # compute the location of pacman after he takes the action
+    x, y = state.getPacmanPosition()
+    dx, dy = Actions.directionToVector(action)
+    next_x, next_y = int(x + dx), int(y + dy)
+    
+    ghostStates =  state.getGhostStates()
+    """
+    if ghostStates:
+        #if ghostStates[0].scaredTimer > 0:
+        if ghostStates[0].scaredTimer > 1:
+            #features["ghosts-are-scared-till"] = ghostStates[0].scaredTimer
+            #features["can-ghosts-eat-me"] = 0
+            if features["#-of-ghosts-1-step-away"]:
+                features["can-i-eat-ghosts"] = 1
+    """
+    
+    time_left_for_all_neighbour_ghosts = []
+    min_time_left_for_all_neighbour_ghosts = 0
+    # Find time left for all neighbouring ghosts
+    for ghost in ghostStates:
+        if (next_x,next_y) in Actions.getLegalNeighbors(ghost.getPosition(),walls):
+            time_left_for_all_neighbour_ghosts += [ghost.scaredTimer]
+    # Find min time left for ghosts to remain eatable
+    if time_left_for_all_neighbour_ghosts:
+        min_time_left_for_all_neighbour_ghosts = min(time_left_for_all_neighbour_ghosts)
+    if min_time_left_for_all_neighbour_ghosts > 1:
+        features["can-i-eat-ghosts"] = 1
+
+    return features
