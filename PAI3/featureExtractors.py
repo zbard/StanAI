@@ -78,6 +78,8 @@ def distAllObject(pos, objects, walls):
     if (pos_x,pos_y) in objects:
       all_distances.append(dist)
       objects.remove((pos_x,pos_y))
+      if not objects:
+        return all_distances
     # otherwise spread out from the location to its neighbours
     nbrs = Actions.getLegalNeighbors((pos_x, pos_y), walls)
     for nbr_x, nbr_y in nbrs:
