@@ -48,6 +48,23 @@ def closestFood(pos, food, walls):
   # no food found
   return None
 
+def closestObject(pos, objects, walls):
+  fringe = [(pos[0], pos[1], 0)]
+  expanded = set()
+  while fringe:
+    pos_x, pos_y, dist = fringe.pop(0)
+    if (pos_x, pos_y) in expanded:
+      continue
+    expanded.add((pos_x, pos_y))
+    # if we find a target object at this location then exit
+    if (pos_x,pos_y) in objects:
+      return dist
+    # otherwise spread out from the location to its neighbours
+    nbrs = Actions.getLegalNeighbors((pos_x, pos_y), walls)
+    for nbr_x, nbr_y in nbrs:
+      fringe.append((nbr_x, nbr_y, dist+1))
+  return None
+
 class SimpleExtractor(FeatureExtractor):
   """
   Returns simple features for a basic reflex Pacman:
@@ -92,6 +109,8 @@ class SimpleExtractor(FeatureExtractor):
 class MyExtractor(FeatureExtractor):
   def getFeatures(self, state, action):
     walls = state.getWalls()
+    capsules = state.getCapsules()
+    ghosts = state.getGhostPositions()
     
     SimpleExtractorObject = SimpleExtractor()
     # All this to avoid StaticMethod decorator, or subclassing
@@ -125,4 +144,17 @@ class MyExtractor(FeatureExtractor):
     if min_time_left_for_all_neighbour_ghosts > 1:
         features["can-i-eat-ghosts"] = 1
 
+    # dist of closest ghost - (slow ?) A useless feature ?
+    """
+    dist = closestObject((next_x, next_y), ghosts, walls)
+    if dist is not None:
+      features["closest-ghost"] = float(dist) / (walls.width * walls.height * 100) 
+    """
+
+    # dist of closest capsule (slow)
+    """
+    dist = closestObject((next_x, next_y), capsules, walls)
+    if dist is not None:
+      features["closest-capsule"] = float(dist) / (walls.width * walls.height) 
+    """
     return features
