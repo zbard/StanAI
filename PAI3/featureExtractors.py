@@ -65,6 +65,28 @@ def closestObject(pos, objects, walls):
       fringe.append((nbr_x, nbr_y, dist+1))
   return None
 
+def distAllObject(pos, objects, walls):
+  fringe = [(pos[0], pos[1], 0)]
+  expanded = set()
+  all_distances = []
+  while fringe:
+    pos_x, pos_y, dist = fringe.pop(0)
+    if (pos_x, pos_y) in expanded:
+      continue
+    expanded.add((pos_x, pos_y))
+    # Found object
+    if (pos_x,pos_y) in objects:
+      all_distances.append(dist)
+      objects.remove((pos_x,pos_y))
+    # otherwise spread out from the location to its neighbours
+    nbrs = Actions.getLegalNeighbors((pos_x, pos_y), walls)
+    for nbr_x, nbr_y in nbrs:
+      fringe.append((nbr_x, nbr_y, dist+1))
+  if all_distances:
+    return all_distances
+  return None
+
+  
 class SimpleExtractor(FeatureExtractor):
   """
   Returns simple features for a basic reflex Pacman:
@@ -142,7 +164,7 @@ class MyExtractor(FeatureExtractor):
     if time_left_for_all_neighbour_ghosts:
         min_time_left_for_all_neighbour_ghosts = min(time_left_for_all_neighbour_ghosts)
     if min_time_left_for_all_neighbour_ghosts > 1:
-        features["can-i-eat-ghosts"] = 1
+        features["can-i-eat-ghosts"] = 1 / 10.0
 
     # dist of closest ghost - (slow ?) A useless feature ?
     """
@@ -152,9 +174,33 @@ class MyExtractor(FeatureExtractor):
     """
 
     # dist of closest capsule (slow)
-    """
     dist = closestObject((next_x, next_y), capsules, walls)
     if dist is not None:
       features["closest-capsule"] = float(dist) / (walls.width * walls.height) 
-    """
+
+    # dist of all ghosts
+    all_dist = distAllObject((next_x,next_y), ghosts, walls)
+    if all_dist is not None:
+      for index in range(len(all_dist)):
+        features["dist_of_ghost"+str(index)] = float(all_dist[index]) / (walls.width * walls.width * 100)
+
+    # Normalize closest-food by danger - all the kewl kids are doing it
+    #if all_dist is not None:
+    #    cost_norm = sum(disti < 4 for disti in all_dist)
+    #    features["closest-food"] = features["closest-food"]/(1+cost_norm)
+
+    # Possible next actions - hardcoded 4 as MAX_NO_ACTIONS. <BAD BAD BAD FEATURE>
+    #features["possible-next-actions"] =  (float(len(Actions.getLegalNeighbors((next_x,next_y),walls)))
+    #                                     / (4.0 * 100) )
+
+    # Possibly trapped
+    poss_actions =  set(Actions.getLegalNeighbors((next_x,next_y),walls))
+    poss_ghost_positions = []
+    for g in ghosts:
+        poss_ghost_positions += Actions.getLegalNeighbors(g, walls)
+    remaining_action = poss_actions.difference_update(poss_ghost_positions)
+    if not remaining_action:
+        features["trapped"] = 1 / 10.0
+    
+
     return features
