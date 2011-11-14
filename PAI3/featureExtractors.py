@@ -180,8 +180,7 @@ class MyExtractor(FeatureExtractor):
 
     # dist of closest capsule (slow)
     dist = closestObject((next_x, next_y), capsules, walls)
-    if dist is not None and features["#-ghosts-1-step-away"]:
-      # only eat when u need
+    if dist is not None:
       features["closest-capsule"] = float(dist) / (walls.width * walls.height) 
 
     # dist of all ghosts
@@ -211,7 +210,10 @@ class MyExtractor(FeatureExtractor):
         features["trapped"] = 1 / 10.0
     
     # Bad positions ?
-    features[(next_x,next_y)] =  features["#-of-ghosts-1-step-away"] / 100
+    if (x,y) in ghosts:
+        features[(x,y)] =  (1 / (walls.width * walls.height)) / 10
+    if (next_x,next_y) in ghosts:
+        features[(next_x,next_y)] =  (1 / (walls.width * walls.height)) / 10
 
 
     # Ghosts in each quadrant
