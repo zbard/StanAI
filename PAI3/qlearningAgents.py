@@ -196,6 +196,10 @@ class ApproximateQAgent(PacmanQAgent):
     """
        Should update your weights based on transition
     """
+    if nextState.isLose():
+        # Losing reward
+        reward += -2000
+
     features = self.featExtractor.getFeatures(state,action)
     correction = reward + self.discount*self.getValue(nextState) - self.getQValue(state,action)
 
@@ -210,6 +214,6 @@ class ApproximateQAgent(PacmanQAgent):
     # did we finish training?
     if self.episodesSoFar == self.numTraining:
       # you might want to print your weights here for debugging
-      for feature in self.Weights:
-          print "Feature: ",feature," Weight: ",self.Weights[feature]
+      #for feature in self.Weights:
+      #    print "Feature: ",feature," Weight: ",self.Weights[feature]
       pass

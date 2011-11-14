@@ -132,6 +132,8 @@ class SimpleExtractor(FeatureExtractor):
 
 class MyExtractor(FeatureExtractor):
   def getFeatures(self, state, action):
+    foodpos = state.getFood()
+    foodpos = foodpos.asList()
     walls = state.getWalls()
     capsules = state.getCapsules()
     ghosts = state.getGhostPositions()
@@ -167,6 +169,7 @@ class MyExtractor(FeatureExtractor):
         min_time_left_for_all_neighbour_ghosts = min(time_left_for_all_neighbour_ghosts)
     if min_time_left_for_all_neighbour_ghosts > 1:
         features["can-i-eat-ghosts"] = 1 / 10.0
+        features["#-of-ghosts-1-step-away"] = 0
 
     # dist of closest ghost - (slow ?) A useless feature ?
     """
@@ -177,14 +180,17 @@ class MyExtractor(FeatureExtractor):
 
     # dist of closest capsule (slow)
     dist = closestObject((next_x, next_y), capsules, walls)
-    if dist is not None:
+    if dist is not None and features["#-ghosts-1-step-away"]:
+      # only eat when u need
       features["closest-capsule"] = float(dist) / (walls.width * walls.height) 
 
     # dist of all ghosts
+    """
     all_dist = distAllObject((next_x,next_y), ghosts, walls)
     if all_dist is not None:
       for index in range(len(all_dist)):
         features["dist_of_ghost"+str(index)] = float(all_dist[index]) / (walls.width * walls.width * 100)
+    """
 
     # Normalize closest-food by danger - all the kewl kids are doing it
     #if all_dist is not None:
@@ -200,9 +206,38 @@ class MyExtractor(FeatureExtractor):
     poss_ghost_positions = []
     for g in ghosts:
         poss_ghost_positions += Actions.getLegalNeighbors(g, walls)
-    remaining_action = poss_actions.difference_update(poss_ghost_positions)
+    remaining_action = poss_actions.difference_update(set(poss_ghost_positions))
     if not remaining_action:
         features["trapped"] = 1 / 10.0
     
+    # Bad positions ?
+    features[(next_x,next_y)] =  features["#-of-ghosts-1-step-away"] / 100
+
+
+    # Ghosts in each quadrant
+    """
+    if features["can-i-eat-ghosts"]:
+      for g in ghosts:
+        if g[0] > next_x and g[1] > next_y:
+            features["top_right_g"] += (1.0/len(ghosts)) /100.0
+        if g[0] <= next_x and g[1] > next_y:
+            features["top_left_g"] += (1.0/len(ghosts)) /100.0
+        if g[0] > next_x and g[1] <= next_y:
+            features["bottom_right_g"] += (1.0/len(ghosts)) /100.0
+        if g[0] <= next_x and g[1] <= next_y:
+            features["bottom_left_g"] += (1.0/len(ghosts)) /100.0
+    """
+    # food in each quadrant
+    """
+    for f in foodpos:
+        if f[0] > next_x and f[1] > next_y:
+            features["top_right_f"] += (1.0/len(foodpos)) /100.0
+        if f[0] <= next_x and f[1] > next_y:
+            features["top_left_f"] += (1.0/len(foodpos)) /100.0
+        if f[0] > next_x and f[1] <= next_y:
+            features["bottom_right_f"] += (1.0/len(foodpos)) /100.0
+        if f[0] <= next_x and f[1] <= next_y:
+            features["bottom_left_f"] += (1.0/len(foodpos)) /100.0
+    """
 
     return features
