@@ -196,9 +196,10 @@ class ApproximateQAgent(PacmanQAgent):
     """
        Should update your weights based on transition
     """
-    if nextState.isLose():
-        # Losing reward
-        reward += -2000
+    # pain of life
+    # reward += -.01
+    # Losing reward
+    if nextState.isLose(): reward += -2000
 
     features = self.featExtractor.getFeatures(state,action)
     correction = reward + self.discount*self.getValue(nextState) - self.getQValue(state,action)
