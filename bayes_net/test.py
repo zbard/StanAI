@@ -44,6 +44,24 @@ def hw2_bayes_net():
     evidence = [("X1",True)]
     print enumeration_custom(query,evidence, bn)
 
+def midterm_test():
+    A_prob_table = [.5,.5]
+    node1 = Event("A",[],A_prob_table)
+    B_prob_table = [.8,.2,.8,.2]
+    node2 = Event("B",[node1],B_prob_table)
+    C_prob_table = [.6,.4,.2,.8]
+    node3 = Event("C",[node1],C_prob_table)
+    bn = Bayes_net([node1,node2,node3])
+    
+    query = [("B",True)]
+    evidence = [("C",True)]
+    print enumeration_custom(query,evidence, bn)
+    
+    query = [("C",True)]
+    evidence = [("B",True)]
+    print enumeration_custom(query,evidence, bn)
+
+midterm_test()
 sanity_test()
 two_cancer_example()
 hw2_bayes_net()

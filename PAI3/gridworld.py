@@ -297,9 +297,14 @@ def getMazeGrid():
           ['S',' ',' ',' ']]
   return Gridworld(grid)
 
+#def getHomeWorkGrid():
+#  grid = [[' ',' ','S',+200],
+#          [' ','#',' ',' '],
+#          [' ',' ',' ',' ']]
+#  return Gridworld(grid)
+
 def getHomeWorkGrid():
-  grid = [[' ',' ','S',+200],
-          [' ','#',' ',' '],
+  grid = [['S',' ','#',+100],
           [' ',' ',' ',' ']]
   return Gridworld(grid)
 

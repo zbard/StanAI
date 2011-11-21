@@ -92,6 +92,12 @@ class bag_of_words:
         query = [("MSG",msg_class)]
         print enumeration_custom(query,evidence,self.bn)
 
+print "Mid1 - q8"
+example = bag_of_words(["old","new"],1)
+example.create_bayes_net()
+example.probability_of_msg([],"old")
+example.probability_of_word("TOP","old")
+example.probability_of_msg(["TOP"],"old")
                     
 print "Example 1"
 example = bag_of_words(["spam","ham"],0)
