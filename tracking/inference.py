@@ -256,6 +256,7 @@ class ParticleFilter(InferenceModule):
     #particleWeights = util.Counter()
 
     for i in range(self.numParticles):
+        # <Should I resample ? Or just use particle translation>
         j = random.choice(self.particles)
         newPosDist = self.getPositionDistribution(
                 self.setGhostPosition(gameState, j))
@@ -368,8 +369,13 @@ class JointParticleFilter:
     """
     newParticles = []
     for oldParticle in self.particles:
-      newParticle = list(oldParticle) # A list of ghost positions
-      "*** YOUR CODE HERE ***"
+      newParticle = [] 
+      oldPos = list(oldParticle) # A list of ghost positions
+      for i in range(self.numGhosts):
+        newPosDist = getPositionDistributionForGhost(
+                    setGhostPositions(gameState, oldPos),
+                    i + 1, self.ghostAgents[i])
+        newParticle.append(util.sampleFromCounter(newPosDist))
       newParticles.append(tuple(newParticle))
     self.particles = newParticles
   
@@ -399,9 +405,41 @@ class JointParticleFilter:
     noisyDistances = gameState.getNoisyGhostDistances()
     if len(noisyDistances) < self.numGhosts: return
     emissionModels = [busters.getObservationDistribution(dist) for dist in noisyDistances]
+    particleWeights = util.Counter()
 
-    "*** YOUR CODE HERE ***"
-  
+    for particle in self.particles:
+        #particleWeights[particle] = 1
+        oldPos = list(particle)
+        for i in range(self.numGhosts):
+            p = oldPos[i]
+            trueDistance = util.manhattanDistance(p, pacmanPosition)
+            # To handle zero probabilities when in jail
+            #particleWeights[particle] *= emissionModels[i][trueDistance]
+            particleWeights[particle] += emissionModels[i][trueDistance]
+    particleWeights.normalize()
+   
+    # Handle case for all weights are 0
+    if not particleWeights.totalCount():
+        print "Re init"
+        self.initializeParticles()
+    else :
+        # Resample
+        self.particles = []
+        for i in range(self.numParticles):
+            p = util.sampleFromCounter(particleWeights)
+            self.particles.append(p)
+
+    # Handle jail cells
+    for i in range(self.numGhosts):
+        if noisyDistances[i] == 999:
+            newParticles = []
+            for particle in self.particles:
+                oldPos = list(particle)
+                oldPos[i] = (2*i + 1, 1)
+                newParticles.append(tuple(oldPos))
+            self.particles = newParticles
+ 
+
   def getBeliefDistribution(self):
     dist = util.Counter()
     for part in self.particles: dist[part] += 1
