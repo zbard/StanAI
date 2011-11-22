@@ -224,20 +224,21 @@ class ParticleFilter(InferenceModule):
 
     for p in self.legalPositions:
         # Noise - is it helping ?
-        particleWeights[p] = .001 + self.particleWeights[p] 
+        particleWeights[p] = 1 
     particleWeights.normalize()
     for p in self.particles:
         trueDistance = util.manhattanDistance(p, pacmanPosition)
-        particleWeights[p] += emissionModel[trueDistance]
+        # Hardcoded : uggh. priority to current particles
+        particleWeights[p] += 10 * emissionModel[trueDistance]
     particleWeights.normalize()
 
     self.particles = []
-    self.particleWeights = util.Counter()
+    #self.particleWeights = util.Counter()
     for i in range(self.numParticles):
         p = util.sampleFromCounter(particleWeights)
         self.particles.append(p)
-        self.particleWeights[p] = particleWeights[p]
-    self.particleWeights.normalize()
+        #self.particleWeights[p] = particleWeights[p]
+    #self.particleWeights.normalize()
         
   def elapseTime(self, gameState):
     """
@@ -252,20 +253,20 @@ class ParticleFilter(InferenceModule):
     position.
     """
     particles = [] 
-    particleWeights = util.Counter()
+    #particleWeights = util.Counter()
 
     for i in range(self.numParticles):
-        j = util.sampleFromCounter(self.particleWeights)
+        j = random.choice(self.particles)
         newPosDist = self.getPositionDistribution(
                 self.setGhostPosition(gameState, j))
         p = util.sampleFromCounter(newPosDist)
         particles.append(p)
         # Calculate w = P(z|p) in observe() - I think ..
-        particleWeights[p] = self.particleWeights[j]
+        #particleWeights[p] = self.particleWeights[j]
 
     self.particles = particles
-    self.particleWeights = particleWeights
-    self.particleWeights.normalize()
+    #self.particleWeights = particleWeights
+    #self.particleWeights.normalize()
     
 
   def getBeliefDistribution(self):
