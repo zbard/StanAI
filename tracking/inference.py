@@ -26,6 +26,9 @@ class InferenceModule:
     self.ghostAgent = ghostAgent
     self.index = ghostAgent.index
     
+  def getJailPosition(self):
+     return (2 * self.ghostAgent.index - 1, 1)
+  
   def getPositionDistribution(self, gameState):
     """
     Returns a distribution over successor positions of the ghost from the given gameState.
@@ -115,13 +118,19 @@ class ExactInference(InferenceModule):
     
     "*** YOUR CODE HERE ***"
     # Replace this code with a correct observation update
+    # Be sure to handle the jail.
+    if noisyDistance == None:
+        self.beliefs = util.Counter()
+        self.beliefs[self.getJailPosition()] = 1
+        return
+
     allPossible = util.Counter()
     for p in self.legalPositions:
       trueDistance = util.manhattanDistance(p, pacmanPosition)
-      if emissionModel[trueDistance] > 0: allPossible[p] = 1.0
+      if emissionModel[trueDistance] > 0: 
+        allPossible[p] = self.beliefs[p]*emissionModel[trueDistance]
     allPossible.normalize()
         
-    "*** YOUR CODE HERE ***"
     self.beliefs = allPossible
     
   def elapseTime(self, gameState):
@@ -168,6 +177,18 @@ class ExactInference(InferenceModule):
     """
     
     "*** YOUR CODE HERE ***"
+    if self.beliefs[self.getJailPosition()]:
+        return
+
+    allPossible = util.Counter()
+    newPosDist = self.beliefs
+    for oldpos in self.legalPositions:
+      newPosDist = self.getPositionDistribution(self.setGhostPosition(gameState, oldpos))
+      for newPos, prob in newPosDist.items():
+          allPossible[newPos] += self.beliefs[oldpos]* prob
+    allPossible.normalize()
+        
+    self.beliefs = allPossible
 
   def getBeliefDistribution(self):
     return self.beliefs
