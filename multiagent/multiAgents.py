@@ -11,6 +11,7 @@ from game import Directions
 import random, util
 
 from game import Agent
+import featureExtractors
 
 class ReflexAgent(Agent):
   """
@@ -21,7 +22,8 @@ class ReflexAgent(Agent):
     it in any way you see fit, so long as you don't touch our method
     headers.
   """
-
+  def __init__(self):
+      self. evalclass = featureExtractors.SimpleExtractor()
 
   def getAction(self, gameState):
     """
@@ -68,7 +70,11 @@ class ReflexAgent(Agent):
     newScaredTimes = [ghostState.scaredTimer for ghostState in newGhostStates]
 
     "*** YOUR CODE HERE ***"
-    return successorGameState.getScore()
+    #Use reinforcment feat extractor
+    f = self.evalclass.getFeatures(currentGameState,action)
+    e = successorGameState.getScore() 
+    e += f
+    return e
 
 def scoreEvaluationFunction(currentGameState):
   """

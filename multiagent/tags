@@ -28,6 +28,7 @@ ExpectimaxAgent	multiAgents.py	/^class ExpectimaxAgent(MultiAgentSearchAgent):$/
 FOOD_COLOR	graphicsDisplay.py	/^FOOD_COLOR = formatColor(1,1,1)$/;"	v
 FOOD_SIZE	graphicsDisplay.py	/^FOOD_SIZE = 0.1$/;"	v
 FRAME_NUMBER	graphicsDisplay.py	/^FRAME_NUMBER = 0$/;"	v
+FeatureExtractor	featureExtractors.py	/^class FeatureExtractor:  $/;"	c
 FirstPersonPacmanGraphics	graphicsDisplay.py	/^class FirstPersonPacmanGraphics(PacmanGraphics):$/;"	c
 GHOST_COLORS	graphicsDisplay.py	/^GHOST_COLORS = []$/;"	v
 GHOST_SHAPE	graphicsDisplay.py	/^GHOST_SHAPE = [$/;"	v
@@ -53,6 +54,7 @@ Layout	layout.py	/^class Layout:$/;"	c
 LeftTurnAgent	pacmanAgents.py	/^class LeftTurnAgent(game.Agent):$/;"	c
 MinimaxAgent	multiAgents.py	/^class MinimaxAgent(MultiAgentSearchAgent):$/;"	c
 MultiAgentSearchAgent	multiAgents.py	/^class MultiAgentSearchAgent(Agent):$/;"	c
+MyExtractor	featureExtractors.py	/^class MyExtractor(FeatureExtractor):$/;"	c
 NORTH	game.py	/^  NORTH = 'North'$/;"	v	class:Directions
 NORTH_KEY	keyboardAgents.py	/^  NORTH_KEY = 'i' $/;"	v	class:KeyboardAgent2
 NORTH_KEY	keyboardAgents.py	/^  NORTH_KEY = 'w' $/;"	v	class:KeyboardAgent
@@ -88,6 +90,7 @@ STOP	game.py	/^  STOP = 'Stop'$/;"	v	class:Directions
 STOP_KEY	keyboardAgents.py	/^  STOP_KEY = 'q'$/;"	v	class:KeyboardAgent
 STOP_KEY	keyboardAgents.py	/^  STOP_KEY = 'u'$/;"	v	class:KeyboardAgent2
 SearchProblem	search.py	/^class SearchProblem:$/;"	c
+SimpleExtractor	featureExtractors.py	/^class SimpleExtractor(FeatureExtractor):$/;"	c
 Stack	util.py	/^class Stack:$/;"	c
 TEAM_COLORS	graphicsDisplay.py	/^TEAM_COLORS = GHOST_COLORS[:2]$/;"	v
 TIME_PENALTY	pacman.py	/^TIME_PENALTY = 1 # Number of points lost each round$/;"	v
@@ -129,6 +132,7 @@ __init__	graphicsDisplay.py	/^  def __init__(self, zoom = 1.0, showGhosts = True
 __init__	graphicsDisplay.py	/^  def __init__(self, zoom=1.0, frameTime=0.0, capture=False):$/;"	m	class:PacmanGraphics
 __init__	keyboardAgents.py	/^  def __init__( self, index = 0 ):$/;"	m	class:KeyboardAgent
 __init__	layout.py	/^  def __init__(self, layoutText):$/;"	m	class:Layout
+__init__	multiAgents.py	/^  def __init__(self):$/;"	m	class:ReflexAgent
 __init__	multiAgents.py	/^  def __init__(self, evalFn = 'scoreEvaluationFunction', depth = '2'):$/;"	m	class:MultiAgentSearchAgent
 __init__	pacman.py	/^  def __init__( self, prevState = None ):$/;"	m	class:GameState
 __init__	pacman.py	/^  def __init__(self, timeout=30):$/;"	m	class:ClassicGameRules
@@ -212,6 +216,8 @@ clearExpandedCells	graphicsDisplay.py	/^  def clearExpandedCells(self):$/;"	m	cl
 clearIcon	graphicsDisplay.py	/^  def clearIcon(self):$/;"	m	class:InfoPane
 clearMessage	graphicsDisplay.py	/^  def clearMessage(self):$/;"	m	class:InfoPane
 clear_screen	graphicsUtils.py	/^def clear_screen(background=None):$/;"	f
+closestFood	featureExtractors.py	/^def closestFood(pos, food, walls):$/;"	f
+closestObject	featureExtractors.py	/^def closestObject(pos, objects, walls):$/;"	f
 collide	pacman.py	/^  collide = staticmethod( collide )$/;"	v	class:GhostRules
 collide	pacman.py	/^  def collide( state, ghostState, agentIndex):$/;"	m	class:GhostRules
 colorToVector	graphicsUtils.py	/^def colorToVector(color):$/;"	f
@@ -233,6 +239,7 @@ depthFirstSearch	search.py	/^def depthFirstSearch(problem):$/;"	f
 dfs	search.py	/^dfs = depthFirstSearch$/;"	v
 directionToVector	game.py	/^  def directionToVector(direction, speed = 1.0):$/;"	m	class:Actions
 directionToVector	game.py	/^  directionToVector = staticmethod(directionToVector)$/;"	v	class:Actions
+distAllObject	featureExtractors.py	/^def distAllObject(pos, objects, walls):$/;"	f
 divideAll	util.py	/^  def divideAll(self, divisor):$/;"	m	class:Counter
 draw	textDisplay.py	/^  def draw(self, state):$/;"	m	class:NullGraphics
 draw	textDisplay.py	/^  def draw(self, state):$/;"	m	class:PacmanGraphics
@@ -281,6 +288,9 @@ getDistribution	ghostAgents.py	/^  def getDistribution( self, state ):$/;"	m	cla
 getDistribution	ghostAgents.py	/^  def getDistribution( self, state ):$/;"	m	class:RandomGhost
 getDistribution	ghostAgents.py	/^  def getDistribution(self, state):$/;"	m	class:GhostAgent
 getEndpoints	graphicsDisplay.py	/^  def getEndpoints(self, direction, position=(0,0)):$/;"	m	class:PacmanGraphics
+getFeatures	featureExtractors.py	/^  def getFeatures(self, state, action):    $/;"	m	class:FeatureExtractor
+getFeatures	featureExtractors.py	/^  def getFeatures(self, state, action):$/;"	m	class:MyExtractor
+getFeatures	featureExtractors.py	/^  def getFeatures(self, state, action):$/;"	m	class:SimpleExtractor
 getFood	pacman.py	/^  def getFood(self):$/;"	m	class:GameState
 getFurthestCorner	layout.py	/^  def getFurthestCorner(self, pacPos):$/;"	m	class:Layout
 getGhostColor	graphicsDisplay.py	/^  def getGhostColor(self, ghost, ghostIndex):$/;"	m	class:FirstPersonPacmanGraphics
@@ -376,6 +386,7 @@ newGame	pacman.py	/^  def newGame( self, layout, pacmanAgent, ghostAgents, displ
 normalize	util.py	/^  def normalize(self):$/;"	m	class:Counter
 normalize	util.py	/^def normalize(vectorOrCounter):$/;"	f
 nullHeuristic	search.py	/^def nullHeuristic(state, problem=None):$/;"	f
+numCloseObjects	featureExtractors.py	/^def numCloseObjects(pos, objects, walls,max_dist):$/;"	f
 packBits	game.py	/^  def packBits(self):$/;"	m	class:Grid
 parseAgentArgs	pacman.py	/^def parseAgentArgs(str):$/;"	f
 pause	textDisplay.py	/^  def pause(self):$/;"	m	class:NullGraphics
