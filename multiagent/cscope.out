@@ -1,0 +1,29049 @@
+cscope 15 $HOME/Jazz/StanAI/multiagent               0000129803
+	@featureExtractors.py
+
+1 #ã©u»ExŒaùÜs.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+11 
+äom
+ 
+game
+ 
+impÜt
+ 
+	gDœeùiÚs
+, 
+AùiÚs
+
+
+12 
+impÜt
+ 
+ut
+
+
+14 
+şass
+ 
+	gF—tu»ExŒaùÜ
+:
+
+15 
+def
+ 
+	$g‘F—tu»s
+(
+£lf
+, 
+¡©e
+, 
+aùiÚ
+):
+
+17 
+R‘uºs
+ 
+a
+ 
+diù
+ 
+äom
+ 
+ã©u»s
+ 
+to
+ 
+couÁs
+
+
+18 
+Usu®ly
+, 
+the
+ 
+couÁ
+ 
+wl
+ 
+ju¡
+ 
+be
+ 1.0 
+
+19 
+šdiÿtÜ
+ 
+funùiÚs
+.
+
+21 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+23 
+def
+ 
+	$şo£¡Food
+(
+pos
+, 
+food
+, 
+w®ls
+):
+
+25 
+şo£¡Food
+ -- 
+this
+ 
+is
+ 
+sim¬
+ 
+to
+ 
+the
+ 
+funùiÚ
+ 
+th©
+ 
+we
+ 
+have
+
+
+26 
+wÜked
+ 
+Ú
+ 
+š
+ 
+the
+ 
+£¬ch
+ 
+´ojeù
+; 
+h”e
+ 
+™s
+ 
+®l
+ iÀ
+Úe
+ 
+¶aû
+
+
+28 
+äšge
+ = [(
+pos
+[0],…os[1], 0)]
+
+29 
+ex·nded
+ = 
+	$£t
+()
+
+30 
+äšge
+:
+
+31 
+pos_x
+, 
+pos_y
+, 
+di¡
+ = 
+äšge
+.
+	$pİ
+(0)
+
+32 ià(
+pos_x
+, 
+pos_y
+è
+š
+ 
+ex·nded
+:
+
+34 
+ex·nded
+.
+	`add
+((
+pos_x
+, 
+pos_y
+))
+
+35 #ià
+we
+ 
+fšd
+ 
+a
+ 
+food
+ 
+©
+ 
+this
+ 
+loÿtiÚ
+ 
+th’
+ 
+ex™
+
+
+36 
+food
+[
+pos_x
+][
+pos_y
+]:
+
+37  
+di¡
+
+
+38 #Ùh”wi£ 
+¥»ad
+ 
+out
+ 
+äom
+ 
+the
+ 
+loÿtiÚ
+ 
+to
+ 
+™s
+ 
+Ãighbours
+
+
+39 
+nbrs
+ = 
+AùiÚs
+.
+	`g‘Leg®NeighbÜs
+((
+pos_x
+, 
+pos_y
+), 
+w®ls
+)
+
+40 
+nbr_x
+, 
+nbr_y
+ 
+š
+ 
+nbrs
+:
+
+41 
+äšge
+.
+	`­³nd
+((
+nbr_x
+, 
+nbr_y
+, 
+di¡
++1))
+
+42 #nØ
+food
+ 
+found
+
+
+43  
+NÚe
+
+
+45 
+def
+ 
+	$numClo£Objeùs
+(
+pos
+, 
+objeùs
+, 
+w®ls
+,
+max_di¡
+):
+
+46 
+äšge
+ = [(
+pos
+[0],…os[1], 0)]
+
+47 
+ex·nded
+ = 
+	$£t
+()
+
+48 
+num
+ = 0
+
+49 
+äšge
+:
+
+50 
+pos_x
+, 
+pos_y
+, 
+di¡
+ = 
+äšge
+.
+	$pİ
+(0)
+
+51 ià(
+pos_x
+, 
+pos_y
+è
+š
+ 
+ex·nded
+:
+
+53 
+di¡
+ > 
+max_di¡
+:
+
+54  
+num
+
+
+55 
+ex·nded
+.
+	`add
+((
+pos_x
+, 
+pos_y
+))
+
+56 #ià
+we
+ 
+fšd
+ 
+a
+ 
+rg‘
+ 
+objeù
+ 
+©
+ 
+th’
+ 
+add
+ 
+to
+ 
+num
+
+
+57 ià(
+pos_x
+,
+pos_y
+è
+š
+ 
+objeùs
+:
+
+58 
+num
+ += 1
+
+59 #Ùh”wi£ 
+¥»ad
+ 
+out
+ 
+äom
+ 
+the
+ 
+loÿtiÚ
+ 
+to
+ 
+™s
+ 
+Ãighbours
+
+
+60 
+nbrs
+ = 
+AùiÚs
+.
+	`g‘Leg®NeighbÜs
+((
+pos_x
+, 
+pos_y
+), 
+w®ls
+)
+
+61 
+nbr_x
+, 
+nbr_y
+ 
+š
+ 
+nbrs
+:
+
+62 
+äšge
+.
+	`­³nd
+((
+nbr_x
+, 
+nbr_y
+, 
+di¡
++1))
+
+65 
+def
+ 
+	$şo£¡Objeù
+(
+pos
+, 
+objeùs
+, 
+w®ls
+):
+
+66 
+äšge
+ = [(
+pos
+[0],…os[1], 0)]
+
+67 
+ex·nded
+ = 
+	$£t
+()
+
+68 
+äšge
+:
+
+69 
+pos_x
+, 
+pos_y
+, 
+di¡
+ = 
+äšge
+.
+	$pİ
+(0)
+
+70 ià(
+pos_x
+, 
+pos_y
+è
+š
+ 
+ex·nded
+:
+
+72 
+ex·nded
+.
+	`add
+((
+pos_x
+, 
+pos_y
+))
+
+73 #ià
+we
+ 
+fšd
+ 
+a
+ 
+rg‘
+ 
+objeù
+ 
+©
+ 
+this
+ 
+loÿtiÚ
+ 
+th’
+ 
+ex™
+
+
+74 ià(
+pos_x
+,
+pos_y
+è
+š
+ 
+objeùs
+:
+
+75  
+di¡
+
+
+76 #Ùh”wi£ 
+¥»ad
+ 
+out
+ 
+äom
+ 
+the
+ 
+loÿtiÚ
+ 
+to
+ 
+™s
+ 
+Ãighbours
+
+
+77 
+nbrs
+ = 
+AùiÚs
+.
+	`g‘Leg®NeighbÜs
+((
+pos_x
+, 
+pos_y
+), 
+w®ls
+)
+
+78 
+nbr_x
+, 
+nbr_y
+ 
+š
+ 
+nbrs
+:
+
+79 
+äšge
+.
+	`­³nd
+((
+nbr_x
+, 
+nbr_y
+, 
+di¡
++1))
+
+80  
+NÚe
+
+
+82 
+def
+ 
+	$di¡AÎObjeù
+(
+pos
+, 
+objeùs
+, 
+w®ls
+):
+
+83 
+äšge
+ = [(
+pos
+[0],…os[1], 0)]
+
+84 
+ex·nded
+ = 
+	$£t
+()
+
+85 
+®l_di¡ªûs
+ = []
+
+86 
+äšge
+:
+
+87 
+pos_x
+, 
+pos_y
+, 
+di¡
+ = 
+äšge
+.
+	$pİ
+(0)
+
+88 ià(
+pos_x
+, 
+pos_y
+è
+š
+ 
+ex·nded
+:
+
+90 
+ex·nded
+.
+	`add
+((
+pos_x
+, 
+pos_y
+))
+
+91 #Found 
+objeù
+
+
+92 ià(
+pos_x
+,
+pos_y
+è
+š
+ 
+objeùs
+:
+
+93 
+®l_di¡ªûs
+.
+	$­³nd
+(
+di¡
+)
+
+94 
+objeùs
+.
+	`»move
+((
+pos_x
+,
+pos_y
+))
+
+95 
+nÙ
+ 
+objeùs
+:
+
+96  
+®l_di¡ªûs
+
+
+97 #Ùh”wi£ 
+¥»ad
+ 
+out
+ 
+äom
+ 
+the
+ 
+loÿtiÚ
+ 
+to
+ 
+™s
+ 
+Ãighbours
+
+
+98 
+nbrs
+ = 
+AùiÚs
+.
+	`g‘Leg®NeighbÜs
+((
+pos_x
+, 
+pos_y
+), 
+w®ls
+)
+
+99 
+nbr_x
+, 
+nbr_y
+ 
+š
+ 
+nbrs
+:
+
+100 
+äšge
+.
+	`­³nd
+((
+nbr_x
+, 
+nbr_y
+, 
+di¡
++1))
+
+101 
+®l_di¡ªûs
+:
+
+102  
+®l_di¡ªûs
+
+
+103  
+NÚe
+
+
+106 
+şass
+ 
+	$Sim¶eExŒaùÜ
+(
+F—tu»ExŒaùÜ
+):
+
+108 
+def
+ 
+	$g‘F—tu»s
+(
+£lf
+, 
+¡©e
+, 
+aùiÚ
+):
+
+109 #exŒaù 
+the
+ 
+grid
+ 
+of
+ 
+food
+ 
+ªd
+ 
+w®l
+ 
+loÿtiÚs
+‡nd 
+g‘
+h
+gho¡
+†ocations
+
+110 
+food
+ = 
+¡©e
+.
+	$g‘Food
+()
+
+111 
+w®ls
+ = 
+¡©e
+.
+	$g‘W®ls
+()
+
+112 
+gho¡s
+ = 
+¡©e
+.
+	$g‘Gho¡Pos™iÚs
+()
+
+114 
+ã©u»s
+ = 
+ut
+.
+	$CouÁ”
+()
+
+116 
+ã©u»s
+["bias"] = 1.0
+
+118 #compu‹ 
+the
+ 
+loÿtiÚ
+ 
+of
+ 
+·cmª
+ 
+aá”
+ 
+he
+ 
+kes
+h
+aùiÚ
+
+
+119 
+x
+, 
+y
+ = 
+¡©e
+.
+	$g‘PacmªPos™iÚ
+()
+
+120 
+dx
+, 
+dy
+ = 
+AùiÚs
+.
+	$dœeùiÚToVeùÜ
+(
+aùiÚ
+)
+
+121 
+Ãxt_x
+, 
+Ãxt_y
+ = (
+x
+ + 
+dx
+), (
+y
+ + 
+dy
+)
+
+123 #couÁ 
+the
+ 
+numb”
+ 
+of
+ 
+gho¡s
+ 1-
+¡•
+ 
+away
+
+
+124 
+ã©u»s
+["#-of-ghosts-1-step-away"] = 1 / (
+
+125 1 + 
+	`sum
+((
+Ãxt_x
+, 
+Ãxt_y
+è
+š
+ 
+AùiÚs
+.
+	$g‘Leg®NeighbÜs
+(
+g
+, 
+w®ls
+èg 
+š
+ 
+gho¡s
+))
+
+127 
+di¡
+ = 
+	`şo£¡Food
+((
+Ãxt_x
+, 
+Ãxt_y
+), 
+food
+, 
+w®ls
+)
+
+128 
+di¡
+ 
+is
+ 
+NÚe
+:
+
+129 
+di¡
+ = 0
+
+130 
+ã©u»s
+["şo£¡-food"] = 1 / ( 1+ ((
+di¡
+è/ (
+w®ls
+.
+width
+ * w®ls.
+height
+)) )
+
+132  
+ã©u»s
+.
+	$tÙ®CouÁ
+()
+
+136 
+şass
+ 
+	$MyExŒaùÜ
+(
+F—tu»ExŒaùÜ
+):
+
+137 
+def
+ 
+	$g‘F—tu»s
+(
+£lf
+, 
+¡©e
+, 
+aùiÚ
+):
+
+138 
+foodpos
+ = 
+¡©e
+.
+	$g‘Food
+()
+
+139 
+foodpos
+ = foodpos.
+	$asLi¡
+()
+
+140 
+w®ls
+ = 
+¡©e
+.
+	$g‘W®ls
+()
+
+141 
+ÿpsuËs
+ = 
+¡©e
+.
+	$g‘C­suËs
+()
+
+142 
+gho¡s
+ = 
+¡©e
+.
+	$g‘Gho¡Pos™iÚs
+()
+
+144 
+Sim¶eExŒaùÜObjeù
+ = 
+	$Sim¶eExŒaùÜ
+()
+
+145 #AÎ 
+this
+ 
+to
+ 
+avoid
+ 
+SticM‘hod
+ 
+decÜ©Ü
+, 
+Ü
+ 
+subşassšg
+
+
+146 
+ã©u»s
+ = 
+Sim¶eExŒaùÜObjeù
+.
+	$g‘F—tu»s
+(
+¡©e
+,
+aùiÚ
+)
+
+148 #compu‹ 
+the
+ 
+loÿtiÚ
+ 
+of
+ 
+·cmª
+ 
+aá”
+ 
+he
+ 
+kes
+h
+aùiÚ
+
+
+149 
+x
+, 
+y
+ = 
+¡©e
+.
+	$g‘PacmªPos™iÚ
+()
+
+150 
+dx
+, 
+dy
+ = 
+AùiÚs
+.
+	$dœeùiÚToVeùÜ
+(
+aùiÚ
+)
+
+151 
+Ãxt_x
+, 
+Ãxt_y
+ = (
+x
+ + 
+dx
+), (
+y
+ + 
+dy
+)
+
+153 
+gho¡S‹s
+ = 
+¡©e
+.
+	$g‘Gho¡S‹s
+()
+
+155 
+time_Ëá_fÜ_®l_Ãighbour_gho¡s
+ = []
+
+156 
+mš_time_Ëá_fÜ_®l_Ãighbour_gho¡s
+ = 0
+
+157 #Fšd 
+time
+ 
+Ëá
+ 
+®l
+ 
+Ãighbouršg
+ 
+gho¡s
+
+
+158 
+gho¡
+ 
+š
+ 
+gho¡S‹s
+:
+
+159 ià(
+Ãxt_x
+,
+Ãxt_y
+è
+š
+ 
+AùiÚs
+.
+	`g‘Leg®NeighbÜs
+(
+gho¡
+.
+	`g‘Pos™iÚ
+(),
+w®ls
+):
+
+160 
+time_Ëá_fÜ_®l_Ãighbour_gho¡s
+ +ğ[
+gho¡
+.
+sÿ»dTim”
+]
+
+161 #Fšd 
+mš
+ 
+time
+ 
+Ëá
+ 
+gho¡s
+ 
+to
+ 
+»maš
+ 
+—bË
+
+
+162 
+time_Ëá_fÜ_®l_Ãighbour_gho¡s
+:
+
+163 
+mš_time_Ëá_fÜ_®l_Ãighbour_gho¡s
+ = 
+	$mš
+(
+time_Ëá_fÜ_®l_Ãighbour_gho¡s
+)
+
+164 
+mš_time_Ëá_fÜ_®l_Ãighbour_gho¡s
+ > 1:
+
+165 
+ã©u»s
+["can-i-eat-ghosts"] = 1 / 10.0
+
+166 
+ã©u»s
+["#-of-ghosts-1-step-away"] = 0
+
+168 #di¡ 
+of
+ 
+şo£¡
+ 
+gho¡
+ - (
+¦ow
+ ?è
+A
+ 
+u£Ëss
+ 
+ã©u»
+ ?
+
+169 
+tÙ_size
+ = 
+w®ls
+.
+width
+*w®ls.
+height
+
+
+170 
+num_şo£_gho¡s
+ = 
+	`numClo£Objeùs
+((
+Ãxt_x
+, 
+Ãxt_y
+), 
+gho¡s
+, 
+w®ls
+,3)
+
+171 
+‹mp
+ = (1.0 + 
+num_şo£_gho¡s
+) / 10
+
+172 
+ã©u»s
+["no-of-şo£-gho¡s"] = 
+num_şo£_gho¡s
+ / 10.0
+
+174 #di¡ 
+of
+ 
+şo£¡
+ 
+	`ÿpsuË
+ (
+¦ow
+)
+
+175 
+di¡
+ = 
+	`şo£¡Objeù
+((
+Ãxt_x
+, 
+Ãxt_y
+), 
+ÿpsuËs
+, 
+w®ls
+)
+
+176 
+di¡
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+177 
+ã©u»s
+["şo£¡-ÿpsuË"] = (
+di¡
+è/ (
+w®ls
+.
+width
+ * w®ls.
+height
+)
+
+180 #Possibly 
+Œ­³d
+
+
+181 
+poss_aùiÚs
+ = 
+AùiÚs
+.
+	`g‘Leg®NeighbÜs
+((
+Ãxt_x
+,
+Ãxt_y
+),
+w®ls
+)
+
+182 
+poss_aùiÚs
+ = 
+	$£t
+(
+poss_aùiÚs
+)
+
+183 
+poss_gho¡_pos™iÚs
+ = []
+
+184 
+g
+ 
+š
+ 
+gho¡s
+:
+
+185 
+poss_gho¡_pos™iÚs
+ +ğ
+AùiÚs
+.
+	$g‘Leg®NeighbÜs
+(
+g
+, 
+w®ls
+)
+
+186 
+»maššg_aùiÚ
+ = 
+poss_aùiÚs
+ - 
+	$£t
+(
+poss_gho¡_pos™iÚs
+)
+
+187 
+nÙ
+ 
+»maššg_aùiÚ
+:
+
+188 
+ã©u»s
+["trapped"] = 1 / 10.0
+
+190  
+ã©u»s
+
+
+	@game.py
+
+1 #game.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+äom
+ 
+ut
+ 
+impÜt
+ *
+
+10 
+äom
+ 
+ut
+ 
+impÜt
+ 
+¿i£NÙDefšed
+
+
+11 
+impÜt
+ 
+	gtime
+, 
+os
+
+
+12 
+impÜt
+ 
+Œaûback
+
+
+14 
+	gŒy
+:
+
+15 
+impÜt
+ 
+bošc
+
+
+16 
+_BOINC_ENABLED
+ = 
+True
+
+
+17 
+exû±
+:
+
+18 
+_BOINC_ENABLED
+ = 
+F®£
+
+
+20 #######################
+#P¬t 
+wÜth
+ 
+»adšg
+ #
+#######################
+
+
+21 
+şass
+ 
+Ag’t
+:
+
+23 
+An
+ 
+ag’t
+ 
+mu¡
+ 
+defše
+ 
+a
+ 
+g‘AùiÚ
+ 
+m‘hod
+, 
+but
+ 
+may
+ 
+®so
+ defš
+the
+
+
+24 
+fŞlowšg
+ 
+m‘hods
+ 
+which
+ 
+wl
+ 
+be
+ 
+ÿÎed
+ 
+they
+ 
+	gexi¡
+:
+
+26 
+def
+ 
+	$»gi¡”In™ŸlS‹
+(
+£lf
+, 
+¡©e
+): #š¥eù 
+the
+ 
+¡¬tšg
+ state
+
+28 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+šdex
+=0):
+
+29 
+£lf
+.
+šdex
+ = index
+
+31 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+¡©e
+):
+
+33 
+The
+ 
+Ag’t
+ 
+wl
+ 
+»ûive
+ 
+a
+ 
+	`GameS‹
+ (
+äom
+ 
+e™h”
+ {
+·cmª
+, 
+ÿ±u»
+, 
+sÚ¬
+}.pyèªd
+
+34 
+mu¡
+  
+ª
+ 
+aùiÚ
+ 
+äom
+ 
+	gDœeùiÚs
+.{
+	gNÜth
+, 
+	gSouth
+, 
+	gEa¡
+, 
+	gWe¡
+, 
+	gStİ
+}
+
+36 
+	$¿i£NÙDefšed
+()
+
+38 
+şass
+ 
+DœeùiÚs
+:
+
+39 
+NORTH
+ = 'North'
+
+40 
+SOUTH
+ = 'South'
+
+41 
+EAST
+ = 'East'
+
+42 
+WEST
+ = 'West'
+
+43 
+STOP
+ = 'Stop'
+
+45 
+LEFT
+ = {
+NORTH
+: 
+WEST
+,
+
+46 
+SOUTH
+: 
+EAST
+,
+
+47 
+EAST
+: 
+NORTH
+,
+
+48 
+WEST
+: 
+SOUTH
+,
+
+49 
+STOP
+: 
+	}
+STOP}
+
+51 
+RIGHT
+ = 
+diù
+([(
+y
+,
+x
+èx, y 
+š
+ 
+LEFT
+.
+™ems
+()])
+
+53 
+	gREVERSE
+ = {
+NORTH
+: 
+SOUTH
+,
+
+54 
+SOUTH
+: 
+NORTH
+,
+
+55 
+EAST
+: 
+WEST
+,
+
+56 
+WEST
+: 
+EAST
+,
+
+57 
+STOP
+: STOP}
+
+59 
+şass
+ 
+CÚfigu¿tiÚ
+:
+
+61 
+A
+ 
+CÚfigu¿tiÚ
+ 
+hŞds
+ 
+	$the
+ (
+x
+,
+y
+è
+coÜdš©e
+ 
+of
+ 
+a
+ 
+ch¬aù”
+, 
+®Úg
+ 
+w™h
+ 
+™s
+
+
+62 
+Œav–šg
+ 
+dœeùiÚ
+.
+
+64 
+The
+ 
+cÚv’tiÚ
+ 
+pos™iÚs
+, 
+like
+ 
+a
+ 
+g¿ph
+, 
+is
+ 
+	$th©
+ (0,0è
+is
+ 
+the
+ 
+low”
+ 
+Ëá
+ 
+cÜÃr
+, 
+x
+ 
+šü—£s
+
+
+65 
+hÜizÚÎy
+ 
+ªd
+ 
+y
+ 
+šü—£s
+ 
+v”tiÿÎy
+. 
+Th”efÜe
+, 
+nÜth
+ 
+is
+ 
+the
+ 
+dœeùiÚ
+ 
+of
+ 
+šü—sšg
+ y, 
+	`Ü
+ (0,1).
+
+68 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+pos
+, 
+dœeùiÚ
+):
+
+69 
+£lf
+.
+pos
+ =…os
+
+70 
+£lf
+.
+dœeùiÚ
+ = direction
+
+72 
+def
+ 
+	$g‘Pos™iÚ
+(
+£lf
+):
+
+73  (
+£lf
+.
+pos
+)
+
+75 
+def
+ 
+	$g‘DœeùiÚ
+(
+£lf
+):
+
+76  
+£lf
+.
+dœeùiÚ
+
+
+78 
+def
+ 
+	$isIÁeg”
+(
+£lf
+):
+
+79 
+x
+,
+y
+ = 
+£lf
+.
+pos
+
+
+80  
+x
+ =ğ(xè
+ªd
+ 
+y
+ == (y)
+
+82 
+def
+ 
+	$__eq__
+(
+£lf
+, 
+Ùh”
+):
+
+83 
+Ùh”
+ =ğ
+NÚe
+:  
+F®£
+
+
+84  (
+£lf
+.
+pos
+ =ğ
+Ùh”
+.po 
+ªd
+ s–f.
+dœeùiÚ
+ == other.direction)
+
+86 
+def
+ 
+	$__hash__
+(
+£lf
+):
+
+87 
+x
+ = 
+	$hash
+(
+£lf
+.
+pos
+)
+
+88 
+y
+ = 
+	$hash
+(
+£lf
+.
+dœeùiÚ
+)
+
+89  
+	`hash
+(
+x
+ + 13 * 
+y
+)
+
+91 
+def
+ 
+	$__¡r__
+(
+£lf
+):
+
+92  "(x,y)="+
+	`¡r
+(
+£lf
+.
+pos
+)+", "+
+	$¡r
+(
+£lf
+.
+dœeùiÚ
+)
+
+94 
+def
+ 
+	$g’”©eSucûssÜ
+(
+£lf
+, 
+veùÜ
+):
+
+96 
+G’”©es
+ 
+a
+ 
+Ãw
+ 
+cÚfigu¿tiÚ
+ 
+»ached
+ 
+by
+ 
+Œª¦©šg
+ 
+the
+ 
+cu¼’t
+
+
+97 
+cÚfigu¿tiÚ
+ 
+by
+ 
+the
+ 
+aùiÚ
+ 
+veùÜ
+. 
+This
+ 
+is
+ 
+a
+ 
+low
+-
+Ëv–
+ 
+ÿÎ
+ 
+ªd
+ 
+dÛs
+
+
+98 
+nÙ
+ 
+©‹m±
+ 
+to
+ 
+»¥eù
+ 
+the
+ 
+Ëg®™y
+ 
+of
+h
+movem’t
+.
+
+100 
+AùiÚs
+ 
+¬e
+ 
+movem’t
+ 
+veùÜs
+.
+
+102 
+x
+, 
+y
+ğ
+£lf
+.
+pos
+
+
+103 
+dx
+, 
+dy
+ = 
+veùÜ
+
+
+104 
+dœeùiÚ
+ = 
+AùiÚs
+.
+	$veùÜToDœeùiÚ
+(
+veùÜ
+)
+
+105 
+dœeùiÚ
+ =ğ
+DœeùiÚs
+.
+STOP
+:
+
+106 
+dœeùiÚ
+ = 
+£lf
+.dœeùiÚ #Th”
+is
+ 
+no
+ 
+¡İ
+ direction
+
+107  
+	`CÚfigu¿tiÚ
+((
+x
+ + 
+dx
+, 
+y
++
+dy
+), 
+dœeùiÚ
+)
+
+109 
+şass
+ 
+Ag’tS‹
+:
+
+111 
+Ag’tS‹s
+ 
+hŞd
+ 
+the
+ 
+¡©e
+ 
+of
+ 
+ª
+ 
+	`ag’t
+ (
+cÚfigu¿tiÚ
+, 
+¥“d
+, 
+sÿ»d
+, 
+‘c
+).
+
+114 
+def
+ 
+	$__š™__
+Ğ
+£lf
+, 
+¡¬tCÚfigu¿tiÚ
+, 
+isPacmª
+ ):
+
+115 
+£lf
+.
+¡¬t
+ = 
+¡¬tCÚfigu¿tiÚ
+
+
+116 
+£lf
+.
+cÚfigu¿tiÚ
+ = 
+¡¬tCÚfigu¿tiÚ
+
+
+117 
+£lf
+.
+isPacmª
+ = isPacman
+
+118 
+£lf
+.
+sÿ»dTim”
+ = 0
+
+120 
+def
+ 
+	$__¡r__
+Ğ
+£lf
+ ):
+
+121 
+£lf
+.
+isPacmª
+:
+
+122  "Pacmª: " + 
+	$¡r
+Ğ
+£lf
+.
+cÚfigu¿tiÚ
+ )
+
+124  "Gho¡: " + 
+	$¡r
+Ğ
+£lf
+.
+cÚfigu¿tiÚ
+ )
+
+126 
+def
+ 
+	$__eq__
+Ğ
+£lf
+, 
+Ùh”
+ ):
+
+127 
+Ùh”
+ =ğ
+NÚe
+:
+
+128  
+F®£
+
+
+129  
+£lf
+.
+cÚfigu¿tiÚ
+ =ğ
+Ùh”
+.cÚfigu¿tiÚ 
+ªd
+ s–f.
+sÿ»dTim”
+ == other.scaredTimer
+
+131 
+def
+ 
+	$__hash__
+(
+£lf
+):
+
+132  
+	`hash
+(hash(
+£lf
+.
+cÚfigu¿tiÚ
+è+ 13 * 
+	$hash
+(
+£lf
+.
+sÿ»dTim”
+))
+
+134 
+def
+ 
+	$cİy
+Ğ
+£lf
+ ):
+
+135 
+¡©e
+ = 
+	$Ag’tS‹
+Ğ
+£lf
+.
+¡¬t
+, s–f.
+isPacmª
+ )
+
+136 
+¡©e
+.
+cÚfigu¿tiÚ
+ = 
+£lf
+.configuration
+
+137 
+¡©e
+.
+sÿ»dTim”
+ = 
+£lf
+.scaredTimer
+
+138  
+¡©e
+
+
+140 
+def
+ 
+	$g‘Pos™iÚ
+(
+£lf
+):
+
+141 
+£lf
+.
+cÚfigu¿tiÚ
+ =ğ
+NÚe
+:  None
+
+142  
+£lf
+.
+cÚfigu¿tiÚ
+.
+	$g‘Pos™iÚ
+()
+
+144 
+def
+ 
+	$g‘DœeùiÚ
+(
+£lf
+):
+
+145  
+£lf
+.
+cÚfigu¿tiÚ
+.
+	$g‘DœeùiÚ
+()
+
+147 
+şass
+ 
+Grid
+:
+
+149 
+A
+ 2-
+dim’siÚ®
+ 
+¬¿y
+ 
+of
+ 
+objeùs
+ 
+backed
+ 
+by
+ 
+a
+ 
+li¡
+ oà
+li¡s
+. 
+D©a
+ 
+is
+ 
+acûs£d
+
+
+150 
+vŸ
+ 
+grid
+[
+x
+][
+y
+] 
+	$wh”e
+ (
+x
+,
+y
+è
+¬e
+ 
+pos™iÚs
+ 
+Ú
+ 
+a
+ 
+Pacmª
+ 
+m­
+ 
+w™h
+ x 
+hÜizÚl
+,
+
+151 
+y
+ 
+v”tiÿl
+ 
+ªd
+ 
+the
+ 
+	$Üigš
+ (0,0è
+š
+ 
+the
+ 
+bÙtom
+ 
+Ëá
+ 
+cÜÃr
+.
+
+153 
+The
+ 
+__¡r__
+ 
+m‘hod
+ 
+cÚ¡ruùs
+ 
+ª
+ 
+ouut
+ 
+th©
+ 
+is
+ 
+Ü›Áed
+ 
+like
+ 
+a
+ 
+·cmª
+ 
+bßrd
+.
+
+155 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+width
+, 
+height
+, 
+š™ŸlV®ue
+=
+F®£
+, 
+b™R•»£Á©iÚ
+=
+NÚe
+):
+
+156 
+š™ŸlV®ue
+ 
+nÙ
+ 
+š
+ [
+F®£
+, 
+True
+]: 
+¿i£
+ 
+	`Exû±iÚ
+('Grids can only contain booleans')
+
+157 
+£lf
+.
+CELLS_PER_INT
+ = 30
+
+159 
+£lf
+.
+width
+ = width
+
+160 
+£lf
+.
+height
+ = height
+
+161 
+£lf
+.
+d©a
+ = [[
+š™ŸlV®ue
+ 
+y
+ 
+š
+ 
+	`¿nge
+(
+height
+)] 
+x
+ iÀ¿nge(
+width
+)]
+
+162 
+b™R•»£Á©iÚ
+:
+
+163 
+£lf
+.
+	$_uÅackB™s
+(
+b™R•»£Á©iÚ
+)
+
+165 
+def
+ 
+	$__g‘™em__
+(
+£lf
+, 
+i
+):
+
+166  
+£lf
+.
+d©a
+[
+i
+]
+
+168 
+def
+ 
+	$__£t™em__
+(
+£lf
+, 
+key
+, 
+™em
+):
+
+169 
+£lf
+.
+d©a
+[
+key
+] = 
+™em
+
+
+171 
+def
+ 
+	$__¡r__
+(
+£lf
+):
+
+172 
+out
+ = [[
+	`¡r
+(
+£lf
+.
+d©a
+[
+x
+][
+y
+])[0] x 
+š
+ 
+	`¿nge
+(£lf.
+width
+)] y iÀ¿nge(£lf.
+height
+)]
+
+173 
+out
+.
+	$»v”£
+()
+
+174  '\n'.
+	`još
+([''.
+	$još
+(
+x
+èx 
+š
+ 
+out
+])
+
+176 
+def
+ 
+	$__eq__
+(
+£lf
+, 
+Ùh”
+):
+
+177 
+Ùh”
+ =ğ
+NÚe
+:  
+F®£
+
+
+178  
+£lf
+.
+d©a
+ =ğ
+Ùh”
+.data
+
+180 
+def
+ 
+	$__hash__
+(
+£lf
+):
+
+181 #»tuº 
+	`hash
+(
+	`¡r
+(
+£lf
+))
+
+182 
+ba£
+ = 1
+
+183 
+h
+ = 0
+
+184 
+l
+ 
+š
+ 
+£lf
+.
+d©a
+:
+
+185 
+i
+ 
+š
+ 
+l
+:
+
+186 
+i
+:
+
+187 
+h
+ +ğ
+ba£
+
+
+188 
+ba£
+ *= 2
+
+189  
+	$hash
+(
+h
+)
+
+191 
+def
+ 
+	$cİy
+(
+£lf
+):
+
+192 
+g
+ = 
+	$Grid
+(
+£lf
+.
+width
+, s–f.
+height
+)
+
+193 
+g
+.
+d©a
+ = [
+x
+[:] x 
+š
+ 
+£lf
+.data]
+
+194  
+g
+
+
+196 
+def
+ 
+	$d“pCİy
+(
+£lf
+):
+
+197  
+£lf
+.
+	$cİy
+()
+
+199 
+def
+ 
+	$sh®lowCİy
+(
+£lf
+):
+
+200 
+g
+ = 
+	$Grid
+(
+£lf
+.
+width
+, s–f.
+height
+)
+
+201 
+g
+.
+d©a
+ = 
+£lf
+.data
+
+202  
+g
+
+
+204 
+def
+ 
+	$couÁ
+(
+£lf
+, 
+™em
+ =
+True
+ ):
+
+205  
+	`sum
+([
+x
+.
+	$couÁ
+(
+™em
+è
+x
+ 
+š
+ 
+£lf
+.
+d©a
+])
+
+207 
+def
+ 
+	$asLi¡
+(
+£lf
+, 
+key
+ = 
+True
+):
+
+208 
+li¡
+ = []
+
+209 
+x
+ 
+š
+ 
+	$¿nge
+(
+£lf
+.
+width
+):
+
+210 
+y
+ 
+š
+ 
+	$¿nge
+(
+£lf
+.
+height
+):
+
+211 
+£lf
+[
+x
+][
+y
+] =ğ
+key
+: 
+li¡
+.
+	`­³nd
+( (x,y) )
+
+212  
+li¡
+
+
+214 
+def
+ 
+	$·ckB™s
+(
+£lf
+):
+
+216 
+R‘uºs
+ 
+ª
+ 
+effic›Á
+ 
+li¡
+ 
+»´e£Á©iÚ
+
+
+218 (
+width
+, 
+height
+, 
+b™PackedIÁs
+...)
+
+220 
+b™s
+ = [
+£lf
+.
+width
+, s–f.
+height
+]
+
+221 
+cu¼’tIÁ
+ = 0
+
+222 
+i
+ 
+š
+ 
+	$¿nge
+(
+£lf
+.
+height
+ * s–f.
+width
+):
+
+223 
+b™
+ = 
+£lf
+.
+CELLS_PER_INT
+ - (
+i
+ % self.CELLS_PER_INT) - 1
+
+224 
+x
+, 
+y
+ = 
+£lf
+.
+	$_ûÎIndexToPos™iÚ
+(
+i
+)
+
+225 
+£lf
+[
+x
+][
+y
+]:
+
+226 
+cu¼’tIÁ
+ +ğ2 ** 
+b™
+
+
+227 ià(
+i
+ + 1è% 
+£lf
+.
+CELLS_PER_INT
+ == 0:
+
+228 
+b™s
+.
+	$­³nd
+(
+cu¼’tIÁ
+)
+
+229 
+cu¼’tIÁ
+ = 0
+
+230 
+b™s
+.
+	$­³nd
+(
+cu¼’tIÁ
+)
+
+231  
+	$tu¶e
+(
+b™s
+)
+
+233 
+def
+ 
+	$_ûÎIndexToPos™iÚ
+(
+£lf
+, 
+šdex
+):
+
+234 
+x
+ = 
+šdex
+ / 
+£lf
+.
+height
+
+
+235 
+y
+ = 
+šdex
+ % 
+£lf
+.
+height
+
+
+236  
+x
+, 
+y
+
+
+238 
+def
+ 
+	$_uÅackB™s
+(
+£lf
+, 
+b™s
+):
+
+240 
+Fls
+ 
+š
+ 
+d©a
+ 
+äom
+ 
+a
+ 
+b™
+-
+Ëv–
+ 
+»´e£Á©iÚ
+
+
+242 
+ûÎ
+ = 0
+
+243 
+·cked
+ 
+š
+ 
+b™s
+:
+
+244 
+b™
+ 
+š
+ 
+£lf
+.
+	$_uÅackIÁ
+(
+·cked
+, 
+£lf
+.
+CELLS_PER_INT
+):
+
+245 
+ûÎ
+ =ğ
+£lf
+.
+width
+ * s–f.
+height
+: 
+
+246 
+x
+, 
+y
+ = 
+£lf
+.
+	$_ûÎIndexToPos™iÚ
+(
+ûÎ
+)
+
+247 
+£lf
+[
+x
+][
+y
+] = 
+b™
+
+
+248 
+ûÎ
+ += 1
+
+250 
+def
+ 
+	$_uÅackIÁ
+(
+£lf
+, 
+·cked
+, 
+size
+):
+
+251 
+boŞs
+ = []
+
+252 
+·cked
+ < 0: 
+¿i£
+ 
+V®ueE¼Ü
+, "must be‡…ositive integer"
+
+253 
+i
+ 
+š
+ 
+	$¿nge
+(
+size
+):
+
+254 
+n
+ = 2 ** (
+£lf
+.
+CELLS_PER_INT
+ - 
+i
+ - 1)
+
+255 
+·cked
+ >ğ
+n
+:
+
+256 
+boŞs
+.
+	$­³nd
+(
+True
+)
+
+257 
+·cked
+ -ğ
+n
+
+
+259 
+boŞs
+.
+	$­³nd
+(
+F®£
+)
+
+260  
+boŞs
+
+
+262 
+def
+ 
+	$»cÚ¡™u‹Grid
+(
+b™R•
+):
+
+263 
+	$ty³
+(
+b™R•
+è
+is
+ 
+nÙ
+ 
+	`ty³
+((1,2)):
+
+264  
+b™R•
+
+
+265 
+width
+, 
+height
+ = 
+b™R•
+[:2]
+
+266  
+	`Grid
+(
+width
+, 
+height
+, 
+b™R•»£Á©iÚ
+ğ
+b™R•
+[2:])
+
+269 #P¬t 
+you
+ 
+shouldn
+'t haveo„ead #
+
+272 
+şass
+ 
+AùiÚs
+:
+
+274 
+A
+ 
+cŞËùiÚ
+ 
+of
+ 
+m‘hods
+ 
+mªuÏtšg
+ 
+move
+ 
+aùiÚs
+.
+
+277 
+_dœeùiÚs
+ = {
+DœeùiÚs
+.
+NORTH
+: (0, 1),
+
+278 
+DœeùiÚs
+.
+SOUTH
+: (0, -1),
+
+279 
+DœeùiÚs
+.
+EAST
+: (1, 0),
+
+280 
+DœeùiÚs
+.
+WEST
+: (-1, 0),
+
+281 
+DœeùiÚs
+.
+STOP
+: (0, 0)
+	}
+}
+
+283 
+_dœeùiÚsAsLi¡
+ = 
+_dœeùiÚs
+.
+	$™ems
+()
+
+285 
+TOLERANCE
+ = .001
+
+287 
+def
+ 
+	$»v”£DœeùiÚ
+(
+aùiÚ
+):
+
+288 
+aùiÚ
+ =ğ
+DœeùiÚs
+.
+NORTH
+:
+
+289  
+DœeùiÚs
+.
+SOUTH
+
+
+290 
+aùiÚ
+ =ğ
+DœeùiÚs
+.
+SOUTH
+:
+
+291  
+DœeùiÚs
+.
+NORTH
+
+
+292 
+aùiÚ
+ =ğ
+DœeùiÚs
+.
+EAST
+:
+
+293  
+DœeùiÚs
+.
+WEST
+
+
+294 
+aùiÚ
+ =ğ
+DœeùiÚs
+.
+WEST
+:
+
+295  
+DœeùiÚs
+.
+EAST
+
+
+296  
+aùiÚ
+
+
+297 
+»v”£DœeùiÚ
+ = 
+	$¡©icm‘hod
+(
+»v”£DœeùiÚ
+)
+
+299 
+def
+ 
+	$veùÜToDœeùiÚ
+(
+veùÜ
+):
+
+300 
+dx
+, 
+dy
+ = 
+veùÜ
+
+
+301 
+dy
+ > 0:
+
+302  
+DœeùiÚs
+.
+NORTH
+
+
+303 
+dy
+ < 0:
+
+304  
+DœeùiÚs
+.
+SOUTH
+
+
+305 
+dx
+ < 0:
+
+306  
+DœeùiÚs
+.
+WEST
+
+
+307 
+dx
+ > 0:
+
+308  
+DœeùiÚs
+.
+EAST
+
+
+309  
+DœeùiÚs
+.
+STOP
+
+
+310 
+veùÜToDœeùiÚ
+ = 
+	$¡©icm‘hod
+(
+veùÜToDœeùiÚ
+)
+
+312 
+def
+ 
+	$dœeùiÚToVeùÜ
+(
+dœeùiÚ
+, 
+¥“d
+ = 1.0):
+
+313 
+dx
+, 
+dy
+ = 
+AùiÚs
+.
+_dœeùiÚs
+[
+dœeùiÚ
+]
+
+314  (
+dx
+ * 
+¥“d
+, 
+dy
+ * speed)
+
+315 
+dœeùiÚToVeùÜ
+ = 
+	$¡©icm‘hod
+(
+dœeùiÚToVeùÜ
+)
+
+317 
+def
+ 
+	$g‘PossibËAùiÚs
+(
+cÚfig
+, 
+w®ls
+):
+
+318 
+possibË
+ = []
+
+319 
+x
+, 
+y
+ = 
+cÚfig
+.
+pos
+
+
+320 
+x_št
+, 
+y_št
+ = (
+x
+ + 0.5), (
+y
+ + 0.5)
+
+322 #IÀ
+b‘w“n
+ 
+grid
+ 
+pošts
+, 
+®l
+ 
+ag’ts
+ 
+mu¡
+  
+¡¿ight
+
+
+323 ià(
+	`abs
+(
+x
+ - 
+x_št
+è+‡bs(
+y
+ - 
+y_št
+è> 
+AùiÚs
+.
+TOLERANCE
+):
+
+324  [
+cÚfig
+.
+	`g‘DœeùiÚ
+()]
+
+326 
+dœ
+, 
+vec
+ 
+š
+ 
+AùiÚs
+.
+_dœeùiÚsAsLi¡
+:
+
+327 
+dx
+, 
+dy
+ = 
+vec
+
+
+328 
+Ãxt_y
+ = 
+y_št
+ + 
+dy
+
+
+329 
+Ãxt_x
+ = 
+x_št
+ + 
+dx
+
+
+330 
+nÙ
+ 
+w®ls
+[
+Ãxt_x
+][
+Ãxt_y
+]: 
+possibË
+.
+	$­³nd
+(
+dœ
+)
+
+332  
+possibË
+
+
+334 
+g‘PossibËAùiÚs
+ = 
+	$¡©icm‘hod
+(
+g‘PossibËAùiÚs
+)
+
+336 
+def
+ 
+	$g‘Leg®NeighbÜs
+(
+pos™iÚ
+, 
+w®ls
+):
+
+337 
+x
+,
+y
+ = 
+pos™iÚ
+
+
+338 
+x_št
+, 
+y_št
+ = (
+x
+ + 0.5), (
+y
+ + 0.5)
+
+339 
+ÃighbÜs
+ = []
+
+340 
+dœ
+, 
+vec
+ 
+š
+ 
+AùiÚs
+.
+_dœeùiÚsAsLi¡
+:
+
+341 
+dx
+, 
+dy
+ = 
+vec
+
+
+342 
+Ãxt_x
+ = 
+x_št
+ + 
+dx
+
+
+343 
+Ãxt_x
+ < 0 
+Ü
+‚ext_x =ğ
+w®ls
+.
+width
+: 
+
+344 
+Ãxt_y
+ = 
+y_št
+ + 
+dy
+
+
+345 
+Ãxt_y
+ < 0 
+Ü
+‚ext_y =ğ
+w®ls
+.
+height
+: 
+
+346 
+nÙ
+ 
+w®ls
+[
+Ãxt_x
+][
+Ãxt_y
+]: 
+ÃighbÜs
+.
+	`­³nd
+((next_x,‚ext_y))
+
+347  
+ÃighbÜs
+
+
+348 
+g‘Leg®NeighbÜs
+ = 
+	$¡©icm‘hod
+(
+g‘Leg®NeighbÜs
+)
+
+350 
+def
+ 
+	$g‘SucûssÜ
+(
+pos™iÚ
+, 
+aùiÚ
+):
+
+351 
+dx
+, 
+dy
+ = 
+AùiÚs
+.
+	$dœeùiÚToVeùÜ
+(
+aùiÚ
+)
+
+352 
+x
+, 
+y
+ = 
+pos™iÚ
+
+
+353  (
+x
+ + 
+dx
+, 
+y
+ + 
+dy
+)
+
+354 
+g‘SucûssÜ
+ = 
+	$¡©icm‘hod
+(
+g‘SucûssÜ
+)
+
+356 
+şass
+ 
+GameS‹D©a
+:
+
+360 
+def
+ 
+	$__š™__
+Ğ
+£lf
+, 
+´evS‹
+ = 
+NÚe
+ ):
+
+362 
+G’”©es
+ 
+a
+ 
+Ãw
+ 
+d©a
+ 
+·ck‘
+ 
+by
+ 
+cİyšg
+ 
+šfÜm©iÚ
+ 
+äom
+ 
+™s
+ 
+´edeûssÜ
+.
+
+364 
+´evS‹
+ !ğ
+NÚe
+:
+
+365 
+£lf
+.
+food
+ = 
+´evS‹
+.food.
+	$sh®lowCİy
+()
+
+366 
+£lf
+.
+ÿpsuËs
+ = 
+´evS‹
+.capsules[:]
+
+367 
+£lf
+.
+ag’tS‹s
+ = s–f.
+	$cİyAg’tS‹s
+Ğ
+´evS‹
+.
+ag’tS‹s
+ )
+
+368 
+£lf
+.
+Ïyout
+ = 
+´evS‹
+.layout
+
+369 
+£lf
+.
+_—‹n
+ = 
+´evS‹
+._eaten
+
+370 
+£lf
+.
+scÜe
+ = 
+´evS‹
+.score
+
+371 
+£lf
+.
+_foodE©’
+ = 
+NÚe
+
+
+372 
+£lf
+.
+_ÿpsuËE©’
+ = 
+NÚe
+
+
+373 
+£lf
+.
+_ag’tMoved
+ = 
+NÚe
+
+
+374 
+£lf
+.
+_lo£
+ = 
+F®£
+
+
+375 
+£lf
+.
+_wš
+ = 
+F®£
+
+
+376 
+£lf
+.
+scÜeChªge
+ = 0
+
+378 
+def
+ 
+	$d“pCİy
+Ğ
+£lf
+ ):
+
+379 
+¡©e
+ = 
+	$GameS‹D©a
+Ğ
+£lf
+ )
+
+380 
+¡©e
+.
+food
+ = 
+£lf
+.food.
+	$d“pCİy
+()
+
+381 
+¡©e
+.
+Ïyout
+ = 
+£lf
+.Ïyout.
+	$d“pCİy
+()
+
+382 
+¡©e
+.
+_ag’tMoved
+ = 
+£lf
+._agentMoved
+
+383 
+¡©e
+.
+_foodE©’
+ = 
+£lf
+._foodEaten
+
+384 
+¡©e
+.
+_ÿpsuËE©’
+ = 
+£lf
+._capsuleEaten
+
+385  
+¡©e
+
+
+387 
+def
+ 
+	$cİyAg’tS‹s
+Ğ
+£lf
+, 
+ag’tS‹s
+ ):
+
+388 
+cİ›dS‹s
+ = []
+
+389 
+ag’tS‹
+ 
+š
+ 
+ag’tS‹s
+:
+
+390 
+cİ›dS‹s
+.
+	`­³nd
+Ğ
+ag’tS‹
+.
+	$cİy
+() )
+
+391  
+cİ›dS‹s
+
+
+393 
+def
+ 
+	$__eq__
+Ğ
+£lf
+, 
+Ùh”
+ ):
+
+395 
+AÎows
+ 
+two
+ 
+¡©es
+ 
+to
+ 
+be
+ 
+com·»d
+.
+
+397 
+Ùh”
+ =ğ
+NÚe
+:  
+F®£
+
+
+398 #TODO 
+Check
+ 
+ty³
+ 
+of
+ 
+Ùh”
+
+
+399 
+nÙ
+ 
+£lf
+.
+ag’tS‹s
+ =ğ
+Ùh”
+.ag’tS‹s:  
+F®£
+
+
+400 
+nÙ
+ 
+£lf
+.
+food
+ =ğ
+Ùh”
+.food:  
+F®£
+
+
+401 
+nÙ
+ 
+£lf
+.
+ÿpsuËs
+ =ğ
+Ùh”
+.ÿpsuËs:  
+F®£
+
+
+402 
+nÙ
+ 
+£lf
+.
+scÜe
+ =ğ
+Ùh”
+.scÜe:  
+F®£
+
+
+403  
+True
+
+
+405 
+def
+ 
+	$__hash__
+Ğ
+£lf
+ ):
+
+407 
+AÎows
+ 
+¡©es
+ 
+to
+ 
+be
+ 
+keys
+ 
+of
+ 
+diùiÚ¬›s
+.
+
+409 
+i
+, 
+¡©e
+ 
+š
+ 
+	$’um”©e
+Ğ
+£lf
+.
+ag’tS‹s
+ ):
+
+410 
+Œy
+:
+
+411 (
+	$hash
+(
+¡©e
+))
+
+412 
+exû±
+ 
+Ty³E¼Ü
+, 
+e
+:
+
+413 
+´št
+ 
+e
+
+
+414 #hash(
+¡©e
+)
+
+415  ((
+	`hash
+(
+	`tu¶e
+(
+£lf
+.
+ag’tS‹s
+)è+ 13*hash(£lf.
+food
+è+ 113* hashÑu¶e(£lf.
+ÿpsuËs
+)è+ 7 * hash(£lf.
+scÜe
+)) % 1048575 )
+
+417 
+def
+ 
+	$__¡r__
+Ğ
+£lf
+ ):
+
+418 
+width
+, 
+height
+ = 
+£lf
+.
+Ïyout
+.width, self.layout.height
+
+419 
+m­
+ = 
+	$Grid
+(
+width
+, 
+height
+)
+
+420 
+	`ty³
+(
+£lf
+.
+food
+) ==ype((1,2)):
+
+421 
+£lf
+.
+food
+ = 
+	$»cÚ¡™u‹Grid
+(
+£lf
+.
+food
+)
+
+422 
+x
+ 
+š
+ 
+	$¿nge
+(
+width
+):
+
+423 
+y
+ 
+š
+ 
+	$¿nge
+(
+height
+):
+
+424 
+food
+, 
+w®ls
+ = 
+£lf
+.food, s–f.
+Ïyout
+.walls
+
+425 
+m­
+[
+x
+][
+y
+] = 
+£lf
+.
+	$_foodW®lSŒ
+(
+food
+[
+x
+][
+y
+], 
+w®ls
+[x][y])
+
+427 
+ag’tS‹
+ 
+š
+ 
+£lf
+.
+ag’tS‹s
+:
+
+428 
+ag’tS‹
+ =ğ
+NÚe
+: 
+
+429 
+ag’tS‹
+.
+cÚfigu¿tiÚ
+ =ğ
+NÚe
+: 
+
+430 
+x
+,
+y
+ = [Ğ
+i
+ ) ˜
+š
+ 
+	`Ã¬e¡Pošt
+Ğ
+ag’tS‹
+.
+cÚfigu¿tiÚ
+.
+pos
+ )]
+
+431 
+ag’t_dœ
+ = 
+ag’tS‹
+.
+cÚfigu¿tiÚ
+.
+dœeùiÚ
+
+
+432 
+ag’tS‹
+.
+isPacmª
+:
+
+433 
+m­
+[
+x
+][
+y
+] = 
+£lf
+.
+	$_·cSŒ
+Ğ
+ag’t_dœ
+ )
+
+435 
+m­
+[
+x
+][
+y
+] = 
+£lf
+.
+	$_gho¡SŒ
+Ğ
+ag’t_dœ
+ )
+
+437 
+x
+, 
+y
+ 
+š
+ 
+£lf
+.
+ÿpsuËs
+:
+
+438 
+m­
+[
+x
+][
+y
+] = 'o'
+
+440  
+	`¡r
+(
+m­
+è+ ("\nScÜe: %d\n" % 
+£lf
+.
+scÜe
+)
+
+442 
+def
+ 
+	$_foodW®lSŒ
+Ğ
+£lf
+, 
+hasFood
+, 
+hasW®l
+ ):
+
+443 
+hasFood
+:
+
+445 
+–if
+ 
+hasW®l
+:
+
+450 
+def
+ 
+	$_·cSŒ
+Ğ
+£lf
+, 
+dœ
+ ):
+
+451 
+dœ
+ =ğ
+DœeùiÚs
+.
+NORTH
+:
+
+453 
+dœ
+ =ğ
+DœeùiÚs
+.
+SOUTH
+:
+
+455 
+dœ
+ =ğ
+DœeùiÚs
+.
+WEST
+:
+
+459 
+def
+ 
+	$_gho¡SŒ
+Ğ
+£lf
+, 
+dœ
+ ):
+
+461 
+dœ
+ =ğ
+DœeùiÚs
+.
+NORTH
+:
+
+463 
+dœ
+ =ğ
+DœeùiÚs
+.
+SOUTH
+:
+
+465 
+dœ
+ =ğ
+DœeùiÚs
+.
+WEST
+:
+
+469 
+def
+ 
+	$š™Ÿlize
+Ğ
+£lf
+, 
+Ïyout
+, 
+numGho¡Ag’ts
+ ):
+
+471 
+C»©es
+ 
+ª
+ 
+š™Ÿl
+ 
+game
+ 
+¡©e
+ 
+äom
+ 
+a
+ 
+Ïyout
+ 
+	`¬¿y
+ (
+£e
+†ayout.
+py
+).
+
+473 
+£lf
+.
+food
+ = 
+Ïyout
+.food.
+	$cİy
+()
+
+474 
+£lf
+.
+ÿpsuËs
+ = 
+Ïyout
+.capsules[:]
+
+475 
+£lf
+.
+Ïyout
+ =†ayout
+
+476 
+£lf
+.
+scÜe
+ = 0
+
+477 
+£lf
+.
+scÜeChªge
+ = 0
+
+479 
+£lf
+.
+ag’tS‹s
+ = []
+
+480 
+numGho¡s
+ = 0
+
+481 
+isPacmª
+, 
+pos
+ 
+š
+ 
+Ïyout
+.
+ag’tPos™iÚs
+:
+
+482 
+nÙ
+ 
+isPacmª
+:
+
+483 
+numGho¡s
+ =ğ
+numGho¡Ag’ts
+:  #Max 
+gho¡s
+ 
+»ached
+ 
+®»ady
+
+
+484 : 
+numGho¡s
+ += 1
+
+485 
+£lf
+.
+ag’tS‹s
+.
+	`­³nd
+Ğ
+	`Ag’tS‹
+Ğ
+	`CÚfigu¿tiÚ
+Ğ
+pos
+, 
+DœeùiÚs
+.
+STOP
+), 
+isPacmª
+) )
+
+486 
+£lf
+.
+_—‹n
+ = [
+F®£
+ 
+a
+ 
+š
+ s–f.
+ag’tS‹s
+]
+
+488 
+şass
+ 
+Game
+:
+
+490 
+The
+ 
+Game
+ 
+mªages
+ 
+the
+ 
+cÚŒŞ
+ 
+æow
+, 
+sŞic™šg
+ 
+aùiÚs
+ 
+äom
+ 
+ag’ts
+.
+
+493 
+def
+ 
+	$__š™__
+Ğ
+£lf
+, 
+ag’ts
+, 
+di¥Ïy
+, 
+ruËs
+, 
+¡¬tšgIndex
+=0, 
+mu‹Ag’ts
+=
+F®£
+, 
+ÿtchExû±iÚs
+=False ):
+
+494 
+£lf
+.
+ag’tC¿shed
+ = 
+F®£
+
+
+495 
+£lf
+.
+ag’ts
+ =‡gents
+
+496 
+£lf
+.
+di¥Ïy
+ = display
+
+497 
+£lf
+.
+ruËs
+ =„ules
+
+498 
+£lf
+.
+¡¬tšgIndex
+ = startingIndex
+
+499 
+£lf
+.
+gameOv”
+ = 
+F®£
+
+
+500 
+£lf
+.
+mu‹Ag’ts
+ = muteAgents
+
+501 
+£lf
+.
+ÿtchExû±iÚs
+ = catchExceptions
+
+502 
+£lf
+.
+moveHi¡Üy
+ = []
+
+503 
+£lf
+.
+tÙ®Ag’tTimes
+ = [0 
+ag’t
+ 
+š
+ 
+ag’ts
+]
+
+504 
+£lf
+.
+tÙ®Ag’tTimeW¬nšgs
+ = [0 
+ag’t
+ 
+š
+ 
+ag’ts
+]
+
+505 
+£lf
+.
+ag’tTimeout
+ = 
+F®£
+
+
+507 
+def
+ 
+	$g‘Prog»ss
+(
+£lf
+):
+
+508 
+£lf
+.
+gameOv”
+:
+
+511  
+£lf
+.
+ruËs
+.
+	$g‘Prog»ss
+(
+£lf
+)
+
+513 
+def
+ 
+	$_ag’tC¿sh
+Ğ
+£lf
+, 
+ag’tIndex
+, 
+qu›t
+=
+F®£
+):
+
+515 
+nÙ
+ 
+qu›t
+: 
+Œaûback
+.
+	$´št_exc
+()
+
+516 
+£lf
+.
+gameOv”
+ = 
+True
+
+
+517 
+£lf
+.
+ag’tC¿shed
+ = 
+True
+
+
+518 
+£lf
+.
+ruËs
+.
+	$ag’tC¿sh
+(
+£lf
+, 
+ag’tIndex
+)
+
+520 
+OLD_STDOUT
+ = 
+NÚe
+
+
+521 
+OLD_STDERR
+ = 
+NÚe
+
+
+523 
+def
+ 
+	$mu‹
+(
+£lf
+):
+
+524 
+nÙ
+ 
+£lf
+.
+mu‹Ag’ts
+: 
+
+525 
+glob®
+ 
+OLD_STDOUT
+, 
+OLD_STDERR
+
+
+526 
+impÜt
+ 
+cSŒšgIO
+
+
+527 
+OLD_STDOUT
+ = 
+sys
+.
+¡dout
+
+
+528 
+OLD_STDERR
+ = 
+sys
+.
+¡d”r
+
+
+529 
+sys
+.
+¡dout
+ = 
+cSŒšgIO
+.
+	$SŒšgIO
+()
+
+530 
+sys
+.
+¡d”r
+ = 
+cSŒšgIO
+.
+	$SŒšgIO
+()
+
+532 
+def
+ 
+	$unmu‹
+(
+£lf
+):
+
+533 
+nÙ
+ 
+£lf
+.
+mu‹Ag’ts
+: 
+
+534 
+glob®
+ 
+OLD_STDOUT
+, 
+OLD_STDERR
+
+
+535 
+sys
+.
+¡dout
+.
+	$şo£
+()
+
+536 
+sys
+.
+¡d”r
+.
+	$şo£
+()
+
+537 #Rev”ˆ
+¡dout
+/
+¡d”r
+ 
+to
+ 
+Üigš®s
+
+
+538 
+sys
+.
+¡dout
+ = 
+OLD_STDOUT
+
+
+539 
+sys
+.
+¡d”r
+ = 
+OLD_STDERR
+
+
+542 
+def
+ 
+	$run
+Ğ
+£lf
+ ):
+
+544 
+Maš
+ 
+cÚŒŞ
+ 
+loİ
+ 
+game
+ 
+¶ay
+.
+
+546 
+£lf
+.
+di¥Ïy
+.
+	$š™Ÿlize
+(
+£lf
+.
+¡©e
+.
+d©a
+)
+
+547 
+£lf
+.
+numMoves
+ = 0
+
+549 ###£lf.
+di¥Ïy
+.
+	`š™Ÿlize
+(
+£lf
+.
+¡©e
+.
+	`makeOb£rv©iÚ
+(1).
+d©a
+)
+
+550 #šfÜm 
+Ë¬nšg
+ 
+ag’ts
+ 
+of
+ 
+the
+ 
+game
+ 
+¡¬t
+
+
+551 
+i
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+ag’ts
+)):
+
+552 
+ag’t
+ = 
+£lf
+.
+ag’ts
+[
+i
+]
+
+553 
+nÙ
+ 
+ag’t
+:
+
+554 #thi 
+is
+ 
+a
+ 
+nuÎ
+ 
+ag’t
+, 
+m—nšg
+ 
+™
+ 
+çed
+ 
+to
+ 
+lßd
+
+
+555 #th
+Ùh”
+ 
+‹am
+ 
+wšs
+
+
+556 
+£lf
+.
+	$_ag’tC¿sh
+(
+i
+, 
+qu›t
+=
+True
+)
+
+558 ià("»gi¡”In™ŸlS‹" 
+š
+ 
+	$dœ
+(
+ag’t
+)):
+
+559 
+£lf
+.
+	$mu‹
+()
+
+560 
+£lf
+.
+ÿtchExû±iÚs
+:
+
+561 
+Œy
+:
+
+562 
+timed_func
+ = 
+	`TimeoutFunùiÚ
+(
+ag’t
+.
+»gi¡”In™ŸlS‹
+, (
+£lf
+.
+ruËs
+.
+	$g‘MaxS¹upTime
+(
+i
+)))
+
+563 
+Œy
+:
+
+564 
+¡¬t_time
+ = 
+time
+.
+	$time
+()
+
+565 
+	`timed_func
+(
+£lf
+.
+¡©e
+.
+	$d“pCİy
+())
+
+566 
+time_k’
+ = 
+time
+.
+	`time
+(è- 
+¡¬t_time
+
+
+567 
+£lf
+.
+tÙ®Ag’tTimes
+[
+i
+] +ğ
+time_k’
+
+
+568 
+exû±
+ 
+TimeoutFunùiÚExû±iÚ
+:
+
+569 
+´št
+ "Ag’ˆ%d„ª ouˆoàtimÚ s¹up!" % 
+i
+
+
+570 
+£lf
+.
+	$unmu‹
+()
+
+571 
+£lf
+.
+ag’tTimeout
+ = 
+True
+
+
+572 
+£lf
+.
+	$_ag’tC¿sh
+(
+i
+, 
+qu›t
+=
+True
+)
+
+574 
+exû±
+ 
+Exû±iÚ
+,
+d©a
+:
+
+575 
+£lf
+.
+	$unmu‹
+()
+
+576 
+£lf
+.
+	$_ag’tC¿sh
+(
+i
+, 
+qu›t
+=
+True
+)
+
+579 
+ag’t
+.
+	`»gi¡”In™ŸlS‹
+(
+£lf
+.
+¡©e
+.
+	$d“pCİy
+())
+
+580 ## 
+TODO
+: 
+could
+ 
+this
+ 
+exûed
+ 
+the
+ 
+tÙ®
+ 
+time
+
+
+581 
+£lf
+.
+	$unmu‹
+()
+
+583 
+ag’tIndex
+ = 
+£lf
+.
+¡¬tšgIndex
+
+
+584 
+numAg’ts
+ = 
+	$Ën
+Ğ
+£lf
+.
+ag’ts
+ )
+
+586 
+nÙ
+ 
+£lf
+.
+gameOv”
+:
+
+587 #F‘ch 
+the
+ 
+Ãxt
+ 
+ag’t
+
+
+588 
+ag’t
+ = 
+£lf
+.
+ag’ts
+[
+ag’tIndex
+]
+
+589 
+move_time
+ = 0
+
+590 
+sk_aùiÚ
+ = 
+F®£
+
+
+591 #G’”©
+ª
+ 
+ob£rv©iÚ
+ 
+of
+ 
+the
+ 
+¡©e
+
+
+592 'ob£rv©iÚFunùiÚ' 
+š
+ 
+	$dœ
+Ğ
+ag’t
+ ):
+
+593 
+£lf
+.
+	$mu‹
+()
+
+594 
+£lf
+.
+ÿtchExû±iÚs
+:
+
+595 
+Œy
+:
+
+596 
+timed_func
+ = 
+	`TimeoutFunùiÚ
+(
+ag’t
+.
+ob£rv©iÚFunùiÚ
+, (
+£lf
+.
+ruËs
+.
+	$g‘MoveTimeout
+(
+ag’tIndex
+)))
+
+597 
+Œy
+:
+
+598 
+¡¬t_time
+ = 
+time
+.
+	$time
+()
+
+599 
+ob£rv©iÚ
+ = 
+	`timed_func
+(
+£lf
+.
+¡©e
+.
+	$d“pCİy
+())
+
+600 
+exû±
+ 
+TimeoutFunùiÚExû±iÚ
+:
+
+601 
+sk_aùiÚ
+ = 
+True
+
+
+602 
+move_time
+ +ğ
+time
+.
+	`time
+(è- 
+¡¬t_time
+
+
+603 
+£lf
+.
+	$unmu‹
+()
+
+604 
+exû±
+ 
+Exû±iÚ
+,
+d©a
+:
+
+605 
+£lf
+.
+	$unmu‹
+()
+
+606 
+£lf
+.
+	$_ag’tC¿sh
+(
+ag’tIndex
+, 
+qu›t
+=
+True
+)
+
+609 
+ob£rv©iÚ
+ = 
+ag’t
+.
+	`ob£rv©iÚFunùiÚ
+(
+£lf
+.
+¡©e
+.
+	$d“pCİy
+())
+
+610 
+£lf
+.
+	$unmu‹
+()
+
+612 
+ob£rv©iÚ
+ = 
+£lf
+.
+¡©e
+.
+	$d“pCİy
+()
+
+614 #SŞic™ 
+ª
+ 
+aùiÚ
+
+
+615 
+aùiÚ
+ = 
+NÚe
+
+
+616 
+£lf
+.
+	$mu‹
+()
+
+617 
+£lf
+.
+ÿtchExû±iÚs
+:
+
+618 
+Œy
+:
+
+619 
+timed_func
+ = 
+	`TimeoutFunùiÚ
+(
+ag’t
+.
+g‘AùiÚ
+, (
+£lf
+.
+ruËs
+.
+	`g‘MoveTimeout
+(
+ag’tIndex
+)è- (
+move_time
+))
+
+620 
+Œy
+:
+
+621 
+¡¬t_time
+ = 
+time
+.
+	$time
+()
+
+622 
+sk_aùiÚ
+:
+
+623 
+¿i£
+ 
+	$TimeoutFunùiÚExû±iÚ
+()
+
+624 
+aùiÚ
+ = 
+	$timed_func
+Ğ
+ob£rv©iÚ
+ )
+
+625 
+exû±
+ 
+TimeoutFunùiÚExû±iÚ
+:
+
+626 
+´št
+ "Ag’ˆ%dimed ouˆÚ‡ sšgË move!" % 
+ag’tIndex
+
+
+627 
+£lf
+.
+ag’tTimeout
+ = 
+True
+
+
+628 
+£lf
+.
+	$unmu‹
+()
+
+629 
+£lf
+.
+	$_ag’tC¿sh
+(
+ag’tIndex
+, 
+qu›t
+=
+True
+)
+
+632 
+move_time
+ +ğ
+time
+.
+	`time
+(è- 
+¡¬t_time
+
+
+634 
+move_time
+ > 
+£lf
+.
+ruËs
+.
+	$g‘MoveW¬nšgTime
+(
+ag’tIndex
+):
+
+635 
+£lf
+.
+tÙ®Ag’tTimeW¬nšgs
+[
+ag’tIndex
+] += 1
+
+636 
+´št
+ "Ag’ˆ%dookoØlÚgØmak¨move! Thi i w¬nšg %d" % (
+ag’tIndex
+, 
+£lf
+.
+tÙ®Ag’tTimeW¬nšgs
+[agentIndex])
+
+637 
+£lf
+.
+tÙ®Ag’tTimeW¬nšgs
+[
+ag’tIndex
+] > s–f.
+ruËs
+.
+	$g‘MaxTimeW¬nšgs
+(
+ag’tIndex
+):
+
+638 
+´št
+ "Ag’ˆ%dƒxûededhmaximum‚umb” oàw¬nšgs: %d" % (
+ag’tIndex
+, 
+£lf
+.
+tÙ®Ag’tTimeW¬nšgs
+[agentIndex])
+
+639 
+£lf
+.
+ag’tTimeout
+ = 
+True
+
+
+640 
+£lf
+.
+	$unmu‹
+()
+
+641 
+£lf
+.
+	$_ag’tC¿sh
+(
+ag’tIndex
+, 
+qu›t
+=
+True
+)
+
+643 
+£lf
+.
+tÙ®Ag’tTimes
+[
+ag’tIndex
+] +ğ
+move_time
+
+
+644 #´šˆ"Ag’t: %d,ime: %f,Ù®: %f" % (
+ag’tIndex
+, 
+move_time
+, 
+£lf
+.
+tÙ®Ag’tTimes
+[agentIndex])
+
+645 
+£lf
+.
+tÙ®Ag’tTimes
+[
+ag’tIndex
+] > s–f.
+ruËs
+.
+	$g‘MaxTÙ®Time
+(
+ag’tIndex
+):
+
+646 
+´št
+ "Ag’ˆ%d„ª ouˆoàtime! (time: %1.2f)" % (
+ag’tIndex
+, 
+£lf
+.
+tÙ®Ag’tTimes
+[agentIndex])
+
+647 
+£lf
+.
+ag’tTimeout
+ = 
+True
+
+
+648 
+£lf
+.
+	$unmu‹
+()
+
+649 
+£lf
+.
+	$_ag’tC¿sh
+(
+ag’tIndex
+, 
+qu›t
+=
+True
+)
+
+651 
+£lf
+.
+	$unmu‹
+()
+
+652 
+exû±
+ 
+Exû±iÚ
+,
+d©a
+:
+
+653 
+£lf
+.
+	$unmu‹
+()
+
+654 
+£lf
+.
+	$_ag’tC¿sh
+(
+ag’tIndex
+)
+
+657 
+aùiÚ
+ = 
+ag’t
+.
+	$g‘AùiÚ
+(
+ob£rv©iÚ
+)
+
+658 
+£lf
+.
+	$unmu‹
+()
+
+660 #Execu‹ 
+the
+ 
+aùiÚ
+
+
+661 
+£lf
+.
+moveHi¡Üy
+.
+	`­³nd
+Ğ(
+ag’tIndex
+, 
+aùiÚ
+) )
+
+662 
+£lf
+.
+ÿtchExû±iÚs
+:
+
+663 
+Œy
+:
+
+664 
+£lf
+.
+¡©e
+ = s–f.¡©e.
+	$g’”©eSucûssÜ
+Ğ
+ag’tIndex
+, 
+aùiÚ
+ )
+
+665 
+exû±
+ 
+Exû±iÚ
+,
+d©a
+:
+
+666 
+£lf
+.
+	$_ag’tC¿sh
+(
+ag’tIndex
+)
+
+669 
+£lf
+.
+¡©e
+ = s–f.¡©e.
+	$g’”©eSucûssÜ
+Ğ
+ag’tIndex
+, 
+aùiÚ
+ )
+
+671 #Chªg
+the
+ 
+di¥Ïy
+
+
+672 
+£lf
+.
+di¥Ïy
+.
+	$upd©e
+Ğ
+£lf
+.
+¡©e
+.
+d©a
+ )
+
+673 ###idx = 
+ag’tIndex
+ -‡gentIndex % 2 + 1
+
+674 ###£lf.
+di¥Ïy
+.
+	`upd©e
+Ğ
+£lf
+.
+¡©e
+.
+	`makeOb£rv©iÚ
+(
+idx
+).
+d©a
+ )
+
+676 #AÎow 
+game
+ 
+¥ecific
+ 
+	`cÚd™iÚs
+ (
+wšnšg
+, 
+losšg
+, 
+‘c
+.)
+
+677 
+£lf
+.
+ruËs
+.
+	$´oûss
+(
+£lf
+.
+¡©e
+, self)
+
+678 #T¿ck 
+´og»ss
+
+
+679 
+ag’tIndex
+ =ğ
+numAg’ts
+ + 1: 
+£lf
+.
+numMoves
+ += 1
+
+680 #Nexˆ
+ag’t
+
+
+681 
+ag’tIndex
+ = (‡g’tIndex + 1 ) % 
+numAg’ts
+
+
+683 
+_BOINC_ENABLED
+:
+
+684 
+bošc
+.
+	`£t_äaùiÚ_dÚe
+(
+£lf
+.
+	$g‘Prog»ss
+())
+
+686 #šfÜm 
+a
+ 
+Ë¬nšg
+ 
+ag’t
+ 
+of
+ 
+the
+ 
+game
+ 
+»suÉ
+
+
+687 
+ag’t
+ 
+š
+ 
+£lf
+.
+ag’ts
+:
+
+688 "fš®" 
+š
+ 
+	$dœ
+Ğ
+ag’t
+ ) :
+
+689 
+Œy
+:
+
+690 
+£lf
+.
+	$mu‹
+()
+
+691 
+ag’t
+.
+	$fš®
+Ğ
+£lf
+.
+¡©e
+ )
+
+692 
+£lf
+.
+	$unmu‹
+()
+
+693 
+exû±
+ 
+Exû±iÚ
+,
+d©a
+:
+
+694 
+nÙ
+ 
+£lf
+.
+ÿtchExû±iÚs
+: 
+¿i£
+
+
+695 
+£lf
+.
+	$unmu‹
+()
+
+696 
+´št
+ "Exû±iÚ",
+d©a
+
+
+697 
+£lf
+.
+	$_ag’tC¿sh
+(
+ag’t
+.
+šdex
+)
+
+699 
+£lf
+.
+di¥Ïy
+.
+	`fšish
+()
+
+	@ghostAgents.py
+
+1 #gho¡Ag’ts.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+äom
+ 
+game
+ 
+impÜt
+ 
+Ag’t
+
+
+10 
+äom
+ 
+game
+ 
+impÜt
+ 
+AùiÚs
+
+
+11 
+äom
+ 
+game
+ 
+impÜt
+ 
+DœeùiÚs
+
+
+12 
+impÜt
+ 
+¿ndom
+
+
+13 
+äom
+ 
+ut
+ 
+impÜt
+ 
+mªh©nDi¡ªû
+
+
+14 
+impÜt
+ 
+ut
+
+
+16 
+şass
+ 
+	$Gho¡Ag’t
+Ğ
+Ag’t
+ ):
+
+17 
+def
+ 
+	$__š™__
+Ğ
+£lf
+, 
+šdex
+ ):
+
+18 
+£lf
+.
+šdex
+ = index
+
+20 
+def
+ 
+	$g‘AùiÚ
+Ğ
+£lf
+, 
+¡©e
+ ):
+
+21 
+di¡
+ = 
+£lf
+.
+	$g‘Di¡ributiÚ
+(
+¡©e
+)
+
+22 
+	`Ën
+(
+di¡
+) == 0:
+
+23  
+DœeùiÚs
+.
+STOP
+
+
+25  
+ut
+.
+	$choo£FromDi¡ributiÚ
+Ğ
+di¡
+ )
+
+27 
+def
+ 
+	$g‘Di¡ributiÚ
+(
+£lf
+, 
+¡©e
+):
+
+29 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+31 
+şass
+ 
+	$RªdomGho¡
+Ğ
+Gho¡Ag’t
+ ):
+
+33 
+def
+ 
+	$g‘Di¡ributiÚ
+Ğ
+£lf
+, 
+¡©e
+ ):
+
+34 
+di¡
+ = 
+ut
+.
+	$CouÁ”
+()
+
+35 
+a
+ 
+š
+ 
+¡©e
+.
+	$g‘Leg®AùiÚs
+Ğ
+£lf
+.
+šdex
+ ): 
+di¡
+[
+a
+] = 1.0
+
+36 
+di¡
+.
+	$nÜm®ize
+()
+
+37  
+di¡
+
+
+39 
+şass
+ 
+	$DœeùiÚ®Gho¡
+Ğ
+Gho¡Ag’t
+ ):
+
+41 
+def
+ 
+	$__š™__
+Ğ
+£lf
+, 
+šdex
+, 
+´ob_©ck
+=0.8, 
+´ob_sÿ»dFËe
+=0.8 ):
+
+42 
+£lf
+.
+šdex
+ = index
+
+43 
+£lf
+.
+´ob_©ck
+ =…rob_attack
+
+44 
+£lf
+.
+´ob_sÿ»dFËe
+ =…rob_scaredFlee
+
+46 
+def
+ 
+	$g‘Di¡ributiÚ
+Ğ
+£lf
+, 
+¡©e
+ ):
+
+47 #R—d 
+v¬ŸbËs
+ 
+äom
+ 
+¡©e
+
+
+48 
+gho¡S‹
+ = 
+¡©e
+.
+	$g‘Gho¡S‹
+Ğ
+£lf
+.
+šdex
+ )
+
+49 
+Ëg®AùiÚs
+ = 
+¡©e
+.
+	$g‘Leg®AùiÚs
+Ğ
+£lf
+.
+šdex
+ )
+
+50 
+pos
+ = 
+¡©e
+.
+	$g‘Gho¡Pos™iÚ
+Ğ
+£lf
+.
+šdex
+ )
+
+51 
+isSÿ»d
+ = 
+gho¡S‹
+.
+sÿ»dTim”
+ > 0
+
+53 
+¥“d
+ = 1
+
+54 
+isSÿ»d
+: 
+¥“d
+ = 0.5
+
+56 
+aùiÚVeùÜs
+ = [
+AùiÚs
+.
+	$dœeùiÚToVeùÜ
+Ğ
+a
+, 
+¥“d
+ ) ¨
+š
+ 
+Ëg®AùiÚs
+]
+
+57 
+ÃwPos™iÚs
+ = [Ğ
+pos
+[0]+
+a
+[0],…os[1]+a[1] ) ¨
+š
+ 
+aùiÚVeùÜs
+]
+
+58 
+·cmªPos™iÚ
+ = 
+¡©e
+.
+	$g‘PacmªPos™iÚ
+()
+
+60 #S–eù 
+be¡
+ 
+aùiÚs
+ 
+giv’
+ 
+the
+ 
+¡©e
+
+
+61 
+di¡ªûsToPacmª
+ = [
+	$mªh©nDi¡ªû
+Ğ
+pos
+, 
+·cmªPos™iÚ
+ ) po 
+š
+ 
+ÃwPos™iÚs
+]
+
+62 
+isSÿ»d
+:
+
+63 
+be¡ScÜe
+ = 
+	$max
+Ğ
+di¡ªûsToPacmª
+ )
+
+64 
+be¡Prob
+ = 
+£lf
+.
+´ob_sÿ»dFËe
+
+
+66 
+be¡ScÜe
+ = 
+	$mš
+Ğ
+di¡ªûsToPacmª
+ )
+
+67 
+be¡Prob
+ = 
+£lf
+.
+´ob_©ck
+
+
+68 
+be¡AùiÚs
+ = [
+aùiÚ
+ aùiÚ, 
+di¡ªû
+ 
+š
+ 
+	$z
+Ğ
+Ëg®AùiÚs
+, 
+di¡ªûsToPacmª
+ ) 
+di¡ªû
+ =ğ
+be¡ScÜe
+]
+
+70 #CÚ¡ruù 
+di¡ributiÚ
+
+
+71 
+di¡
+ = 
+ut
+.
+	$CouÁ”
+()
+
+72 
+a
+ 
+š
+ 
+be¡AùiÚs
+: 
+di¡
+[a] = 
+be¡Prob
+ / 
+	$Ën
+(
+be¡AùiÚs
+)
+
+73 
+a
+ 
+š
+ 
+Ëg®AùiÚs
+: 
+di¡
+[a] +ğĞ1-
+be¡Prob
+ ) / 
+	$Ën
+(
+Ëg®AùiÚs
+)
+
+74 
+di¡
+.
+	$nÜm®ize
+()
+
+75  
+di¡
+
+
+	@graphicsDisplay.py
+
+1 #g¿phicsDi¥Ïy.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+äom
+ 
+g¿phicsUts
+ 
+impÜt
+ *
+
+10 
+impÜt
+ 
+	gm©h
+, 
+time
+
+
+11 
+äom
+ 
+game
+ 
+impÜt
+ 
+	gDœeùiÚs
+
+
+13 ###########################
+#GRAPHICS 
+DISPLAY
+ 
+CODE
+ #
+###########################
+
+
+14 #Mo¡ 
+code
+ 
+by
+ 
+Dª
+ 
+KËš
+ 
+ªd
+ 
+John
+ 
+D’”o
+ 
+wr™‹n
+ 
+Ü
+ 
+»wr™‹n
+ 
+cs188
+, 
+UC
+ 
+B”k–ey
+.
+
+15 #Som
+code
+ 
+äom
+ 
+a
+ 
+Pacmª
+ 
+im¶em’tiÚ
+ 
+by
+ 
+LiveWœes
+, 
+ªd
+ 
+u£d
+ / 
+modif›d
+ 
+w™h
+ 
+³rmissiÚ
+.
+
+17 
+	gDEFAULT_GRID_SIZE
+ = 30.0
+
+18 
+INFO_PANE_HEIGHT
+ = 35
+
+19 
+BACKGROUND_COLOR
+ = 
+	$fÜm©CŞÜ
+(0,0,0)
+
+20 
+WALL_COLOR
+ = 
+	`fÜm©CŞÜ
+(0.0/255.0, 51.0/255.0, 255.0/255.0)
+
+21 
+INFO_PANE_COLOR
+ = 
+	$fÜm©CŞÜ
+(.4,.4,0)
+
+22 
+SCORE_COLOR
+ = 
+	$fÜm©CŞÜ
+(.9, .9, .9)
+
+23 
+PACMAN_OUTLINE_WIDTH
+ = 2
+
+24 
+PACMAN_CAPTURE_OUTLINE_WIDTH
+ = 4
+
+26 
+GHOST_COLORS
+ = []
+
+27 
+GHOST_COLORS
+.
+	`­³nd
+(
+	$fÜm©CŞÜ
+(.9,0,0)) #Red
+
+28 
+GHOST_COLORS
+.
+	`­³nd
+(
+	$fÜm©CŞÜ
+(0,.3,.9)) #Blue
+
+29 
+GHOST_COLORS
+.
+	`­³nd
+(
+	$fÜm©CŞÜ
+(.98,.41,.07)) #Orange
+
+30 
+GHOST_COLORS
+.
+	`­³nd
+(
+	$fÜm©CŞÜ
+(.1,.75,.7)) #Green
+
+31 
+GHOST_COLORS
+.
+	`­³nd
+(
+	$fÜm©CŞÜ
+(1.0,0.6,0.0)) #Yellow
+
+32 
+GHOST_COLORS
+.
+	`­³nd
+(
+	$fÜm©CŞÜ
+(.4,0.13,0.91)) #Purple
+
+34 
+TEAM_COLORS
+ = 
+GHOST_COLORS
+[:2]
+
+36 
+GHOST_SHAPE
+ = [
+
+49 
+GHOST_SIZE
+ = 0.65
+
+50 
+SCARED_COLOR
+ = 
+	$fÜm©CŞÜ
+(1,1,1)
+
+52 
+GHOST_VEC_COLORS
+ = 
+	$m­
+(
+cŞÜToVeùÜ
+, 
+GHOST_COLORS
+)
+
+54 
+PACMAN_COLOR
+ = 
+	`fÜm©CŞÜ
+(255.0/255.0,255.0/255.0,61.0/255)
+
+55 
+PACMAN_SCALE
+ = 0.5
+
+59 
+FOOD_COLOR
+ = 
+	$fÜm©CŞÜ
+(1,1,1)
+
+60 
+FOOD_SIZE
+ = 0.1
+
+63 
+LASER_COLOR
+ = 
+	$fÜm©CŞÜ
+(1,0,0)
+
+64 
+LASER_SIZE
+ = 0.02
+
+66 #C­suË 
+g¿phics
+
+
+67 
+CAPSULE_COLOR
+ = 
+	$fÜm©CŞÜ
+(1,1,1)
+
+68 
+CAPSULE_SIZE
+ = 0.25
+
+70 #D¿wšg 
+w®ls
+
+
+71 
+WALL_RADIUS
+ = 0.15
+
+73 
+şass
+ 
+InfoPªe
+:
+
+74 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+Ïyout
+, 
+gridSize
+):
+
+75 
+£lf
+.
+gridSize
+ = gridSize
+
+76 
+£lf
+.
+width
+ = (
+Ïyout
+.widthè* 
+gridSize
+
+
+77 
+£lf
+.
+ba£
+ = (
+Ïyout
+.
+height
+ + 1è* 
+gridSize
+
+
+78 
+£lf
+.
+height
+ = 
+INFO_PANE_HEIGHT
+
+
+79 
+£lf
+.
+fÚtSize
+ = 24
+
+80 
+£lf
+.
+‹xtCŞÜ
+ = 
+PACMAN_COLOR
+
+
+81 
+£lf
+.
+	$d¿wPªe
+()
+
+83 
+def
+ 
+	$toSü“n
+(
+£lf
+, 
+pos
+, 
+y
+ = 
+NÚe
+):
+
+85 
+T¿n¦©es
+ 
+a
+ 
+pošt
+ 
+»Ïtive
+ 
+äom
+ 
+the
+ 
+bÙtom
+ 
+Ëá
+ 
+of
+h
+šfo
+ 
+·Ã
+.
+
+87 
+y
+ =ğ
+NÚe
+:
+
+88 
+x
+,
+y
+ = 
+pos
+
+
+90 
+x
+ = 
+pos
+
+
+92 
+x
+ = 
+£lf
+.
+gridSize
+ + x #Margin
+
+93 
+y
+ = 
+£lf
+.
+ba£
+ + y
+
+94  
+x
+,
+y
+
+
+96 
+def
+ 
+	$d¿wPªe
+(
+£lf
+):
+
+97 
+£lf
+.
+scÜeText
+ = 
+	`‹xt
+Ğ£lf.
+	`toSü“n
+(0, 0 ), s–f.
+‹xtCŞÜ
+, "SCORE: 0", "Times", s–f.
+fÚtSize
+, "bold")
+
+99 
+def
+ 
+	$š™ŸlizeGho¡Di¡ªûs
+(
+£lf
+, 
+di¡ªûs
+):
+
+100 
+£lf
+.
+gho¡Di¡ªûText
+ = []
+
+102 
+size
+ = 20
+
+103 
+£lf
+.
+width
+ < 240:
+
+104 
+size
+ = 12
+
+105 
+£lf
+.
+width
+ < 160:
+
+106 
+size
+ = 10
+
+108 
+i
+, 
+d
+ 
+š
+ 
+	$’um”©e
+(
+di¡ªûs
+):
+
+109 
+t
+ = 
+	`‹xt
+Ğ
+£lf
+.
+	`toSü“n
+(£lf.
+width
+/2 + s–f.width/8 * 
+i
+, 0), 
+GHOST_COLORS
+[i+1], 
+d
+, "Times", 
+size
+, "bold")
+
+110 
+£lf
+.
+gho¡Di¡ªûText
+.
+	$­³nd
+(
+t
+)
+
+112 
+def
+ 
+	$upd©eScÜe
+(
+£lf
+, 
+scÜe
+):
+
+113 
+	`chªgeText
+(
+£lf
+.
+scÜeText
+, "SCORE: % 4d" % 
+scÜe
+)
+
+115 
+def
+ 
+	$£tT—m
+(
+£lf
+, 
+isBlue
+):
+
+116 
+‹xt
+ = "RED TEAM"
+
+117 
+isBlue
+: 
+‹xt
+ = "BLUE TEAM"
+
+118 
+£lf
+.
+‹amText
+ = 
+	`‹xt
+Ğ£lf.
+	`toSü“n
+(300, 0 ), s–f.
+‹xtCŞÜ
+, 
+‹xt
+, "Times", s–f.
+fÚtSize
+, "bold")
+
+120 
+def
+ 
+	$upd©eGho¡Di¡ªûs
+(
+£lf
+, 
+di¡ªûs
+):
+
+121 
+	`Ën
+(
+di¡ªûs
+) == 0: 
+
+122 'gho¡Di¡ªûText' 
+nÙ
+ 
+š
+ 
+	$dœ
+(
+£lf
+): s–f.
+	$š™ŸlizeGho¡Di¡ªûs
+(
+di¡ªûs
+)
+
+124 
+i
+, 
+d
+ 
+š
+ 
+	$’um”©e
+(
+di¡ªûs
+):
+
+125 
+	$chªgeText
+(
+£lf
+.
+gho¡Di¡ªûText
+[
+i
+], 
+d
+)
+
+127 
+def
+ 
+	$d¿wGho¡
+(
+£lf
+):
+
+128 
+·ss
+
+
+130 
+def
+ 
+	$d¿wPacmª
+(
+£lf
+):
+
+131 
+·ss
+
+
+133 
+def
+ 
+	$d¿wW¬nšg
+(
+£lf
+):
+
+134 
+·ss
+
+
+136 
+def
+ 
+	$ş—rIcÚ
+(
+£lf
+):
+
+137 
+·ss
+
+
+139 
+def
+ 
+	$upd©eMes§ge
+(
+£lf
+, 
+mes§ge
+):
+
+140 
+·ss
+
+
+142 
+def
+ 
+	$ş—rMes§ge
+(
+£lf
+):
+
+143 
+·ss
+
+
+146 
+şass
+ 
+PacmªG¿phics
+:
+
+147 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+zoom
+=1.0, 
+äameTime
+=0.0, 
+ÿ±u»
+=
+F®£
+):
+
+148 
+£lf
+.
+have_wšdow
+ = 0
+
+149 
+£lf
+.
+cu¼’tGho¡Images
+ = {
+	}
+}
+
+150 
+£lf
+.
+·cmªImage
+ = 
+NÚe
+
+
+151 
+£lf
+.
+zoom
+ = zoom
+
+152 
+£lf
+.
+gridSize
+ = 
+DEFAULT_GRID_SIZE
+ * 
+zoom
+
+
+153 
+£lf
+.
+ÿ±u»
+ = capture
+
+154 
+£lf
+.
+äameTime
+ = frameTime
+
+156 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡©e
+, 
+isBlue
+ = 
+F®£
+):
+
+157 
+£lf
+.
+isBlue
+ = isBlue
+
+158 
+£lf
+.
+	$¡¬tG¿phics
+(
+¡©e
+)
+
+160 #£lf.
+	`d¿wDi¡ributiÚs
+(
+¡©e
+)
+
+161 
+£lf
+.
+di¡ributiÚImages
+ = 
+NÚe
+ #In™Ÿlized 
+Ïzy
+
+
+162 
+£lf
+.
+	$d¿wSticObjeùs
+(
+¡©e
+)
+
+163 
+£lf
+.
+	$d¿wAg’tObjeùs
+(
+¡©e
+)
+
+166 
+£lf
+.
+´eviousS‹
+ = 
+¡©e
+
+
+168 
+def
+ 
+	$¡¬tG¿phics
+(
+£lf
+, 
+¡©e
+):
+
+169 
+£lf
+.
+Ïyout
+ = 
+¡©e
+.layout
+
+170 
+Ïyout
+ = 
+£lf
+.layout
+
+171 
+£lf
+.
+width
+ = 
+Ïyout
+.width
+
+172 
+£lf
+.
+height
+ = 
+Ïyout
+.height
+
+173 
+£lf
+.
+	$make_wšdow
+(
+£lf
+.
+width
+, s–f.
+height
+)
+
+174 
+£lf
+.
+šfoPªe
+ = 
+	$InfoPªe
+(
+Ïyout
+, 
+£lf
+.
+gridSize
+)
+
+175 
+£lf
+.
+cu¼’tS‹
+ = 
+Ïyout
+
+
+177 
+def
+ 
+	$d¿wDi¡ributiÚs
+(
+£lf
+, 
+¡©e
+):
+
+178 
+w®ls
+ = 
+¡©e
+.
+Ïyout
+.walls
+
+179 
+di¡
+ = []
+
+180 
+x
+ 
+š
+ 
+	$¿nge
+(
+w®ls
+.
+width
+):
+
+181 
+di¡x
+ = []
+
+182 
+di¡
+.
+	$­³nd
+(
+di¡x
+)
+
+183 
+y
+ 
+š
+ 
+	$¿nge
+(
+w®ls
+.
+height
+):
+
+184 Ğ
+sü“n_x
+, 
+sü“n_y
+ ) = 
+£lf
+.
+	`to_sü“n
+Ğ(
+x
+, 
+y
+) )
+
+185 
+block
+ = 
+	`squ¬e
+Ğ(
+sü“n_x
+, 
+sü“n_y
+),
+
+186 0.5 * 
+£lf
+.
+gridSize
+,
+
+187 
+cŞÜ
+ = 
+BACKGROUND_COLOR
+,
+
+188 
+fËd
+ = 1, 
+behšd
+=2)
+
+189 
+di¡x
+.
+	$­³nd
+(
+block
+)
+
+190 
+£lf
+.
+di¡ributiÚImages
+ = 
+di¡
+
+
+192 
+def
+ 
+	$d¿wSticObjeùs
+(
+£lf
+, 
+¡©e
+):
+
+193 
+Ïyout
+ = 
+£lf
+.layout
+
+194 
+£lf
+.
+	$d¿wW®ls
+(
+Ïyout
+.
+w®ls
+)
+
+195 
+£lf
+.
+food
+ = s–f.
+	$d¿wFood
+(
+Ïyout
+.
+food
+)
+
+196 
+£lf
+.
+ÿpsuËs
+ = s–f.
+	$d¿wC­suËs
+(
+Ïyout
+.
+ÿpsuËs
+)
+
+197 
+	$»äesh
+()
+
+199 
+def
+ 
+	$d¿wAg’tObjeùs
+(
+£lf
+, 
+¡©e
+):
+
+200 
+£lf
+.
+ag’tImages
+ = [] #(
+ag’tS‹
+, 
+image
+)
+
+201 
+šdex
+, 
+ag’t
+ 
+š
+ 
+	$’um”©e
+(
+¡©e
+.
+ag’tS‹s
+):
+
+202 
+ag’t
+.
+isPacmª
+:
+
+203 
+image
+ = 
+£lf
+.
+	$d¿wPacmª
+(
+ag’t
+, 
+šdex
+)
+
+204 
+£lf
+.
+ag’tImages
+.
+	`­³nd
+Ğ(
+ag’t
+, 
+image
+) )
+
+206 
+image
+ = 
+£lf
+.
+	$d¿wGho¡
+(
+ag’t
+, 
+šdex
+)
+
+207 
+£lf
+.
+ag’tImages
+.
+	`­³nd
+Ğ(
+ag’t
+, 
+image
+) )
+
+208 
+	$»äesh
+()
+
+210 
+def
+ 
+	$sw­Images
+(
+£lf
+, 
+ag’tIndex
+, 
+ÃwS‹
+):
+
+212 
+Chªges
+ 
+ª
+ 
+image
+ 
+äom
+ 
+a
+ 
+gho¡
+ 
+to
+‡ 
+·cmª
+ 
+Ü
+ 
+vis
+ 
+	`v”§
+ (
+ÿ±u»
+)
+
+214 
+´evS‹
+, 
+´evImage
+ = 
+£lf
+.
+ag’tImages
+[
+ag’tIndex
+]
+
+215 
+™em
+ 
+š
+ 
+´evImage
+: 
+	$»move_äom_sü“n
+(
+™em
+)
+
+216 
+ÃwS‹
+.
+isPacmª
+:
+
+217 
+image
+ = 
+£lf
+.
+	$d¿wPacmª
+(
+ÃwS‹
+, 
+ag’tIndex
+)
+
+218 
+£lf
+.
+ag’tImages
+[
+ag’tIndex
+] = (
+ÃwS‹
+, 
+image
+ )
+
+220 
+image
+ = 
+£lf
+.
+	$d¿wGho¡
+(
+ÃwS‹
+, 
+ag’tIndex
+)
+
+221 
+£lf
+.
+ag’tImages
+[
+ag’tIndex
+] = (
+ÃwS‹
+, 
+image
+ )
+
+222 
+	$»äesh
+()
+
+224 
+def
+ 
+	$upd©e
+(
+£lf
+, 
+ÃwS‹
+):
+
+225 
+ag’tIndex
+ = 
+ÃwS‹
+.
+_ag’tMoved
+
+
+226 
+ag’tS‹
+ = 
+ÃwS‹
+.
+ag’tS‹s
+[
+ag’tIndex
+]
+
+228 
+£lf
+.
+ag’tImages
+[
+ag’tIndex
+][0].
+isPacmª
+ !ğ
+ag’tS‹
+.isPacmª: s–f.
+	$sw­Images
+(
+ag’tIndex
+, 
+ag’tS‹
+)
+
+229 
+´evS‹
+, 
+´evImage
+ = 
+£lf
+.
+ag’tImages
+[
+ag’tIndex
+]
+
+230 
+ag’tS‹
+.
+isPacmª
+:
+
+231 
+£lf
+.
+	$ªim©ePacmª
+(
+ag’tS‹
+, 
+´evS‹
+, 
+´evImage
+)
+
+233 
+£lf
+.
+	$moveGho¡
+(
+ag’tS‹
+, 
+ag’tIndex
+, 
+´evS‹
+, 
+´evImage
+)
+
+234 
+£lf
+.
+ag’tImages
+[
+ag’tIndex
+] = (
+ag’tS‹
+, 
+´evImage
+)
+
+236 
+ÃwS‹
+.
+_foodE©’
+ !ğ
+NÚe
+:
+
+237 
+£lf
+.
+	$»moveFood
+(
+ÃwS‹
+.
+_foodE©’
+, 
+£lf
+.
+food
+)
+
+238 
+ÃwS‹
+.
+_ÿpsuËE©’
+ !ğ
+NÚe
+:
+
+239 
+£lf
+.
+	$»moveC­suË
+(
+ÃwS‹
+.
+_ÿpsuËE©’
+, 
+£lf
+.
+ÿpsuËs
+)
+
+240 
+£lf
+.
+šfoPªe
+.
+	$upd©eScÜe
+(
+ÃwS‹
+.
+scÜe
+)
+
+241 'gho¡Di¡ªûs' 
+š
+ 
+	$dœ
+(
+ÃwS‹
+):
+
+242 
+£lf
+.
+šfoPªe
+.
+	$upd©eGho¡Di¡ªûs
+(
+ÃwS‹
+.
+gho¡Di¡ªûs
+)
+
+244 
+def
+ 
+	$make_wšdow
+(
+£lf
+, 
+width
+, 
+height
+):
+
+245 
+grid_width
+ = (
+width
+-1è* 
+£lf
+.
+gridSize
+
+
+246 
+grid_height
+ = (
+height
+-1è* 
+£lf
+.
+gridSize
+
+
+247 
+sü“n_width
+ = 2*
+£lf
+.
+gridSize
+ + 
+grid_width
+
+
+248 
+sü“n_height
+ = 2*
+£lf
+.
+gridSize
+ + 
+grid_height
+ + 
+INFO_PANE_HEIGHT
+
+
+250 
+	`begš_g¿phics
+(
+sü“n_width
+,
+
+251 
+sü“n_height
+,
+
+252 
+BACKGROUND_COLOR
+,
+
+255 
+def
+ 
+	$d¿wPacmª
+(
+£lf
+, 
+·cmª
+, 
+šdex
+):
+
+256 
+pos™iÚ
+ = 
+£lf
+.
+	$g‘Pos™iÚ
+(
+·cmª
+)
+
+257 
+sü“n_pošt
+ = 
+£lf
+.
+	$to_sü“n
+(
+pos™iÚ
+)
+
+258 
+’dpošts
+ = 
+£lf
+.
+	`g‘Endpošts
+(£lf.
+	$g‘DœeùiÚ
+(
+·cmª
+))
+
+260 
+width
+ = 
+PACMAN_OUTLINE_WIDTH
+
+
+261 
+oušeCŞÜ
+ = 
+PACMAN_COLOR
+
+
+262 
+flCŞÜ
+ = 
+PACMAN_COLOR
+
+
+264 
+£lf
+.
+ÿ±u»
+:
+
+265 
+oušeCŞÜ
+ = 
+TEAM_COLORS
+[
+šdex
+ % 2]
+
+266 
+flCŞÜ
+ = 
+GHOST_COLORS
+[
+šdex
+]
+
+267 
+width
+ = 
+PACMAN_CAPTURE_OUTLINE_WIDTH
+
+
+269  [
+	`cœşe
+(
+sü“n_pošt
+, 
+PACMAN_SCALE
+ * 
+£lf
+.
+gridSize
+,
+
+270 
+flCŞÜ
+ = flCŞÜ, 
+oušeCŞÜ
+ = outlineColor,
+
+271 
+’dpošts
+ =ƒndpoints,
+
+272 
+width
+ = width)]
+
+274 
+def
+ 
+	`g‘Endpošts
+(
+£lf
+, 
+dœeùiÚ
+, 
+pos™iÚ
+=(0,0)):
+
+275 
+x
+, 
+y
+ = 
+pos™iÚ
+
+
+276 
+pos
+ = 
+x
+ - (xè+ 
+y
+ - (y)
+
+277 
+width
+ = 30 + 80 * 
+m©h
+.
+	$sš
+(
+m©h
+.
+pi
+* 
+pos
+)
+
+279 
+d–
+ = 
+width
+ / 2
+
+280 ià(
+dœeùiÚ
+ == 'West'):
+
+281 
+’dpošts
+ = (180+
+d–
+, 180-delta)
+
+282 
+	`–if
+ (
+dœeùiÚ
+ == 'North'):
+
+283 
+’dpošts
+ = (90+
+d–
+, 90-delta)
+
+284 
+	`–if
+ (
+dœeùiÚ
+ == 'South'):
+
+285 
+’dpošts
+ = (270+
+d–
+, 270-delta)
+
+287 
+’dpošts
+ = (0+
+d–
+, 0-delta)
+
+288  
+’dpošts
+
+
+290 
+def
+ 
+	$movePacmª
+(
+£lf
+, 
+pos™iÚ
+, 
+dœeùiÚ
+, 
+image
+):
+
+291 
+sü“nPos™iÚ
+ = 
+£lf
+.
+	$to_sü“n
+(
+pos™iÚ
+)
+
+292 
+’dpošts
+ = 
+£lf
+.
+	$g‘Endpošts
+Ğ
+dœeùiÚ
+, 
+pos™iÚ
+ )
+
+293 
+r
+ = 
+PACMAN_SCALE
+ * 
+£lf
+.
+gridSize
+
+
+294 
+	$moveCœşe
+(
+image
+[0], 
+sü“nPos™iÚ
+, 
+r
+, 
+’dpošts
+)
+
+295 
+	$»äesh
+()
+
+297 
+def
+ 
+	$ªim©ePacmª
+(
+£lf
+, 
+·cmª
+, 
+´evPacmª
+, 
+image
+):
+
+298 
+£lf
+.
+äameTime
+ < 0:
+
+299 
+´št
+ 'Press‡ny keyo step forward, "q"o…lay'
+
+300 
+keys
+ = 
+	$wa™_fÜ_keys
+()
+
+301 'q' 
+š
+ 
+keys
+:
+
+302 
+£lf
+.
+äameTime
+ = 0.1
+
+303 
+£lf
+.
+äameTime
+ > 0.01 
+Ü
+ self.frameTime < 0:
+
+304 
+¡¬t
+ = 
+time
+.
+	$time
+()
+
+305 
+fx
+, 
+fy
+ = 
+£lf
+.
+	$g‘Pos™iÚ
+(
+´evPacmª
+)
+
+306 
+px
+, 
+py
+ = 
+£lf
+.
+	$g‘Pos™iÚ
+(
+·cmª
+)
+
+307 
+äames
+ = 4.0
+
+308 
+i
+ 
+š
+ 
+	`¿nge
+(1,(
+äames
+) + 1):
+
+309 
+pos
+ = 
+px
+*
+i
+/
+äames
+ + 
+fx
+*(äames-i)/äames, 
+py
+*i/äame + 
+fy
+*(frames-i)/frames
+
+310 
+£lf
+.
+	`movePacmª
+(
+pos
+, s–f.
+	`g‘DœeùiÚ
+(
+·cmª
+), 
+image
+)
+
+311 
+	$»äesh
+()
+
+312 
+	`¦“p
+(
+	`abs
+(
+£lf
+.
+äameTime
+è/ 
+äames
+)
+
+314 
+£lf
+.
+	`movePacmª
+(£lf.
+	`g‘Pos™iÚ
+(
+·cmª
+), s–f.
+	`g‘DœeùiÚ
+Õacmª), 
+image
+)
+
+315 
+	$»äesh
+()
+
+317 
+def
+ 
+	$g‘Gho¡CŞÜ
+(
+£lf
+, 
+gho¡
+, 
+gho¡Index
+):
+
+318 
+gho¡
+.
+sÿ»dTim”
+ > 0:
+
+319  
+SCARED_COLOR
+
+
+321  
+GHOST_COLORS
+[
+gho¡Index
+]
+
+323 
+def
+ 
+	$d¿wGho¡
+(
+£lf
+, 
+gho¡
+, 
+ag’tIndex
+):
+
+324 
+pos
+ = 
+£lf
+.
+	$g‘Pos™iÚ
+(
+gho¡
+)
+
+325 
+dœ
+ = 
+£lf
+.
+	$g‘DœeùiÚ
+(
+gho¡
+)
+
+326 (
+sü“n_x
+, 
+sü“n_y
+èğ(
+£lf
+.
+	$to_sü“n
+(
+pos
+) )
+
+327 
+coÜds
+ = []
+
+328 
+x
+, 
+y
+è
+š
+ 
+GHOST_SHAPE
+:
+
+329 
+coÜds
+.
+	`­³nd
+((
+x
+*
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+ + 
+sü“n_x
+, 
+y
+*£lf.gridSize*GHOST_SIZE + 
+sü“n_y
+))
+
+331 
+cŞour
+ = 
+£lf
+.
+	$g‘Gho¡CŞÜ
+(
+gho¡
+, 
+ag’tIndex
+)
+
+332 
+body
+ = 
+	$pŞygÚ
+(
+coÜds
+, 
+cŞour
+, 
+fËd
+ = 1)
+
+333 
+WHITE
+ = 
+	$fÜm©CŞÜ
+(1.0, 1.0, 1.0)
+
+334 
+BLACK
+ = 
+	$fÜm©CŞÜ
+(0.0, 0.0, 0.0)
+
+336 
+dx
+ = 0
+
+337 
+dy
+ = 0
+
+338 
+dœ
+ == 'North':
+
+339 
+dy
+ = -0.2
+
+340 
+dœ
+ == 'South':
+
+341 
+dy
+ = 0.2
+
+342 
+dœ
+ == 'East':
+
+343 
+dx
+ = 0.2
+
+344 
+dœ
+ == 'West':
+
+345 
+dx
+ = -0.2
+
+346 
+ËáEye
+ = 
+	`cœşe
+((
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(-0.3+
+dx
+/1.5), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+/1.5)), s–f.gridSize*GHOST_SIZE*0.2, 
+WHITE
+, WHITE)
+
+347 
+rightEye
+ = 
+	`cœşe
+((
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(0.3+
+dx
+/1.5), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+/1.5)), s–f.gridSize*GHOST_SIZE*0.2, 
+WHITE
+, WHITE)
+
+348 
+ËáPup
+ = 
+	`cœşe
+((
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(-0.3+
+dx
+), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+)), s–f.gridSize*GHOST_SIZE*0.08, 
+BLACK
+, BLACK)
+
+349 
+rightPup
+ = 
+	`cœşe
+((
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(0.3+
+dx
+), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+)), s–f.gridSize*GHOST_SIZE*0.08, 
+BLACK
+, BLACK)
+
+350 
+gho¡ImageP¬ts
+ = []
+
+351 
+gho¡ImageP¬ts
+.
+	$­³nd
+(
+body
+)
+
+352 
+gho¡ImageP¬ts
+.
+	$­³nd
+(
+ËáEye
+)
+
+353 
+gho¡ImageP¬ts
+.
+	$­³nd
+(
+rightEye
+)
+
+354 
+gho¡ImageP¬ts
+.
+	$­³nd
+(
+ËáPup
+)
+
+355 
+gho¡ImageP¬ts
+.
+	$­³nd
+(
+rightPup
+)
+
+357  
+gho¡ImageP¬ts
+
+
+359 
+def
+ 
+	$moveEyes
+(
+£lf
+, 
+pos
+, 
+dœ
+, 
+eyes
+):
+
+360 (
+sü“n_x
+, 
+sü“n_y
+èğ(
+£lf
+.
+	$to_sü“n
+(
+pos
+) )
+
+361 
+dx
+ = 0
+
+362 
+dy
+ = 0
+
+363 
+dœ
+ == 'North':
+
+364 
+dy
+ = -0.2
+
+365 
+dœ
+ == 'South':
+
+366 
+dy
+ = 0.2
+
+367 
+dœ
+ == 'East':
+
+368 
+dx
+ = 0.2
+
+369 
+dœ
+ == 'West':
+
+370 
+dx
+ = -0.2
+
+371 
+	`moveCœşe
+(
+eyes
+[0],(
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(-0.3+
+dx
+/1.5), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+/1.5)), self.gridSize*GHOST_SIZE*0.2)
+
+372 
+	`moveCœşe
+(
+eyes
+[1],(
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(0.3+
+dx
+/1.5), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+/1.5)), self.gridSize*GHOST_SIZE*0.2)
+
+373 
+	`moveCœşe
+(
+eyes
+[2],(
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(-0.3+
+dx
+), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+)), self.gridSize*GHOST_SIZE*0.08)
+
+374 
+	`moveCœşe
+(
+eyes
+[3],(
+sü“n_x
++
+£lf
+.
+gridSize
+*
+GHOST_SIZE
+*(0.3+
+dx
+), 
+sü“n_y
+-£lf.gridSize*GHOST_SIZE*(0.3-
+dy
+)), self.gridSize*GHOST_SIZE*0.08)
+
+376 
+def
+ 
+	$moveGho¡
+(
+£lf
+, 
+gho¡
+, 
+gho¡Index
+, 
+´evGho¡
+, 
+gho¡ImageP¬ts
+):
+
+377 
+Şd_x
+, 
+Şd_y
+ = 
+£lf
+.
+	`to_sü“n
+(£lf.
+	$g‘Pos™iÚ
+(
+´evGho¡
+))
+
+378 
+Ãw_x
+, 
+Ãw_y
+ = 
+£lf
+.
+	`to_sü“n
+(£lf.
+	$g‘Pos™iÚ
+(
+gho¡
+))
+
+379 
+d–
+ = 
+Ãw_x
+ - 
+Şd_x
+, 
+Ãw_y
+ - 
+Şd_y
+
+
+381 
+gho¡ImageP¬t
+ 
+š
+ 
+gho¡ImageP¬ts
+:
+
+382 
+	$move_by
+(
+gho¡ImageP¬t
+, 
+d–
+)
+
+383 
+	$»äesh
+()
+
+385 
+gho¡
+.
+sÿ»dTim”
+ > 0:
+
+386 
+cŞÜ
+ = 
+SCARED_COLOR
+
+
+388 
+cŞÜ
+ = 
+GHOST_COLORS
+[
+gho¡Index
+]
+
+389 
+	`ed™
+(
+gho¡ImageP¬ts
+[0], ('fl', 
+cŞÜ
+), ('outline', color))
+
+390 
+£lf
+.
+	`moveEyes
+(£lf.
+	`g‘Pos™iÚ
+(
+gho¡
+), s–f.
+	`g‘DœeùiÚ
+(gho¡), 
+gho¡ImageP¬ts
+[-4:])
+
+391 
+	$»äesh
+()
+
+393 
+def
+ 
+	$g‘Pos™iÚ
+(
+£lf
+, 
+ag’tS‹
+):
+
+394 
+ag’tS‹
+.
+cÚfigu¿tiÚ
+ =ğ
+NÚe
+:  (-1000, -1000)
+
+395  
+ag’tS‹
+.
+	$g‘Pos™iÚ
+()
+
+397 
+def
+ 
+	$g‘DœeùiÚ
+(
+£lf
+, 
+ag’tS‹
+):
+
+398 
+ag’tS‹
+.
+cÚfigu¿tiÚ
+ =ğ
+NÚe
+:  
+DœeùiÚs
+.
+STOP
+
+
+399  
+ag’tS‹
+.
+cÚfigu¿tiÚ
+.
+	$g‘DœeùiÚ
+()
+
+401 
+def
+ 
+	$fšish
+(
+£lf
+):
+
+402 
+	$’d_g¿phics
+()
+
+404 
+def
+ 
+	$to_sü“n
+(
+£lf
+, 
+pošt
+):
+
+405 Ğ
+x
+, 
+y
+ ) = 
+pošt
+
+
+406 #y = 
+£lf
+.
+height
+ - 
+y
+
+
+407 
+x
+ = (x + 1)*
+£lf
+.
+gridSize
+
+
+408 
+y
+ = (
+£lf
+.
+height
+ - y)*£lf.
+gridSize
+
+
+409  ( 
+x
+, 
+y
+ )
+
+411 #Fixe 
+some
+ 
+TK
+ 
+issue
+ 
+w™h
+ 
+off
+-
+ûÁ”
+ 
+cœşes
+
+
+412 
+def
+ 
+	$to_sü“n2
+(
+£lf
+, 
+pošt
+):
+
+413 Ğ
+x
+, 
+y
+ ) = 
+pošt
+
+
+414 #y = 
+£lf
+.
+height
+ - 
+y
+
+
+415 
+x
+ = (x + 1)*
+£lf
+.
+gridSize
+
+
+416 
+y
+ = (
+£lf
+.
+height
+ - y)*£lf.
+gridSize
+
+
+417  ( 
+x
+, 
+y
+ )
+
+419 
+def
+ 
+	$d¿wW®ls
+(
+£lf
+, 
+w®lM©rix
+):
+
+420 
+w®lCŞÜ
+ = 
+WALL_COLOR
+
+
+421 
+xNum
+, 
+x
+ 
+š
+ 
+	$’um”©e
+(
+w®lM©rix
+):
+
+422 
+£lf
+.
+ÿ±u»
+ 
+	`ªd
+ (
+xNum
+ * 2è< 
+w®lM©rix
+.
+width
+: 
+w®lCŞÜ
+ = 
+TEAM_COLORS
+[0]
+
+423 
+£lf
+.
+ÿ±u»
+ 
+	`ªd
+ (
+xNum
+ * 2è>ğ
+w®lM©rix
+.
+width
+: 
+w®lCŞÜ
+ = 
+TEAM_COLORS
+[1]
+
+425 
+yNum
+, 
+ûÎ
+ 
+š
+ 
+	$’um”©e
+(
+x
+):
+
+426 
+ûÎ
+: #There's‡ wall here
+
+427 
+pos
+ = (
+xNum
+, 
+yNum
+)
+
+428 
+sü“n
+ = 
+£lf
+.
+	$to_sü“n
+(
+pos
+)
+
+429 
+sü“n2
+ = 
+£lf
+.
+	$to_sü“n2
+(
+pos
+)
+
+431 #d¿w 
+—ch
+ 
+quad¿Á
+ 
+of
+ 
+the
+ 
+squ¬e
+ 
+ba£d
+ 
+Ú
+ 
+adjaûÁ
+ 
+w®ls
+
+
+432 
+wIsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
+-1, 
+yNum
+, 
+w®lM©rix
+)
+
+433 
+eIsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
++1, 
+yNum
+, 
+w®lM©rix
+)
+
+434 
+nIsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
+, 
+yNum
++1, 
+w®lM©rix
+)
+
+435 
+sIsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
+, 
+yNum
+-1, 
+w®lM©rix
+)
+
+436 
+nwIsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
+-1, 
+yNum
++1, 
+w®lM©rix
+)
+
+437 
+swIsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
+-1, 
+yNum
+-1, 
+w®lM©rix
+)
+
+438 
+ÃIsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
++1, 
+yNum
++1, 
+w®lM©rix
+)
+
+439 
+£IsW®l
+ = 
+£lf
+.
+	`isW®l
+(
+xNum
++1, 
+yNum
+-1, 
+w®lM©rix
+)
+
+441 #NE 
+quad¿Á
+
+
+442 ià(
+nÙ
+ 
+nIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+eIsW®l
+):
+
+443 #šÃ¸
+cœşe
+
+
+444 
+	`cœşe
+(
+sü“n2
+, 
+WALL_RADIUS
+ * 
+£lf
+.
+gridSize
+, 
+w®lCŞÜ
+, wallColor, (0,91), 'arc')
+
+445 ià(
+nIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+eIsW®l
+):
+
+446 #v”tiÿÈ
+lše
+
+
+447 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*
+WALL_RADIUS
+, 0)),‡dd(sü“n, (£lf.gridSize*WALL_RADIUS, s–f.gridSize*(-0.5)-1)), 
+w®lCŞÜ
+)
+
+448 ià(
+nÙ
+ 
+nIsW®l
+è
+	$ªd
+ (
+eIsW®l
+):
+
+449 #hÜizÚÈ
+lše
+
+
+450 
+	`lše
+(
+	`add
+(
+sü“n
+, (0, 
+£lf
+.
+gridSize
+*(-1)*
+WALL_RADIUS
+)),‡dd(sü“n, (£lf.gridSize*0.5+1, s–f.gridSize*(-1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+451 ià(
+nIsW®l
+è
+	$ªd
+ (
+eIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+ÃIsW®l
+):
+
+452 #ou‹¸
+cœşe
+
+
+453 
+	`cœşe
+(
+	`add
+(
+sü“n2
+, (
+£lf
+.
+gridSize
+*2*
+WALL_RADIUS
+, s–f.gridSize*(-2)*WALL_RADIUS)), WALL_RADIUS * s–f.gridSize-1, 
+w®lCŞÜ
+, wallColor, (180,271), 'arc')
+
+454 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*2*
+WALL_RADIUS
+-1, s–f.gridSize*(-1)*WALL_RADIUS)),‡dd(sü“n, (£lf.gridSize*0.5+1, s–f.gridSize*(-1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+455 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*
+WALL_RADIUS
+, s–f.gridSize*(-2)*WALL_RADIUS+1)),‡dd(sü“n, (£lf.gridSize*WALL_RADIUS, s–f.gridSize*(-0.5))), 
+w®lCŞÜ
+)
+
+457 #NW 
+quad¿Á
+
+
+458 ià(
+nÙ
+ 
+nIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+wIsW®l
+):
+
+459 #šÃ¸
+cœşe
+
+
+460 
+	`cœşe
+(
+sü“n2
+, 
+WALL_RADIUS
+ * 
+£lf
+.
+gridSize
+, 
+w®lCŞÜ
+, wallColor, (90,181), 'arc')
+
+461 ià(
+nIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+wIsW®l
+):
+
+462 #v”tiÿÈ
+lše
+
+
+463 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*(-1)*
+WALL_RADIUS
+, 0)),‡dd(sü“n, (£lf.gridSize*(-1)*WALL_RADIUS, s–f.gridSize*(-0.5)-1)), 
+w®lCŞÜ
+)
+
+464 ià(
+nÙ
+ 
+nIsW®l
+è
+	$ªd
+ (
+wIsW®l
+):
+
+465 #hÜizÚÈ
+lše
+
+
+466 
+	`lše
+(
+	`add
+(
+sü“n
+, (0, 
+£lf
+.
+gridSize
+*(-1)*
+WALL_RADIUS
+)),‡dd(sü“n, (£lf.gridSize*(-0.5)-1, s–f.gridSize*(-1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+467 ià(
+nIsW®l
+è
+	$ªd
+ (
+wIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+nwIsW®l
+):
+
+468 #ou‹¸
+cœşe
+
+
+469 
+	`cœşe
+(
+	`add
+(
+sü“n2
+, (
+£lf
+.
+gridSize
+*(-2)*
+WALL_RADIUS
+, s–f.gridSize*(-2)*WALL_RADIUS)), WALL_RADIUS * s–f.gridSize-1, 
+w®lCŞÜ
+, wallColor, (270,361), 'arc')
+
+470 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*(-2)*
+WALL_RADIUS
++1, s–f.gridSize*(-1)*WALL_RADIUS)),‡dd(sü“n, (£lf.gridSize*(-0.5), s–f.gridSize*(-1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+471 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*(-1)*
+WALL_RADIUS
+, s–f.gridSize*(-2)*WALL_RADIUS+1)),‡dd(sü“n, (£lf.gridSize*(-1)*WALL_RADIUS, s–f.gridSize*(-0.5))), 
+w®lCŞÜ
+)
+
+473 #SE 
+quad¿Á
+
+
+474 ià(
+nÙ
+ 
+sIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+eIsW®l
+):
+
+475 #šÃ¸
+cœşe
+
+
+476 
+	`cœşe
+(
+sü“n2
+, 
+WALL_RADIUS
+ * 
+£lf
+.
+gridSize
+, 
+w®lCŞÜ
+, wallColor, (270,361), 'arc')
+
+477 ià(
+sIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+eIsW®l
+):
+
+478 #v”tiÿÈ
+lše
+
+
+479 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*
+WALL_RADIUS
+, 0)),‡dd(sü“n, (£lf.gridSize*WALL_RADIUS, s–f.gridSize*(0.5)+1)), 
+w®lCŞÜ
+)
+
+480 ià(
+nÙ
+ 
+sIsW®l
+è
+	$ªd
+ (
+eIsW®l
+):
+
+481 #hÜizÚÈ
+lše
+
+
+482 
+	`lše
+(
+	`add
+(
+sü“n
+, (0, 
+£lf
+.
+gridSize
+*(1)*
+WALL_RADIUS
+)),‡dd(sü“n, (£lf.gridSize*0.5+1, s–f.gridSize*(1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+483 ià(
+sIsW®l
+è
+	$ªd
+ (
+eIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+£IsW®l
+):
+
+484 #ou‹¸
+cœşe
+
+
+485 
+	`cœşe
+(
+	`add
+(
+sü“n2
+, (
+£lf
+.
+gridSize
+*2*
+WALL_RADIUS
+, s–f.gridSize*(2)*WALL_RADIUS)), WALL_RADIUS * s–f.gridSize-1, 
+w®lCŞÜ
+, wallColor, (90,181), 'arc')
+
+486 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*2*
+WALL_RADIUS
+-1, s–f.gridSize*(1)*WALL_RADIUS)),‡dd(sü“n, (£lf.gridSize*0.5, s–f.gridSize*(1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+487 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*
+WALL_RADIUS
+, s–f.gridSize*(2)*WALL_RADIUS-1)),‡dd(sü“n, (£lf.gridSize*WALL_RADIUS, s–f.gridSize*(0.5))), 
+w®lCŞÜ
+)
+
+489 #SW 
+quad¿Á
+
+
+490 ià(
+nÙ
+ 
+sIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+wIsW®l
+):
+
+491 #šÃ¸
+cœşe
+
+
+492 
+	`cœşe
+(
+sü“n2
+, 
+WALL_RADIUS
+ * 
+£lf
+.
+gridSize
+, 
+w®lCŞÜ
+, wallColor, (180,271), 'arc')
+
+493 ià(
+sIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+wIsW®l
+):
+
+494 #v”tiÿÈ
+lše
+
+
+495 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*(-1)*
+WALL_RADIUS
+, 0)),‡dd(sü“n, (£lf.gridSize*(-1)*WALL_RADIUS, s–f.gridSize*(0.5)+1)), 
+w®lCŞÜ
+)
+
+496 ià(
+nÙ
+ 
+sIsW®l
+è
+	$ªd
+ (
+wIsW®l
+):
+
+497 #hÜizÚÈ
+lše
+
+
+498 
+	`lše
+(
+	`add
+(
+sü“n
+, (0, 
+£lf
+.
+gridSize
+*(1)*
+WALL_RADIUS
+)),‡dd(sü“n, (£lf.gridSize*(-0.5)-1, s–f.gridSize*(1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+499 ià(
+sIsW®l
+è
+	$ªd
+ (
+wIsW®l
+è
+	$ªd
+ (
+nÙ
+ 
+swIsW®l
+):
+
+500 #ou‹¸
+cœşe
+
+
+501 
+	`cœşe
+(
+	`add
+(
+sü“n2
+, (
+£lf
+.
+gridSize
+*(-2)*
+WALL_RADIUS
+, s–f.gridSize*(2)*WALL_RADIUS)), WALL_RADIUS * s–f.gridSize-1, 
+w®lCŞÜ
+, wallColor, (0,91), 'arc')
+
+502 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*(-2)*
+WALL_RADIUS
++1, s–f.gridSize*(1)*WALL_RADIUS)),‡dd(sü“n, (£lf.gridSize*(-0.5), s–f.gridSize*(1)*WALL_RADIUS)), 
+w®lCŞÜ
+)
+
+503 
+	`lše
+(
+	`add
+(
+sü“n
+, (
+£lf
+.
+gridSize
+*(-1)*
+WALL_RADIUS
+, s–f.gridSize*(2)*WALL_RADIUS-1)),‡dd(sü“n, (£lf.gridSize*(-1)*WALL_RADIUS, s–f.gridSize*(0.5))), 
+w®lCŞÜ
+)
+
+505 
+def
+ 
+	$isW®l
+(
+£lf
+, 
+x
+, 
+y
+, 
+w®ls
+):
+
+506 
+x
+ < 0 
+Ü
+ 
+y
+ < 0:
+
+507  
+F®£
+
+
+508 
+x
+ >ğ
+w®ls
+.
+width
+ 
+Ü
+ 
+y
+ >ğw®ls.
+height
+:
+
+509  
+F®£
+
+
+510  
+w®ls
+[
+x
+][
+y
+]
+
+512 
+def
+ 
+	$d¿wFood
+(
+£lf
+, 
+foodM©rix
+ ):
+
+513 
+foodImages
+ = []
+
+514 
+cŞÜ
+ = 
+FOOD_COLOR
+
+
+515 
+xNum
+, 
+x
+ 
+š
+ 
+	$’um”©e
+(
+foodM©rix
+):
+
+516 
+£lf
+.
+ÿ±u»
+ 
+	`ªd
+ (
+xNum
+ * 2è<ğ
+foodM©rix
+.
+width
+: 
+cŞÜ
+ = 
+TEAM_COLORS
+[0]
+
+517 
+£lf
+.
+ÿ±u»
+ 
+	`ªd
+ (
+xNum
+ * 2è> 
+foodM©rix
+.
+width
+: 
+cŞÜ
+ = 
+TEAM_COLORS
+[1]
+
+518 
+imageRow
+ = []
+
+519 
+foodImages
+.
+	$­³nd
+(
+imageRow
+)
+
+520 
+yNum
+, 
+ûÎ
+ 
+š
+ 
+	$’um”©e
+(
+x
+):
+
+521 
+ûÎ
+: #There's food here
+
+522 
+sü“n
+ = 
+£lf
+.
+	`to_sü“n
+((
+xNum
+, 
+yNum
+ ))
+
+523 
+dÙ
+ = 
+	$cœşe
+Ğ
+sü“n
+,
+
+524 
+FOOD_SIZE
+ * 
+£lf
+.
+gridSize
+,
+
+525 
+oušeCŞÜ
+ = 
+cŞÜ
+, 
+flCŞÜ
+ = color,
+
+526 
+width
+ = 1)
+
+527 
+imageRow
+.
+	$­³nd
+(
+dÙ
+)
+
+529 
+imageRow
+.
+	$­³nd
+(
+NÚe
+)
+
+530  
+foodImages
+
+
+532 
+def
+ 
+	$d¿wC­suËs
+(
+£lf
+, 
+ÿpsuËs
+ ):
+
+533 
+ÿpsuËImages
+ = {
+	}
+}
+
+534 
+ÿpsuË
+ 
+š
+ 
+ÿpsuËs
+:
+
+535 Ğ
+sü“n_x
+, 
+	gsü“n_y
+ ) = 
+£lf
+.
+	$to_sü“n
+(
+ÿpsuË
+)
+
+536 
+dÙ
+ = 
+	`cœşe
+Ğ(
+sü“n_x
+, 
+sü“n_y
+),
+
+537 
+CAPSULE_SIZE
+ * 
+£lf
+.
+gridSize
+,
+
+538 
+oušeCŞÜ
+ = 
+CAPSULE_COLOR
+,
+
+539 
+flCŞÜ
+ = 
+CAPSULE_COLOR
+,
+
+540 
+width
+ = 1)
+
+541 
+ÿpsuËImages
+[
+ÿpsuË
+] = 
+dÙ
+
+
+542  
+ÿpsuËImages
+
+
+544 
+def
+ 
+	$»moveFood
+(
+£lf
+, 
+ûÎ
+, 
+foodImages
+ ):
+
+545 
+x
+, 
+y
+ = 
+ûÎ
+
+
+546 
+	$»move_äom_sü“n
+(
+foodImages
+[
+x
+][
+y
+])
+
+548 
+def
+ 
+	$»moveC­suË
+(
+£lf
+, 
+ûÎ
+, 
+ÿpsuËImages
+ ):
+
+549 
+x
+, 
+y
+ = 
+ûÎ
+
+
+550 
+	`»move_äom_sü“n
+(
+ÿpsuËImages
+[(
+x
+, 
+y
+)])
+
+552 
+def
+ 
+	$d¿wEx·ndedC–ls
+(
+£lf
+, 
+ûÎs
+):
+
+554 
+D¿ws
+ 
+ª
+ 
+ov”Ïy
+ 
+of
+ 
+ex·nded
+ 
+grid
+ 
+pos™iÚs
+ 
+£¬ch
+ 
+ag’ts
+
+
+556 
+n
+ = (
+	$Ën
+(
+ûÎs
+))
+
+557 
+ba£CŞÜ
+ = [1.0, 0.0, 0.0]
+
+558 
+£lf
+.
+	$ş—rEx·ndedC–ls
+()
+
+559 
+£lf
+.
+ex·ndedC–ls
+ = []
+
+560 
+k
+, 
+ûÎ
+ 
+š
+ 
+	$’um”©e
+(
+ûÎs
+):
+
+561 
+sü“nPos
+ = 
+£lf
+.
+	$to_sü“n
+Ğ
+ûÎ
+)
+
+562 
+ûÎCŞÜ
+ = 
+	`fÜm©CŞÜ
+(*[(
+n
+-
+k
+è* 
+c
+ * .5 /‚ + .25 ø
+š
+ 
+ba£CŞÜ
+])
+
+563 
+block
+ = 
+	$squ¬e
+(
+sü“nPos
+,
+
+564 0.5 * 
+£lf
+.
+gridSize
+,
+
+565 
+cŞÜ
+ = 
+ûÎCŞÜ
+,
+
+566 
+fËd
+ = 1, 
+behšd
+=2)
+
+567 
+£lf
+.
+ex·ndedC–ls
+.
+	$­³nd
+(
+block
+)
+
+568 
+£lf
+.
+äameTime
+ < 0:
+
+569 
+	$»äesh
+()
+
+571 
+def
+ 
+	$ş—rEx·ndedC–ls
+(
+£lf
+):
+
+572 'ex·ndedC–ls' 
+š
+ 
+	$dœ
+(
+£lf
+è
+ªd
+ 
+	`Ën
+(£lf.
+ex·ndedC–ls
+) > 0:
+
+573 
+ûÎ
+ 
+š
+ 
+£lf
+.
+ex·ndedC–ls
+:
+
+574 
+	$»move_äom_sü“n
+(
+ûÎ
+)
+
+577 
+def
+ 
+	$upd©eDi¡ributiÚs
+(
+£lf
+, 
+di¡ributiÚs
+):
+
+579 
+£lf
+.
+di¡ributiÚImages
+ =ğ
+NÚe
+:
+
+580 
+£lf
+.
+	$d¿wDi¡ributiÚs
+(
+£lf
+.
+´eviousS‹
+)
+
+581 
+x
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+di¡ributiÚImages
+)):
+
+582 
+y
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+di¡ributiÚImages
+[0])):
+
+583 
+image
+ = 
+£lf
+.
+di¡ributiÚImages
+[
+x
+][
+y
+]
+
+584 
+weights
+ = [
+di¡
+[ (
+x
+,
+y
+è] di¡ 
+š
+ 
+di¡ributiÚs
+]
+
+586 
+	`sum
+(
+weights
+) != 0:
+
+587 
+·ss
+
+
+588 #Fog 
+of
+ 
+w¬
+
+
+589 
+cŞÜ
+ = [0.0,0.0,0.0]
+
+590 
+cŞÜs
+ = 
+GHOST_VEC_COLORS
+[1:] #W™h 
+Pacmª
+
+
+591 
+£lf
+.
+ÿ±u»
+: 
+cŞÜs
+ = 
+GHOST_VEC_COLORS
+
+
+592 
+weight
+, 
+gcŞÜ
+ 
+š
+ 
+	$z
+(
+weights
+, 
+cŞÜs
+):
+
+593 
+cŞÜ
+ = [
+	`mš
+(1.0, 
+c
+ + 0.95 * 
+g
+ * 
+weight
+ ** .3èc,g 
+š
+ 
+	`z
+(cŞÜ, 
+gcŞÜ
+)]
+
+594 
+	`chªgeCŞÜ
+(
+image
+, 
+	$fÜm©CŞÜ
+(*
+cŞÜ
+))
+
+595 
+	$»äesh
+()
+
+597 
+şass
+ 
+	$Fœ¡P”sÚPacmªG¿phics
+(
+PacmªG¿phics
+):
+
+598 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+zoom
+ = 1.0, 
+showGho¡s
+ = 
+True
+, 
+ÿ±u»
+ = 
+F®£
+, 
+äameTime
+=0):
+
+599 
+PacmªG¿phics
+.
+	$__š™__
+(
+£lf
+, 
+zoom
+, 
+äameTime
+=frameTime)
+
+600 
+£lf
+.
+showGho¡s
+ = showGhosts
+
+601 
+£lf
+.
+ÿ±u»
+ = capture
+
+603 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡©e
+, 
+isBlue
+ = 
+F®£
+):
+
+605 
+£lf
+.
+isBlue
+ = isBlue
+
+606 
+PacmªG¿phics
+.
+	$¡¬tG¿phics
+(
+£lf
+, 
+¡©e
+)
+
+607 #In™Ÿliz
+di¡ributiÚ
+ 
+images
+
+
+608 
+w®ls
+ = 
+¡©e
+.
+Ïyout
+.walls
+
+609 
+di¡
+ = []
+
+610 
+£lf
+.
+Ïyout
+ = 
+¡©e
+.layout
+
+612 #D¿w 
+the
+ 
+»¡
+
+
+613 
+£lf
+.
+di¡ributiÚImages
+ = 
+NÚe
+ #š™Ÿliz
+Ïzy
+
+
+614 
+£lf
+.
+	$d¿wSticObjeùs
+(
+¡©e
+)
+
+615 
+£lf
+.
+	$d¿wAg’tObjeùs
+(
+¡©e
+)
+
+618 
+£lf
+.
+´eviousS‹
+ = 
+¡©e
+
+
+620 
+def
+ 
+	$lookAh—d
+(
+£lf
+, 
+cÚfig
+, 
+¡©e
+):
+
+621 
+cÚfig
+.
+	`g‘DœeùiÚ
+() == 'Stop':
+
+624 
+·ss
+
+
+625 #D¿w 
+»Ëvªt
+ 
+gho¡s
+
+
+626 
+®lGho¡s
+ = 
+¡©e
+.
+	$g‘Gho¡S‹s
+()
+
+627 
+visibËGho¡s
+ = 
+¡©e
+.
+	$g‘VisibËGho¡s
+()
+
+628 
+i
+, 
+gho¡
+ 
+š
+ 
+	$’um”©e
+(
+®lGho¡s
+):
+
+629 
+gho¡
+ 
+š
+ 
+visibËGho¡s
+:
+
+630 
+£lf
+.
+	$d¿wGho¡
+(
+gho¡
+, 
+i
+)
+
+632 
+£lf
+.
+cu¼’tGho¡Images
+[
+i
+] = 
+NÚe
+
+
+634 
+def
+ 
+	$g‘Gho¡CŞÜ
+(
+£lf
+, 
+gho¡
+, 
+gho¡Index
+):
+
+635  
+GHOST_COLORS
+[
+gho¡Index
+]
+
+637 
+def
+ 
+	$g‘Pos™iÚ
+(
+£lf
+, 
+gho¡S‹
+):
+
+638 
+nÙ
+ 
+£lf
+.
+showGho¡s
+ 
+ªd
+‚Ù 
+gho¡S‹
+.
+isPacmª
+‡nd gho¡S‹.
+	`g‘Pos™iÚ
+()[1] > 1:
+
+641  
+PacmªG¿phics
+.
+	$g‘Pos™iÚ
+(
+£lf
+, 
+gho¡S‹
+)
+
+643 
+def
+ 
+	$add
+(
+x
+, 
+y
+):
+
+644  (
+x
+[0] + 
+y
+[0], x[1] + y[1])
+
+647 #Savšg 
+g¿phiÿl
+ 
+ouut
+
+
+649 #NÙe: 
+to
+ 
+make
+ 
+ª
+ 
+ªim©ed
+ 
+gif
+ 
+äom
+ 
+this
+ 
+po¡süt
+ 
+ouut
+, 
+Œy
+ 
+the
+ 
+commªd
+:
+
+650 #cÚv”ˆ-
+d–ay
+ 7 -
+loİ
+ 1 -
+com´ess
+ 
+lzw
+ -
+Ïy”s
+ 
+İtimize
+ 
+äame
+* 
+out
+.
+gif
+
+
+651 #cÚv”ˆ
+is
+ 
+·¹
+ 
+of
+ 
+	`imagemagick
+ (
+ä“w¬e
+)
+
+653 
+SAVE_POSTSCRIPT
+ = 
+F®£
+
+
+654 
+POSTSCRIPT_OUTPUT_DIR
+ = 'frames'
+
+655 
+FRAME_NUMBER
+ = 0
+
+656 
+impÜt
+ 
+os
+
+
+658 
+def
+ 
+	$§veF¿me
+():
+
+660 
+glob®
+ 
+SAVE_POSTSCRIPT
+, 
+FRAME_NUMBER
+, 
+POSTSCRIPT_OUTPUT_DIR
+
+
+661 
+nÙ
+ 
+SAVE_POSTSCRIPT
+: 
+
+662 
+nÙ
+ 
+os
+.
+·th
+.
+	$exi¡s
+(
+POSTSCRIPT_OUTPUT_DIR
+): 
+os
+.
+	$mkdœ
+(
+POSTSCRIPT_OUTPUT_DIR
+)
+
+663 
+Çme
+ = 
+os
+.
+·th
+.
+	`još
+(
+POSTSCRIPT_OUTPUT_DIR
+, 'äame_%08d.ps' % 
+FRAME_NUMBER
+)
+
+664 
+FRAME_NUMBER
+ += 1
+
+665 
+	$wr™ePo¡süt
+(
+Çme
+è#wr™e 
+the
+ 
+cu¼’t
+ canvas
+
+	@graphicsUtils.py
+
+1 #g¿phicsUts.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+impÜt
+ 
+sys
+
+
+10 
+impÜt
+ 
+m©h
+
+
+11 
+impÜt
+ 
+¿ndom
+
+
+12 
+impÜt
+ 
+¡ršg
+
+
+13 
+impÜt
+ 
+time
+
+
+14 
+impÜt
+ 
+ty³s
+
+
+15 
+impÜt
+ 
+Tkš‹r
+
+
+17 
+	g_Wšdows
+ = 
+sys
+.
+¶©fÜm
+ =ğ'wš32' #Tru
+Ú
+ 
+Wš95
+/98/
+NT
+
+
+19 
+_roÙ_wšdow
+ = 
+NÚe
+ #Th
+roÙ
+ 
+wšdow
+ 
+g¿phics
+ 
+ouut
+
+
+20 
+_ÿnvas
+ = 
+NÚe
+ #Th
+ÿnvas
+ 
+which
+ 
+hŞds
+ 
+g¿phics
+
+
+21 
+_ÿnvas_xs
+ = 
+NÚe
+ #Siz
+of
+ 
+ÿnvas
+ 
+objeù
+
+
+22 
+_ÿnvas_ys
+ = 
+NÚe
+
+
+23 
+_ÿnvas_x
+ = 
+NÚe
+ #Cu¼’ˆ
+pos™iÚ
+ 
+Ú
+ 
+ÿnvas
+
+
+24 
+_ÿnvas_y
+ = 
+NÚe
+
+
+25 
+_ÿnvas_cŞ
+ = 
+NÚe
+ #Cu¼’ˆ
+	$cŞour
+ (
+£t
+ 
+to
+ 
+bÏck
+ 
+b–ow
+)
+
+26 
+_ÿnvas_tsize
+ = 12
+
+27 
+_ÿnvas_t£rifs
+ = 0
+
+29 
+def
+ 
+	$fÜm©CŞÜ
+(
+r
+, 
+g
+, 
+b
+):
+
+30  '#%02x%02x%02x' % ((
+r
+ * 255), (
+g
+ * 255), (
+b
+ * 255))
+
+32 
+def
+ 
+	$cŞÜToVeùÜ
+(
+cŞÜ
+):
+
+33  
+	`m­
+(
+Ïmbda
+ 
+x
+: (x, 16è/ 256.0, [
+cŞÜ
+[1:3], color[3:5], color[5:7]])
+
+35 
+_Wšdows
+:
+
+36 
+_ÿnvas_tfÚts
+ = ['times‚ew„oman', 'lucida console']
+
+38 
+_ÿnvas_tfÚts
+ = ['times', 'lucidasans-24']
+
+39 
+·ss
+ #XXX 
+Ãed
+ 
+deçuÉs
+ 
+h”e
+
+
+41 
+def
+ 
+	$¦“p
+(
+£cs
+):
+
+42 
+glob®
+ 
+_roÙ_wšdow
+
+
+43 
+_roÙ_wšdow
+ =ğ
+NÚe
+:
+
+44 
+time
+.
+	$¦“p
+(
+£cs
+)
+
+46 
+_roÙ_wšdow
+.
+	$upd©e_idËsks
+()
+
+47 
+_roÙ_wšdow
+.
+	`aá”
+((1000 * 
+£cs
+), _roÙ_wšdow.
+qu™
+)
+
+48 
+_roÙ_wšdow
+.
+	$mašloİ
+()
+
+50 
+def
+ 
+	`begš_g¿phics
+(
+width
+=640, 
+height
+=480, 
+cŞÜ
+=
+	`fÜm©CŞÜ
+(0, 0, 0), 
+t™Ë
+=
+NÚe
+):
+
+52 
+glob®
+ 
+_roÙ_wšdow
+, 
+_ÿnvas
+, 
+_ÿnvas_x
+, 
+_ÿnvas_y
+, 
+_ÿnvas_xs
+, 
+_ÿnvas_ys
+, 
+_bg_cŞÜ
+
+
+54 #Check 
+du¶iÿ‹
+ 
+ÿÎ
+
+
+55 
+_roÙ_wšdow
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+56 #Lo£ 
+the
+ 
+wšdow
+.
+
+57 
+_roÙ_wšdow
+.
+	$de¡roy
+()
+
+59 #Sav
+the
+ 
+ÿnvas
+ 
+size
+ 
+·¿m‘”s
+
+
+60 
+_ÿnvas_xs
+, 
+_ÿnvas_ys
+ = 
+width
+ - 1, 
+height
+ - 1
+
+61 
+_ÿnvas_x
+, 
+_ÿnvas_y
+ = 0, 
+_ÿnvas_ys
+
+
+62 
+_bg_cŞÜ
+ = 
+cŞÜ
+
+
+64 #C»©
+the
+ 
+roÙ
+ 
+wšdow
+
+
+65 
+_roÙ_wšdow
+ = 
+Tkš‹r
+.
+	$Tk
+()
+
+66 
+_roÙ_wšdow
+.
+	`´ÙocŞ
+('WM_DELETE_WINDOW', 
+_de¡roy_wšdow
+)
+
+67 
+_roÙ_wšdow
+.
+	`t™Ë
+(
+t™Ë
+ 
+Ü
+ 'Graphics Window')
+
+68 
+_roÙ_wšdow
+.
+	$»sizabË
+(0, 0)
+
+70 #C»©
+the
+ 
+ÿnvas
+ 
+objeù
+
+
+71 
+Œy
+:
+
+72 
+_ÿnvas
+ = 
+Tkš‹r
+.
+	$Cªvas
+(
+_roÙ_wšdow
+, 
+width
+=width, 
+height
+=height)
+
+73 
+_ÿnvas
+.
+	$·ck
+()
+
+74 
+	$d¿w_background
+()
+
+75 
+_ÿnvas
+.
+	$upd©e
+()
+
+76 
+exû±
+:
+
+77 
+_roÙ_wšdow
+ = 
+NÚe
+
+
+78 
+¿i£
+
+
+80 #Bšd 
+to
+ 
+key
+-
+down
+ 
+ªd
+ key-
+up
+ 
+ev’ts
+
+
+81 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<KeyP»ss>", 
+_key´ess
+ )
+
+82 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<KeyR–—£>", 
+_key»Ëa£
+ )
+
+83 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<FocusIn>", 
+_ş—r_keys
+ )
+
+84 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<FocusOut>", 
+_ş—r_keys
+ )
+
+85 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<Bu‰Ú-1>", 
+_Ëáşick
+ )
+
+86 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<Bu‰Ú-2>", 
+_rightşick
+ )
+
+87 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<Bu‰Ú-3>", 
+_rightşick
+ )
+
+88 
+_roÙ_wšdow
+.
+	`bšd
+Ğ"<CÚŒŞ-Bu‰Ú-1>", 
+_ù¾_Ëáşick
+)
+
+89 
+	$_ş—r_keys
+()
+
+91 
+_Ëáşick_loc
+ = 
+NÚe
+
+
+92 
+_rightşick_loc
+ = 
+NÚe
+
+
+93 
+_ù¾_Ëáşick_loc
+ = 
+NÚe
+
+
+95 
+def
+ 
+	$_Ëáşick
+(
+ev’t
+):
+
+96 
+glob®
+ 
+_Ëáşick_loc
+
+
+97 
+_Ëáşick_loc
+ = (
+ev’t
+.
+x
+,ƒv’t.
+y
+)
+
+99 
+def
+ 
+	$_rightşick
+(
+ev’t
+):
+
+100 
+glob®
+ 
+_rightşick_loc
+
+
+101 
+_rightşick_loc
+ = (
+ev’t
+.
+x
+,ƒv’t.
+y
+)
+
+103 
+def
+ 
+	$_ù¾_Ëáşick
+(
+ev’t
+):
+
+104 
+glob®
+ 
+_ù¾_Ëáşick_loc
+
+
+105 
+_ù¾_Ëáşick_loc
+ = (
+ev’t
+.
+x
+,ƒv’t.
+y
+)
+
+107 
+def
+ 
+	$wa™_fÜ_şick
+():
+
+108 
+True
+:
+
+109 
+glob®
+ 
+_Ëáşick_loc
+
+
+110 
+glob®
+ 
+_rightşick_loc
+
+
+111 
+glob®
+ 
+_ù¾_Ëáşick_loc
+
+
+112 
+_Ëáşick_loc
+ !ğ
+NÚe
+:
+
+113 
+v®
+ = 
+_Ëáşick_loc
+
+
+114 
+_Ëáşick_loc
+ = 
+NÚe
+
+
+115  
+v®
+, 'left'
+
+116 
+_rightşick_loc
+ !ğ
+NÚe
+:
+
+117 
+v®
+ = 
+_rightşick_loc
+
+
+118 
+_rightşick_loc
+ = 
+NÚe
+
+
+119  
+v®
+, 'right'
+
+120 
+_ù¾_Ëáşick_loc
+ !ğ
+NÚe
+:
+
+121 
+v®
+ = 
+_ù¾_Ëáşick_loc
+
+
+122 
+_ù¾_Ëáşick_loc
+ = 
+NÚe
+
+
+123  
+v®
+, 'ctrl_left'
+
+124 
+	$¦“p
+(0.05)
+
+126 
+def
+ 
+	$d¿w_background
+():
+
+127 
+cÜÃrs
+ = [(0,0), (0, 
+_ÿnvas_ys
+), (
+_ÿnvas_xs
+, _canvas_ys), (_canvas_xs, 0)]
+
+128 
+	$pŞygÚ
+(
+cÜÃrs
+, 
+_bg_cŞÜ
+, 
+flCŞÜ
+=_bg_cŞÜ, 
+fËd
+=
+True
+, 
+smoÙhed
+=
+F®£
+)
+
+130 
+def
+ 
+	$_de¡roy_wšdow
+(
+ev’t
+=
+NÚe
+):
+
+131 
+sys
+.
+	$ex™
+(0)
+
+132 #glob® 
+_roÙ_wšdow
+
+
+133 #_roÙ_wšdow.
+	`de¡roy
+()
+
+134 #_roÙ_wšdow = 
+NÚe
+
+
+137 
+def
+ 
+	$’d_g¿phics
+():
+
+138 
+glob®
+ 
+_roÙ_wšdow
+, 
+_ÿnvas
+, 
+_mou£_’abËd
+
+
+139 
+Œy
+:
+
+140 
+Œy
+:
+
+141 
+	$¦“p
+(1)
+
+142 
+_roÙ_wšdow
+ !ğ
+NÚe
+:
+
+143 
+_roÙ_wšdow
+.
+	$de¡roy
+()
+
+144 
+exû±
+ 
+Sy¡emEx™
+, 
+e
+:
+
+145 
+´št
+ 'Endšg g¿phic ¿i£d‡Àexû±iÚ:', 
+e
+
+
+146 
+fš®ly
+:
+
+147 
+_roÙ_wšdow
+ = 
+NÚe
+
+
+148 
+_ÿnvas
+ = 
+NÚe
+
+
+149 
+_mou£_’abËd
+ = 0
+
+150 
+	$_ş—r_keys
+()
+
+152 
+def
+ 
+	$ş—r_sü“n
+(
+background
+=
+NÚe
+):
+
+153 
+glob®
+ 
+_ÿnvas_x
+, 
+_ÿnvas_y
+
+
+154 
+_ÿnvas
+.
+	`d–‘e
+('all')
+
+155 
+	$d¿w_background
+()
+
+156 
+_ÿnvas_x
+, 
+_ÿnvas_y
+ = 0, 
+_ÿnvas_ys
+
+
+158 
+def
+ 
+	$pŞygÚ
+(
+coÜds
+, 
+oušeCŞÜ
+, 
+flCŞÜ
+=
+NÚe
+, 
+fËd
+=1, 
+smoÙhed
+=1, 
+behšd
+=0, 
+width
+=1):
+
+159 
+c
+ = []
+
+160 
+coÜd
+ 
+š
+ 
+coÜds
+:
+
+161 
+c
+.
+	$­³nd
+(
+coÜd
+[0])
+
+162 
+c
+.
+	$­³nd
+(
+coÜd
+[1])
+
+163 
+flCŞÜ
+ =ğ
+NÚe
+: flCŞÜ = 
+oušeCŞÜ
+
+
+164 
+fËd
+ =ğ0: 
+flCŞÜ
+ = ""
+
+165 
+pŞy
+ = 
+_ÿnvas
+.
+	$ü—‹_pŞygÚ
+(
+c
+, 
+ouše
+=
+oušeCŞÜ
+, 
+fl
+=
+flCŞÜ
+, 
+smoÙh
+=
+smoÙhed
+, 
+width
+=width)
+
+166 
+behšd
+ > 0:
+
+167 
+_ÿnvas
+.
+	$g_low”
+(
+pŞy
+, 
+behšd
+è#High” 
+should
+ 
+be
+ 
+mÜe
+ 
+visibË
+
+
+168  
+pŞy
+
+
+170 
+def
+ 
+	$squ¬e
+(
+pos
+, 
+r
+, 
+cŞÜ
+, 
+fËd
+=1, 
+behšd
+=0):
+
+171 
+x
+, 
+y
+ = 
+pos
+
+
+172 
+coÜds
+ = [(
+x
+ - 
+r
+, 
+y
+ -„), (x +„, y -„), (x +„, y +„), (x -„, y +„)]
+
+173  
+	$pŞygÚ
+(
+coÜds
+, 
+cŞÜ
+, cŞÜ, 
+fËd
+, 0, 
+behšd
+=behind)
+
+175 
+def
+ 
+	`cœşe
+(
+pos
+, 
+r
+, 
+oušeCŞÜ
+, 
+flCŞÜ
+, 
+’dpošts
+=
+NÚe
+, 
+¡yË
+='p›¦iû', 
+width
+=2):
+
+176 
+x
+, 
+y
+ = 
+pos
+
+
+177 
+x0
+, 
+x1
+ = 
+x
+ - 
+r
+ - 1, x +„
+
+178 
+y0
+, 
+y1
+ = 
+y
+ - 
+r
+ - 1, y +„
+
+179 
+’dpošts
+ =ğ
+NÚe
+:
+
+180 
+e
+ = [0, 359]
+
+182 
+e
+ = 
+	$li¡
+(
+’dpošts
+)
+
+183 
+e
+[0] >ƒ[1]:ƒ[1] =ƒ[1] + 360
+
+185  
+_ÿnvas
+.
+	`ü—‹_¬c
+(
+x0
+, 
+y0
+, 
+x1
+, 
+y1
+, 
+ouše
+=
+oušeCŞÜ
+, 
+fl
+=
+flCŞÜ
+,
+
+186 
+ex‹Á
+=
+e
+[1] -ƒ[0], 
+¡¬t
+ó[0], 
+¡yË
+=¡yË, 
+width
+=width)
+
+188 
+def
+ 
+	`image
+(
+pos
+, 
+fe
+="../../blueghost.gif"):
+
+189 
+x
+, 
+y
+ = 
+pos
+
+
+190 #img = 
+	`PhÙoImage
+(
+fe
+=file)
+
+191  
+_ÿnvas
+.
+	`ü—‹_image
+(
+x
+, 
+y
+, 
+image
+ = 
+Tkš‹r
+.
+	`PhÙoImage
+(
+fe
+=fe), 
+ªchÜ
+ = Tkš‹r.
+NW
+)
+
+194 
+def
+ 
+	$»äesh
+():
+
+195 
+_ÿnvas
+.
+	$upd©e_idËsks
+()
+
+197 
+def
+ 
+	$moveCœşe
+(
+id
+, 
+pos
+, 
+r
+, 
+’dpošts
+=
+NÚe
+):
+
+198 
+glob®
+ 
+_ÿnvas_x
+, 
+_ÿnvas_y
+
+
+200 
+x
+, 
+y
+ = 
+pos
+
+
+201 #x0, 
+x1
+ = 
+x
+ - 
+r
+, x +„ + 1
+
+202 #y0, 
+y1
+ = 
+y
+ - 
+r
+, y +„ + 1
+
+203 
+x0
+, 
+x1
+ = 
+x
+ - 
+r
+ - 1, x +„
+
+204 
+y0
+, 
+y1
+ = 
+y
+ - 
+r
+ - 1, y +„
+
+205 
+’dpošts
+ =ğ
+NÚe
+:
+
+206 
+e
+ = [0, 359]
+
+208 
+e
+ = 
+	$li¡
+(
+’dpošts
+)
+
+209 
+e
+[0] >ƒ[1]:ƒ[1] =ƒ[1] + 360
+
+211 
+	`ed™
+(
+id
+, ('¡¬t', 
+e
+[0]), ('extent',ƒ[1] -ƒ[0]))
+
+212 
+	$move_to
+(
+id
+, 
+x0
+, 
+y0
+)
+
+214 
+def
+ 
+	$ed™
+(
+id
+, *
+¬gs
+):
+
+215 
+_ÿnvas
+.
+	`™emcÚfigu»
+(
+id
+, **
+	$diù
+(
+¬gs
+))
+
+217 
+def
+ 
+	`‹xt
+(
+pos
+, 
+cŞÜ
+, 
+cÚ‹Ás
+, 
+fÚt
+='H–v‘iÿ', 
+size
+=12, 
+¡yË
+='nÜm®', 
+ªchÜ
+="nw"):
+
+218 
+glob®
+ 
+_ÿnvas_x
+, 
+_ÿnvas_y
+
+
+219 
+x
+, 
+y
+ = 
+pos
+
+
+220 
+fÚt
+ = (fÚt, 
+	`¡r
+(
+size
+), 
+¡yË
+)
+
+221  
+_ÿnvas
+.
+	$ü—‹_‹xt
+(
+x
+, 
+y
+, 
+fl
+=
+cŞÜ
+, 
+‹xt
+=
+cÚ‹Ás
+, 
+fÚt
+=fÚt, 
+ªchÜ
+=anchor)
+
+223 
+def
+ 
+	`chªgeText
+(
+id
+, 
+ÃwText
+, 
+fÚt
+=
+NÚe
+, 
+size
+=12, 
+¡yË
+='normal'):
+
+224 
+_ÿnvas
+.
+	$™emcÚfigu»
+(
+id
+, 
+‹xt
+=
+ÃwText
+)
+
+225 
+fÚt
+ !ğ
+NÚe
+:
+
+226 
+_ÿnvas
+.
+	`™emcÚfigu»
+(
+id
+, 
+fÚt
+=(fÚt, '-%d' % 
+size
+, 
+¡yË
+))
+
+228 
+def
+ 
+	$chªgeCŞÜ
+(
+id
+, 
+ÃwCŞÜ
+):
+
+229 
+_ÿnvas
+.
+	$™emcÚfigu»
+(
+id
+, 
+fl
+=
+ÃwCŞÜ
+)
+
+231 
+def
+ 
+	`lše
+(
+h”e
+, 
+th”e
+, 
+cŞÜ
+=
+	`fÜm©CŞÜ
+(0, 0, 0), 
+width
+=2):
+
+232 
+x0
+, 
+y0
+ = 
+h”e
+[0], here[1]
+
+233 
+x1
+, 
+y1
+ = 
+th”e
+[0],here[1]
+
+234  
+_ÿnvas
+.
+	$ü—‹_lše
+(
+x0
+, 
+y0
+, 
+x1
+, 
+y1
+, 
+fl
+=
+cŞÜ
+, 
+width
+=width)
+
+237 ###Key´es 
+hªdlšg
+ ########################################################
+
+240 #W
+bšd
+ 
+to
+ 
+key
+-
+down
+ 
+ªd
+ key-
+up
+ 
+ev’ts
+.
+
+242 
+_keysdown
+ = {
+	}
+}
+
+243 
+_keyswa™šg
+ = {}
+
+244 #Thi 
+hŞds
+ 
+ª
+ 
+uÅroûs£d
+ 
+key
+ 
+»Ëa£
+. 
+We
+ 
+d–ay
+ key 
+»Ëa£s
+ 
+by
+ 
+up
+ 
+to
+
+
+245 #Ú
+ÿÎ
+ 
+to
+ 
+keys_´es£d
+(ètØ
+g‘
+ 
+round
+ 
+a
+ 
+´obËm
+ 
+w™h
+‡utØ
+»³©
+.
+
+246 
+_gÙ_»Ëa£
+ = 
+NÚe
+
+
+248 
+def
+ 
+	$_key´ess
+(
+ev’t
+):
+
+249 
+glob®
+ 
+_gÙ_»Ëa£
+
+
+250 #»m­_¬rows(
+ev’t
+)
+
+251 
+_keysdown
+[
+ev’t
+.
+keysym
+] = 1
+
+252 
+_keyswa™šg
+[
+ev’t
+.
+keysym
+] = 1
+
+253 #´šˆ
+ev’t
+.,ƒv’t.
+keycode
+
+
+254 
+_gÙ_»Ëa£
+ = 
+NÚe
+
+
+256 
+def
+ 
+	$_key»Ëa£
+(
+ev’t
+):
+
+257 
+glob®
+ 
+_gÙ_»Ëa£
+
+
+258 #»m­_¬rows(
+ev’t
+)
+
+259 
+Œy
+:
+
+260 
+d–
+ 
+_keysdown
+[
+ev’t
+.
+keysym
+]
+
+261 
+exû±
+:
+
+262 
+·ss
+
+
+263 
+_gÙ_»Ëa£
+ = 1
+
+265 
+def
+ 
+	$»m­_¬rows
+(
+ev’t
+):
+
+266 #TURN 
+ARROW
+ 
+PRESSES
+ 
+INTO
+ 
+	`LETTERS
+ (
+SHOULD
+ 
+BE
+ 
+IN
+ 
+KEYBOARD
+ 
+AGENT
+)
+
+267 
+ev’t
+.
+š
+ ['a', 's', 'd', 'w']:
+
+269 
+ev’t
+.
+keycode
+ 
+š
+ [37, 101]: #LEFT 
+	`ARROW
+ (
+wš
+ / 
+x
+)
+
+270 
+ev’t
+.= 'a'
+
+271 
+ev’t
+.
+keycode
+ 
+š
+ [38, 99]: #UP 
+ARROW
+
+
+272 
+ev’t
+.= 'w'
+
+273 
+ev’t
+.
+keycode
+ 
+š
+ [39, 102]: #RIGHT 
+ARROW
+
+
+274 
+ev’t
+.= 'd'
+
+275 
+ev’t
+.
+keycode
+ 
+š
+ [40, 104]: #DOWN 
+ARROW
+
+
+276 
+ev’t
+.= 's'
+
+278 
+def
+ 
+	$_ş—r_keys
+(
+ev’t
+=
+NÚe
+):
+
+279 
+glob®
+ 
+_keysdown
+, 
+_gÙ_»Ëa£
+, 
+_keyswa™šg
+
+
+280 
+_keysdown
+ = {
+	}
+}
+
+281 
+_keyswa™šg
+ = {}
+
+282 
+_gÙ_»Ëa£
+ = 
+NÚe
+
+
+284 
+def
+ 
+	$keys_´es£d
+(
+d_o_e
+=
+Tkš‹r
+.
+tkš‹r
+.
+doÚ“v’t
+,
+
+285 
+d_w
+=
+Tkš‹r
+.
+tkš‹r
+.
+DONT_WAIT
+):
+
+286 
+	$d_o_e
+(
+d_w
+)
+
+287 
+_gÙ_»Ëa£
+:
+
+288 
+	$d_o_e
+(
+d_w
+)
+
+289  
+_keysdown
+.
+	$keys
+()
+
+291 
+def
+ 
+	$keys_wa™šg
+():
+
+292 
+glob®
+ 
+_keyswa™šg
+
+
+293 
+keys
+ = 
+_keyswa™šg
+.
+	$keys
+()
+
+294 
+_keyswa™šg
+ = {
+	}
+}
+
+295  
+keys
+
+
+297 #Block 
+a
+ 
+li¡
+ 
+of
+ 
+keys
+...
+
+299 
+def
+ 
+	$wa™_fÜ_keys
+():
+
+300 
+keys
+ = []
+
+301 
+keys
+ == []:
+
+302 
+keys
+ = 
+	$keys_´es£d
+()
+
+303 
+	$¦“p
+(0.05)
+
+304  
+keys
+
+
+306 
+def
+ 
+	$»move_äom_sü“n
+(
+x
+,
+
+307 
+d_o_e
+=
+Tkš‹r
+.
+tkš‹r
+.
+doÚ“v’t
+,
+
+308 
+d_w
+=
+Tkš‹r
+.
+tkš‹r
+.
+DONT_WAIT
+):
+
+309 
+_ÿnvas
+.
+	$d–‘e
+(
+x
+)
+
+310 
+	$d_o_e
+(
+d_w
+)
+
+312 
+def
+ 
+	$_adju¡_coÜds
+(
+coÜd_li¡
+, 
+x
+, 
+y
+):
+
+313 
+i
+ 
+š
+ 
+	`¿nge
+(0, 
+	`Ën
+(
+coÜd_li¡
+), 2):
+
+314 
+coÜd_li¡
+[
+i
+] = coÜd_li¡[i] + 
+x
+
+
+315 
+coÜd_li¡
+[
+i
+ + 1] = coÜd_li¡[˜+ 1] + 
+y
+
+
+316  
+coÜd_li¡
+
+
+318 
+def
+ 
+	$move_to
+(
+objeù
+, 
+x
+, 
+y
+=
+NÚe
+,
+
+319 
+d_o_e
+=
+Tkš‹r
+.
+tkš‹r
+.
+doÚ“v’t
+,
+
+320 
+d_w
+=
+Tkš‹r
+.
+tkš‹r
+.
+DONT_WAIT
+):
+
+321 
+y
+ 
+is
+ 
+NÚe
+:
+
+322 
+Œy
+: 
+x
+, 
+y
+ = x
+
+323 
+exû±
+: 
+¿i£
+ 'incomprehensible coordinates'
+
+325 
+hÜiz
+ = 
+True
+
+
+326 
+ÃwCoÜds
+ = []
+
+327 
+cu¼’t_x
+, 
+cu¼’t_y
+ = 
+_ÿnvas
+.
+	`coÜds
+(
+objeù
+)[0:2] #fœ¡ 
+pošt
+
+
+328 
+coÜd
+ 
+š
+ 
+_ÿnvas
+.
+	$coÜds
+(
+objeù
+):
+
+329 
+hÜiz
+:
+
+330 
+šc
+ = 
+x
+ - 
+cu¼’t_x
+
+
+332 
+šc
+ = 
+y
+ - 
+cu¼’t_y
+
+
+333 
+hÜiz
+ = 
+nÙ
+ horiz
+
+335 
+ÃwCoÜds
+.
+	`­³nd
+(
+coÜd
+ + 
+šc
+)
+
+337 
+_ÿnvas
+.
+	$coÜds
+(
+objeù
+, *
+ÃwCoÜds
+)
+
+338 
+	$d_o_e
+(
+d_w
+)
+
+340 
+def
+ 
+	$move_by
+(
+objeù
+, 
+x
+, 
+y
+=
+NÚe
+,
+
+341 
+d_o_e
+=
+Tkš‹r
+.
+tkš‹r
+.
+doÚ“v’t
+,
+
+342 
+d_w
+=
+Tkš‹r
+.
+tkš‹r
+.
+DONT_WAIT
+):
+
+343 
+y
+ 
+is
+ 
+NÚe
+:
+
+344 
+Œy
+: 
+x
+, 
+y
+ = x
+
+345 
+exû±
+: 
+¿i£
+ 
+Exû±iÚ
+, 'incomprehensible coordinates'
+
+347 
+hÜiz
+ = 
+True
+
+
+348 
+ÃwCoÜds
+ = []
+
+349 
+coÜd
+ 
+š
+ 
+_ÿnvas
+.
+	$coÜds
+(
+objeù
+):
+
+350 
+hÜiz
+:
+
+351 
+šc
+ = 
+x
+
+
+353 
+šc
+ = 
+y
+
+
+354 
+hÜiz
+ = 
+nÙ
+ horiz
+
+356 
+ÃwCoÜds
+.
+	`­³nd
+(
+coÜd
+ + 
+šc
+)
+
+358 
+_ÿnvas
+.
+	$coÜds
+(
+objeù
+, *
+ÃwCoÜds
+)
+
+359 
+	$d_o_e
+(
+d_w
+)
+
+361 
+def
+ 
+	$wr™ePo¡süt
+(
+f’ame
+):
+
+363 
+psfe
+ = 
+	`fe
+(
+f’ame
+, 'w')
+
+364 
+psfe
+.
+	`wr™e
+(
+_ÿnvas
+.
+	`po¡süt
+(
+·g—nchÜ
+='sw',
+
+365 
+y
+='0.c',
+
+366 
+x
+='0.c'))
+
+367 
+psfe
+.
+	$şo£
+()
+
+369 
+gho¡_sh­e
+ = [
+
+383 
+__Çme__
+ == '__main__':
+
+384 
+	$begš_g¿phics
+()
+
+385 
+	$ş—r_sü“n
+()
+
+386 
+gho¡_sh­e
+ = [(
+x
+ * 10 + 20, 
+y
+ * 10 + 20èx, y 
+š
+ ghost_shape]
+
+387 
+g
+ = 
+	`pŞygÚ
+(
+gho¡_sh­e
+, 
+	$fÜm©CŞÜ
+(1, 1, 1))
+
+388 
+	`move_to
+(
+g
+, (50, 50))
+
+389 
+	`cœşe
+((150, 150), 20, 
+	`fÜm©CŞÜ
+(0.7, 0.3, 0.0), 
+’dpošts
+=[15, - 15])
+
+390 
+	`¦“p
+(2)
+
+	@keyboardAgents.py
+
+1 #keybßrdAg’ts.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+äom
+ 
+game
+ 
+impÜt
+ 
+Ag’t
+
+
+10 
+äom
+ 
+game
+ 
+impÜt
+ 
+DœeùiÚs
+
+
+11 
+impÜt
+ 
+¿ndom
+
+
+13 
+şass
+ 
+	$KeybßrdAg’t
+(
+Ag’t
+):
+
+15 
+An
+ 
+ag’t
+ 
+cÚŒŞËd
+ 
+by
+ 
+the
+ 
+keybßrd
+.
+
+17 #NOTE: 
+A¼ow
+ 
+keys
+ 
+®so
+ 
+wÜk
+.
+
+18 
+WEST_KEY
+ = 'a'
+
+19 
+EAST_KEY
+ = 'd'
+
+20 
+NORTH_KEY
+ = 'w'
+
+21 
+SOUTH_KEY
+ = 's'
+
+22 
+STOP_KEY
+ = 'q'
+
+24 
+def
+ 
+	$__š™__
+Ğ
+£lf
+, 
+šdex
+ = 0 ):
+
+26 
+£lf
+.
+Ï¡Move
+ = 
+DœeùiÚs
+.
+STOP
+
+
+27 
+£lf
+.
+šdex
+ = index
+
+28 
+£lf
+.
+keys
+ = []
+
+30 
+def
+ 
+	$g‘AùiÚ
+Ğ
+£lf
+, 
+¡©e
+):
+
+31 
+äom
+ 
+g¿phicsUts
+ 
+impÜt
+ 
+keys_wa™šg
+
+
+32 
+äom
+ 
+g¿phicsUts
+ 
+impÜt
+ 
+keys_´es£d
+
+
+33 
+keys
+ = 
+	`keys_wa™šg
+(è+ 
+	$keys_´es£d
+()
+
+34 
+keys
+ != []:
+
+35 
+£lf
+.
+keys
+ = keys
+
+37 
+Ëg®
+ = 
+¡©e
+.
+	$g‘Leg®AùiÚs
+(
+£lf
+.
+šdex
+)
+
+38 
+move
+ = 
+£lf
+.
+	$g‘Move
+(
+Ëg®
+)
+
+40 
+move
+ =ğ
+DœeùiÚs
+.
+STOP
+:
+
+41 #Try 
+to
+ 
+move
+ 
+š
+ 
+the
+ 
+§me
+ 
+dœeùiÚ
+ 
+as
+ 
+befÜe
+
+
+42 
+£lf
+.
+Ï¡Move
+ 
+š
+ 
+Ëg®
+:
+
+43 
+move
+ = 
+£lf
+.
+Ï¡Move
+
+
+45 ià(
+£lf
+.
+STOP_KEY
+ 
+š
+ s–f.
+keys
+è
+ªd
+ 
+DœeùiÚs
+.
+STOP
+ iÀ
+Ëg®
+: 
+move
+ = Directions.STOP
+
+47 
+move
+ 
+nÙ
+ 
+š
+ 
+Ëg®
+:
+
+48 
+move
+ = 
+¿ndom
+.
+	$choiû
+(
+Ëg®
+)
+
+50 
+£lf
+.
+Ï¡Move
+ = 
+move
+
+
+51  
+move
+
+
+53 
+def
+ 
+	$g‘Move
+(
+£lf
+, 
+Ëg®
+):
+
+54 
+move
+ = 
+DœeùiÚs
+.
+STOP
+
+
+55 ià(
+£lf
+.
+WEST_KEY
+ 
+š
+ s–f.
+keys
+ 
+Ü
+ 'Leá' iÀ£lf.keysè
+ªd
+ 
+DœeùiÚs
+.
+WEST
+ iÀ
+Ëg®
+: 
+move
+ = Directions.WEST
+
+56 ià(
+£lf
+.
+EAST_KEY
+ 
+š
+ s–f.
+keys
+ 
+Ü
+ 'Right' iÀ£lf.keysè
+ªd
+ 
+DœeùiÚs
+.
+EAST
+ iÀ
+Ëg®
+: 
+move
+ = Directions.EAST
+
+57 ià(
+£lf
+.
+NORTH_KEY
+ 
+š
+ s–f.
+keys
+ 
+Ü
+ 'Up' iÀ£lf.keysè
+ªd
+ 
+DœeùiÚs
+.
+NORTH
+ iÀ
+Ëg®
+: 
+move
+ = Directions.NORTH
+
+58 ià(
+£lf
+.
+SOUTH_KEY
+ 
+š
+ s–f.
+keys
+ 
+Ü
+ 'Down' iÀ£lf.keysè
+ªd
+ 
+DœeùiÚs
+.
+SOUTH
+ iÀ
+Ëg®
+: 
+move
+ = Directions.SOUTH
+
+59  
+move
+
+
+61 
+şass
+ 
+	$KeybßrdAg’t2
+(
+KeybßrdAg’t
+):
+
+63 
+A
+ 
+£cÚd
+ 
+ag’t
+ 
+cÚŒŞËd
+ 
+by
+ 
+the
+ 
+keybßrd
+.
+
+65 #NOTE: 
+A¼ow
+ 
+keys
+ 
+®so
+ 
+wÜk
+.
+
+66 
+WEST_KEY
+ = 'j'
+
+67 
+EAST_KEY
+ = "l"
+
+68 
+NORTH_KEY
+ = 'i'
+
+69 
+SOUTH_KEY
+ = 'k'
+
+70 
+STOP_KEY
+ = 'u'
+
+72 
+def
+ 
+	$g‘Move
+(
+£lf
+, 
+Ëg®
+):
+
+73 
+move
+ = 
+DœeùiÚs
+.
+STOP
+
+
+74 ià(
+£lf
+.
+WEST_KEY
+ 
+š
+ s–f.
+keys
+è
+ªd
+ 
+DœeùiÚs
+.
+WEST
+ iÀ
+Ëg®
+: 
+move
+ = Directions.WEST
+
+75 ià(
+£lf
+.
+EAST_KEY
+ 
+š
+ s–f.
+keys
+è
+ªd
+ 
+DœeùiÚs
+.
+EAST
+ iÀ
+Ëg®
+: 
+move
+ = Directions.EAST
+
+76 ià(
+£lf
+.
+NORTH_KEY
+ 
+š
+ s–f.
+keys
+è
+ªd
+ 
+DœeùiÚs
+.
+NORTH
+ iÀ
+Ëg®
+: 
+move
+ = Directions.NORTH
+
+77 ià(
+£lf
+.
+SOUTH_KEY
+ 
+š
+ s–f.
+keys
+è
+ªd
+ 
+DœeùiÚs
+.
+SOUTH
+ iÀ
+Ëg®
+: 
+move
+ = Directions.SOUTH
+
+78  
+move
+
+
+	@layout.py
+
+1 #Ïyout.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+äom
+ 
+ut
+ 
+impÜt
+ 
+mªh©nDi¡ªû
+
+
+10 
+äom
+ 
+game
+ 
+impÜt
+ 
+Grid
+
+
+11 
+impÜt
+ 
+os
+
+
+12 
+impÜt
+ 
+¿ndom
+
+
+14 
+	gVISIBILITY_MATRIX_CACHE
+ = {}
+
+16 
+şass
+ 
+Layout
+:
+
+18 
+A
+ 
+Layout
+ 
+mªages
+ 
+the
+ 
+šfÜm©iÚ
+ 
+about
+h
+game
+ 
+bßrd
+.
+
+21 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+ÏyoutText
+):
+
+22 
+£lf
+.
+width
+ = 
+	$Ën
+(
+ÏyoutText
+[0])
+
+23 
+£lf
+.
+height
+ğ
+	$Ën
+(
+ÏyoutText
+)
+
+24 
+£lf
+.
+w®ls
+ = 
+	$Grid
+(
+£lf
+.
+width
+, s–f.
+height
+, 
+F®£
+)
+
+25 
+£lf
+.
+food
+ = 
+	$Grid
+(
+£lf
+.
+width
+, s–f.
+height
+, 
+F®£
+)
+
+26 
+£lf
+.
+ÿpsuËs
+ = []
+
+27 
+£lf
+.
+ag’tPos™iÚs
+ = []
+
+28 
+£lf
+.
+numGho¡s
+ = 0
+
+29 
+£lf
+.
+	$´oûssLayoutText
+(
+ÏyoutText
+)
+
+30 
+£lf
+.
+ÏyoutText
+ =†ayoutText
+
+31 #£lf.
+	`š™ŸlizeVisib™yM©rix
+()
+
+33 
+def
+ 
+	$g‘NumGho¡s
+(
+£lf
+):
+
+34  
+£lf
+.
+numGho¡s
+
+
+36 
+def
+ 
+	$š™ŸlizeVisib™yM©rix
+(
+£lf
+):
+
+37 
+glob®
+ 
+VISIBILITY_MATRIX_CACHE
+
+
+38 
+	$»duû
+(
+¡r
+.
+__add__
+, 
+£lf
+.
+ÏyoutText
+è
+nÙ
+ 
+š
+ 
+VISIBILITY_MATRIX_CACHE
+:
+
+39 
+äom
+ 
+game
+ 
+impÜt
+ 
+DœeùiÚs
+
+
+40 
+vecs
+ = [(-0.5,0), (0.5,0),(0,-0.5),(0,0.5)]
+
+41 
+dœs
+ = [
+DœeùiÚs
+.
+NORTH
+, DœeùiÚs.
+SOUTH
+, DœeùiÚs.
+WEST
+, DœeùiÚs.
+EAST
+]
+
+42 
+vis
+ = 
+	`Grid
+(
+£lf
+.
+width
+, s–f.
+height
+, {
+DœeùiÚs
+.
+NORTH
+:
+	`£t
+(), DœeùiÚs.
+SOUTH
+:£t(), DœeùiÚs.
+EAST
+:£t(), DœeùiÚs.
+WEST
+:£t(), DœeùiÚs.
+STOP
+:£t()
+	}
+})
+
+43 
+x
+ 
+š
+ 
+	$¿nge
+(
+£lf
+.
+width
+):
+
+44 
+y
+ 
+š
+ 
+	$¿nge
+(
+£lf
+.
+height
+):
+
+45 
+£lf
+.
+w®ls
+[
+x
+][
+y
+] =ğ
+F®£
+:
+
+46 
+vec
+, 
+dœeùiÚ
+ 
+š
+ 
+	$z
+(
+vecs
+, 
+dœs
+):
+
+47 
+dx
+, 
+dy
+ = 
+vec
+
+
+48 
+Ãxtx
+, 
+Ãxty
+ = 
+x
+ + 
+dx
+, 
+y
+ + 
+dy
+
+
+49 
+Ãxtx
+ + 
+Ãxty
+è!ğÒextxè+ Òextyè
+Ü
+ 
+nÙ
+ 
+£lf
+.
+w®ls
+[(nextx)][(nexty)] :
+
+50 
+vis
+[
+x
+][
+y
+][
+dœeùiÚ
+].
+	`add
+((
+Ãxtx
+, 
+Ãxty
+))
+
+51 
+Ãxtx
+, 
+Ãxty
+ = 
+x
+ + 
+dx
+, 
+y
+ + 
+dy
+
+
+52 
+£lf
+.
+visib™y
+ = 
+vis
+
+
+53 
+VISIBILITY_MATRIX_CACHE
+[
+	`»duû
+(
+¡r
+.
+__add__
+, 
+£lf
+.
+ÏyoutText
+)] = 
+vis
+
+
+55 
+£lf
+.
+visib™y
+ = 
+VISIBILITY_MATRIX_CACHE
+[
+	`»duû
+(
+¡r
+.
+__add__
+, s–f.
+ÏyoutText
+)]
+
+57 
+def
+ 
+	$isW®l
+(
+£lf
+, 
+pos
+):
+
+58 
+x
+, 
+cŞ
+ = 
+pos
+
+
+59  
+£lf
+.
+w®ls
+[
+x
+][
+cŞ
+]
+
+61 
+def
+ 
+	$g‘RªdomLeg®Pos™iÚ
+(
+£lf
+):
+
+62 
+x
+ = 
+¿ndom
+.
+	`choiû
+(
+	$¿nge
+(
+£lf
+.
+width
+))
+
+63 
+y
+ = 
+¿ndom
+.
+	`choiû
+(
+	$¿nge
+(
+£lf
+.
+height
+))
+
+64 
+£lf
+.
+	`isW®l
+Ğ(
+x
+, 
+y
+) ):
+
+65 
+x
+ = 
+¿ndom
+.
+	`choiû
+(
+	$¿nge
+(
+£lf
+.
+width
+))
+
+66 
+y
+ = 
+¿ndom
+.
+	`choiû
+(
+	$¿nge
+(
+£lf
+.
+height
+))
+
+67  (
+x
+,
+y
+)
+
+69 
+def
+ 
+	$g‘RªdomCÜÃr
+(
+£lf
+):
+
+70 
+po£s
+ = [(1,1), (1, 
+£lf
+.
+height
+ - 2), (£lf.
+width
+ - 2, 1), (self.width - 2, self.height - 2)]
+
+71  
+¿ndom
+.
+	$choiû
+(
+po£s
+)
+
+73 
+def
+ 
+	$g‘Fu¹he¡CÜÃr
+(
+£lf
+, 
+·cPos
+):
+
+74 
+po£s
+ = [(1,1), (1, 
+£lf
+.
+height
+ - 2), (£lf.
+width
+ - 2, 1), (self.width - 2, self.height - 2)]
+
+75 
+di¡
+, 
+pos
+ = 
+	`max
+([(
+	`mªh©nDi¡ªû
+(
+p
+, 
+·cPos
+),…è°
+š
+ 
+po£s
+])
+
+76  
+pos
+
+
+78 
+def
+ 
+	$isVisibËFrom
+(
+£lf
+, 
+gho¡Pos
+, 
+·cPos
+, 
+·cDœeùiÚ
+):
+
+79 
+row
+, 
+cŞ
+ = [(
+x
+èx 
+š
+ 
+·cPos
+]
+
+80  
+gho¡Pos
+ 
+š
+ 
+£lf
+.
+visib™y
+[
+row
+][
+cŞ
+][
+·cDœeùiÚ
+]
+
+82 
+def
+ 
+	$__¡r__
+(
+£lf
+):
+
+83  "\n".
+	$još
+(
+£lf
+.
+ÏyoutText
+)
+
+85 
+def
+ 
+	$d“pCİy
+(
+£lf
+):
+
+86  
+	`Layout
+(
+£lf
+.
+ÏyoutText
+[:])
+
+88 
+def
+ 
+	$´oûssLayoutText
+(
+£lf
+, 
+ÏyoutText
+):
+
+90 
+CoÜdš©es
+ 
+¬e
+ 
+æ³d
+ 
+äom
+ 
+the
+ 
+šput
+ 
+fÜm©
+ 
+to
+ 
+	$the
+ (
+x
+,
+y
+è
+cÚv’tiÚ
+ 
+h”e
+
+
+92 
+The
+ 
+sh­e
+ 
+of
+ 
+the
+ 
+maze
+. 
+Each
+ 
+ch¬aù”
+
+
+93 
+»´e£Ás
+ 
+a
+ 
+difã»Á
+ 
+ty³
+ 
+of
+ 
+objeù
+.
+
+94 % - 
+W®l
+
+
+95 . - 
+Food
+
+
+96 
+o
+ - 
+C­suË
+
+
+97 
+G
+ - 
+Gho¡
+
+
+98 
+P
+ - 
+Pacmª
+
+
+99 
+Oth”
+ 
+ch¬aù”s
+ 
+¬e
+ 
+ignÜed
+.
+
+101 
+maxY
+ = 
+£lf
+.
+height
+ - 1
+
+102 
+y
+ 
+š
+ 
+	$¿nge
+(
+£lf
+.
+height
+):
+
+103 
+x
+ 
+š
+ 
+	$¿nge
+(
+£lf
+.
+width
+):
+
+104 
+ÏyoutCh¬
+ = 
+ÏyoutText
+[
+maxY
+ - 
+y
+][
+x
+]
+
+105 
+£lf
+.
+	$´oûssLayoutCh¬
+(
+x
+, 
+y
+, 
+ÏyoutCh¬
+)
+
+106 
+£lf
+.
+ag’tPos™iÚs
+.
+	$sÜt
+()
+
+107 
+£lf
+.
+ag’tPos™iÚs
+ = [ ( 
+i
+ =ğ0, 
+pos
+èi,…o 
+š
+ self.agentPositions]
+
+109 
+def
+ 
+	$´oûssLayoutCh¬
+(
+£lf
+, 
+x
+, 
+y
+, 
+ÏyoutCh¬
+):
+
+110 
+ÏyoutCh¬
+ == '%':
+
+111 
+£lf
+.
+w®ls
+[
+x
+][
+y
+] = 
+True
+
+
+112 
+–if
+ 
+ÏyoutCh¬
+ == '.':
+
+113 
+£lf
+.
+food
+[
+x
+][
+y
+] = 
+True
+
+
+114 
+–if
+ 
+ÏyoutCh¬
+ == 'o':
+
+115 
+£lf
+.
+ÿpsuËs
+.
+	`­³nd
+((
+x
+, 
+y
+))
+
+116 
+–if
+ 
+ÏyoutCh¬
+ == 'P':
+
+117 
+£lf
+.
+ag’tPos™iÚs
+.
+	`­³nd
+Ğ(0, (
+x
+, 
+y
+) ) )
+
+118 
+–if
+ 
+ÏyoutCh¬
+ 
+š
+ ['G']:
+
+119 
+£lf
+.
+ag’tPos™iÚs
+.
+	`­³nd
+Ğ(1, (
+x
+, 
+y
+) ) )
+
+120 
+£lf
+.
+numGho¡s
+ += 1
+
+121 
+–if
+ 
+ÏyoutCh¬
+ 
+š
+ ['1', '2', '3', '4']:
+
+122 
+£lf
+.
+ag’tPos™iÚs
+.
+	`­³nd
+Ğ((
+ÏyoutCh¬
+), (
+x
+,
+y
+)))
+
+123 
+£lf
+.
+numGho¡s
+ += 1
+
+124 
+def
+ 
+	$g‘Layout
+(
+Çme
+, 
+back
+ = 2):
+
+125 
+Çme
+.
+	`’dsw™h
+('.lay'):
+
+126 
+Ïyout
+ = 
+	`ŒyToLßd
+('Ïyouts/' + 
+Çme
+)
+
+127 
+Ïyout
+ =ğ
+NÚe
+:†ayouˆğ
+	$ŒyToLßd
+(
+Çme
+)
+
+129 
+Ïyout
+ = 
+	`ŒyToLßd
+('Ïyouts/' + 
+Çme
+ + '.lay')
+
+130 
+Ïyout
+ =ğ
+NÚe
+:†ayouˆğ
+	`ŒyToLßd
+(
+Çme
+ + '.lay')
+
+131 
+Ïyout
+ =ğ
+NÚe
+ 
+ªd
+ 
+back
+ >= 0:
+
+132 
+curdœ
+ = 
+os
+.
+·th
+.
+	`ab¥©h
+('.')
+
+133 
+os
+.
+	`chdœ
+('..')
+
+134 
+Ïyout
+ = 
+	`g‘Layout
+(
+Çme
+, 
+back
+ -1)
+
+135 
+os
+.
+	$chdœ
+(
+curdœ
+)
+
+136  
+Ïyout
+
+
+138 
+def
+ 
+	$ŒyToLßd
+(
+fuÎÇme
+):
+
+139 if(
+nÙ
+ 
+os
+.
+·th
+.
+	$exi¡s
+(
+fuÎÇme
+)):  
+NÚe
+
+
+140 
+f
+ = 
+	$İ’
+(
+fuÎÇme
+)
+
+141 
+Œy
+:  
+	`Layout
+([
+lše
+.
+	$¡r
+(è
+lše
+ 
+š
+ 
+f
+])
+
+142 
+fš®ly
+: 
+f
+.
+	`şo£
+()
+
+	@multiAgents.py
+
+1 #muÉiAg’ts.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+äom
+ 
+ut
+ 
+impÜt
+ 
+mªh©nDi¡ªû
+
+
+10 
+äom
+ 
+game
+ 
+impÜt
+ 
+DœeùiÚs
+
+
+11 
+impÜt
+ 
+	g¿ndom
+, 
+ut
+
+
+13 
+äom
+ 
+game
+ 
+impÜt
+ 
+Ag’t
+
+
+14 
+impÜt
+ 
+ã©u»ExŒaùÜs
+
+
+16 
+şass
+ 
+	$ReæexAg’t
+(
+Ag’t
+):
+
+18 
+A
+ 
+»æex
+ 
+ag’t
+ 
+choo£s
+ 
+ª
+ 
+aùiÚ
+ 
+©
+ 
+—ch
+ 
+choiû
+ 
+pošt
+ 
+by
+ 
+examššg
+
+
+19 
+™s
+ 
+®‹º©ives
+ 
+vŸ
+ 
+a
+ 
+¡©e
+ 
+ev®u©iÚ
+ 
+funùiÚ
+.
+
+21 
+The
+ 
+code
+ 
+b–ow
+ 
+is
+ 
+´ovided
+ 
+as
+ 
+a
+ 
+guide
+. 
+You
+ 
+¬e
+ 
+w–come
+ 
+to
+ 
+chªge
+
+
+22 
+™
+ 
+š
+ 
+ªy
+ 
+way
+ 
+you
+ 
+£e
+ 
+f™
+, 
+so
+ 
+as
+ you 
+dÚ
+'touch our method
+
+23 
+h—d”s
+.
+
+25 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+26 
+£lf
+. 
+ev®şass
+ = 
+ã©u»ExŒaùÜs
+.
+	$Sim¶eExŒaùÜ
+()
+
+28 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+gameS‹
+):
+
+30 
+You
+ dØ
+nÙ
+ 
+Ãed
+ 
+to
+ 
+chªge
+ 
+this
+ 
+m‘hod
+, 
+but
+ 
+you
+'re welcomeo.
+
+32 
+g‘AùiÚ
+ 
+choo£s
+ 
+amÚg
+ 
+the
+ 
+be¡
+ 
+İtiÚs
+ 
+accÜdšg
+ 
+to
+h
+ev®u©iÚ
+ 
+funùiÚ
+.
+
+34 
+Ju¡
+ 
+like
+ 
+š
+ 
+the
+ 
+´evious
+ 
+´ojeù
+, 
+g‘AùiÚ
+ 
+kes
+ 
+a
+ 
+GameS‹
+ 
+ªd
+ 
+»tuºs
+
+
+35 
+some
+ 
+DœeùiÚs
+.
+X
+ somX 
+š
+ 
+the
+ 
+£t
+ {
+NÜth
+, 
+South
+, 
+We¡
+, 
+Ea¡
+, 
+Stİ
+}
+
+37 #CŞËù 
+Ëg®
+ 
+moves
+ 
+ªd
+ 
+sucûssÜ
+ 
+¡©es
+
+
+38 
+	gËg®Moves
+ = 
+gameS‹
+.
+	$g‘Leg®AùiÚs
+()
+
+40 #Choo£ 
+Úe
+ 
+of
+ 
+the
+ 
+be¡
+ 
+aùiÚs
+
+
+41 
+scÜes
+ = [
+£lf
+.
+	$ev®u©iÚFunùiÚ
+(
+gameS‹
+, 
+aùiÚ
+èaùiÚ 
+š
+ 
+Ëg®Moves
+]
+
+42 
+be¡ScÜe
+ = 
+	$max
+(
+scÜes
+)
+
+43 
+be¡Indiûs
+ = [
+šdex
+ šdex 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+scÜes
+)èscÜes[
+šdex
+] =ğ
+be¡ScÜe
+]
+
+44 
+cho£nIndex
+ = 
+¿ndom
+.
+	$choiû
+(
+be¡Indiûs
+è#Pick 
+¿ndomly
+ 
+amÚg
+ 
+the
+ 
+be¡
+
+
+48  
+Ëg®Moves
+[
+cho£nIndex
+]
+
+50 
+def
+ 
+	$ev®u©iÚFunùiÚ
+(
+£lf
+, 
+cu¼’tGameS‹
+, 
+aùiÚ
+):
+
+52 
+Design
+ 
+a
+ 
+b‘‹r
+ 
+ev®u©iÚ
+ 
+funùiÚ
+ 
+h”e
+.
+
+54 
+The
+ 
+ev®u©iÚ
+ 
+funùiÚ
+ 
+kes
+ 
+š
+ 
+the
+ 
+cu¼’t
+ 
+ªd
+ 
+´İo£d
+ 
+sucûssÜ
+
+
+55 
+	$GameS‹s
+ (
+·cmª
+.
+py
+è
+ªd
+ 
+»tuºs
+ 
+a
+ 
+numb”
+, 
+wh”e
+ 
+high”
+ 
+numb”s
+ 
+¬e
+ 
+b‘‹r
+.
+
+57 
+The
+ 
+code
+ 
+b–ow
+ 
+exŒaùs
+ 
+some
+ 
+u£ful
+ 
+šfÜm©iÚ
+ 
+äom
+ 
+the
+ 
+¡©e
+, 
+like
+he
+
+58 
+»maššg
+ 
+	$food
+ (
+ŞdFood
+è
+ªd
+ 
+Pacmª
+ 
+pos™iÚ
+ 
+aá”
+ 
+	`movšg
+ (
+ÃwPos
+).
+
+59 
+ÃwSÿ»dTimes
+ 
+hŞds
+ 
+the
+ 
+numb”
+ 
+of
+ 
+moves
+ 
+th©
+ 
+—ch
+ 
+gho¡
+ 
+wl
+ 
+»maš
+
+
+60 
+sÿ»d
+ 
+beÿu£
+ 
+of
+ 
+Pacmª
+ 
+havšg
+ 
+—‹n
+ 
+a
+ 
+pow”
+ 
+³Î‘
+.
+
+62 
+Pršt
+ 
+out
+ 
+the£
+ 
+v¬ŸbËs
+ 
+to
+ 
+£e
+ 
+wh©
+ 
+you
+'re getting,hen combinehem
+
+63 
+to
+ 
+ü—‹
+ 
+a
+ 
+ma¡”ful
+ 
+ev®u©iÚ
+ 
+funùiÚ
+.
+
+65 #U£fuÈ
+šfÜm©iÚ
+ 
+you
+ 
+ÿn
+ 
+exŒaù
+ 
+äom
+ 
+a
+ 
+	`GameS‹
+ (
+·cmª
+.
+py
+)
+
+66 
+sucûssÜGameS‹
+ = 
+cu¼’tGameS‹
+.
+	$g’”©ePacmªSucûssÜ
+(
+aùiÚ
+)
+
+67 
+ÃwPos
+ = 
+sucûssÜGameS‹
+.
+	$g‘PacmªPos™iÚ
+()
+
+68 
+ŞdFood
+ = 
+cu¼’tGameS‹
+.
+	$g‘Food
+()
+
+69 
+ÃwGho¡S‹s
+ = 
+sucûssÜGameS‹
+.
+	$g‘Gho¡S‹s
+()
+
+70 
+ÃwSÿ»dTimes
+ = [
+gho¡S‹
+.
+sÿ»dTim”
+ gho¡S‹ 
+š
+ 
+ÃwGho¡S‹s
+]
+
+73 #U£ 
+»šfÜcm’t
+ 
+ã©
+ 
+exŒaùÜ
+
+
+74 
+f
+ = 
+£lf
+.
+ev®şass
+.
+	$g‘F—tu»s
+(
+cu¼’tGameS‹
+,
+aùiÚ
+)
+
+75 
+e
+ = 
+sucûssÜGameS‹
+.
+	$g‘ScÜe
+()
+
+76 
+e
+ +ğ
+f
+
+
+77  
+e
+
+
+79 
+def
+ 
+	$scÜeEv®u©iÚFunùiÚ
+(
+cu¼’tGameS‹
+):
+
+81 
+This
+  
+ev®u©iÚ
+ 
+funùiÚ
+ 
+ju¡
+ 
+»tuºs
+ 
+the
+ 
+scÜe
+ 
+of
+h
+¡©e
+.
+
+82 
+The
+ 
+scÜe
+ 
+is
+ 
+the
+ 
+§me
+ 
+Úe
+ 
+di¥Ïyed
+ 
+š
+h
+Pacmª
+ 
+GUI
+.
+
+84 
+This
+ 
+ev®u©iÚ
+ 
+funùiÚ
+ 
+is
+ 
+m—Á
+ 
+u£
+ 
+w™h
+ 
+adv”§rŸl
+ 
+£¬ch
+ 
+ag’ts
+
+
+85 (
+nÙ
+ 
+»æex
+ 
+ag’ts
+).
+
+87  
+cu¼’tGameS‹
+.
+	$g‘ScÜe
+()
+
+89 
+şass
+ 
+	$MuÉiAg’tS—rchAg’t
+(
+Ag’t
+):
+
+91 
+This
+ 
+şass
+ 
+´ovides
+ 
+some
+ 
+commÚ
+ 
+–em’ts
+ 
+to
+ 
+®l
+ 
+of
+ 
+your
+
+
+92 
+muÉi
+-
+ag’t
+ 
+£¬ch”s
+. 
+Any
+ 
+m‘hods
+ 
+defšed
+ 
+h”e
+ 
+wl
+ 
+be
+ 
+avaabË
+
+
+93 
+to
+ 
+the
+ 
+MšimaxPacmªAg’t
+, 
+AÍhaB‘aPacmªAg’t
+ & 
+Ex³ùimaxPacmªAg’t
+.
+
+95 
+You
+ *dØ
+nÙ
+* 
+Ãed
+ 
+to
+ 
+make
+ 
+ªy
+ 
+chªges
+ 
+h”e
+, 
+but
+ 
+you
+ 
+ÿn
+ you 
+wªt
+o
+
+96 
+add
+ 
+funùiÚ®™y
+ 
+to
+ 
+®l
+ 
+your
+ 
+adv”§rŸl
+ 
+£¬ch
+ 
+ag’ts
+. 
+PËa£
+ dØ
+nÙ
+
+
+97 
+»move
+ 
+ªythšg
+, 
+howev”
+.
+
+99 
+NÙe
+: 
+this
+ 
+is
+ 
+ª
+ 
+ab¡¿ù
+ 
+şass
+: 
+Úe
+ 
+th©
+ 
+should
+ 
+nÙ
+ 
+be
+ 
+š¡ªtŸ‹d
+. 
+It
+'s
+
+100 
+Úly
+ 
+·¹ŸÎy
+ 
+¥ecif›d
+, 
+ªd
+ 
+desigÃd
+ 
+to
+ 
+be
+ 
+ex‹nded
+. 
+	$Ag’t
+ (
+game
+.
+py
+)
+
+101 
+is
+ 
+ªÙh”
+ 
+ab¡¿ù
+ 
+şass
+.
+
+104 
+def
+ 
+	`__š™__
+(
+£lf
+, 
+ev®Fn
+ = 'scÜeEv®u©iÚFunùiÚ', 
+d•th
+ = '2'):
+
+105 
+£lf
+.
+šdex
+ = 0 #Pacmª 
+is
+ 
+®ways
+ 
+ag’t
+ index 0
+
+106 
+£lf
+.
+ev®u©iÚFunùiÚ
+ = 
+ut
+.
+	`lookup
+(
+ev®Fn
+, 
+	$glob®s
+())
+
+107 
+£lf
+.
+d•th
+ = (depth)
+
+109 
+şass
+ 
+	$MšimaxAg’t
+(
+MuÉiAg’tS—rchAg’t
+):
+
+111 
+Your
+ 
+mšimax
+ 
+	`ag’t
+ (
+que¡iÚ
+ 2)
+
+114 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+gameS‹
+):
+
+116 
+R‘uºs
+ 
+the
+ 
+mšimax
+ 
+aùiÚ
+ 
+äom
+h
+cu¼’t
+ 
+gameS‹
+ 
+usšg
+ 
+£lf
+.
+d•th
+
+
+117 
+ªd
+ 
+£lf
+.
+ev®u©iÚFunùiÚ
+.
+
+119 
+H”e
+ 
+¬e
+ 
+some
+ 
+m‘hod
+ 
+ÿÎs
+ 
+th©
+ 
+might
+ 
+be
+ 
+u£ful
+ 
+wh’
+ 
+im¶em’tšg
+ 
+mšimax
+.
+
+121 
+gameS‹
+.
+	$g‘Leg®AùiÚs
+(
+ag’tIndex
+):
+
+122 
+R‘uºs
+ 
+a
+ 
+li¡
+ 
+of
+ 
+Ëg®
+ 
+aùiÚs
+ 
+ª
+ 
+ag’t
+
+
+123 
+ag’tIndex
+=0 
+m—ns
+ 
+Pacmª
+, 
+gho¡s
+ 
+¬e
+ >= 1
+
+125 
+DœeùiÚs
+.
+STOP
+:
+
+126 
+The
+ 
+¡İ
+ 
+dœeùiÚ
+, 
+which
+ 
+is
+ 
+®ways
+ 
+Ëg®
+
+
+128 
+gameS‹
+.
+	$g’”©eSucûssÜ
+(
+ag’tIndex
+, 
+aùiÚ
+):
+
+129 
+R‘uºs
+ 
+the
+ 
+sucûssÜ
+ 
+game
+ 
+¡©e
+ 
+aá”
+ 
+ª
+ 
+ag’t
+ 
+kes
+‡À
+aùiÚ
+
+
+131 
+gameS‹
+.
+	$g‘NumAg’ts
+():
+
+132 
+R‘uºs
+ 
+the
+ 
+tÙ®
+ 
+numb”
+ 
+of
+ 
+ag’ts
+ 
+š
+h
+game
+
+
+135 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+137 
+şass
+ 
+	$AÍhaB‘aAg’t
+(
+MuÉiAg’tS—rchAg’t
+):
+
+139 
+Your
+ 
+mšimax
+ 
+ag’t
+ 
+w™h
+ 
+®pha
+-
+b‘a
+ 
+	`´unšg
+ (
+que¡iÚ
+ 3)
+
+142 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+gameS‹
+):
+
+144 
+R‘uºs
+ 
+the
+ 
+mšimax
+ 
+aùiÚ
+ 
+usšg
+ 
+£lf
+.
+d•th
+ 
+ªd
+ s–f.
+ev®u©iÚFunùiÚ
+
+
+147 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+149 
+şass
+ 
+	$Ex³ùimaxAg’t
+(
+MuÉiAg’tS—rchAg’t
+):
+
+151 
+Your
+ 
+ex³ùimax
+ 
+	`ag’t
+ (
+que¡iÚ
+ 4)
+
+154 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+gameS‹
+):
+
+156 
+R‘uºs
+ 
+the
+ 
+ex³ùimax
+ 
+aùiÚ
+ 
+usšg
+ 
+£lf
+.
+d•th
+ 
+ªd
+ s–f.
+ev®u©iÚFunùiÚ
+
+
+158 
+AÎ
+ 
+gho¡s
+ 
+should
+ 
+be
+ 
+mod–ed
+ 
+as
+ 
+choosšg
+ 
+unifÜmly
+ 
+©
+ 
+¿ndom
+ 
+äom
+ 
+theœ
+
+
+159 
+Ëg®
+ 
+moves
+.
+
+162 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+164 
+def
+ 
+	$b‘‹rEv®u©iÚFunùiÚ
+(
+cu¼’tGameS‹
+):
+
+166 
+Your
+ 
+exŒeme
+ 
+gho¡
+-
+huÁšg
+, 
+³Î‘
+-
+Çbbšg
+, 
+food
+-
+gobblšg
+, 
+un¡İ·bË
+
+
+167 
+ev®u©iÚ
+ 
+	`funùiÚ
+ (
+que¡iÚ
+ 5).
+
+169 
+DESCRIPTION
+: <
+wr™e
+ 
+som‘hšg
+ 
+h”e
+ 
+so
+ 
+we
+ 
+know
+ 
+wh©
+ 
+you
+ 
+did
+>
+
+172 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+175 
+b‘‹r
+ = 
+b‘‹rEv®u©iÚFunùiÚ
+
+
+177 
+şass
+ 
+	$CÚ‹¡Ag’t
+(
+MuÉiAg’tS—rchAg’t
+):
+
+179 
+Your
+ 
+ag’t
+ 
+the
+ 
+mši
+-
+cÚ‹¡
+
+
+182 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+gameS‹
+):
+
+184 
+R‘uºs
+ 
+ª
+ 
+aùiÚ
+. 
+You
+ 
+ÿn
+ 
+u£
+ 
+ªy
+ 
+m‘hod
+ 
+you
+ 
+wªt
+ 
+ªd
+ 
+£¬ch
+ 
+to
+‡ny 
+d•th
+ you want.
+
+185 
+Ju¡
+ 
+»memb”
+ 
+th©
+ 
+the
+ 
+mši
+-
+cÚ‹¡
+ 
+is
+ 
+timed
+, 
+so
+ 
+you
+ 
+have
+ 
+to
+ 
+Œade
+ 
+off
+ 
+¥“d
+ 
+ªd
+ 
+computiÚ
+.
+
+187 
+Gho¡s
+ 
+dÚ
+'ˆbehav¿ndomly‡nymÜe, buˆthey‡»n'
+t
+ 
+³rãù
+ 
+e™h”
+ -- 
+they
+'ll usually
+
+188 
+ju¡
+ 
+make
+ 
+a
+ 
+b“lše
+ 
+¡¿ight
+ 
+tow¬ds
+ 
+	`Pacmª
+ (
+Ü
+ 
+away
+ 
+äom
+ 
+him
+ 
+they
+'re scared!)
+
+191 
+ut
+.
+	`¿i£NÙDefšed
+()
+
+	@pacman.py
+
+1 #·cmª.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+10 
+	gPacmª
+.
+py
+ 
+hŞds
+ 
+the
+ 
+logic
+ th
+şassic
+ 
+·cmª
+ 
+game
+ 
+®Úg
+ 
+w™h
+h
+maš
+
+
+11 
+code
+ 
+to
+ 
+run
+ 
+a
+ 
+	ggame
+. 
+This
+ 
+fe
+ 
+is
+ 
+divided
+ 
+što
+ 
+th»e
+ 
+	g£ùiÚs
+:
+
+13 (
+i
+è
+Your
+ 
+š‹rçû
+ 
+to
+ 
+the
+ 
+·cmª
+ 
+wÜld
+:
+
+14 
+Pacmª
+ 
+is
+ 
+a
+ 
+com¶ex
+ 
+’vœÚm’t
+. 
+You
+ 
+´obably
+ 
+dÚ
+'t wanto
+
+15 
+»ad
+ 
+through
+ 
+®l
+ 
+of
+ 
+the
+ 
+code
+ 
+we
+ 
+wrÙe
+ 
+to
+ 
+make
+h
+game
+ 
+runs
+
+
+16 
+cÜ»ùly
+. 
+This
+ 
+£ùiÚ
+ 
+cÚšs
+ 
+the
+ 
+·¹s
+ 
+of
+h
+code
+
+
+17 
+th©
+ 
+you
+ 
+wl
+ 
+Ãed
+ 
+to
+ 
+und”¡ªd
+ 
+š
+ 
+Üd”
+Ø
+com¶‘e
+ 
+the
+
+
+18 
+´ojeù
+. 
+Th”e
+ 
+is
+ 
+®so
+ 
+some
+ 
+code
+ 
+š
+ 
+game
+.
+py
+ 
+th©
+ 
+you
+ 
+should
+
+
+19 
+und”¡ªd
+.
+
+21 (
+ii
+è
+The
+ 
+hidd’
+ 
+£ü‘s
+ 
+of
+ 
+·cmª
+:
+
+22 
+This
+ 
+£ùiÚ
+ 
+cÚšs
+ 
+®l
+ 
+of
+ 
+the
+ 
+logic
+ 
+code
+ 
+th©
+h
+·cmª
+
+
+23 
+’vœÚm’t
+ 
+u£s
+ 
+to
+ 
+decide
+ 
+who
+ 
+ÿn
+ 
+move
+ 
+wh”e
+, whØ
+d›s
+ 
+wh’
+
+
+24 
+thšgs
+ 
+	gcŞlide
+, 
+	g‘c
+. 
+You
+ 
+	gshouldn
+'t‚eedo„eadhis section
+
+25 
+of
+ 
+	gcode
+, 
+but
+ 
+you
+ 
+ÿn
+ you 
+	gwªt
+.
+
+27 (
+	giii
+è
+F¿mewÜk
+ 
+to
+ 
+¡¬t
+ 
+a
+ 
+	ggame
+:
+
+28 
+The
+ 
+fš®
+ 
+£ùiÚ
+ 
+cÚšs
+ 
+the
+ 
+code
+ 
+»adšg
+h
+commªd
+
+
+29 
+you
+ 
+u£
+ 
+to
+ 
+£t
+ 
+up
+ 
+the
+ 
+game
+, 
+th’
+ 
+¡¬tšg
+ u°
+a
+ 
+Ãw
+ 
+	ggame
+, 
+®Úg
+ 
+w™h
+
+
+30 
+lškšg
+ 
+š
+ 
+®l
+ 
+the
+ 
+ex‹º®
+ 
+·¹s
+ (
+ag’t
+ 
+funùiÚs
+, 
+g¿phics
+).
+
+31 
+Check
+ 
+this
+ 
+£ùiÚ
+ 
+out
+ 
+to
+ 
+£e
+ 
+®l
+ 
+the
+ 
+İtiÚs
+ 
+avaabË
+Ø
+	gyou
+.
+
+33 
+To
+ 
+¶ay
+ 
+your
+ 
+fœ¡
+ 
+	ggame
+, 
+	gty³
+ 'pythÚ…acmª.py' 
+äom
+ 
+the
+ 
+commªd
+ 
+	glše
+.
+
+34 
+The
+ 
+keys
+ 
+	g¬e
+ 'a', 's', 'd', 
+	gªd
+ 'w' 
+to
+ 
+move
+ (
+Ü
+ 
+¬row
+ keys). 
+Have
+ 
+	gfun
+!
+
+36 
+äom
+ 
+game
+ 
+impÜt
+ 
+GameS‹D©a
+
+
+37 
+äom
+ 
+game
+ 
+impÜt
+ 
+Game
+
+
+38 
+äom
+ 
+game
+ 
+impÜt
+ 
+DœeùiÚs
+
+
+39 
+äom
+ 
+game
+ 
+impÜt
+ 
+AùiÚs
+
+
+40 
+äom
+ 
+ut
+ 
+impÜt
+ 
+Ã¬e¡Pošt
+
+
+41 
+äom
+ 
+ut
+ 
+impÜt
+ 
+mªh©nDi¡ªû
+
+
+42 
+impÜt
+ 
+	gut
+, 
+Ïyout
+
+
+43 
+impÜt
+ 
+	gsys
+, 
+	gty³s
+, 
+	gtime
+, 
+	g¿ndom
+, 
+	gos
+
+
+45 ###################################################
+#YOUR 
+INTERFACE
+ 
+TO
+ 
+THE
+ 
+PACMAN
+ 
+WORLD
+: 
+A
+ 
+GameS‹
+ #
+###################################################
+
+
+46 
+şass
+ 
+	gGameS‹
+:
+
+48 
+A
+ 
+GameS‹
+ 
+¥ecif›s
+ 
+the
+ 
+fuÎ
+ 
+game
+ 
+¡©e
+, 
+šşudšg
+h
+	gfood
+, 
+	gÿpsuËs
+,
+
+49 
+ag’t
+ 
+cÚfigu¿tiÚs
+ 
+ªd
+ 
+scÜe
+ 
+	gchªges
+.
+
+51 
+GameS‹s
+ 
+¬e
+ 
+u£d
+ 
+by
+ 
+the
+ 
+Game
+ 
+objeù
+ 
+to
+ 
+ÿ±u»
+h
+aùu®
+ 
+¡©e
+ 
+of
+h
+game
+ 
+ªd
+
+
+52 
+ÿn
+ 
+be
+ 
+u£d
+ 
+by
+ 
+ag’ts
+ 
+to
+ 
+»asÚ
+ 
+about
+ 
+the
+ 
+	ggame
+.
+
+54 
+Much
+ 
+of
+ 
+the
+ 
+šfÜm©iÚ
+ 
+š
+ 
+a
+ 
+GameS‹
+ 
+is
+ 
+¡Üed
+ iÀ¨
+GameS‹D©a
+ 
+	gobjeù
+. 
+We
+
+
+55 
+¡rÚgly
+ 
+sugge¡
+ 
+th©
+ 
+you
+ 
+acûss
+h© 
+d©a
+ 
+vŸ
+ 
+the
+ 
+acûssÜ
+ 
+m‘hods
+ 
+b–ow
+ 
+¿th”
+
+
+56 
+thª
+ 
+»ã¼šg
+ 
+to
+ 
+the
+ 
+GameS‹D©a
+ 
+objeù
+ 
+	gdœeùly
+.
+
+58 
+NÙe
+ 
+th©
+ 
+š
+ 
+şassic
+ 
+	gPacmª
+, 
+Pacmª
+ 
+is
+ 
+®ways
+ 
+	gag’t
+ 0.
+
+62 #AcûssÜ 
+m‘hods
+: 
+u£
+ 
+the£
+ 
+to
+ 
+acûss
+ 
+¡©e
+ 
+d©a
+ #
+####################################################
+
+64 
+def
+ 
+	$g‘Leg®AùiÚs
+Ğ
+£lf
+, 
+ag’tIndex
+=0 ):
+
+66 
+R‘uºs
+ 
+the
+ 
+Ëg®
+ 
+aùiÚs
+ th
+ag’t
+ 
+¥ecif›d
+.
+
+68 
+£lf
+.
+	$isWš
+(è
+Ü
+ 
+£lf
+.
+	$isLo£
+():  []
+
+70 
+ag’tIndex
+ =ğ0: #Pacmª 
+is
+ 
+movšg
+
+
+71  
+PacmªRuËs
+.
+	$g‘Leg®AùiÚs
+Ğ
+£lf
+ )
+
+73  
+Gho¡RuËs
+.
+	$g‘Leg®AùiÚs
+Ğ
+£lf
+, 
+ag’tIndex
+ )
+
+75 
+def
+ 
+	$g’”©eSucûssÜ
+Ğ
+£lf
+, 
+ag’tIndex
+, 
+aùiÚ
+):
+
+77 
+R‘uºs
+ 
+the
+ 
+sucûssÜ
+ 
+¡©e
+ 
+aá”
+h
+¥ecif›d
+ 
+ag’t
+ 
+kes
+h
+aùiÚ
+.
+
+79 #Check 
+th©
+ 
+sucûssÜs
+ 
+exi¡
+
+
+80 
+£lf
+.
+	$isWš
+(è
+Ü
+ 
+£lf
+.
+	$isLo£
+(): 
+¿i£
+ 
+	`Exû±iÚ
+('Can\'t generate‡ successor of‡erminal state.')
+
+82 #Cİy 
+cu¼’t
+ 
+¡©e
+
+
+83 
+¡©e
+ = 
+	$GameS‹
+(
+£lf
+)
+
+85 #L‘ 
+ag’t
+' logiød—Èw™h it aùiÚ'
+s
+ 
+efãùs
+ 
+Ú
+ 
+the
+ 
+bßrd
+
+
+86 
+ag’tIndex
+ =ğ0: #Pacmª 
+is
+ 
+movšg
+
+
+87 
+¡©e
+.
+d©a
+.
+_—‹n
+ = [
+F®£
+ 
+i
+ 
+š
+ 
+	`¿nge
+(¡©e.
+	`g‘NumAg’ts
+())]
+
+88 
+PacmªRuËs
+.
+	$­¶yAùiÚ
+Ğ
+¡©e
+, 
+aùiÚ
+ )
+
+89 : #A 
+gho¡
+ 
+is
+ 
+movšg
+
+
+90 
+Gho¡RuËs
+.
+	$­¶yAùiÚ
+Ğ
+¡©e
+, 
+aùiÚ
+, 
+ag’tIndex
+ )
+
+92 #Tim
+·s£s
+
+
+93 
+ag’tIndex
+ == 0:
+
+94 
+¡©e
+.
+d©a
+.
+scÜeChªge
+ +ğ-
+TIME_PENALTY
+ #P’®ty 
+wa™šg
+ 
+¬ound
+
+
+96 
+Gho¡RuËs
+.
+	$deüem’tTim”
+Ğ
+¡©e
+.
+d©a
+.
+ag’tS‹s
+[
+ag’tIndex
+] )
+
+98 #ResŞv
+muÉi
+-
+ag’t
+ 
+efãùs
+
+
+99 
+Gho¡RuËs
+.
+	$checkD—th
+Ğ
+¡©e
+, 
+ag’tIndex
+ )
+
+101 #Book 
+k“pšg
+
+
+102 
+¡©e
+.
+d©a
+.
+_ag’tMoved
+ = 
+ag’tIndex
+
+
+103 
+¡©e
+.
+d©a
+.
+scÜe
+ +ğ¡©e.d©a.
+scÜeChªge
+
+
+104  
+¡©e
+
+
+106 
+def
+ 
+	$g‘Leg®PacmªAùiÚs
+Ğ
+£lf
+ ):
+
+107  
+£lf
+.
+	$g‘Leg®AùiÚs
+( 0 )
+
+109 
+def
+ 
+	$g’”©ePacmªSucûssÜ
+Ğ
+£lf
+, 
+aùiÚ
+ ):
+
+111 
+G’”©es
+ 
+the
+ 
+sucûssÜ
+ 
+¡©e
+ 
+aá”
+h
+¥ecif›d
+ 
+·cmª
+ 
+move
+
+
+113  
+£lf
+.
+	$g’”©eSucûssÜ
+Ğ0, 
+aùiÚ
+ )
+
+115 
+def
+ 
+	$g‘PacmªS‹
+Ğ
+£lf
+ ):
+
+117 
+R‘uºs
+ 
+ª
+ 
+Ag’tS‹
+ 
+objeù
+ 
+	$·cmª
+ (
+š
+ 
+game
+.
+py
+)
+
+119 
+¡©e
+.
+pos
+ 
+gives
+ 
+the
+ 
+cu¼’t
+ 
+pos™iÚ
+
+
+120 
+¡©e
+.
+dœeùiÚ
+ 
+gives
+ 
+the
+ 
+Œav–
+ 
+veùÜ
+
+
+122  
+£lf
+.
+d©a
+.
+ag’tS‹s
+[0].
+	$cİy
+()
+
+124 
+def
+ 
+	$g‘PacmªPos™iÚ
+Ğ
+£lf
+ ):
+
+125  
+£lf
+.
+d©a
+.
+ag’tS‹s
+[0].
+	$g‘Pos™iÚ
+()
+
+127 
+def
+ 
+	$g‘Gho¡S‹s
+Ğ
+£lf
+ ):
+
+128  
+£lf
+.
+d©a
+.
+ag’tS‹s
+[1:]
+
+130 
+def
+ 
+	$g‘Gho¡S‹
+Ğ
+£lf
+, 
+ag’tIndex
+ ):
+
+131 
+ag’tIndex
+ =ğ0 
+Ü
+‡g’tIndex >ğ
+£lf
+.
+	$g‘NumAg’ts
+():
+
+132 
+¿i£
+ 
+	`Exû±iÚ
+("Invalid index…assedo getGhostState")
+
+133  
+£lf
+.
+d©a
+.
+ag’tS‹s
+[
+ag’tIndex
+]
+
+135 
+def
+ 
+	$g‘Gho¡Pos™iÚ
+Ğ
+£lf
+, 
+ag’tIndex
+ ):
+
+136 
+ag’tIndex
+ == 0:
+
+137 
+¿i£
+ 
+	`Exû±iÚ
+("Pacman's index…assedo getGhostPosition")
+
+138  
+£lf
+.
+d©a
+.
+ag’tS‹s
+[
+ag’tIndex
+].
+	$g‘Pos™iÚ
+()
+
+140 
+def
+ 
+	$g‘Gho¡Pos™iÚs
+(
+£lf
+):
+
+141  [
+s
+.
+	$g‘Pos™iÚ
+(è
+s
+ 
+š
+ 
+£lf
+.
+	`g‘Gho¡S‹s
+()]
+
+143 
+def
+ 
+	$g‘NumAg’ts
+Ğ
+£lf
+ ):
+
+144  
+	$Ën
+Ğ
+£lf
+.
+d©a
+.
+ag’tS‹s
+ )
+
+146 
+def
+ 
+	$g‘ScÜe
+Ğ
+£lf
+ ):
+
+147  
+£lf
+.
+d©a
+.
+scÜe
+
+
+149 
+def
+ 
+	$g‘C­suËs
+(
+£lf
+):
+
+151 
+R‘uºs
+ 
+a
+ 
+li¡
+ 
+of
+ 
+	$pos™iÚs
+ (
+x
+,
+y
+è
+of
+ 
+the
+ 
+»maššg
+ 
+ÿpsuËs
+.
+
+153  
+£lf
+.
+d©a
+.
+ÿpsuËs
+
+
+155 
+def
+ 
+	$g‘NumFood
+Ğ
+£lf
+ ):
+
+156  
+£lf
+.
+d©a
+.
+food
+.
+	$couÁ
+()
+
+158 
+def
+ 
+	$g‘Food
+(
+£lf
+):
+
+160 
+R‘uºs
+ 
+a
+ 
+Grid
+ 
+of
+ 
+boŞ—n
+ 
+food
+ 
+šdiÿtÜ
+ 
+v¬ŸbËs
+.
+
+162 
+Grids
+ 
+ÿn
+ 
+be
+ 
+acûs£d
+ 
+vŸ
+ 
+li¡
+ 
+nÙ©iÚ
+, 
+so
+ 
+to
+ 
+check
+
+
+163 
+th”e
+ 
+is
+ 
+food
+ 
+	`©
+ (
+x
+,
+y
+), 
+ju¡
+ 
+ÿÎ
+
+
+165 
+cu¼’tFood
+ = 
+¡©e
+.
+	$g‘Food
+()
+
+166 
+cu¼’tFood
+[
+x
+][
+y
+] =ğ
+True
+: ...
+
+168  
+£lf
+.
+d©a
+.
+food
+
+
+170 
+def
+ 
+	$g‘W®ls
+(
+£lf
+):
+
+172 
+R‘uºs
+ 
+a
+ 
+Grid
+ 
+of
+ 
+boŞ—n
+ 
+w®l
+ 
+šdiÿtÜ
+ 
+v¬ŸbËs
+.
+
+174 
+Grids
+ 
+ÿn
+ 
+be
+ 
+acûs£d
+ 
+vŸ
+ 
+li¡
+ 
+nÙ©iÚ
+, 
+so
+ 
+to
+ 
+check
+
+
+175 
+th”e
+ 
+is
+ 
+food
+ 
+	`©
+ (
+x
+,
+y
+), 
+ju¡
+ 
+ÿÎ
+
+
+177 
+w®ls
+ = 
+¡©e
+.
+	$g‘W®ls
+()
+
+178 
+w®ls
+[
+x
+][
+y
+] =ğ
+True
+: ...
+
+180  
+£lf
+.
+d©a
+.
+Ïyout
+.
+w®ls
+
+
+182 
+def
+ 
+	$hasFood
+(
+£lf
+, 
+x
+, 
+y
+):
+
+183  
+£lf
+.
+d©a
+.
+food
+[
+x
+][
+y
+]
+
+185 
+def
+ 
+	$hasW®l
+(
+£lf
+, 
+x
+, 
+y
+):
+
+186  
+£lf
+.
+d©a
+.
+Ïyout
+.
+w®ls
+[
+x
+][
+y
+]
+
+188 
+def
+ 
+	$isLo£
+Ğ
+£lf
+ ):
+
+189  
+£lf
+.
+d©a
+.
+_lo£
+
+
+191 
+def
+ 
+	$isWš
+Ğ
+£lf
+ ):
+
+192  
+£lf
+.
+d©a
+.
+_wš
+
+
+194 #############################################
+#H–³¸
+m‘hods
+: #
+#You 
+shouldn
+'t‚eedo callhese directly #
+
+196 
+def
+ 
+	$__š™__
+Ğ
+£lf
+, 
+´evS‹
+ = 
+NÚe
+ ):
+
+198 
+G’”©es
+ 
+a
+ 
+Ãw
+ 
+¡©e
+ 
+by
+ 
+cİyšg
+ 
+šfÜm©iÚ
+ 
+äom
+ 
+™s
+ 
+´edeûssÜ
+.
+
+200 
+´evS‹
+ !ğ
+NÚe
+: #In™ŸÈ
+¡©e
+
+
+201 
+£lf
+.
+d©a
+ = 
+	$GameS‹D©a
+(
+´evS‹
+.
+d©a
+)
+
+203 
+£lf
+.
+d©a
+ = 
+	$GameS‹D©a
+()
+
+205 
+def
+ 
+	$d“pCİy
+Ğ
+£lf
+ ):
+
+206 
+¡©e
+ = 
+	$GameS‹
+Ğ
+£lf
+ )
+
+207 
+¡©e
+.
+d©a
+ = 
+£lf
+.d©a.
+	$d“pCİy
+()
+
+208  
+¡©e
+
+
+210 
+def
+ 
+	$__eq__
+Ğ
+£lf
+, 
+Ùh”
+ ):
+
+212 
+AÎows
+ 
+two
+ 
+¡©es
+ 
+to
+ 
+be
+ 
+com·»d
+.
+
+214  
+£lf
+.
+d©a
+ =ğ
+Ùh”
+.data
+
+216 
+def
+ 
+	$__hash__
+Ğ
+£lf
+ ):
+
+218 
+AÎows
+ 
+¡©es
+ 
+to
+ 
+be
+ 
+keys
+ 
+of
+ 
+diùiÚ¬›s
+.
+
+220  
+	$hash
+Ğ
+£lf
+.
+d©a
+ )
+
+222 
+def
+ 
+	$__¡r__
+Ğ
+£lf
+ ):
+
+224  
+	$¡r
+(
+£lf
+.
+d©a
+)
+
+226 
+def
+ 
+	$š™Ÿlize
+Ğ
+£lf
+, 
+Ïyout
+, 
+numGho¡Ag’ts
+=1000 ):
+
+228 
+C»©es
+ 
+ª
+ 
+š™Ÿl
+ 
+game
+ 
+¡©e
+ 
+äom
+ 
+a
+ 
+Ïyout
+ 
+	`¬¿y
+ (
+£e
+†ayout.
+py
+).
+
+230 
+£lf
+.
+d©a
+.
+	$š™Ÿlize
+(
+Ïyout
+, 
+numGho¡Ag’ts
+)
+
+233 #THE 
+HIDDEN
+ 
+SECRETS
+ 
+OF
+ 
+PACMAN
+ #
+##
+
+234 #You 
+shouldn
+'t‚eedo†ookhroughhe code inhis section ofhe file. #
+
+237 
+SCARED_TIME
+ = 40 #Move 
+gho¡s
+ 
+¬e
+ 
+sÿ»d
+
+
+238 
+COLLISION_TOLERANCE
+ = 0.7 #How 
+şo£
+ 
+gho¡s
+ 
+mu¡
+ 
+be
+ 
+to
+ 
+Pacmª
+Ø
+kl
+
+
+239 
+TIME_PENALTY
+ = 1 #Numb” 
+of
+ 
+pošts
+ 
+lo¡
+ 
+—ch
+ 
+round
+
+
+241 
+şass
+ 
+CÏssicGameRuËs
+:
+
+243 
+The£
+ 
+game
+ 
+ruËs
+ 
+mªage
+ 
+the
+ 
+cÚŒŞ
+ 
+æow
+ 
+of
+ 
+a
+ game, 
+decidšg
+ 
+wh’
+
+
+244 
+ªd
+ 
+how
+ 
+the
+ 
+game
+ 
+¡¬ts
+‡nd 
+’ds
+.
+
+246 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+timeout
+=30):
+
+247 
+£lf
+.
+timeout
+ =imeout
+
+249 
+def
+ 
+	$ÃwGame
+Ğ
+£lf
+, 
+Ïyout
+, 
+·cmªAg’t
+, 
+gho¡Ag’ts
+, 
+di¥Ïy
+, 
+qu›t
+ = 
+F®£
+, 
+ÿtchExû±iÚs
+=False):
+
+250 
+ag’ts
+ = [
+·cmªAg’t
+] + 
+gho¡Ag’ts
+[:
+Ïyout
+.
+	`g‘NumGho¡s
+()]
+
+251 
+š™S‹
+ = 
+	$GameS‹
+()
+
+252 
+š™S‹
+.
+	`š™Ÿlize
+Ğ
+Ïyout
+, 
+	$Ën
+(
+gho¡Ag’ts
+) )
+
+253 
+game
+ = 
+	$Game
+(
+ag’ts
+, 
+di¥Ïy
+, 
+£lf
+, 
+ÿtchExû±iÚs
+=catchExceptions)
+
+254 
+game
+.
+¡©e
+ = 
+š™S‹
+
+
+255 
+£lf
+.
+š™ŸlS‹
+ = 
+š™S‹
+.
+	$d“pCİy
+()
+
+256 
+£lf
+.
+qu›t
+ = quiet
+
+257  
+game
+
+
+259 
+def
+ 
+	$´oûss
+(
+£lf
+, 
+¡©e
+, 
+game
+):
+
+261 
+Checks
+ 
+to
+ 
+£e
+ 
+wh‘h”
+ 
+™
+ 
+is
+ 
+time
+Ø
+’d
+ 
+the
+ 
+game
+.
+
+263 
+¡©e
+.
+	$isWš
+(): 
+£lf
+.
+	$wš
+(
+¡©e
+, 
+game
+)
+
+264 
+¡©e
+.
+	$isLo£
+(): 
+£lf
+.
+	$lo£
+(
+¡©e
+, 
+game
+)
+
+266 
+def
+ 
+	$wš
+Ğ
+£lf
+, 
+¡©e
+, 
+game
+ ):
+
+267 
+nÙ
+ 
+£lf
+.
+qu›t
+: 
+´št
+ "Pacmªƒm”ge viùÜious! ScÜe: %d" % 
+¡©e
+.
+d©a
+.
+scÜe
+
+
+268 
+game
+.
+gameOv”
+ = 
+True
+
+
+270 
+def
+ 
+	$lo£
+Ğ
+£lf
+, 
+¡©e
+, 
+game
+ ):
+
+271 
+nÙ
+ 
+£lf
+.
+qu›t
+: 
+´št
+ "Pacmª d›d! ScÜe: %d" % 
+¡©e
+.
+d©a
+.
+scÜe
+
+
+272 
+game
+.
+gameOv”
+ = 
+True
+
+
+274 
+def
+ 
+	$g‘Prog»ss
+(
+£lf
+, 
+game
+):
+
+275  (
+game
+.
+¡©e
+.
+	`g‘NumFood
+()è/ 
+£lf
+.
+š™ŸlS‹
+.
+	$g‘NumFood
+()
+
+277 
+def
+ 
+	$ag’tC¿sh
+(
+£lf
+, 
+game
+, 
+ag’tIndex
+):
+
+278 
+ag’tIndex
+ == 0:
+
+279 
+´št
+ "Pacman crashed"
+
+281 
+´št
+ "A ghost crashed"
+
+283 
+def
+ 
+	$g‘MaxTÙ®Time
+(
+£lf
+, 
+ag’tIndex
+):
+
+284  
+£lf
+.
+timeout
+
+
+286 
+def
+ 
+	$g‘MaxS¹upTime
+(
+£lf
+, 
+ag’tIndex
+):
+
+287  
+£lf
+.
+timeout
+
+
+289 
+def
+ 
+	$g‘MoveW¬nšgTime
+(
+£lf
+, 
+ag’tIndex
+):
+
+290  
+£lf
+.
+timeout
+
+
+292 
+def
+ 
+	$g‘MoveTimeout
+(
+£lf
+, 
+ag’tIndex
+):
+
+293  
+£lf
+.
+timeout
+
+
+295 
+def
+ 
+	$g‘MaxTimeW¬nšgs
+(
+£lf
+, 
+ag’tIndex
+):
+
+298 
+şass
+ 
+PacmªRuËs
+:
+
+300 
+The£
+ 
+funùiÚs
+ 
+gov”n
+ 
+how
+ 
+·cmª
+ 
+š‹¿ùs
+ 
+w™h
+ 
+his
+ 
+’vœÚm’t
+ 
+und”
+
+
+301 
+the
+ 
+şassic
+ 
+game
+ 
+ruËs
+.
+
+303 
+PACMAN_SPEED
+=1
+
+305 
+def
+ 
+	$g‘Leg®AùiÚs
+Ğ
+¡©e
+ ):
+
+307 
+R‘uºs
+ 
+a
+ 
+li¡
+ 
+of
+ 
+possibË
+ 
+aùiÚs
+.
+
+309  
+AùiÚs
+.
+	`g‘PossibËAùiÚs
+Ğ
+¡©e
+.
+	`g‘PacmªS‹
+().
+cÚfigu¿tiÚ
+, s‹.
+d©a
+.
+Ïyout
+.
+w®ls
+ )
+
+310 
+g‘Leg®AùiÚs
+ = 
+	$¡©icm‘hod
+Ğ
+g‘Leg®AùiÚs
+ )
+
+312 
+def
+ 
+	$­¶yAùiÚ
+Ğ
+¡©e
+, 
+aùiÚ
+ ):
+
+314 
+Ed™s
+ 
+the
+ 
+¡©e
+ 
+to
+ 
+»æeù
+h
+»suÉs
+ 
+of
+h
+aùiÚ
+.
+
+316 
+Ëg®
+ = 
+PacmªRuËs
+.
+	$g‘Leg®AùiÚs
+Ğ
+¡©e
+ )
+
+317 
+aùiÚ
+ 
+nÙ
+ 
+š
+ 
+Ëg®
+:
+
+318 
+¿i£
+ 
+	`Exû±iÚ
+("IÎeg®‡ùiÚ " + 
+	$¡r
+(
+aùiÚ
+))
+
+320 
+·cmªS‹
+ = 
+¡©e
+.
+d©a
+.
+ag’tS‹s
+[0]
+
+322 #Upd©
+CÚfigu¿tiÚ
+
+
+323 
+veùÜ
+ = 
+AùiÚs
+.
+	$dœeùiÚToVeùÜ
+Ğ
+aùiÚ
+, 
+PacmªRuËs
+.
+PACMAN_SPEED
+ )
+
+324 
+·cmªS‹
+.
+cÚfigu¿tiÚ
+ =…acmªS‹.cÚfigu¿tiÚ.
+	$g’”©eSucûssÜ
+Ğ
+veùÜ
+ )
+
+327 
+Ãxt
+ = 
+·cmªS‹
+.
+cÚfigu¿tiÚ
+.
+	$g‘Pos™iÚ
+()
+
+328 
+Ã¬e¡
+ = 
+	$Ã¬e¡Pošt
+Ğ
+Ãxt
+ )
+
+329 
+	`mªh©nDi¡ªû
+Ğ
+Ã¬e¡
+, 
+Ãxt
+ ) <= 0.5 :
+
+330 #Remov
+food
+
+
+331 
+PacmªRuËs
+.
+	$cÚsume
+Ğ
+Ã¬e¡
+, 
+¡©e
+ )
+
+332 
+­¶yAùiÚ
+ = 
+	$¡©icm‘hod
+Ğ
+­¶yAùiÚ
+ )
+
+334 
+def
+ 
+	$cÚsume
+Ğ
+pos™iÚ
+, 
+¡©e
+ ):
+
+335 
+x
+,
+y
+ = 
+pos™iÚ
+
+
+336 #E© 
+food
+
+
+337 
+¡©e
+.
+d©a
+.
+food
+[
+x
+][
+y
+]:
+
+338 
+¡©e
+.
+d©a
+.
+scÜeChªge
+ += 10
+
+339 
+¡©e
+.
+d©a
+.
+food
+ = s‹.d©a.food.
+	$cİy
+()
+
+340 
+¡©e
+.
+d©a
+.
+food
+[
+x
+][
+y
+] = 
+F®£
+
+
+341 
+¡©e
+.
+d©a
+.
+_foodE©’
+ = 
+pos™iÚ
+
+
+342 #TODO: 
+ÿche
+ 
+numFood
+?
+
+343 
+numFood
+ = 
+¡©e
+.
+	$g‘NumFood
+()
+
+344 
+numFood
+ =ğ0 
+ªd
+ 
+nÙ
+ 
+¡©e
+.
+d©a
+.
+_lo£
+:
+
+345 
+¡©e
+.
+d©a
+.
+scÜeChªge
+ += 500
+
+346 
+¡©e
+.
+d©a
+.
+_wš
+ = 
+True
+
+
+347 #E© 
+ÿpsuË
+
+
+348 ifĞ
+pos™iÚ
+ 
+š
+ 
+¡©e
+.
+	$g‘C­suËs
+() ):
+
+349 
+¡©e
+.
+d©a
+.
+ÿpsuËs
+.
+	$»move
+Ğ
+pos™iÚ
+ )
+
+350 
+¡©e
+.
+d©a
+.
+_ÿpsuËE©’
+ = 
+pos™iÚ
+
+
+351 #Re£ˆ
+®l
+ 
+gho¡s
+' scaredimers
+
+352 
+šdex
+ 
+š
+ 
+	`¿nge
+Ğ1, 
+	$Ën
+Ğ
+¡©e
+.
+d©a
+.
+ag’tS‹s
+ ) ):
+
+353 
+¡©e
+.
+d©a
+.
+ag’tS‹s
+[
+šdex
+].
+sÿ»dTim”
+ = 
+SCARED_TIME
+
+
+354 
+cÚsume
+ = 
+	$¡©icm‘hod
+Ğ
+cÚsume
+ )
+
+356 
+şass
+ 
+Gho¡RuËs
+:
+
+358 
+The£
+ 
+funùiÚs
+ 
+diù©e
+ 
+how
+ 
+gho¡s
+ 
+š‹¿ù
+ 
+w™h
+ 
+theœ
+ 
+’vœÚm’t
+.
+
+360 
+GHOST_SPEED
+=1.0
+
+361 
+def
+ 
+	$g‘Leg®AùiÚs
+Ğ
+¡©e
+, 
+gho¡Index
+ ):
+
+363 
+Gho¡s
+ 
+ÿÂÙ
+ 
+¡İ
+, 
+ªd
+ cªnÙ 
+tuº
+ 
+¬ound
+ 
+uÆess
+ 
+they
+
+
+364 
+»ach
+ 
+a
+ 
+d—d
+ 
+’d
+, 
+but
+ 
+ÿn
+ 
+tuº
+ 90 
+deg»es
+ 
+©
+ 
+š‹r£ùiÚs
+.
+
+366 
+cÚf
+ = 
+¡©e
+.
+	`g‘Gho¡S‹
+Ğ
+gho¡Index
+ ).
+cÚfigu¿tiÚ
+
+
+367 
+possibËAùiÚs
+ = 
+AùiÚs
+.
+	$g‘PossibËAùiÚs
+Ğ
+cÚf
+, 
+¡©e
+.
+d©a
+.
+Ïyout
+.
+w®ls
+ )
+
+368 
+»v”£
+ = 
+AùiÚs
+.
+	$»v”£DœeùiÚ
+Ğ
+cÚf
+.
+dœeùiÚ
+ )
+
+369 
+DœeùiÚs
+.
+STOP
+ 
+š
+ 
+possibËAùiÚs
+:
+
+370 
+possibËAùiÚs
+.
+	$»move
+Ğ
+DœeùiÚs
+.
+STOP
+ )
+
+371 
+»v”£
+ 
+š
+ 
+possibËAùiÚs
+ 
+ªd
+ 
+	`Ën
+(…ossibleActions ) > 1:
+
+372 
+possibËAùiÚs
+.
+	$»move
+Ğ
+»v”£
+ )
+
+373  
+possibËAùiÚs
+
+
+374 
+g‘Leg®AùiÚs
+ = 
+	$¡©icm‘hod
+Ğ
+g‘Leg®AùiÚs
+ )
+
+376 
+def
+ 
+	$­¶yAùiÚ
+Ğ
+¡©e
+, 
+aùiÚ
+, 
+gho¡Index
+):
+
+378 
+Ëg®
+ = 
+Gho¡RuËs
+.
+	$g‘Leg®AùiÚs
+Ğ
+¡©e
+, 
+gho¡Index
+ )
+
+379 
+aùiÚ
+ 
+nÙ
+ 
+š
+ 
+Ëg®
+:
+
+380 
+¿i£
+ 
+	`Exû±iÚ
+("IÎeg® gho¡‡ùiÚ " + 
+	$¡r
+(
+aùiÚ
+))
+
+382 
+gho¡S‹
+ = 
+¡©e
+.
+d©a
+.
+ag’tS‹s
+[
+gho¡Index
+]
+
+383 
+¥“d
+ = 
+Gho¡RuËs
+.
+GHOST_SPEED
+
+
+384 
+gho¡S‹
+.
+sÿ»dTim”
+ > 0: 
+¥“d
+ /= 2.0
+
+385 
+veùÜ
+ = 
+AùiÚs
+.
+	$dœeùiÚToVeùÜ
+Ğ
+aùiÚ
+, 
+¥“d
+ )
+
+386 
+gho¡S‹
+.
+cÚfigu¿tiÚ
+ = gho¡S‹.cÚfigu¿tiÚ.
+	$g’”©eSucûssÜ
+Ğ
+veùÜ
+ )
+
+387 
+­¶yAùiÚ
+ = 
+	$¡©icm‘hod
+Ğ
+­¶yAùiÚ
+ )
+
+389 
+def
+ 
+	$deüem’tTim”
+Ğ
+gho¡S‹
+):
+
+390 
+tim”
+ = 
+gho¡S‹
+.
+sÿ»dTim”
+
+
+391 
+tim”
+ == 1:
+
+392 
+gho¡S‹
+.
+cÚfigu¿tiÚ
+.
+pos
+ = 
+	$Ã¬e¡Pošt
+Ğ
+gho¡S‹
+.
+cÚfigu¿tiÚ
+.
+pos
+ )
+
+393 
+gho¡S‹
+.
+sÿ»dTim”
+ = 
+	`max
+Ğ0, 
+tim”
+ - 1 )
+
+394 
+deüem’tTim”
+ = 
+	$¡©icm‘hod
+Ğ
+deüem’tTim”
+ )
+
+396 
+def
+ 
+	$checkD—th
+Ğ
+¡©e
+, 
+ag’tIndex
+):
+
+397 
+·cmªPos™iÚ
+ = 
+¡©e
+.
+	$g‘PacmªPos™iÚ
+()
+
+398 
+ag’tIndex
+ =ğ0: #Pacmª 
+ju¡
+ 
+moved
+; 
+AnyÚe
+ 
+ÿn
+ 
+kl
+ 
+him
+
+
+399 
+šdex
+ 
+š
+ 
+	`¿nge
+Ğ1, 
+	$Ën
+Ğ
+¡©e
+.
+d©a
+.
+ag’tS‹s
+ ) ):
+
+400 
+gho¡S‹
+ = 
+¡©e
+.
+d©a
+.
+ag’tS‹s
+[
+šdex
+]
+
+401 
+gho¡Pos™iÚ
+ = 
+gho¡S‹
+.
+cÚfigu¿tiÚ
+.
+	$g‘Pos™iÚ
+()
+
+402 
+Gho¡RuËs
+.
+	$ÿnKl
+Ğ
+·cmªPos™iÚ
+, 
+gho¡Pos™iÚ
+ ):
+
+403 
+Gho¡RuËs
+.
+	$cŞlide
+Ğ
+¡©e
+, 
+gho¡S‹
+, 
+šdex
+ )
+
+405 
+gho¡S‹
+ = 
+¡©e
+.
+d©a
+.
+ag’tS‹s
+[
+ag’tIndex
+]
+
+406 
+gho¡Pos™iÚ
+ = 
+gho¡S‹
+.
+cÚfigu¿tiÚ
+.
+	$g‘Pos™iÚ
+()
+
+407 
+Gho¡RuËs
+.
+	$ÿnKl
+Ğ
+·cmªPos™iÚ
+, 
+gho¡Pos™iÚ
+ ):
+
+408 
+Gho¡RuËs
+.
+	$cŞlide
+Ğ
+¡©e
+, 
+gho¡S‹
+, 
+ag’tIndex
+ )
+
+409 
+checkD—th
+ = 
+	$¡©icm‘hod
+Ğ
+checkD—th
+ )
+
+411 
+def
+ 
+	$cŞlide
+Ğ
+¡©e
+, 
+gho¡S‹
+, 
+ag’tIndex
+):
+
+412 
+gho¡S‹
+.
+sÿ»dTim”
+ > 0:
+
+413 
+¡©e
+.
+d©a
+.
+scÜeChªge
+ += 200
+
+414 
+Gho¡RuËs
+.
+	$¶aûGho¡
+(
+¡©e
+, 
+gho¡S‹
+)
+
+415 
+gho¡S‹
+.
+sÿ»dTim”
+ = 0
+
+416 #Added 
+fœ¡
+-
+³rsÚ
+
+
+417 
+¡©e
+.
+d©a
+.
+_—‹n
+[
+ag’tIndex
+] = 
+True
+
+
+419 
+nÙ
+ 
+¡©e
+.
+d©a
+.
+_wš
+:
+
+420 
+¡©e
+.
+d©a
+.
+scÜeChªge
+ -= 500
+
+421 
+¡©e
+.
+d©a
+.
+_lo£
+ = 
+True
+
+
+422 
+cŞlide
+ = 
+	$¡©icm‘hod
+Ğ
+cŞlide
+ )
+
+424 
+def
+ 
+	$ÿnKl
+Ğ
+·cmªPos™iÚ
+, 
+gho¡Pos™iÚ
+ ):
+
+425  
+	`mªh©nDi¡ªû
+Ğ
+gho¡Pos™iÚ
+, 
+·cmªPos™iÚ
+ ) <ğ
+COLLISION_TOLERANCE
+
+
+426 
+ÿnKl
+ = 
+	$¡©icm‘hod
+Ğ
+ÿnKl
+ )
+
+428 
+def
+ 
+	$¶aûGho¡
+(
+¡©e
+, 
+gho¡S‹
+):
+
+429 
+gho¡S‹
+.
+cÚfigu¿tiÚ
+ = gho¡S‹.
+¡¬t
+
+
+430 
+¶aûGho¡
+ = 
+	$¡©icm‘hod
+Ğ
+¶aûGho¡
+ )
+
+432 #############################
+#FRAMEWORK 
+TO
+ 
+START
+ 
+A
+ 
+GAME
+ #
+#############################
+
+
+433 
+def
+ (
+¡r
+):
+
+434  
+¡r
+ + ' [Default: %default]'
+
+436 
+def
+ 
+	$·r£Ag’tArgs
+(
+¡r
+):
+
+437 
+¡r
+ =ğ
+NÚe
+:  {
+	}
+}
+
+438 
+p›ûs
+ = 
+¡r
+.
+¥l™
+(',')
+
+439 
+İts
+ = {}
+
+440 
+p
+ 
+š
+ 
+p›ûs
+:
+
+441 '=' 
+š
+ 
+p
+:
+
+442 
+key
+, 
+	gv®
+ = 
+p
+.
+¥l™
+('=')
+
+444 
+key
+,
+	gv®
+ = 
+p
+, 1
+
+445 
+	gİts
+[
+key
+] = 
+v®
+
+
+446  
+İts
+
+
+448 
+def
+ 
+	$»adCommªd
+Ğ
+¬gv
+ ):
+
+450 
+Proûs£s
+ 
+the
+ 
+commªd
+ 
+u£d
+ 
+to
+ 
+run
+ 
+·cmª
+ 
+äom
+hcommªd 
+lše
+.
+
+452 
+äom
+ 
+İ¬£
+ 
+impÜt
+ 
+O±iÚP¬£r
+
+
+453 
+u§geSŒ
+ = """
+
+454 
+USAGE
+: 
+pythÚ
+ 
+·cmª
+.
+py
+ <
+İtiÚs
+>
+
+455 
+EXAMPLES
+: (1è
+pythÚ
+ 
+·cmª
+.
+py
+
+
+456 - 
+¡¬ts
+ 
+ª
+ 
+š‹¿ùive
+ 
+game
+
+
+457 (2è
+pythÚ
+ 
+·cmª
+.
+py
+ --
+Ïyout
+ 
+sm®lCÏssic
+ --
+zoom
+ 2
+
+458 
+OR
+ 
+pythÚ
+ 
+·cmª
+.
+py
+ -
+l
+ 
+sm®lCÏssic
+ -
+z
+ 2
+
+459 - 
+¡¬ts
+ 
+ª
+ 
+š‹¿ùive
+ 
+game
+ 
+Ú
+ 
+a
+ 
+sm®Ër
+ 
+bßrd
+, 
+zoomed
+ 
+š
+
+
+461 
+·r£r
+ = 
+	$O±iÚP¬£r
+(
+u§geSŒ
+)
+
+463 
+·r£r
+.
+	`add_İtiÚ
+('-n', '--numGames', 
+de¡
+='numGames', 
+ty³
+='int',
+
+464 
+h–p
+=('thnumb” oàGAMESØ¶ay'), 
+m‘av¬
+='GAMES', =1)
+
+465 
+·r£r
+.
+	`add_İtiÚ
+('-l', '--Ïyout', 
+de¡
+='layout',
+
+466 
+h–p
+=('the LAYOUT_FILE from whicho†oadhe map†ayout'),
+
+467 
+m‘av¬
+='LAYOUT_FILE', ='mediumClassic')
+
+468 
+·r£r
+.
+	`add_İtiÚ
+('-p', '--·cmª', 
+de¡
+='pacman',
+
+469 
+h–p
+=('the‡gent TYPE inhe…acmanAgents moduleo use'),
+
+470 
+m‘av¬
+='TYPE', ='KeyboardAgent')
+
+471 
+·r£r
+.
+	`add_İtiÚ
+('-t', '--‹xtG¿phics', 
+aùiÚ
+='¡Üe_Œue', 
+de¡
+='textGraphics',
+
+472 
+h–p
+='Di¥Ïy ouuˆa ‹xˆÚly', =
+F®£
+)
+
+473 
+·r£r
+.
+	`add_İtiÚ
+('-q', '--qu›tTextG¿phics', 
+aùiÚ
+='¡Üe_Œue', 
+de¡
+='quietGraphics',
+
+474 
+h–p
+='G’”©mšim® ouuˆªd‚Øg¿phics', =
+F®£
+)
+
+475 
+·r£r
+.
+	`add_İtiÚ
+('-g', '--gho¡s', 
+de¡
+='ghost',
+
+476 
+h–p
+=('the ghost‡gent TYPE inhe ghostAgents moduleo use'),
+
+477 
+m‘av¬
+ = 'TYPE', ='RandomGhost')
+
+478 
+·r£r
+.
+	`add_İtiÚ
+('-k', '--numgho¡s', 
+ty³
+='št', 
+de¡
+='numGhosts',
+
+479 
+h–p
+=('The maximum‚umber of ghostso use'), =4)
+
+480 
+·r£r
+.
+	`add_İtiÚ
+('-z', '--zoom', 
+ty³
+='æßt', 
+de¡
+='zoom',
+
+481 
+h–p
+=('Zoomhe size ofhe graphics window'), =1.0)
+
+482 
+·r£r
+.
+	`add_İtiÚ
+('-f', '--fixRªdomS“d', 
+aùiÚ
+='¡Üe_Œue', 
+de¡
+='fixRandomSeed',
+
+483 
+h–p
+='Fixe th¿ndom s“dØ®way ¶ayh§mgame', =
+F®£
+)
+
+484 
+·r£r
+.
+	`add_İtiÚ
+('-r', '--»cÜdAùiÚs', 
+aùiÚ
+='¡Üe_Œue', 
+de¡
+='record',
+
+485 
+h–p
+='Wr™e gamhi¡Ü› tØ¨fÒamed byhtimthey w”¶ayed)', =
+F®£
+)
+
+486 
+·r£r
+.
+	`add_İtiÚ
+('--»¶ay', 
+de¡
+='gameToReplay',
+
+487 
+h–p
+='A„ecÜded gamfÕickËètØ»¶ay', =
+NÚe
+)
+
+488 
+·r£r
+.
+	`add_İtiÚ
+('-a','--ag’tArgs',
+de¡
+='agentArgs',
+
+489 
+h–p
+='Comma separated values sento‡gent.ƒ.g. "opt1=val1,opt2,opt3=val3"')
+
+490 
+·r£r
+.
+	`add_İtiÚ
+('-x', '--numT¿ššg', 
+de¡
+='numT¿ššg', 
+ty³
+='int',
+
+491 
+h–p
+=('How manyƒpisodes‡reraining (suppresses output)'), =0)
+
+492 
+·r£r
+.
+	`add_İtiÚ
+('--äameTime', 
+de¡
+='äameTime', 
+ty³
+='float',
+
+493 
+h–p
+=('Timeo delay between frames; <0 means keyboard'), =0.1)
+
+494 
+·r£r
+.
+	`add_İtiÚ
+('-c', '--ÿtchExû±iÚs', 
+aùiÚ
+='¡Üe_Œue', 
+de¡
+='catchExceptions',
+
+495 
+h–p
+='Tuº Úƒxû±iÚ hªdlšg‡ndimeout duršg games', =
+F®£
+)
+
+496 
+·r£r
+.
+	`add_İtiÚ
+('--timeout', 
+de¡
+='timeout', 
+ty³
+='int',
+
+497 
+h–p
+=('Maximum†ength ofime‡n‡gent can spend computing in‡ single game'), =30)
+
+499 
+İtiÚs
+, 
+Ùh”junk
+ = 
+·r£r
+.
+	$·r£_¬gs
+(
+¬gv
+)
+
+500 
+	`Ën
+(
+Ùh”junk
+) != 0:
+
+501 
+¿i£
+ 
+	`Exû±iÚ
+('Commªd†ššpuˆnÙ und”¡ood: ' + 
+	$¡r
+(
+Ùh”junk
+))
+
+502 
+¬gs
+ = 
+	$diù
+()
+
+504 #Fix 
+the
+ 
+¿ndom
+ 
+£ed
+
+
+505 
+İtiÚs
+.
+fixRªdomS“d
+: 
+¿ndom
+.
+	`£ed
+('cs188')
+
+507 #Choo£ 
+a
+ 
+Ïyout
+
+
+508 
+¬gs
+['Ïyout'] = 
+Ïyout
+.
+	$g‘Layout
+Ğ
+İtiÚs
+.
+Ïyout
+ )
+
+509 
+¬gs
+['Ïyout'] =ğ
+NÚe
+: 
+¿i£
+ 
+	`Exû±iÚ
+("ThÏyouˆ" + 
+İtiÚs
+.
+Ïyout
+ + " cannot be found")
+
+511 #Choo£ 
+a
+ 
+Pacmª
+ 
+ag’t
+
+
+512 
+noKeybßrd
+ = 
+İtiÚs
+.
+gameToR•Ïy
+ =ğ
+NÚe
+ 
+	$ªd
+ (
+İtiÚs
+.
+‹xtG¿phics
+ 
+Ü
+ o±iÚs.
+qu›tG¿phics
+)
+
+513 
+·cmªTy³
+ = 
+	$lßdAg’t
+(
+İtiÚs
+.
+·cmª
+, 
+noKeybßrd
+)
+
+514 
+ag’tO±s
+ = 
+	$·r£Ag’tArgs
+(
+İtiÚs
+.
+ag’tArgs
+)
+
+515 
+İtiÚs
+.
+numT¿ššg
+ > 0:
+
+516 
+¬gs
+['numT¿ššg'] = 
+İtiÚs
+.
+numT¿ššg
+
+
+517 'numT¿ššg' 
+nÙ
+ 
+š
+ 
+ag’tO±s
+:‡g’tO±s['numT¿ššg'] = 
+İtiÚs
+.
+numT¿ššg
+
+
+518 
+·cmª
+ = 
+	$·cmªTy³
+(**
+ag’tO±s
+è#In¡ªtŸ‹ 
+Pacmª
+ 
+w™h
+ 
+ag’tArgs
+
+
+519 
+¬gs
+['·cmª'] = 
+·cmª
+
+
+522 'numT¿š' 
+š
+ 
+ag’tO±s
+:
+
+523 
+İtiÚs
+.
+numQu›t
+ = (
+ag’tO±s
+['numTrain'])
+
+524 
+İtiÚs
+.
+numIgnÜe
+ = (
+ag’tO±s
+['numTrain'])
+
+526 #Choo£ 
+a
+ 
+gho¡
+ 
+ag’t
+
+
+527 
+gho¡Ty³
+ = 
+	$lßdAg’t
+(
+İtiÚs
+.
+gho¡
+, 
+noKeybßrd
+)
+
+528 
+¬gs
+['gho¡s'] = [
+	`gho¡Ty³
+Ğ
+i
++1 ) ˜
+š
+ 
+	`¿nge
+Ğ
+İtiÚs
+.
+numGho¡s
+ )]
+
+530 #Choo£ 
+a
+ 
+di¥Ïy
+ 
+fÜm©
+
+
+531 
+İtiÚs
+.
+qu›tG¿phics
+:
+
+532 
+impÜt
+ 
+‹xtDi¥Ïy
+
+
+533 
+¬gs
+['di¥Ïy'] = 
+‹xtDi¥Ïy
+.
+	$NuÎG¿phics
+()
+
+534 
+–if
+ 
+İtiÚs
+.
+‹xtG¿phics
+:
+
+535 
+impÜt
+ 
+‹xtDi¥Ïy
+
+
+536 
+‹xtDi¥Ïy
+.
+SLEEP_TIME
+ = 
+İtiÚs
+.
+äameTime
+
+
+537 
+¬gs
+['di¥Ïy'] = 
+‹xtDi¥Ïy
+.
+	$PacmªG¿phics
+()
+
+539 
+impÜt
+ 
+g¿phicsDi¥Ïy
+
+
+540 
+¬gs
+['di¥Ïy'] = 
+g¿phicsDi¥Ïy
+.
+	$PacmªG¿phics
+(
+İtiÚs
+.
+zoom
+, 
+äameTime
+ = options.frameTime)
+
+541 
+¬gs
+['numGames'] = 
+İtiÚs
+.
+numGames
+
+
+542 
+¬gs
+['»cÜd'] = 
+İtiÚs
+.
+»cÜd
+
+
+543 
+¬gs
+['ÿtchExû±iÚs'] = 
+İtiÚs
+.
+ÿtchExû±iÚs
+
+
+544 
+¬gs
+['timeout'] = 
+İtiÚs
+.
+timeout
+
+
+546 #S³cŸÈ: 
+»cÜded
+ 
+games
+ 
+dÚ
+'t usehe„unGames method or‡rgs structure
+
+547 
+İtiÚs
+.
+gameToR•Ïy
+ !ğ
+NÚe
+:
+
+548 
+´št
+ 'R•Ïyšg„ecÜded gam%s.' % 
+İtiÚs
+.
+gameToR•Ïy
+
+
+549 
+impÜt
+ 
+cPickË
+
+
+550 
+f
+ = 
+	$İ’
+(
+İtiÚs
+.
+gameToR•Ïy
+)
+
+551 
+Œy
+: 
+»cÜded
+ = 
+cPickË
+.
+	$lßd
+(
+f
+)
+
+552 
+fš®ly
+: 
+f
+.
+	$şo£
+()
+
+553 
+»cÜded
+['di¥Ïy'] = 
+¬gs
+['display']
+
+554 
+	$»¶ayGame
+(**
+»cÜded
+)
+
+555 
+sys
+.
+	$ex™
+(0)
+
+557  
+¬gs
+
+
+559 
+def
+ 
+	$lßdAg’t
+(
+·cmª
+, 
+nog¿phics
+):
+
+560 #Look 
+through
+ 
+®l
+ 
+pythÚP©h
+ 
+DœeùÜ›s
+ 
+the
+ 
+right
+ 
+moduË
+,
+
+561 
+pythÚP©hSŒ
+ = 
+os
+.
+·th
+.
+	`ex·ndv¬s
+("$PYTHONPATH")
+
+562 
+pythÚP©hSŒ
+.
+	`fšd
+(';') == -1:
+
+563 
+pythÚP©hDœs
+ = 
+pythÚP©hSŒ
+.
+	`¥l™
+(':')
+
+565 
+pythÚP©hDœs
+ = 
+pythÚP©hSŒ
+.
+	`¥l™
+(';')
+
+566 
+pythÚP©hDœs
+.
+	`­³nd
+('.')
+
+568 
+moduËDœ
+ 
+š
+ 
+pythÚP©hDœs
+:
+
+569 
+nÙ
+ 
+os
+.
+·th
+.
+	$isdœ
+(
+moduËDœ
+): 
+
+570 
+moduËNames
+ = [
+f
+ à
+š
+ 
+os
+.
+	$li¡dœ
+(
+moduËDœ
+è
+f
+.
+	`’dsw™h
+('gents.py')]
+
+571 
+moduËÇme
+ 
+š
+ 
+moduËNames
+:
+
+572 
+Œy
+:
+
+573 
+moduË
+ = 
+	`__impÜt__
+(
+moduËÇme
+[:-3])
+
+574 
+exû±
+ 
+ImpÜtE¼Ü
+:
+
+576 
+·cmª
+ 
+š
+ 
+	$dœ
+(
+moduË
+):
+
+577 
+nog¿phics
+ 
+ªd
+ 
+moduËÇme
+ == 'keyboardAgents.py':
+
+578 
+¿i£
+ 
+	`Exû±iÚ
+('Usinghe keyboard„equires graphics (notext display)')
+
+579  
+	$g‘©Œ
+(
+moduË
+, 
+·cmª
+)
+
+580 
+¿i£
+ 
+	`Exû±iÚ
+('Thag’ˆ' + 
+·cmª
+ + ' is‚ot specified in‡ny *Agents.py.')
+
+582 
+def
+ 
+	$»¶ayGame
+Ğ
+Ïyout
+, 
+aùiÚs
+, 
+di¥Ïy
+ ):
+
+583 
+impÜt
+ 
+·cmªAg’ts
+, 
+gho¡Ag’ts
+
+
+584 
+ruËs
+ = 
+	$CÏssicGameRuËs
+()
+
+585 
+ag’ts
+ = [
+·cmªAg’ts
+.
+	`G»edyAg’t
+()] + [
+gho¡Ag’ts
+.
+	`RªdomGho¡
+(
+i
++1è˜
+š
+ 
+	`¿nge
+(
+Ïyout
+.
+	`g‘NumGho¡s
+())]
+
+586 
+game
+ = 
+ruËs
+.
+	`ÃwGame
+Ğ
+Ïyout
+, 
+ag’ts
+[0],‡g’ts[1:], 
+di¥Ïy
+ )
+
+587 
+¡©e
+ = 
+game
+.state
+
+588 
+di¥Ïy
+.
+	$š™Ÿlize
+(
+¡©e
+.
+d©a
+)
+
+590 
+aùiÚ
+ 
+š
+ 
+aùiÚs
+:
+
+591 #Execu‹ 
+the
+ 
+aùiÚ
+
+
+592 
+¡©e
+ = s‹.
+	$g’”©eSucûssÜ
+Ğ*
+aùiÚ
+ )
+
+593 #Chªg
+the
+ 
+di¥Ïy
+
+
+594 
+di¥Ïy
+.
+	$upd©e
+Ğ
+¡©e
+.
+d©a
+ )
+
+595 #AÎow 
+game
+ 
+¥ecific
+ 
+	`cÚd™iÚs
+ (
+wšnšg
+, 
+losšg
+, 
+‘c
+.)
+
+596 
+ruËs
+.
+	$´oûss
+(
+¡©e
+, 
+game
+)
+
+598 
+di¥Ïy
+.
+	$fšish
+()
+
+600 
+def
+ 
+	$runGames
+Ğ
+Ïyout
+, 
+·cmª
+, 
+gho¡s
+, 
+di¥Ïy
+, 
+numGames
+, 
+»cÜd
+, 
+numT¿ššg
+ = 0, 
+ÿtchExû±iÚs
+=
+F®£
+, 
+timeout
+=30 ):
+
+601 
+impÜt
+ 
+__maš__
+
+
+602 
+__maš__
+.
+__diù__
+['_di¥Ïy'] = 
+di¥Ïy
+
+
+604 
+ruËs
+ = 
+	$CÏssicGameRuËs
+(
+timeout
+)
+
+605 
+games
+ = []
+
+607 
+i
+ 
+š
+ 
+	$¿nge
+Ğ
+numGames
+ ):
+
+608 
+beQu›t
+ = 
+i
+ < 
+numT¿ššg
+
+
+609 
+beQu›t
+:
+
+610 #Suµ»s 
+ouut
+ 
+ªd
+ 
+g¿phics
+
+
+611 
+impÜt
+ 
+‹xtDi¥Ïy
+
+
+612 
+gameDi¥Ïy
+ = 
+‹xtDi¥Ïy
+.
+	$NuÎG¿phics
+()
+
+613 
+ruËs
+.
+qu›t
+ = 
+True
+
+
+615 
+gameDi¥Ïy
+ = 
+di¥Ïy
+
+
+616 
+ruËs
+.
+qu›t
+ = 
+F®£
+
+
+617 
+game
+ = 
+ruËs
+.
+	$ÃwGame
+Ğ
+Ïyout
+, 
+·cmª
+, 
+gho¡s
+, 
+gameDi¥Ïy
+, 
+beQu›t
+, 
+ÿtchExû±iÚs
+)
+
+618 
+game
+.
+	$run
+()
+
+619 
+nÙ
+ 
+beQu›t
+: 
+games
+.
+	$­³nd
+(
+game
+)
+
+621 
+»cÜd
+:
+
+622 
+impÜt
+ 
+time
+, 
+cPickË
+
+
+623 
+âame
+ = ('»cÜded-game-%d' % (
+i
+ + 1)è+ '-'.
+	`još
+([
+	$¡r
+(
+t
+èˆ
+š
+ 
+time
+.
+	`loÿÉime
+()[1:6]])
+
+624 
+f
+ = 
+	`fe
+(
+âame
+, 'w')
+
+625 
+compÚ’ts
+ = {'Ïyout': 
+Ïyout
+, 'aùiÚs': 
+game
+.
+moveHi¡Üy
+}
+
+626 
+cPickË
+.
+	$dump
+(
+compÚ’ts
+, 
+f
+)
+
+627 
+f
+.
+	$şo£
+()
+
+629 ià(
+numGames
+-
+numT¿ššg
+) > 0:
+
+630 
+scÜes
+ = [
+game
+.
+¡©e
+.
+	$g‘ScÜe
+(è
+game
+ 
+š
+ 
+games
+]
+
+631 
+wšs
+ = [
+game
+.
+¡©e
+.
+	$isWš
+(è
+game
+ 
+š
+ 
+games
+]
+
+632 
+wšR©e
+ = 
+wšs
+.
+	`couÁ
+(
+True
+)/ (
+	$Ën
+(
+wšs
+))
+
+633 
+´št
+ 'Av”agScÜe:', 
+	`sum
+(
+scÜes
+è/ (
+	$Ën
+(
+scÜes
+))
+
+634 
+´št
+ 'ScÜes: ', ', '.
+	`još
+([
+	$¡r
+(
+scÜe
+èscÜ
+š
+ 
+scÜes
+])
+
+635 
+´št
+ 'Wš R©e: %d/%d (%.2f)' % (
+wšs
+.
+	`couÁ
+(
+True
+), 
+	`Ën
+(wšs), 
+wšR©e
+)
+
+636 
+´št
+ 'RecÜd: ', ', '.
+	`još
+([ ['Loss', 'Wš'][(
+w
+)] w 
+š
+ 
+wšs
+])
+
+638  
+games
+
+
+640 
+__Çme__
+ == '__main__':
+
+642 
+The
+ 
+maš
+ 
+funùiÚ
+ 
+ÿÎed
+ 
+wh’
+ 
+·cmª
+.
+py
+ 
+is
+ 
+run
+
+
+643 
+äom
+ 
+the
+ 
+commªd
+ 
+lše
+:
+
+645 > 
+pythÚ
+ 
+·cmª
+.
+py
+
+
+647 
+S“
+ 
+the
+ 
+u§ge
+ 
+¡ršg
+ 
+mÜe
+ 
+d‘as
+.
+
+649 > 
+pythÚ
+ 
+·cmª
+.
+py
+ --
+h–p
+
+
+651 
+¬gs
+ = 
+	`»adCommªd
+Ğ
+sys
+.
+¬gv
+[1:] ) #G‘ 
+game
+ 
+compÚ’ts
+ 
+ba£d
+ 
+Ú
+ 
+šput
+
+
+652 
+	$runGames
+Ğ**
+¬gs
+ )
+
+654 #impÜˆ
+cProfe
+
+
+655 #cProfe.
+	`run
+("runGames( **args )")
+
+656 
+·ss
+
+
+	@pacmanAgents.py
+
+1 #·cmªAg’ts.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+äom
+ 
+·cmª
+ 
+impÜt
+ 
+DœeùiÚs
+
+
+10 
+äom
+ 
+game
+ 
+impÜt
+ 
+Ag’t
+
+
+11 
+impÜt
+ 
+¿ndom
+
+
+12 
+impÜt
+ 
+game
+
+
+13 
+impÜt
+ 
+ut
+
+
+15 
+şass
+ 
+	$LeáTuºAg’t
+(
+game
+.
+Ag’t
+):
+
+18 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+¡©e
+):
+
+19 
+Ëg®
+ = 
+¡©e
+.
+	$g‘Leg®PacmªAùiÚs
+()
+
+20 
+cu¼’t
+ = 
+¡©e
+.
+	`g‘PacmªS‹
+().
+cÚfigu¿tiÚ
+.
+dœeùiÚ
+
+
+21 
+cu¼’t
+ =ğ
+DœeùiÚs
+.
+STOP
+: cu¼’ˆğDœeùiÚs.
+NORTH
+
+
+22 
+Ëá
+ = 
+DœeùiÚs
+.
+LEFT
+[
+cu¼’t
+]
+
+23 
+Ëá
+ 
+š
+ 
+Ëg®
+: †eft
+
+24 
+cu¼’t
+ 
+š
+ 
+Ëg®
+:  current
+
+25 
+DœeùiÚs
+.
+RIGHT
+[
+cu¼’t
+] 
+š
+ 
+Ëg®
+:  Directions.RIGHT[current]
+
+26 
+DœeùiÚs
+.
+LEFT
+[
+Ëá
+] 
+š
+ 
+Ëg®
+:  Directions.LEFT[left]
+
+27  
+DœeùiÚs
+.
+STOP
+
+
+29 
+şass
+ 
+	$G»edyAg’t
+(
+Ag’t
+):
+
+30 
+def
+ 
+	`__š™__
+(
+£lf
+, 
+ev®Fn
+="scoreEvaluation"):
+
+31 
+£lf
+.
+ev®u©iÚFunùiÚ
+ = 
+ut
+.
+	`lookup
+(
+ev®Fn
+, 
+	$glob®s
+())
+
+32 
+as£¹
+ 
+£lf
+.
+ev®u©iÚFunùiÚ
+ !ğ
+NÚe
+
+
+34 
+def
+ 
+	$g‘AùiÚ
+(
+£lf
+, 
+¡©e
+):
+
+35 #G’”©
+ÿndid©e
+ 
+aùiÚs
+
+
+36 
+Ëg®
+ = 
+¡©e
+.
+	$g‘Leg®PacmªAùiÚs
+()
+
+37 
+DœeùiÚs
+.
+STOP
+ 
+š
+ 
+Ëg®
+:†eg®.
+	$»move
+(
+DœeùiÚs
+.
+STOP
+)
+
+39 
+sucûssÜs
+ = [(
+¡©e
+.
+	`g’”©eSucûssÜ
+(0, 
+aùiÚ
+),‡ùiÚèaùiÚ 
+š
+ 
+Ëg®
+]
+
+40 
+scÜed
+ = [(
+£lf
+.
+	`ev®u©iÚFunùiÚ
+(
+¡©e
+), 
+aùiÚ
+è¡©e,‡ùiÚ 
+š
+ 
+sucûssÜs
+]
+
+41 
+be¡ScÜe
+ = 
+	`max
+(
+scÜed
+)[0]
+
+42 
+be¡AùiÚs
+ = [
+·œ
+[1] ·œ 
+š
+ 
+scÜed
+ ·œ[0] =ğ
+be¡ScÜe
+]
+
+43  
+¿ndom
+.
+	$choiû
+(
+be¡AùiÚs
+)
+
+45 
+def
+ 
+	$scÜeEv®u©iÚ
+(
+¡©e
+):
+
+46  
+¡©e
+.
+	`g‘ScÜe
+()
+
+	@search.py
+
+1 #£¬ch.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+10 
+In
+ 
+	g£¬ch
+.
+	gpy
+, 
+you
+ 
+wl
+ 
+im¶em’t
+ 
+g’”ic
+ 
+£¬ch
+ 
+®gÜ™hms
+ 
+which
+ 
+¬e
+ 
+ÿÎed
+
+
+11 
+by
+ 
+Pacmª
+ 
+ag’ts
+ (
+š
+ 
+£¬chAg’ts
+.
+py
+).
+
+14 
+impÜt
+ 
+ut
+
+
+16 
+şass
+ 
+	gS—rchProbËm
+:
+
+18 
+This
+ 
+şass
+ 
+oušes
+ 
+the
+ 
+¡ruùu»
+ 
+of
+ 
+a
+ 
+£¬ch
+ 
+´obËm
+, 
+but
+ 
+	gdÛ¢
+'t implement
+
+19 
+ªy
+ 
+of
+ 
+the
+ 
+m‘hods
+ (
+š
+ 
+objeù
+-
+Ü›Áed
+ 
+‹rmšŞogy
+: 
+ª
+ 
+ab¡¿ù
+ 
+şass
+).
+
+21 
+You
+ dØ
+nÙ
+ 
+Ãed
+ 
+to
+ 
+chªge
+ 
+ªythšg
+ 
+š
+ 
+this
+ 
+şass
+, 
+	gev”
+.
+
+24 
+def
+ 
+	$g‘S¹S‹
+(
+£lf
+):
+
+26 
+R‘uºs
+ 
+the
+ 
+¡¬t
+ 
+¡©e
+ th
+£¬ch
+ 
+´obËm
+
+
+28 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+30 
+def
+ 
+	$isGßlS‹
+(
+£lf
+, 
+¡©e
+):
+
+32 
+¡©e
+: 
+S—rch
+ state
+
+34 
+R‘uºs
+ 
+True
+ 
+ªd
+ 
+Úly
+ 
+the
+ 
+¡©e
+ 
+is
+ 
+a
+ 
+v®id
+ 
+gßl
+ state
+
+36 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+38 
+def
+ 
+	$g‘SucûssÜs
+(
+£lf
+, 
+¡©e
+):
+
+40 
+¡©e
+: 
+S—rch
+ state
+
+42 
+FÜ
+ 
+a
+ 
+giv’
+ 
+¡©e
+, 
+this
+ 
+should
+ ‡ 
+li¡
+ 
+of
+ 
+ŒËs
+,
+
+43 (
+sucûssÜ
+, 
+aùiÚ
+, 
+¡•Co¡
+), 
+wh”e
+ 'sucûssÜ' 
+is
+ 
+a
+
+
+44 
+sucûssÜ
+ 
+to
+ 
+the
+ 
+cu¼’t
+ 
+¡©e
+, 'aùiÚ' 
+is
+h
+aùiÚ
+
+
+45 
+»quœed
+ 
+to
+ 
+g‘
+ 
+th”e
+, 
+ªd
+ '¡•Co¡' 
+is
+ 
+the
+ 
+šüem’l
+
+
+46 
+co¡
+ 
+of
+ 
+ex·ndšg
+ 
+to
+ 
+th©
+ 
+sucûssÜ
+
+
+48 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+50 
+def
+ 
+	$g‘Co¡OfAùiÚs
+(
+£lf
+, 
+aùiÚs
+):
+
+52 
+aùiÚs
+: 
+A
+ 
+li¡
+ 
+of
+‡ùiÚ 
+to
+ 
+ke
+
+
+54 
+This
+ 
+m‘hod
+ 
+»tuºs
+ 
+the
+ 
+tÙ®
+ 
+co¡
+ 
+of
+ 
+a
+ 
+·¹icuÏr
+ 
+£qu’û
+ oà
+aùiÚs
+. 
+The
+ sequ’û 
+mu¡
+
+
+55 
+be
+ 
+compo£d
+ 
+of
+ 
+Ëg®
+ 
+moves
+
+
+57 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+60 
+def
+ 
+	$tšyMazeS—rch
+(
+´obËm
+):
+
+62 
+R‘uºs
+ 
+a
+ 
+£qu’û
+ 
+of
+ 
+moves
+ 
+th©
+ 
+sŞves
+ 
+tšyMaze
+. 
+FÜ
+ 
+ªy
+ 
+Ùh”
+
+
+63 
+maze
+, 
+the
+ 
+£qu’û
+ 
+of
+ 
+moves
+ 
+wl
+ 
+be
+ 
+šcÜ»ù
+, 
+so
+ 
+Úly
+ 
+u£
+ 
+this
+ 
+tšyMaze
+
+
+65 
+äom
+ 
+game
+ 
+impÜt
+ 
+DœeùiÚs
+
+
+66 
+s
+ = 
+DœeùiÚs
+.
+SOUTH
+
+
+67 
+w
+ = 
+DœeùiÚs
+.
+WEST
+
+
+68  [
+s
+,s,
+w
+,s,w,w,s,w]
+
+70 
+def
+ 
+	$d•thFœ¡S—rch
+(
+´obËm
+):
+
+72 
+S—rch
+ 
+the
+ 
+d“³¡
+ 
+nodes
+ 
+š
+h
+£¬ch
+ 
+Œ“
+ 
+fœ¡
+
+
+73 [2
+nd
+ 
+Ed™iÚ
+: 
+p
+ 75, 3
+rd
+ Edition:… 87]
+
+75 
+Your
+ 
+£¬ch
+ 
+®gÜ™hm
+ 
+Ãeds
+ 
+to
+  
+a
+ 
+li¡
+ 
+of
+ 
+aùiÚs
+ 
+th©
+ 
+»aches
+
+
+76 
+the
+ 
+gßl
+. 
+Make
+ 
+su»
+ 
+to
+ 
+im¶em’t
+ 
+a
+ 
+g¿ph
+ 
+£¬ch
+ 
+®gÜ™hm
+
+
+77 [2
+nd
+ 
+Ed™iÚ
+: 
+Fig
+. 3.18, 3
+rd
+ Edition: Fig 3.7].
+
+79 
+To
+ 
+g‘
+ 
+¡¬‹d
+, 
+you
+ 
+might
+ 
+wªt
+ 
+to
+ 
+Œy
+ 
+some
+ 
+of
+ 
+the£
+ 
+sim¶e
+ 
+commªds
+o
+
+80 
+und”¡ªd
+ 
+the
+ 
+£¬ch
+ 
+´obËm
+ 
+th©
+ 
+is
+ 
+bešg
+ 
+·s£d
+ 
+š
+:
+
+82 
+´št
+ "S¹:", 
+´obËm
+.
+	$g‘S¹S‹
+()
+
+83 
+´št
+ "I th¡¬ˆ¨gßl?", 
+´obËm
+.
+	`isGßlS‹
+ÕrobËm.
+	$g‘S¹S‹
+())
+
+84 
+´št
+ "S¹' sucûssÜs:", 
+´obËm
+.
+	`g‘SucûssÜs
+ÕrobËm.
+	`g‘S¹S‹
+())
+
+87 
+äom
+ 
+ut
+ 
+impÜt
+ 
+Sck
+
+
+88 
+Ex¶Üed
+ = {
+	}
+}
+
+89 
+FrÚt›r
+ = 
+	$Sck
+()
+
+91 
+node
+ = 0
+
+92 
+cu¼’t
+ = 
+´obËm
+.
+	$g‘S¹S‹
+()
+
+93 
+Ex¶Üed
+[
+cu¼’t
+] = 1;
+
+94 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+cu¼’t
+)
+
+95 
+k
+ 
+š
+ 
+succ
+:
+
+96 #´šˆ"š™ŸÈpush",
+k
+
+
+97 
+FrÚt›r
+.
+	`push
+([
+k
+]);
+
+98 
+Ex¶Üed
+[
+k
+[0]] = 1;
+
+100 
+	`nÙ
+ (
+FrÚt›r
+.
+	$isEm±y
+()):
+
+101 
+cu¼’t
+ = 
+FrÚt›r
+.
+	$pİ
+()
+
+102 
+node
+ = 
+cu¼’t
+[-1][0]
+
+103 #´šˆ"cu¼…©h‡nd‚ode",
+cu¼’t
+,
+node
+,"ex¶Üed stus",Òod
+š
+ 
+Ex¶Üed
+),"\n"
+
+104 #check 
+dÚe
+
+
+105 ià(
+´obËm
+.
+	$isGßlS‹
+(
+node
+)):
+
+107 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+node
+)
+
+108 
+k
+ 
+š
+ 
+succ
+:
+
+109 
+	$nÙ
+ (
+k
+[0] 
+š
+ 
+Ex¶Üed
+):
+
+110 
+FrÚt›r
+.
+	`push
+(
+cu¼’t
+ + [
+k
+]);
+
+111 
+Ex¶Üed
+[
+k
+[0]] = 1;
+
+113 
+sŞ
+ = []
+
+114 #´šˆ
+cu¼’t
+
+
+115 
+k
+ 
+š
+ 
+cu¼’t
+:
+
+116 
+sŞ
+ +ğ[
+k
+[1]]
+
+118 #´šˆ
+sŞ
+
+
+119  
+sŞ
+
+
+122 #»tuº [
+s
+,s,
+w
+,s,w,w,s,w]
+
+124 
+def
+ 
+	$b»adthFœ¡S—rch
+(
+´obËm
+):
+
+126 
+S—rch
+ 
+the
+ 
+sh®lowe¡
+ 
+nodes
+ 
+š
+h
+£¬ch
+ 
+Œ“
+ 
+fœ¡
+.
+
+127 [2
+nd
+ 
+Ed™iÚ
+: 
+p
+ 73, 3
+rd
+ Edition:… 82]
+
+130 
+äom
+ 
+ut
+ 
+impÜt
+ 
+Queue
+
+
+131 
+Ex¶Üed
+ = {
+	}
+}
+
+132 
+FrÚt›r
+ = 
+	$Queue
+()
+
+134 
+node
+ = 0
+
+135 
+cu¼’t
+ = 
+´obËm
+.
+	$g‘S¹S‹
+()
+
+136 #´šˆ"bf fœ¡ s‹", 
+cu¼’t
+
+
+137 
+Ex¶Üed
+[
+cu¼’t
+] = 1
+
+138 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+cu¼’t
+)
+
+139 
+k
+ 
+š
+ 
+succ
+:
+
+140 #´šˆ"š™ŸÈpush",
+k
+
+
+141 
+FrÚt›r
+.
+	`push
+([
+k
+]);
+
+142 
+Ex¶Üed
+[
+k
+[0]] = 1;
+
+144 
+	`nÙ
+ (
+FrÚt›r
+.
+	$isEm±y
+()):
+
+145 
+cu¼’t
+ = 
+FrÚt›r
+.
+	$pİ
+()
+
+146 
+node
+ = 
+cu¼’t
+[-1][0]
+
+147 #´šˆ"cu¼…©h‡nd‚ode",
+cu¼’t
+,
+node
+,"ex¶Üed stus",Òod
+š
+ 
+Ex¶Üed
+),"\n"
+
+148 #check 
+dÚe
+
+
+149 ià(
+´obËm
+.
+	$isGßlS‹
+(
+node
+)):
+
+151 #´šˆ
+node
+
+
+152 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+node
+)
+
+153 
+k
+ 
+š
+ 
+succ
+:
+
+154 
+	$nÙ
+ (
+k
+[0] 
+š
+ 
+Ex¶Üed
+):
+
+155 #ià
+	`nÙ
+ (
+FrÚt›r
+.
+	`isP»£Á
+(
+cu¼’t
+ + [
+k
+])):
+
+156 
+FrÚt›r
+.
+	`push
+(
+cu¼’t
+ + [
+k
+]);
+
+157 
+Ex¶Üed
+[
+k
+[0]] = 1;
+
+159 
+sŞ
+ = []
+
+160 
+k
+ 
+š
+ 
+cu¼’t
+:
+
+161 
+sŞ
+ +ğ[
+k
+[1]]
+
+163 #´šˆ
+cu¼’t
+
+
+164 #´šˆ"aùiÚ sŞ", 
+sŞ
+
+
+165  
+sŞ
+
+
+167 
+def
+ 
+	$unifÜmCo¡S—rch
+(
+´obËm
+):
+
+170 
+äom
+ 
+ut
+ 
+impÜt
+ 
+PriÜ™yQueue
+
+
+171 
+Ex¶Üed
+ = {
+	}
+}
+
+172 
+FrÚt›r
+ = 
+	$PriÜ™yQueue
+()
+
+174 
+node
+ = 0
+
+175 
+cu¼’t
+ = 
+´obËm
+.
+	$g‘S¹S‹
+()
+
+176 
+Ex¶Üed
+[
+cu¼’t
+] = 1;
+
+177 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+cu¼’t
+)
+
+178 
+k
+ 
+š
+ 
+succ
+:
+
+179 
+t
+ = [
+k
+[2],k]
+
+180 #´šˆ"š™ŸÈpush",
+t
+
+
+181 
+FrÚt›r
+.
+	`push
+(
+t
+,t[0]);
+
+182 
+Ex¶Üed
+[
+k
+[0]] = 1;
+
+184 
+	`nÙ
+ (
+FrÚt›r
+.
+	$isEm±y
+()):
+
+185 
+cu¼’t
+ = 
+FrÚt›r
+.
+	$pİ
+()
+
+186 
+di¡
+ = 
+cu¼’t
+[0]
+
+187 #´šˆ"´iÜ", 
+´iÜ™y
+
+
+188 
+node
+ = 
+cu¼’t
+[-1][0]
+
+189 #´šˆ"cu¼…©h‡nd‚ode",
+cu¼’t
+,
+node
+,"ex¶Üed stus",Òod
+š
+ 
+Ex¶Üed
+),"\n"
+
+190 #check 
+dÚe
+
+
+191 ià(
+´obËm
+.
+	$isGßlS‹
+(
+node
+)):
+
+193 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+node
+)
+
+194 
+k
+ 
+š
+ 
+succ
+:
+
+195 
+	$nÙ
+ (
+k
+[0] 
+š
+ 
+Ex¶Üed
+):
+
+196 
+t
+ = [] + 
+cu¼’t
+ + [
+k
+]
+
+197 
+t
+[0] +ğ
+k
+[2]
+
+198 
+FrÚt›r
+.
+	`push
+(
+t
+,t[0]);
+
+199 
+Ex¶Üed
+[
+k
+[0]] = 1;
+
+201 
+sŞ
+ = []
+
+202 #´šˆ
+cu¼’t
+
+
+203 
+k
+ 
+š
+ 
+cu¼’t
+[1:]:
+
+204 
+sŞ
+ +ğ[
+k
+[1]]
+
+206 #´šˆ
+sŞ
+
+
+207  
+sŞ
+
+
+209 
+def
+ 
+	$nuÎHeuri¡ic
+(
+¡©e
+, 
+´obËm
+=
+NÚe
+):
+
+211 
+A
+ 
+heuri¡ic
+ 
+funùiÚ
+ 
+e¡im©es
+ 
+the
+ 
+co¡
+ 
+äom
+h
+cu¼’t
+ 
+¡©e
+ 
+to
+h
+Ã¬e¡
+
+
+212 
+gßl
+ 
+š
+ 
+the
+ 
+´ovided
+ 
+S—rchProbËm
+. 
+This
+ 
+heuri¡ic
+ 
+is
+ 
+ŒivŸl
+.
+
+216 
+def
+ 
+	$aSrS—rch
+(
+´obËm
+, 
+heuri¡ic
+=
+nuÎHeuri¡ic
+):
+
+219 
+äom
+ 
+ut
+ 
+impÜt
+ 
+PriÜ™yQueue
+
+
+220 
+Ex¶Üed
+ = {
+	}
+}
+
+221 
+FrÚt›r
+ = 
+	$PriÜ™yQueue
+()
+
+223 
+node
+ = 0
+
+224 
+cu¼’t
+ = 
+´obËm
+.
+	$g‘S¹S‹
+()
+
+225 #´šˆ"¡¬‹d‡¡¬‡t",
+cu¼’t
+
+
+226 
+Ex¶Üed
+[
+cu¼’t
+] = 1
+
+227 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+cu¼’t
+)
+
+228 
+k
+ 
+š
+ 
+succ
+:
+
+229 
+t
+ = [
+k
+[2],k]
+
+230 #´šˆ"š™ŸÈpush",
+t
+
+
+231 
+FrÚt›r
+.
+	`push
+(
+t
+,t[0]+
+	`heuri¡ic
+(
+k
+[0],
+´obËm
+));
+
+232 
+Ex¶Üed
+[
+k
+[0]] = 1;
+
+235 
+	`nÙ
+ (
+FrÚt›r
+.
+	$isEm±y
+()):
+
+236 
+cu¼’t
+ = 
+FrÚt›r
+.
+	$pİ
+()
+
+237 
+di¡
+ = 
+cu¼’t
+[0]
+
+238 #´šˆ"´iÜ", 
+´iÜ™y
+
+
+239 
+node
+ = 
+cu¼’t
+[-1][0]
+
+240 #´šˆ"cu¼…©h‡nd‚ode",
+cu¼’t
+,
+node
+,"ex¶Üed stus",Òod
+š
+ 
+Ex¶Üed
+),"\n"
+
+241 #check 
+dÚe
+
+
+242 ià(
+´obËm
+.
+	$isGßlS‹
+(
+node
+)):
+
+244 
+succ
+ = 
+´obËm
+.
+	$g‘SucûssÜs
+(
+node
+)
+
+245 
+k
+ 
+š
+ 
+succ
+:
+
+246 
+	$nÙ
+ (
+k
+[0] 
+š
+ 
+Ex¶Üed
+):
+
+247 
+t
+ = [] + 
+cu¼’t
+ + [
+k
+]
+
+248 #add 
+co¡
+
+
+249 
+t
+[0] +ğ
+k
+[2]
+
+250 
+FrÚt›r
+.
+	`push
+(
+t
+,t[0]+
+	`heuri¡ic
+(
+k
+[0],
+´obËm
+));
+
+251 
+Ex¶Üed
+[
+k
+[0]] = 1; #ÿÀ
+I
+ dØ
+this
+ - 
+Ü
+ 
+is
+ 
+™
+ 
+Úly
+ 
+unifÜm
+ 
+co¡
+ 
+£¬ches
+ ? 
+VERIFY
+
+
+252 #check 
+cÚsi¡’cy
+ -
+
+253 if(
+	`heuri¡ic
+(
+node
+,
+´obËm
+è- heuri¡ic(
+k
+[0],problem)) > k[2]:
+
+254 
+´št
+ "Warning - inconsistencey. Heuristic decreases by greaterhan cost"
+
+255 
+´št
+ "Origš®‚od",
+node
+,",ªd it h:",
+	$heuri¡ic
+(
+node
+,
+´obËm
+,
+True
+)
+
+256 
+´št
+ "SucûssÜ‚od",
+k
+[0],",ªd it h:",
+	$heuri¡ic
+(
+k
+[0],
+´obËm
+,
+True
+)
+
+259 
+sŞ
+ = []
+
+260 #´šˆ
+cu¼’t
+
+
+261 
+k
+ 
+š
+ 
+cu¼’t
+[1:]:
+
+262 
+sŞ
+ +ğ[
+k
+[1]]
+
+264 #´šˆ
+sŞ
+
+
+265  
+sŞ
+
+
+266 
+ut
+.
+	$¿i£NÙDefšed
+()
+
+270 
+bfs
+ = 
+b»adthFœ¡S—rch
+
+
+271 
+dfs
+ = 
+d•thFœ¡S—rch
+
+
+272 
+a¡¬
+ = 
+aSrS—rch
+
+
+273 
+ucs
+ = 
+unifÜmCo¡S—rch
+
+
+	@textDisplay.py
+
+1 #‹xtDi¥Ïy.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+impÜt
+ 
+	g·cmª
+, 
+time
+
+
+11 
+	gDRAW_EVERY
+ = 1
+
+12 
+SLEEP_TIME
+ = 0 #Thi 
+ÿn
+ 
+be
+ 
+ov”wr™‹n
+ 
+by
+ 
+__š™__
+
+
+13 
+DISPLAY_MOVES
+ = 
+F®£
+
+
+14 
+QUIET
+ = 
+F®£
+ #Su´es£ 
+ouut
+
+
+16 
+şass
+ 
+NuÎG¿phics
+:
+
+17 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡©e
+, 
+isBlue
+ = 
+F®£
+):
+
+18 
+·ss
+
+
+20 
+def
+ 
+	$upd©e
+(
+£lf
+, 
+¡©e
+):
+
+21 
+·ss
+
+
+23 
+def
+ 
+	$·u£
+(
+£lf
+):
+
+24 
+time
+.
+	$¦“p
+(
+SLEEP_TIME
+)
+
+26 
+def
+ 
+	$d¿w
+(
+£lf
+, 
+¡©e
+):
+
+27 
+´št
+ 
+¡©e
+
+
+29 
+def
+ 
+	$fšish
+(
+£lf
+):
+
+30 
+·ss
+
+
+32 
+şass
+ 
+PacmªG¿phics
+:
+
+33 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+¥“d
+=
+NÚe
+):
+
+34 
+¥“d
+ !ğ
+NÚe
+:
+
+35 
+glob®
+ 
+SLEEP_TIME
+
+
+36 
+SLEEP_TIME
+ = 
+¥“d
+
+
+38 
+def
+ 
+	$š™Ÿlize
+(
+£lf
+, 
+¡©e
+, 
+isBlue
+ = 
+F®£
+):
+
+39 
+£lf
+.
+	$d¿w
+(
+¡©e
+)
+
+40 
+£lf
+.
+	$·u£
+()
+
+41 
+£lf
+.
+tuº
+ = 0
+
+42 
+£lf
+.
+ag’tCouÁ”
+ = 0
+
+44 
+def
+ 
+	$upd©e
+(
+£lf
+, 
+¡©e
+):
+
+45 
+numAg’ts
+ = 
+	$Ën
+(
+¡©e
+.
+ag’tS‹s
+)
+
+46 
+£lf
+.
+ag’tCouÁ”
+ = (£lf.ag’tCouÁ” + 1è% 
+numAg’ts
+
+
+47 
+£lf
+.
+ag’tCouÁ”
+ == 0:
+
+48 
+£lf
+.
+tuº
+ += 1
+
+49 
+DISPLAY_MOVES
+:
+
+50 
+gho¡s
+ = [
+·cmª
+.
+	`Ã¬e¡Pošt
+(
+¡©e
+.
+	$g‘Gho¡Pos™iÚ
+(
+i
+)è˜
+š
+ 
+	`¿nge
+(1, 
+numAg’ts
+)]
+
+51 
+´št
+ "%4dèP: %-8s" % (
+£lf
+.
+tuº
+, 
+	`¡r
+(
+·cmª
+.
+	`Ã¬e¡Pošt
+(
+¡©e
+.
+	`g‘PacmªPos™iÚ
+()))),'| ScÜe: %-5d' % s‹.
+scÜe
+,'| Gho¡s:', 
+gho¡s
+
+
+52 
+£lf
+.
+tuº
+ % 
+DRAW_EVERY
+ == 0:
+
+53 
+£lf
+.
+	$d¿w
+(
+¡©e
+)
+
+54 
+£lf
+.
+	$·u£
+()
+
+55 
+¡©e
+.
+_wš
+ 
+Ü
+ s‹.
+_lo£
+:
+
+56 
+£lf
+.
+	$d¿w
+(
+¡©e
+)
+
+58 
+def
+ 
+	$·u£
+(
+£lf
+):
+
+59 
+time
+.
+	$¦“p
+(
+SLEEP_TIME
+)
+
+61 
+def
+ 
+	$d¿w
+(
+£lf
+, 
+¡©e
+):
+
+62 
+´št
+ 
+¡©e
+
+
+64 
+def
+ 
+	$fšish
+(
+£lf
+):
+
+65 
+·ss
+
+
+	@util.py
+
+1 #ut.
+py
+
+
+3 #Liûnsšg 
+InfÜm©iÚ
+: 
+PËa£
+ dØ
+nÙ
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+ 
+sŞutiÚs
+ 
+to
+ 
+this
+
+
+4 #´ojeù. 
+You
+ 
+¬e
+ 
+ä“
+ 
+to
+ 
+u£
+ 
+ªd
+ 
+ex‹nd
+ 
+the£
+ 
+´ojeùs
+ 
+eduÿtiÚ®
+
+
+5 #pu½o£s. 
+The
+ 
+Pacmª
+ 
+AI
+ 
+´ojeùs
+ 
+w”e
+ 
+dev–İed
+ 
+©
+ 
+UC
+ 
+B”k–ey
+, 
+´im¬y
+ 
+by
+
+
+6 #JohÀ
+DeN”o
+ (
+d’”o
+@
+cs
+.
+b”k–ey
+.
+edu
+è
+ªd
+ 
+Dª
+ 
+KËš
+ (
+kËš
+@cs.berkeley.edu).
+
+7 #FÜ 
+mÜe
+ 
+šfo
+, 
+£e
+ 
+h‰p
+:
+
+9 
+impÜt
+ 
+sys
+
+
+10 
+impÜt
+ 
+š¥eù
+
+
+11 
+impÜt
+ 
+	gh—pq
+, 
+	g¿ndom
+
+
+15 
+D©a
+ 
+¡ruùu»s
+ 
+u£ful
+ 
+im¶em’tšg
+ 
+	gS—rchAg’ts
+
+
+18 
+şass
+ 
+	gSck
+:
+
+20 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+21 
+£lf
+.
+li¡
+ = []
+
+23 
+def
+ 
+	$push
+(
+£lf
+,
+™em
+):
+
+25 
+£lf
+.
+li¡
+.
+	$­³nd
+(
+™em
+)
+
+27 
+def
+ 
+	$pİ
+(
+£lf
+):
+
+29  
+£lf
+.
+li¡
+.
+	$pİ
+()
+
+31 
+def
+ 
+	$isEm±y
+(
+£lf
+):
+
+33  
+	`Ën
+(
+£lf
+.
+li¡
+) == 0
+
+35 
+şass
+ 
+Queue
+:
+
+37 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+38 
+£lf
+.
+li¡
+ = []
+
+40 
+def
+ 
+	$push
+(
+£lf
+,
+™em
+):
+
+42 
+£lf
+.
+li¡
+.
+	$š£¹
+(0,
+™em
+)
+
+44 
+def
+ 
+	$pİ
+(
+£lf
+):
+
+46 
+Dequeue
+ 
+the
+ 
+—¾›¡
+ 
+’queued
+ 
+™em
+ 
+¡l
+ 
+š
+h
+queue
+. 
+This
+
+
+47 
+İ”©iÚ
+ 
+»moves
+ 
+the
+ 
+™em
+ 
+äom
+h
+queue
+.
+
+49  
+£lf
+.
+li¡
+.
+	$pİ
+()
+
+51 
+def
+ 
+	$isEm±y
+(
+£lf
+):
+
+53  
+	`Ën
+(
+£lf
+.
+li¡
+) == 0
+
+55 
+şass
+ 
+PriÜ™yQueue
+:
+
+57 
+Im¶em’ts
+ 
+a
+ 
+´iÜ™y
+ 
+queue
+ 
+d©a
+ 
+¡ruùu»
+. 
+Each
+ 
+š£¹ed
+ 
+™em
+
+
+58 
+has
+ 
+a
+ 
+´iÜ™y
+ 
+assocŸ‹d
+ 
+w™h
+ 
+™
+ 
+ªd
+ 
+the
+ 
+ş›Á
+ 
+is
+ 
+usu®ly
+ 
+š‹»¡ed
+
+
+59 
+š
+ 
+quick
+ 
+»Œ›v®
+ 
+of
+ 
+the
+ 
+lowe¡
+-
+´iÜ™y
+ 
+™em
+ iÀth
+queue
+. 
+This
+
+
+60 
+d©a
+ 
+¡ruùu»
+ 
+®lows
+ 
+	$O
+(1è
+acûss
+ 
+to
+ 
+the
+ 
+lowe¡
+-
+´iÜ™y
+ 
+™em
+.
+
+62 
+NÙe
+ 
+th©
+ 
+this
+ 
+PriÜ™yQueue
+ 
+dÛs
+ 
+nÙ
+ 
+®low
+ 
+you
+ 
+to
+ 
+chªge
+ 
+the
+ 
+´iÜ™y
+
+
+63 
+of
+ 
+ª
+ 
+™em
+. 
+Howev”
+, 
+you
+ 
+may
+ 
+š£¹
+ 
+the
+ 
+§me
+ i‹m 
+muÉË
+ 
+times
+ 
+w™h
+
+
+64 
+difã»Á
+ 
+´iÜ™›s
+.
+
+66 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+67 
+£lf
+.
+h—p
+ = []
+
+69 
+def
+ 
+	$push
+(
+£lf
+, 
+™em
+, 
+´iÜ™y
+):
+
+70 
+·œ
+ = (
+´iÜ™y
+,
+™em
+)
+
+71 
+h—pq
+.
+	$h—µush
+(
+£lf
+.
+h—p
+,
+·œ
+)
+
+73 
+def
+ 
+	$pİ
+(
+£lf
+):
+
+74 (
+´iÜ™y
+,
+™em
+èğ
+h—pq
+.
+	$h—µİ
+(
+£lf
+.
+h—p
+)
+
+75  
+™em
+
+
+77 
+def
+ 
+	$isEm±y
+(
+£lf
+):
+
+78  
+	`Ën
+(
+£lf
+.
+h—p
+) == 0
+
+80 
+şass
+ 
+	$PriÜ™yQueueW™hFunùiÚ
+(
+PriÜ™yQueue
+):
+
+82 
+Im¶em’ts
+ 
+a
+ 
+´iÜ™y
+ 
+queue
+ 
+w™h
+ 
+the
+ 
+§me
+ 
+push
+/
+pİ
+ 
+sigÇtu»
+ 
+of
+he
+
+83 
+Queue
+ 
+ªd
+ 
+the
+ 
+Sck
+ 
+şas£s
+. 
+This
+ 
+is
+ 
+desigÃd
+ 
+drİ
+-
+š
+ 
+»¶aûm’t
+ 
+
+84 
+tho£
+ 
+two
+ 
+şas£s
+. 
+The
+ 
+ÿÎ”
+ 
+has
+ 
+to
+ 
+´ovide
+ 
+a
+ 
+´iÜ™y
+ 
+funùiÚ
+, 
+which
+
+
+85 
+exŒaùs
+ 
+—ch
+ 
+™em
+'s…riority.
+
+87 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+´iÜ™yFunùiÚ
+):
+
+89 
+£lf
+.
+´iÜ™yFunùiÚ
+ =…riÜ™yFunùiÚ #¡Ü
+the
+ 
+´iÜ™y
+ 
+funùiÚ
+
+
+90 
+PriÜ™yQueue
+.
+	$__š™__
+(
+£lf
+è#su³r-
+şass
+ 
+š™Ÿliz”
+
+
+92 
+def
+ 
+	$push
+(
+£lf
+, 
+™em
+):
+
+94 
+PriÜ™yQueue
+.
+	`push
+(
+£lf
+, 
+™em
+, s–f.
+	$´iÜ™yFunùiÚ
+(
+™em
+))
+
+97 
+def
+ 
+	$mªh©nDi¡ªû
+Ğ
+xy1
+, 
+xy2
+ ):
+
+99  
+	`abs
+Ğ
+xy1
+[0] - 
+xy2
+[0] ) +‡bs( xy1[1] - xy2[1] )
+
+102 
+D©a
+ 
+¡ruùu»s
+ 
+ªd
+ 
+funùiÚs
+ 
+u£ful
+ 
+v¬ious
+ 
+cour£
+ 
+´ojeùs
+
+
+104 
+The
+ 
+£¬ch
+ 
+´ojeù
+ 
+should
+ 
+nÙ
+ 
+Ãed
+ 
+ªythšg
+ 
+b–ow
+ 
+this
+ 
+lše
+.
+
+107 
+şass
+ 
+	$CouÁ”
+(
+diù
+):
+
+109 
+A
+ 
+couÁ”
+ 
+k“ps
+ 
+Œack
+ 
+of
+ 
+couÁs
+ 
+a
+ 
+£t
+ oà
+keys
+.
+
+111 
+The
+ 
+couÁ”
+ 
+şass
+ 
+is
+ 
+ª
+ 
+ex‹nsiÚ
+ 
+of
+ 
+the
+ 
+¡ªd¬d
+ 
+pythÚ
+
+
+112 
+diùiÚ¬y
+ 
+ty³
+. 
+It
+ 
+is
+ 
+¥ecŸlized
+ 
+to
+ 
+have
+ 
+numb”
+ 
+v®ues
+
+
+113 (
+š‹g”s
+ 
+Ü
+ 
+æßts
+), 
+ªd
+ 
+šşudes
+ 
+a
+ 
+hªdful
+ 
+of
+ 
+add™iÚ®
+
+
+114 
+funùiÚs
+ 
+to
+ 
+—£
+ 
+the
+ 
+sk
+ 
+of
+ 
+couÁšg
+ 
+d©a
+. 
+In
+ 
+·¹icuÏr
+,
+
+115 
+®l
+ 
+keys
+ 
+¬e
+ 
+deçuÉed
+ 
+to
+ 
+have
+ 
+v®ue
+ 0. 
+Usšg
+ 
+a
+ 
+diùiÚ¬y
+:
+
+117 
+a
+ = {
+	}
+}
+
+118 
+´št
+ 
+a
+['test']
+
+120 
+would
+ 
+give
+ 
+ª
+ 
+”rÜ
+, 
+the
+ 
+CouÁ”
+ 
+şass
+ 
+	gª®ogue
+:
+
+122 >>> 
+a
+ = 
+CouÁ”
+()
+
+123 >>> 
+´št
+ 
+a
+['test']
+
+126 
+»tuºs
+ 
+the
+  0 
+v®ue
+. 
+NÙe
+ 
+th©
+ 
+to
+ 
+»ã»nû
+ 
+a
+ 
+key
+
+
+127 
+th©
+ 
+you
+ 
+know
+ 
+is
+ 
+cÚšed
+ 
+š
+ 
+the
+ 
+couÁ”
+,
+
+128 
+you
+ 
+ÿn
+ 
+¡l
+ 
+u£
+ 
+the
+ 
+diùiÚ¬y
+ 
+	gsyÁax
+:
+
+130 >>> 
+a
+ = 
+CouÁ”
+()
+
+131 >>> 
+a
+['test'] = 2
+
+132 >>> 
+´št
+ 
+a
+['test']
+
+135 
+This
+ 
+is
+ 
+v”y
+ 
+u£ful
+ 
+couÁšg
+ 
+thšgs
+ 
+w™hout
+ 
+š™Ÿlizšg
+ 
+theœ
+ 
+couÁs
+,
+
+136 
+£e
+ 
+	gexam¶e
+:
+
+138 >>> 
+a
+['blah'] += 1
+
+139 >>> 
+´št
+ 
+a
+['blah']
+
+142 
+The
+ 
+couÁ”
+ 
+®so
+ 
+šşudes
+ 
+add™iÚ®
+ 
+funùiÚ®™y
+ 
+u£ful
+ 
+š
+ 
+im¶em’tšg
+
+
+143 
+the
+ 
+şassif›rs
+ 
+this
+ 
+assignm’t
+. 
+Two
+ 
+couÁ”s
+ 
+ÿn
+ 
+be
+ 
+added
+,
+
+144 
+subŒaùed
+ 
+Ü
+ 
+muÉl›d
+ 
+	gtog‘h”
+. 
+S“
+ 
+b–ow
+ 
+	gd‘as
+. 
+They
+ 
+ÿn
+
+
+145 
+®so
+ 
+be
+ 
+nÜm®ized
+ 
+ªd
+ 
+theœ
+ 
+tÙ®
+ 
+couÁ
+‡nd 
+¬g
+ 
+max
+ 
+ÿn
+ b
+	gexŒaùed
+.
+
+147 
+def
+ 
+	$__g‘™em__
+(
+£lf
+, 
+idx
+):
+
+148 
+£lf
+.
+	$£tdeçuÉ
+(
+idx
+, 0)
+
+149  
+diù
+.
+	$__g‘™em__
+(
+£lf
+, 
+idx
+)
+
+151 
+def
+ 
+	$šüem’tAÎ
+(
+£lf
+, 
+keys
+, 
+couÁ
+):
+
+153 
+Inüem’ts
+ 
+®l
+ 
+–em’ts
+ 
+of
+ 
+keys
+ 
+by
+ 
+the
+ 
+§me
+ 
+couÁ
+.
+
+155 >>> 
+a
+ = 
+	`CouÁ”
+()
+
+156 >>> 
+a
+.
+	`šüem’tAÎ
+(['one','two', 'three'], 1)
+
+157 >>> 
+a
+['one']
+
+159 >>> 
+a
+['two']
+
+162 
+key
+ 
+š
+ 
+keys
+:
+
+163 
+£lf
+[
+key
+] +ğ
+couÁ
+
+
+165 
+def
+ 
+	$¬gMax
+(
+£lf
+):
+
+167 
+R‘uºs
+ 
+the
+ 
+key
+ 
+w™h
+h
+highe¡
+ 
+v®ue
+.
+
+169 
+	`Ën
+(
+£lf
+.
+	`keys
+()è=ğ0:  
+NÚe
+
+
+170 
+®l
+ = 
+£lf
+.
+	$™ems
+()
+
+171 
+v®ues
+ = [
+x
+[1] x 
+š
+ 
+®l
+]
+
+172 
+maxIndex
+ = 
+v®ues
+.
+	`šdex
+(
+	$max
+(
+v®ues
+))
+
+173  
+®l
+[
+maxIndex
+][0]
+
+175 
+def
+ 
+	$sÜ‹dKeys
+(
+£lf
+):
+
+177 
+R‘uºs
+ 
+a
+ 
+li¡
+ 
+of
+ 
+keys
+ 
+sÜ‹d
+ 
+by
+ 
+theœ
+ 
+v®ues
+. 
+Keys
+
+
+178 
+w™h
+ 
+the
+ 
+highe¡
+ 
+v®ues
+ 
+wl
+ 
+­³¬
+ 
+fœ¡
+.
+
+180 >>> 
+a
+ = 
+	`CouÁ”
+()
+
+181 >>> 
+a
+['first'] = -2
+
+182 >>> 
+a
+['second'] = 4
+
+183 >>> 
+a
+['third'] = 1
+
+184 >>> 
+a
+.
+	`sÜ‹dKeys
+()
+
+187 
+sÜ‹dI‹ms
+ = 
+£lf
+.
+	$™ems
+()
+
+188 
+com·»
+ = 
+Ïmbda
+ 
+x
+, 
+y
+: 
+	`sign
+(y[1] - x[1])
+
+189 
+sÜ‹dI‹ms
+.
+	$sÜt
+(
+cmp
+=
+com·»
+)
+
+190  [
+x
+[0] x 
+š
+ 
+sÜ‹dI‹ms
+]
+
+192 
+def
+ 
+	$tÙ®CouÁ
+(
+£lf
+):
+
+194 
+R‘uºs
+ 
+the
+ 
+sum
+ 
+of
+ 
+couÁs
+ 
+®l
+ 
+keys
+.
+
+196  
+	`sum
+(
+£lf
+.
+	$v®ues
+())
+
+198 
+def
+ 
+	$nÜm®ize
+(
+£lf
+):
+
+200 
+Ed™s
+ 
+the
+ 
+couÁ”
+ 
+such
+ 
+th©
+h
+tÙ®
+ 
+couÁ
+ 
+of
+ 
+®l
+
+
+201 
+keys
+ 
+sums
+ 
+to
+ 1. 
+The
+ 
+¿tio
+ 
+of
+ 
+couÁs
+ 
+®l
+ keys
+
+202 
+wl
+ 
+»maš
+ 
+the
+ 
+§me
+. 
+NÙe
+ 
+th©
+ 
+nÜm®izšg
+ 
+ª
+ 
+em±y
+
+
+203 
+CouÁ”
+ 
+wl
+ 
+»suÉ
+ 
+š
+ 
+ª
+ 
+”rÜ
+.
+
+205 
+tÙ®
+ = (
+£lf
+.
+	$tÙ®CouÁ
+())
+
+206 
+tÙ®
+ == 0: 
+
+207 
+key
+ 
+š
+ 
+£lf
+.
+	$keys
+():
+
+208 
+£lf
+[
+key
+] = s–f[key] / 
+tÙ®
+
+
+210 
+def
+ 
+	$divideAÎ
+(
+£lf
+, 
+divisÜ
+):
+
+212 
+Divides
+ 
+®l
+ 
+couÁs
+ 
+by
+ 
+divisÜ
+
+
+214 
+divisÜ
+ = (divisor)
+
+215 
+key
+ 
+š
+ 
+£lf
+:
+
+216 
+£lf
+[
+key
+] /ğ
+divisÜ
+
+
+218 
+def
+ 
+	$cİy
+(
+£lf
+):
+
+220 
+R‘uºs
+ 
+a
+ 
+cİy
+ 
+of
+ 
+the
+ 
+couÁ”
+
+
+222  
+	`CouÁ”
+(
+diù
+.
+	$cİy
+(
+£lf
+))
+
+224 
+def
+ 
+	$__mul__
+(
+£lf
+, 
+y
+ ):
+
+226 
+MuÉlyšg
+ 
+two
+ 
+couÁ”s
+ 
+gives
+ 
+the
+ 
+dÙ
+ 
+´oduù
+ 
+of
+ 
+theœ
+ 
+veùÜs
+ 
+wh”e
+
+
+227 
+—ch
+ 
+unique
+ 
+Ïb–
+ 
+is
+ 
+a
+ 
+veùÜ
+ 
+–em’t
+.
+
+229 >>> 
+a
+ = 
+	`CouÁ”
+()
+
+230 >>> 
+b
+ = 
+	`CouÁ”
+()
+
+231 >>> 
+a
+['first'] = -2
+
+232 >>> 
+a
+['second'] = 4
+
+233 >>> 
+b
+['first'] = 3
+
+234 >>> 
+b
+['second'] = 5
+
+235 >>> 
+a
+['third'] = 1.5
+
+236 >>> 
+a
+['fourth'] = 2.5
+
+237 >>> 
+a
+ * 
+b
+
+
+240 
+sum
+ = 0
+
+241 
+x
+ = 
+£lf
+
+
+242 
+	`Ën
+(
+x
+è> 
+	$Ën
+(
+y
+):
+
+243 
+x
+,
+y
+ = y,x
+
+244 
+key
+ 
+š
+ 
+x
+:
+
+245 
+key
+ 
+nÙ
+ 
+š
+ 
+y
+:
+
+247 
+sum
+ +ğ
+x
+[
+key
+] * 
+y
+[key]
+
+248  
+sum
+
+
+250 
+def
+ 
+	$__¿dd__
+(
+£lf
+, 
+y
+):
+
+252 
+Addšg
+ 
+ªÙh”
+ 
+couÁ”
+ 
+to
+ 
+a
+ couÁ” 
+šüem’ts
+ 
+the
+ 
+cu¼’t
+ counter
+
+253 
+by
+ 
+the
+ 
+v®ues
+ 
+¡Üed
+ 
+š
+h
+£cÚd
+ 
+couÁ”
+.
+
+255 >>> 
+a
+ = 
+	`CouÁ”
+()
+
+256 >>> 
+b
+ = 
+	`CouÁ”
+()
+
+257 >>> 
+a
+['first'] = -2
+
+258 >>> 
+a
+['second'] = 4
+
+259 >>> 
+b
+['first'] = 3
+
+260 >>> 
+b
+['third'] = 1
+
+261 >>> 
+a
+ +ğ
+b
+
+
+262 >>> 
+a
+['first']
+
+265 
+key
+, 
+v®ue
+ 
+š
+ 
+y
+.
+	$™ems
+():
+
+266 
+£lf
+[
+key
+] +ğ
+v®ue
+
+
+268 
+def
+ 
+	$__add__
+Ğ
+£lf
+, 
+y
+ ):
+
+270 
+Addšg
+ 
+two
+ 
+couÁ”s
+ 
+gives
+ 
+a
+ 
+couÁ”
+ 
+w™h
+ 
+the
+ 
+of
+ 
+®l
+ 
+keys
+ 
+ªd
+
+
+271 
+couÁs
+ 
+of
+ 
+the
+ 
+£cÚd
+ 
+added
+ 
+to
+ couÁ oàth
+fœ¡
+.
+
+273 >>> 
+a
+ = 
+	`CouÁ”
+()
+
+274 >>> 
+b
+ = 
+	`CouÁ”
+()
+
+275 >>> 
+a
+['first'] = -2
+
+276 >>> 
+a
+['second'] = 4
+
+277 >>> 
+b
+['first'] = 3
+
+278 >>> 
+b
+['third'] = 1
+
+279 >>> (
+a
+ + 
+b
+)['first']
+
+282 
+add’d
+ = 
+	$CouÁ”
+()
+
+283 
+key
+ 
+š
+ 
+£lf
+:
+
+284 
+key
+ 
+š
+ 
+y
+:
+
+285 
+add’d
+[
+key
+] = 
+£lf
+[key] + 
+y
+[key]
+
+287 
+add’d
+[
+key
+] = 
+£lf
+[key]
+
+288 
+key
+ 
+š
+ 
+y
+:
+
+289 
+key
+ 
+š
+ 
+£lf
+:
+
+291 
+add’d
+[
+key
+] = 
+y
+[key]
+
+292  
+add’d
+
+
+294 
+def
+ 
+	$__sub__
+Ğ
+£lf
+, 
+y
+ ):
+
+296 
+SubŒaùšg
+ 
+a
+ 
+couÁ”
+ 
+äom
+ 
+ªÙh”
+ 
+gives
+‡ couÁ” 
+w™h
+ 
+the
+ 
+of
+ 
+®l
+ 
+keys
+ 
+ªd
+
+
+297 
+couÁs
+ 
+of
+ 
+the
+ 
+£cÚd
+ 
+subŒaùed
+ 
+äom
+ couÁ oàth
+fœ¡
+.
+
+299 >>> 
+a
+ = 
+	`CouÁ”
+()
+
+300 >>> 
+b
+ = 
+	`CouÁ”
+()
+
+301 >>> 
+a
+['first'] = -2
+
+302 >>> 
+a
+['second'] = 4
+
+303 >>> 
+b
+['first'] = 3
+
+304 >>> 
+b
+['third'] = 1
+
+305 >>> (
+a
+ - 
+b
+)['first']
+
+308 
+add’d
+ = 
+	$CouÁ”
+()
+
+309 
+key
+ 
+š
+ 
+£lf
+:
+
+310 
+key
+ 
+š
+ 
+y
+:
+
+311 
+add’d
+[
+key
+] = 
+£lf
+[key] - 
+y
+[key]
+
+313 
+add’d
+[
+key
+] = 
+£lf
+[key]
+
+314 
+key
+ 
+š
+ 
+y
+:
+
+315 
+key
+ 
+š
+ 
+£lf
+:
+
+317 
+add’d
+[
+key
+] = -1 * 
+y
+[key]
+
+318  
+add’d
+
+
+320 
+def
+ 
+	$¿i£NÙDefšed
+():
+
+321 
+´št
+ "M‘hod‚Ù im¶em’‹d: %s" % 
+š¥eù
+.
+	`¡ack
+()[1][3]
+
+322 
+sys
+.
+	$ex™
+(1)
+
+324 
+def
+ 
+	$nÜm®ize
+(
+veùÜOrCouÁ”
+):
+
+326 
+nÜm®ize
+ 
+a
+ 
+veùÜ
+ 
+Ü
+ 
+couÁ”
+ 
+by
+ 
+dividšg
+ 
+—ch
+ 
+v®ue
+ by 
+the
+ 
+sum
+ 
+of
+ 
+®l
+ 
+v®ues
+
+
+328 
+nÜm®izedCouÁ”
+ = 
+	$CouÁ”
+()
+
+329 
+	`ty³
+(
+veùÜOrCouÁ”
+è=ğ
+	$ty³
+(
+nÜm®izedCouÁ”
+):
+
+330 
+couÁ”
+ = 
+veùÜOrCouÁ”
+
+
+331 
+tÙ®
+ = (
+couÁ”
+.
+	$tÙ®CouÁ
+())
+
+332 
+tÙ®
+ =ğ0:  
+couÁ”
+
+
+333 
+key
+ 
+š
+ 
+couÁ”
+.
+	$keys
+():
+
+334 
+v®ue
+ = 
+couÁ”
+[
+key
+]
+
+335 
+nÜm®izedCouÁ”
+[
+key
+] = 
+v®ue
+ / 
+tÙ®
+
+
+336  
+nÜm®izedCouÁ”
+
+
+338 
+veùÜ
+ = 
+veùÜOrCouÁ”
+
+
+339 
+s
+ = (
+	$sum
+(
+veùÜ
+))
+
+340 
+s
+ =ğ0:  
+veùÜ
+
+
+341  [
+–
+ / 
+s
+ – 
+š
+ 
+veùÜ
+]
+
+343 
+def
+ 
+	$nSam¶e
+(
+di¡ributiÚ
+, 
+v®ues
+, 
+n
+):
+
+344 
+	`sum
+(
+di¡ributiÚ
+) != 1:
+
+345 
+di¡ributiÚ
+ = 
+	$nÜm®ize
+(
+di¡ributiÚ
+)
+
+346 
+¿nd
+ = [
+¿ndom
+.
+	$¿ndom
+(è
+i
+ 
+š
+ 
+	`¿nge
+(
+n
+)]
+
+347 
+¿nd
+.
+	$sÜt
+()
+
+348 
+§m¶es
+ = []
+
+349 
+§m¶ePos
+, 
+di¡Pos
+, 
+cdf
+ = 0,0, 
+di¡ributiÚ
+[0]
+
+350 
+§m¶ePos
+ < 
+n
+:
+
+351 
+¿nd
+[
+§m¶ePos
+] < 
+cdf
+:
+
+352 
+§m¶ePos
+ += 1
+
+353 
+§m¶es
+.
+	$­³nd
+(
+v®ues
+[
+di¡Pos
+])
+
+355 
+di¡Pos
+ += 1
+
+356 
+cdf
+ +ğ
+di¡ributiÚ
+[
+di¡Pos
+]
+
+357  
+§m¶es
+
+
+359 
+def
+ 
+	$§m¶e
+(
+di¡ributiÚ
+, 
+v®ues
+ = 
+NÚe
+):
+
+360 
+	`ty³
+(
+di¡ributiÚ
+è=ğ
+CouÁ”
+:
+
+361 
+™ems
+ = 
+di¡ributiÚ
+.
+	$™ems
+()
+
+362 
+di¡ributiÚ
+ = [
+i
+[1] ˜
+š
+ 
+™ems
+]
+
+363 
+v®ues
+ = [
+i
+[0] ˜
+š
+ 
+™ems
+]
+
+364 
+	`sum
+(
+di¡ributiÚ
+) != 1:
+
+365 
+di¡ributiÚ
+ = 
+	$nÜm®ize
+(
+di¡ributiÚ
+)
+
+366 
+choiû
+ = 
+¿ndom
+.
+	$¿ndom
+()
+
+367 
+i
+, 
+tÙ®
+ğ0, 
+di¡ributiÚ
+[0]
+
+368 
+choiû
+ > 
+tÙ®
+:
+
+369 
+i
+ += 1
+
+370 
+tÙ®
+ +ğ
+di¡ributiÚ
+[
+i
+]
+
+371  
+v®ues
+[
+i
+]
+
+373 
+def
+ 
+	$§m¶eFromCouÁ”
+(
+ùr
+):
+
+374 
+™ems
+ = 
+ùr
+.
+	$™ems
+()
+
+375  
+	$§m¶e
+([
+v
+ 
+k
+,v 
+š
+ 
+™ems
+], [k k,v in items])
+
+377 
+def
+ 
+	$g‘Probab™y
+(
+v®ue
+, 
+di¡ributiÚ
+, 
+v®ues
+):
+
+379 
+Gives
+ 
+the
+ 
+´obab™y
+ 
+of
+ 
+a
+ 
+v®ue
+ 
+und”
+‡ 
+disü‘e
+ 
+di¡ributiÚ
+
+
+380 
+defšed
+ 
+	`by
+ (
+di¡ributiÚs
+, 
+v®ues
+).
+
+382 
+tÙ®
+ = 0.0
+
+383 
+´ob
+, 
+v®
+ 
+š
+ 
+	$z
+(
+di¡ributiÚ
+, 
+v®ues
+):
+
+384 
+v®
+ =ğ
+v®ue
+:
+
+385 
+tÙ®
+ +ğ
+´ob
+
+
+386  
+tÙ®
+
+
+388 
+def
+ 
+	$æCoš
+Ğ
+p
+ ):
+
+389 
+r
+ = 
+¿ndom
+.
+	$¿ndom
+()
+
+390  
+r
+ < 
+p
+
+
+392 
+def
+ 
+	$choo£FromDi¡ributiÚ
+Ğ
+di¡ributiÚ
+ ):
+
+394 
+	`ty³
+(
+di¡ributiÚ
+è=ğ
+diù
+ 
+Ü
+y³(di¡ributiÚè=ğ
+CouÁ”
+:
+
+395  
+	$§m¶e
+(
+di¡ributiÚ
+)
+
+396 
+r
+ = 
+¿ndom
+.
+	$¿ndom
+()
+
+397 
+ba£
+ = 0.0
+
+398 
+´ob
+, 
+–em’t
+ 
+š
+ 
+di¡ributiÚ
+:
+
+399 
+ba£
+ +ğ
+´ob
+
+
+400 
+r
+ <ğ
+ba£
+:  
+–em’t
+
+
+402 
+def
+ 
+	$Ã¬e¡Pošt
+Ğ
+pos
+ ):
+
+404 
+Fšds
+ 
+the
+ 
+Ã¬e¡
+ 
+grid
+ 
+pošt
+ 
+to
+ 
+a
+ 
+	`pos™iÚ
+ (
+disü‘izes
+).
+
+406 Ğ
+cu¼’t_row
+, 
+cu¼’t_cŞ
+ ) = 
+pos
+
+
+408 
+grid_row
+ = Ğ
+cu¼’t_row
+ + 0.5 )
+
+409 
+grid_cŞ
+ = Ğ
+cu¼’t_cŞ
+ + 0.5 )
+
+410  ( 
+grid_row
+, 
+grid_cŞ
+ )
+
+412 
+def
+ 
+	$sign
+Ğ
+x
+ ):
+
+414 
+R‘uºs
+ 1 
+Ü
+ -1 
+d•’dšg
+ 
+Ú
+ 
+the
+ 
+sign
+ 
+of
+ 
+x
+
+
+416 ifĞ
+x
+ >= 0 ):
+
+421 
+def
+ 
+	$¬¿yInv”t
+(
+¬¿y
+):
+
+423 
+Inv”ts
+ 
+a
+ 
+m©rix
+ 
+¡Üed
+ 
+as
+‡ 
+li¡
+ 
+of
+ 
+li¡s
+.
+
+425 
+»suÉ
+ = [[] 
+i
+ 
+š
+ 
+¬¿y
+]
+
+426 
+ou‹r
+ 
+š
+ 
+¬¿y
+:
+
+427 
+šÃr
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+ou‹r
+)):
+
+428 
+»suÉ
+[
+šÃr
+].
+	$­³nd
+(
+ou‹r
+[
+šÃr
+])
+
+429  
+»suÉ
+
+
+431 
+def
+ 
+	$m©rixAsLi¡
+Ğ
+m©rix
+, 
+v®ue
+ = 
+True
+ ):
+
+433 
+Tuºs
+ 
+a
+ 
+m©rix
+ 
+što
+‡ 
+li¡
+ 
+of
+ 
+coÜdš©es
+ 
+m©chšg
+ 
+the
+ 
+¥ecif›d
+ 
+v®ue
+
+
+435 
+rows
+, 
+cŞs
+ = 
+	`Ën
+Ğ
+m©rix
+ ), 
+	$Ën
+Ğ
+m©rix
+[0] )
+
+436 
+ûÎs
+ = []
+
+437 
+row
+ 
+š
+ 
+	$¿nge
+Ğ
+rows
+ ):
+
+438 
+cŞ
+ 
+š
+ 
+	$¿nge
+Ğ
+cŞs
+ ):
+
+439 
+m©rix
+[
+row
+][
+cŞ
+] =ğ
+v®ue
+:
+
+440 
+ûÎs
+.
+	`­³nd
+ĞĞ
+row
+, 
+cŞ
+ ) )
+
+441  
+ûÎs
+
+
+443 
+def
+ 
+	$lookup
+(
+Çme
+, 
+Çme¥aû
+):
+
+445 
+G‘
+ 
+a
+ 
+m‘hod
+ 
+Ü
+ 
+şass
+ 
+äom
+ 
+ªy
+ 
+impÜ‹d
+ 
+moduË
+ from 
+™s
+ 
+Çme
+.
+
+446 
+U§ge
+: 
+	`lookup
+(
+funùiÚName
+, 
+	`glob®s
+())
+
+448 
+dÙs
+ = 
+Çme
+.
+	`couÁ
+('.')
+
+449 
+dÙs
+ > 0:
+
+450 
+moduËName
+, 
+objName
+ = '.'.
+	`još
+(
+Çme
+.
+	`¥l™
+('.')[:-1]),‚ame.split('.')[-1]
+
+451 
+moduË
+ = 
+	$__impÜt__
+(
+moduËName
+)
+
+452  
+	$g‘©Œ
+(
+moduË
+, 
+objName
+)
+
+454 
+moduËs
+ = [
+obj
+ obj 
+š
+ 
+Çme¥aû
+.
+	$v®ues
+(è
+	`¡r
+(
+	`ty³
+(
+obj
+)) == "<type 'module'>"]
+
+455 
+İtiÚs
+ = [
+	$g‘©Œ
+(
+moduË
+, 
+Çme
+èmoduË 
+š
+ 
+moduËs
+ Çmš 
+	`dœ
+(module)]
+
+456 
+İtiÚs
+ +ğ[
+obj
+[1] obj 
+š
+ 
+Çme¥aû
+.
+	$™ems
+(è
+obj
+[0] =ğ
+Çme
+ ]
+
+457 
+	`Ën
+(
+İtiÚs
+) == 1:  options[0]
+
+458 
+	`Ën
+(
+İtiÚs
+è> 1: 
+¿i£
+ 
+Exû±iÚ
+, 'Name conflict for %s'
+
+459 
+¿i£
+ 
+Exû±iÚ
+, '% nÙ found‡ ¨m‘hod o¸şass' % 
+Çme
+
+
+461 
+def
+ 
+	$·u£
+():
+
+463 
+Pau£s
+ 
+the
+ 
+ouut
+ 
+¡»am
+ 
+awa™šg
+ 
+u£r
+ 
+ãedback
+.
+
+465 
+´št
+ "<Pressƒnter/returno continue>"
+
+466 
+	$¿w_šput
+()
+
+469 ## 
+code
+ 
+to
+ 
+hªdË
+ 
+timeouts
+
+
+470 
+impÜt
+ 
+sigÇl
+
+
+471 
+şass
+ 
+	$TimeoutFunùiÚExû±iÚ
+(
+Exû±iÚ
+):
+
+473 
+·ss
+
+
+475 
+şass
+ 
+TimeoutFunùiÚ
+:
+
+477 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+funùiÚ
+, 
+timeout
+):
+
+479 
+£lf
+.
+timeout
+ =imeout
+
+480 
+£lf
+.
+funùiÚ
+ = function
+
+482 
+def
+ 
+	$hªdË_timeout
+(
+£lf
+, 
+signum
+, 
+äame
+):
+
+483 
+¿i£
+ 
+	$TimeoutFunùiÚExû±iÚ
+()
+
+485 
+def
+ 
+	$__ÿÎ__
+(
+£lf
+, *
+¬gs
+):
+
+486 
+nÙ
+ 'SIGALRM' 
+š
+ 
+	$dœ
+(
+sigÇl
+):
+
+487  
+£lf
+.
+	$funùiÚ
+(*
+¬gs
+)
+
+488 
+Şd
+ = 
+sigÇl
+.
+	$sigÇl
+(
+sigÇl
+.
+SIGALRM
+, 
+£lf
+.
+hªdË_timeout
+)
+
+489 
+sigÇl
+.
+	$®¬m
+(
+£lf
+.
+timeout
+)
+
+490 
+Œy
+:
+
+491 
+»suÉ
+ = 
+£lf
+.
+	$funùiÚ
+(*
+¬gs
+)
+
+492 
+fš®ly
+:
+
+493 
+sigÇl
+.
+	$sigÇl
+(
+sigÇl
+.
+SIGALRM
+, 
+Şd
+)
+
+494 
+sigÇl
+.
+	$®¬m
+(0)
+
+495  
+»suÉ
+
+
+	@
+1
+.
+1
+/usr/include
+13
+182
+featureExtractors.py
+game.py
+ghostAgents.py
+graphicsDisplay.py
+graphicsUtils.py
+keyboardAgents.py
+layout.py
+multiAgents.py
+pacman.py
+pacmanAgents.py
+search.py
+textDisplay.py
+util.py
