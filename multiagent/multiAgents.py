@@ -7,7 +7,7 @@
 # For more info, see http://inst.eecs.berkeley.edu/~cs188/sp09/pacman.html
 
 from util import manhattanDistance
-from game import Directions
+from game import Directions,Actions
 import random, util
 
 from game import Agent
@@ -275,6 +275,7 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
 
   def maxValue(self,gameState,agent,current_depth,alpha,beta,return_best_action=0):
       best_action = Directions.STOP
+      maxval = []
 
       pos_actions = gameState.getLegalActions(agent)
       pos_actions.remove(Directions.STOP)
@@ -282,16 +283,13 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
       for action in pos_actions:
           newState = gameState.generateSuccessor(agent,action)
           value = self.getValue(newState,agent+1,current_depth,alpha,beta)
-          alpha = max([alpha,value])
-          if (return_best_action) and (alpha == value):
+          maxval = [max(maxval + [value])]
+          if (return_best_action) and (maxval[0] == value):
               # Should randomly break ties ?
               best_action = action
-          if alpha >= beta:
-              if return_best_action : return best_action
-              else : return alpha
    
       if return_best_action: return best_action
-      else: return alpha
+      else: return maxval[0]
 
 
   def stochasticValue(self,gameState,agent,current_depth,alpha,beta):
@@ -312,17 +310,93 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
       All ghosts should be modeled as choosing uniformly at random from their
       legal moves.
     """
+    #print "------------------------------------------------------------------------------------"
+    #print "Max value ><",self.maxValue(gameState,0,1,-10000, +10000, 0)
     return self.maxValue(gameState,0,1,-10000, +10000, 1)
 
-def betterEvaluationFunction(currentGameState):
-  """
-    Your extreme ghost-hunting, pellet-nabbing, food-gobbling, unstoppable
-    evaluation function (question 5).
+def betterEvaluationFunction(state):
+    food = state.getFood()
+    walls = state.getWalls()
+    ghosts = state.getGhostPositions()
+    foodpos = food.asList()
+    capsules = state.getCapsules()
+    
+    x, y = state.getPacmanPosition()
+    next_x = x
+    next_y = y
 
-    DESCRIPTION: <write something here so we know what you did>
-  """
-  "*** YOUR CODE HERE ***"
-  util.raiseNotDefined()
+    features = util.Counter()
+    features["bias"] = 1.0
+    features["#-of-ghosts-1-step-away"] = sum(
+            (next_x, next_y) in Actions.getLegalNeighbors(g, walls) for g in ghosts)
+    dist = featureExtractors.closestFood((next_x, next_y), food, walls)
+    if dist is not None:
+      features["closest-food"] = float(dist) / (walls.width * walls.height) 
+    if not features["#-of-ghosts-1-step-away"] and food[next_x][next_y]:
+      features["eats-food"] = 1.0
+    features.divideAll(10.0)
+    # end of default features
+    
+    ghostStates =  state.getGhostStates()
+    time_left_for_all_neighbour_ghosts = []
+    min_time_left_for_all_neighbour_ghosts = 0
+    for ghost in ghostStates:
+        if (next_x,next_y) in Actions.getLegalNeighbors(ghost.getPosition(),walls):
+            time_left_for_all_neighbour_ghosts += [ghost.scaredTimer]
+    if time_left_for_all_neighbour_ghosts:
+        min_time_left_for_all_neighbour_ghosts = min(time_left_for_all_neighbour_ghosts)
+    if min_time_left_for_all_neighbour_ghosts > 1:
+        features["can-i-eat-ghosts"] = 1 / 10.0
+        features["#-of-ghosts-1-step-away"] = 0
+    
+    """
+    tot_size = walls.width*walls.height
+    num_close_ghosts = featureExtractors.numCloseObjects((next_x, next_y), ghosts, walls,3)
+    temp = (1.0 + num_close_ghosts) / 10
+    features["no-of-close-ghosts"] = num_close_ghosts / 10.0
+    """
+
+    dist = featureExtractors.closestObject((next_x, next_y), capsules, walls)
+    if dist is not None and not features["closest-capsule"]:
+      features["closest-capsule"] = float(dist) / (walls.width * walls.height) 
+    
+    poss_actions =  Actions.getLegalNeighbors((next_x,next_y),walls)
+    poss_actions = set(poss_actions)
+    poss_ghost_positions = []
+    for g in ghosts:
+        poss_ghost_positions += Actions.getLegalNeighbors(g, walls)
+    remaining_action = poss_actions - set(poss_ghost_positions)
+    if not remaining_action:
+        features["trapped"] = 1 / 10.0
+
+    # Done with features
+    #features["closest-food"] *= -130.6968173719
+    features["closest-food"] *= -10
+    #features["eats-food"] *= 300.8063
+    features["eats-food"] *= 0
+    #features["can-i-eat-ghosts"] *=  221.523894152
+    features["can-i-eat-ghosts"] *=  10
+    #features["trapped"] *=  -485.22293807
+    features["trapped"] *=  -100
+    #features["no-of-close-ghosts"] *=  -583.724761197
+    features["no-of-close-ghosts"] *=  0
+    #features["bias"] *= 95.0220236622
+    features["bias"] *= 0
+    features[" #-of-ghosts-1-step-away"] *=  -10
+    #features[" #-of-ghosts-1-step-away"] *=  0
+    #features["closest-capsule"] *= -46.6186658185
+    features["closest-capsule"] *= -1
+
+    if state.isLose():
+        features["is-lose"] = -100
+    if state.isWin():
+        features["is-win"] = 100
+
+    features["#-of-food-left"] = 100/(1.0+len(foodpos))
+    
+    return features.totalCount()
+
+
 
 # Abbreviation
 better = betterEvaluationFunction
