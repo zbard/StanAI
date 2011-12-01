@@ -1,0 +1,445 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Actions	game.py	/^class Actions:$/;"	c
+Agent	game.py	/^class Agent:$/;"	c
+AgentState	game.py	/^class AgentState:$/;"	c
+AlphaBetaAgent	multiAgents.py	/^class AlphaBetaAgent(MultiAgentSearchAgent):$/;"	c
+BACKGROUND_COLOR	graphicsDisplay.py	/^BACKGROUND_COLOR = formatColor(0,0,0)$/;"	v
+CAPSULE_COLOR	graphicsDisplay.py	/^CAPSULE_COLOR = formatColor(1,1,1)$/;"	v
+CAPSULE_SIZE	graphicsDisplay.py	/^CAPSULE_SIZE = 0.25$/;"	v
+COLLISION_TOLERANCE	pacman.py	/^COLLISION_TOLERANCE = 0.7 # How close ghosts must be to Pacman to kill$/;"	v
+ClassicGameRules	pacman.py	/^class ClassicGameRules:$/;"	c
+Configuration	game.py	/^class Configuration:$/;"	c
+ContestAgent	multiAgents.py	/^class ContestAgent(MultiAgentSearchAgent):$/;"	c
+Counter	util.py	/^class Counter(dict):$/;"	c
+DEFAULT_GRID_SIZE	graphicsDisplay.py	/^DEFAULT_GRID_SIZE = 30.0$/;"	v
+DISPLAY_MOVES	textDisplay.py	/^DISPLAY_MOVES = False$/;"	v
+DRAW_EVERY	textDisplay.py	/^DRAW_EVERY = 1$/;"	v
+DirectionalGhost	ghostAgents.py	/^class DirectionalGhost( GhostAgent ):$/;"	c
+Directions	game.py	/^class Directions:$/;"	c
+EAST	game.py	/^  EAST = 'East'$/;"	v	class:Directions
+EAST_KEY	keyboardAgents.py	/^  EAST_KEY  = "l" $/;"	v	class:KeyboardAgent2
+EAST_KEY	keyboardAgents.py	/^  EAST_KEY  = 'd' $/;"	v	class:KeyboardAgent
+ExpectimaxAgent	multiAgents.py	/^class ExpectimaxAgent(MultiAgentSearchAgent):$/;"	c
+FOOD_COLOR	graphicsDisplay.py	/^FOOD_COLOR = formatColor(1,1,1)$/;"	v
+FOOD_SIZE	graphicsDisplay.py	/^FOOD_SIZE = 0.1$/;"	v
+FRAME_NUMBER	graphicsDisplay.py	/^FRAME_NUMBER = 0$/;"	v
+FirstPersonPacmanGraphics	graphicsDisplay.py	/^class FirstPersonPacmanGraphics(PacmanGraphics):$/;"	c
+GHOST_COLORS	graphicsDisplay.py	/^GHOST_COLORS = []$/;"	v
+GHOST_SHAPE	graphicsDisplay.py	/^GHOST_SHAPE = [$/;"	v
+GHOST_SIZE	graphicsDisplay.py	/^GHOST_SIZE = 0.65$/;"	v
+GHOST_SPEED	pacman.py	/^  GHOST_SPEED=1.0$/;"	v	class:GhostRules
+GHOST_VEC_COLORS	graphicsDisplay.py	/^GHOST_VEC_COLORS = map(colorToVector, GHOST_COLORS)$/;"	v
+Game	game.py	/^class Game:$/;"	c
+GameState	pacman.py	/^class GameState:$/;"	c
+GameStateData	game.py	/^class GameStateData:$/;"	c
+GhostAgent	ghostAgents.py	/^class GhostAgent( Agent ):$/;"	c
+GhostRules	pacman.py	/^class GhostRules:$/;"	c
+GreedyAgent	pacmanAgents.py	/^class GreedyAgent(Agent):$/;"	c
+Grid	game.py	/^class Grid:$/;"	c
+INFO_PANE_COLOR	graphicsDisplay.py	/^INFO_PANE_COLOR = formatColor(.4,.4,0)$/;"	v
+INFO_PANE_HEIGHT	graphicsDisplay.py	/^INFO_PANE_HEIGHT = 35$/;"	v
+InfoPane	graphicsDisplay.py	/^class InfoPane:$/;"	c
+KeyboardAgent	keyboardAgents.py	/^class KeyboardAgent(Agent):$/;"	c
+KeyboardAgent2	keyboardAgents.py	/^class KeyboardAgent2(KeyboardAgent):$/;"	c
+LASER_COLOR	graphicsDisplay.py	/^LASER_COLOR = formatColor(1,0,0)$/;"	v
+LASER_SIZE	graphicsDisplay.py	/^LASER_SIZE = 0.02$/;"	v
+LEFT	game.py	/^  LEFT =       {NORTH: WEST,$/;"	v	class:Directions
+Layout	layout.py	/^class Layout:$/;"	c
+LeftTurnAgent	pacmanAgents.py	/^class LeftTurnAgent(game.Agent):$/;"	c
+MinimaxAgent	multiAgents.py	/^class MinimaxAgent(MultiAgentSearchAgent):$/;"	c
+MultiAgentSearchAgent	multiAgents.py	/^class MultiAgentSearchAgent(Agent):$/;"	c
+NORTH	game.py	/^  NORTH = 'North'$/;"	v	class:Directions
+NORTH_KEY	keyboardAgents.py	/^  NORTH_KEY = 'i' $/;"	v	class:KeyboardAgent2
+NORTH_KEY	keyboardAgents.py	/^  NORTH_KEY = 'w' $/;"	v	class:KeyboardAgent
+NullGraphics	textDisplay.py	/^class NullGraphics:$/;"	c
+OLD_STDERR	game.py	/^  OLD_STDERR = None$/;"	v	class:Game
+OLD_STDOUT	game.py	/^  OLD_STDOUT = None$/;"	v	class:Game
+PACMAN_CAPTURE_OUTLINE_WIDTH	graphicsDisplay.py	/^PACMAN_CAPTURE_OUTLINE_WIDTH = 4$/;"	v
+PACMAN_COLOR	graphicsDisplay.py	/^PACMAN_COLOR = formatColor(255.0\/255.0,255.0\/255.0,61.0\/255)$/;"	v
+PACMAN_OUTLINE_WIDTH	graphicsDisplay.py	/^PACMAN_OUTLINE_WIDTH = 2$/;"	v
+PACMAN_SCALE	graphicsDisplay.py	/^PACMAN_SCALE = 0.5$/;"	v
+PACMAN_SPEED	pacman.py	/^  PACMAN_SPEED=1$/;"	v	class:PacmanRules
+POSTSCRIPT_OUTPUT_DIR	graphicsDisplay.py	/^POSTSCRIPT_OUTPUT_DIR = 'frames'$/;"	v
+PacmanGraphics	graphicsDisplay.py	/^class PacmanGraphics:$/;"	c
+PacmanGraphics	textDisplay.py	/^class PacmanGraphics:$/;"	c
+PacmanRules	pacman.py	/^class PacmanRules:$/;"	c
+PriorityQueue	util.py	/^class PriorityQueue:$/;"	c
+PriorityQueueWithFunction	util.py	/^class PriorityQueueWithFunction(PriorityQueue):$/;"	c
+QUIET	textDisplay.py	/^QUIET = False # Supresses output$/;"	v
+Queue	util.py	/^class Queue:$/;"	c
+REVERSE	game.py	/^  REVERSE = {NORTH: SOUTH,$/;"	v	class:Directions
+RIGHT	game.py	/^  RIGHT =      dict([(y,x) for x, y in LEFT.items()])$/;"	v	class:Directions
+RandomGhost	ghostAgents.py	/^class RandomGhost( GhostAgent ):$/;"	c
+ReflexAgent	multiAgents.py	/^class ReflexAgent(Agent):$/;"	c
+SAVE_POSTSCRIPT	graphicsDisplay.py	/^SAVE_POSTSCRIPT = False$/;"	v
+SCARED_COLOR	graphicsDisplay.py	/^SCARED_COLOR = formatColor(1,1,1)$/;"	v
+SCARED_TIME	pacman.py	/^SCARED_TIME = 40    # Moves ghosts are scared$/;"	v
+SCORE_COLOR	graphicsDisplay.py	/^SCORE_COLOR = formatColor(.9, .9, .9)$/;"	v
+SLEEP_TIME	textDisplay.py	/^SLEEP_TIME = 0 # This can be overwritten by __init__$/;"	v
+SOUTH	game.py	/^  SOUTH = 'South'$/;"	v	class:Directions
+SOUTH_KEY	keyboardAgents.py	/^  SOUTH_KEY = 'k'$/;"	v	class:KeyboardAgent2
+SOUTH_KEY	keyboardAgents.py	/^  SOUTH_KEY = 's'$/;"	v	class:KeyboardAgent
+STOP	game.py	/^  STOP = 'Stop'$/;"	v	class:Directions
+STOP_KEY	keyboardAgents.py	/^  STOP_KEY = 'q'$/;"	v	class:KeyboardAgent
+STOP_KEY	keyboardAgents.py	/^  STOP_KEY = 'u'$/;"	v	class:KeyboardAgent2
+SearchProblem	search.py	/^class SearchProblem:$/;"	c
+Stack	util.py	/^class Stack:$/;"	c
+TEAM_COLORS	graphicsDisplay.py	/^TEAM_COLORS = GHOST_COLORS[:2]$/;"	v
+TIME_PENALTY	pacman.py	/^TIME_PENALTY = 1 # Number of points lost each round$/;"	v
+TOLERANCE	game.py	/^  TOLERANCE = .001$/;"	v	class:Actions
+TimeoutFunction	util.py	/^class TimeoutFunction:$/;"	c
+TimeoutFunctionException	util.py	/^class TimeoutFunctionException(Exception):$/;"	c
+VISIBILITY_MATRIX_CACHE	layout.py	/^VISIBILITY_MATRIX_CACHE = {}$/;"	v
+WALL_COLOR	graphicsDisplay.py	/^WALL_COLOR = formatColor(0.0\/255.0, 51.0\/255.0, 255.0\/255.0)$/;"	v
+WALL_RADIUS	graphicsDisplay.py	/^WALL_RADIUS = 0.15$/;"	v
+WEST	game.py	/^  WEST = 'West'$/;"	v	class:Directions
+WEST_KEY	keyboardAgents.py	/^  WEST_KEY  = 'a' $/;"	v	class:KeyboardAgent
+WEST_KEY	keyboardAgents.py	/^  WEST_KEY  = 'j' $/;"	v	class:KeyboardAgent2
+_BOINC_ENABLED	game.py	/^  _BOINC_ENABLED = False$/;"	v
+_BOINC_ENABLED	game.py	/^  _BOINC_ENABLED = True$/;"	v
+__add__	util.py	/^  def __add__( self, y ):$/;"	m	class:Counter	file:
+__call__	util.py	/^    def __call__(self, *args):$/;"	m	class:TimeoutFunction	file:
+__eq__	game.py	/^  def __eq__( self, other ):$/;"	m	class:AgentState	file:
+__eq__	game.py	/^  def __eq__( self, other ):$/;"	m	class:GameStateData	file:
+__eq__	game.py	/^  def __eq__(self, other):$/;"	m	class:Configuration	file:
+__eq__	game.py	/^  def __eq__(self, other):$/;"	m	class:Grid	file:
+__eq__	pacman.py	/^  def __eq__( self, other ):$/;"	m	class:GameState	file:
+__getitem__	game.py	/^  def __getitem__(self, i):$/;"	m	class:Grid	file:
+__getitem__	util.py	/^  def __getitem__(self, idx):$/;"	m	class:Counter	file:
+__hash__	game.py	/^  def __hash__( self ):$/;"	m	class:GameStateData	file:
+__hash__	game.py	/^  def __hash__(self):$/;"	m	class:AgentState	file:
+__hash__	game.py	/^  def __hash__(self):$/;"	m	class:Configuration	file:
+__hash__	game.py	/^  def __hash__(self):$/;"	m	class:Grid	file:
+__hash__	pacman.py	/^  def __hash__( self ):$/;"	m	class:GameState	file:
+__init__	game.py	/^  def __init__( self, agents, display, rules, startingIndex=0, muteAgents=False, catchExceptions=False ):$/;"	m	class:Game
+__init__	game.py	/^  def __init__( self, prevState = None ):$/;"	m	class:GameStateData
+__init__	game.py	/^  def __init__( self, startConfiguration, isPacman ):$/;"	m	class:AgentState
+__init__	game.py	/^  def __init__(self, index=0):$/;"	m	class:Agent
+__init__	game.py	/^  def __init__(self, pos, direction):$/;"	m	class:Configuration
+__init__	game.py	/^  def __init__(self, width, height, initialValue=False, bitRepresentation=None):$/;"	m	class:Grid
+__init__	ghostAgents.py	/^  def __init__( self, index ):$/;"	m	class:GhostAgent
+__init__	ghostAgents.py	/^  def __init__( self, index, prob_attack=0.8, prob_scaredFlee=0.8 ):$/;"	m	class:DirectionalGhost
+__init__	graphicsDisplay.py	/^  def __init__(self, layout, gridSize):$/;"	m	class:InfoPane
+__init__	graphicsDisplay.py	/^  def __init__(self, zoom = 1.0, showGhosts = True, capture = False, frameTime=0):$/;"	m	class:FirstPersonPacmanGraphics
+__init__	graphicsDisplay.py	/^  def __init__(self, zoom=1.0, frameTime=0.0, capture=False):$/;"	m	class:PacmanGraphics
+__init__	keyboardAgents.py	/^  def __init__( self, index = 0 ):$/;"	m	class:KeyboardAgent
+__init__	layout.py	/^  def __init__(self, layoutText):$/;"	m	class:Layout
+__init__	multiAgents.py	/^  def __init__(self, evalFn = 'scoreEvaluationFunction', depth = '2'):$/;"	m	class:MultiAgentSearchAgent
+__init__	pacman.py	/^  def __init__( self, prevState = None ):$/;"	m	class:GameState
+__init__	pacman.py	/^  def __init__(self, timeout=30):$/;"	m	class:ClassicGameRules
+__init__	pacmanAgents.py	/^  def __init__(self, evalFn="scoreEvaluation"):$/;"	m	class:GreedyAgent
+__init__	textDisplay.py	/^  def __init__(self, speed=None):$/;"	m	class:PacmanGraphics
+__init__	util.py	/^    def __init__(self, function, timeout):$/;"	m	class:TimeoutFunction
+__init__	util.py	/^  def  __init__(self):  $/;"	m	class:PriorityQueue
+__init__	util.py	/^  def  __init__(self, priorityFunction):$/;"	m	class:PriorityQueueWithFunction
+__init__	util.py	/^  def __init__(self):$/;"	m	class:Queue
+__init__	util.py	/^  def __init__(self):$/;"	m	class:Stack
+__mul__	util.py	/^  def __mul__(self, y ):$/;"	m	class:Counter	file:
+__radd__	util.py	/^  def __radd__(self, y):$/;"	m	class:Counter	file:
+__setitem__	game.py	/^  def __setitem__(self, key, item):$/;"	m	class:Grid	file:
+__str__	game.py	/^  def __str__( self ):$/;"	m	class:AgentState	file:
+__str__	game.py	/^  def __str__( self ):$/;"	m	class:GameStateData	file:
+__str__	game.py	/^  def __str__(self):$/;"	m	class:Configuration	file:
+__str__	game.py	/^  def __str__(self):$/;"	m	class:Grid	file:
+__str__	layout.py	/^  def __str__(self):$/;"	m	class:Layout	file:
+__str__	pacman.py	/^  def __str__( self ):$/;"	m	class:GameState	file:
+__sub__	util.py	/^  def __sub__( self, y ):$/;"	m	class:Counter	file:
+_adjust_coords	graphicsUtils.py	/^def _adjust_coords(coord_list, x, y):$/;"	f
+_agentCrash	game.py	/^  def _agentCrash( self, agentIndex, quiet=False):$/;"	m	class:Game
+_canvas	graphicsUtils.py	/^_canvas = None      # The canvas which holds graphics$/;"	v
+_canvas_col	graphicsUtils.py	/^_canvas_col = None      # Current colour (set to black below)$/;"	v
+_canvas_tfonts	graphicsUtils.py	/^    _canvas_tfonts = ['times', 'lucidasans-24']$/;"	v
+_canvas_tserifs	graphicsUtils.py	/^_canvas_tserifs = 0$/;"	v
+_canvas_tsize	graphicsUtils.py	/^_canvas_tsize = 12$/;"	v
+_canvas_x	graphicsUtils.py	/^_canvas_x = None      # Current position on canvas$/;"	v
+_canvas_xs	graphicsUtils.py	/^_canvas_xs = None      # Size of canvas object$/;"	v
+_canvas_y	graphicsUtils.py	/^_canvas_y = None$/;"	v
+_canvas_ys	graphicsUtils.py	/^_canvas_ys = None$/;"	v
+_cellIndexToPosition	game.py	/^  def _cellIndexToPosition(self, index):$/;"	m	class:Grid
+_clear_keys	graphicsUtils.py	/^def _clear_keys(event=None):$/;"	f
+_ctrl_leftclick	graphicsUtils.py	/^def _ctrl_leftclick(event):$/;"	f
+_ctrl_leftclick_loc	graphicsUtils.py	/^_ctrl_leftclick_loc = None$/;"	v
+_destroy_window	graphicsUtils.py	/^def _destroy_window(event=None):$/;"	f
+_directions	game.py	/^  _directions = {Directions.NORTH: (0, 1),$/;"	v	class:Actions
+_directionsAsList	game.py	/^  _directionsAsList = _directions.items()$/;"	v	class:Actions
+_foodWallStr	game.py	/^  def _foodWallStr( self, hasFood, hasWall ):$/;"	m	class:GameStateData
+_ghostStr	game.py	/^  def _ghostStr( self, dir ):$/;"	m	class:GameStateData
+_got_release	graphicsUtils.py	/^_got_release = None$/;"	v
+_keypress	graphicsUtils.py	/^def _keypress(event):$/;"	f
+_keyrelease	graphicsUtils.py	/^def _keyrelease(event):$/;"	f
+_keysdown	graphicsUtils.py	/^_keysdown = {}$/;"	v
+_keyswaiting	graphicsUtils.py	/^_keyswaiting = {}$/;"	v
+_leftclick	graphicsUtils.py	/^def _leftclick(event):$/;"	f
+_leftclick_loc	graphicsUtils.py	/^_leftclick_loc = None$/;"	v
+_pacStr	game.py	/^  def _pacStr( self, dir ):$/;"	m	class:GameStateData
+_rightclick	graphicsUtils.py	/^def _rightclick(event):$/;"	f
+_rightclick_loc	graphicsUtils.py	/^_rightclick_loc = None$/;"	v
+_root_window	graphicsUtils.py	/^_root_window = None      # The root window for graphics output$/;"	v
+_unpackBits	game.py	/^  def _unpackBits(self, bits):$/;"	m	class:Grid
+_unpackInt	game.py	/^  def _unpackInt(self, packed, size):$/;"	m	class:Grid
+aStarSearch	search.py	/^def aStarSearch(problem, heuristic=nullHeuristic):$/;"	f
+add	graphicsDisplay.py	/^def add(x, y):$/;"	f
+agentCrash	pacman.py	/^  def agentCrash(self, game, agentIndex):$/;"	m	class:ClassicGameRules
+animatePacman	graphicsDisplay.py	/^  def animatePacman(self, pacman, prevPacman, image):$/;"	m	class:PacmanGraphics
+applyAction	pacman.py	/^  applyAction = staticmethod( applyAction )$/;"	v	class:GhostRules
+applyAction	pacman.py	/^  applyAction = staticmethod( applyAction )$/;"	v	class:PacmanRules
+applyAction	pacman.py	/^  def applyAction( state, action ):$/;"	m	class:PacmanRules
+applyAction	pacman.py	/^  def applyAction( state, action, ghostIndex):$/;"	m	class:GhostRules
+argMax	util.py	/^  def argMax(self):$/;"	m	class:Counter
+args	pacman.py	/^  args = readCommand( sys.argv[1:] ) # Get game components based on input$/;"	v
+arrayInvert	util.py	/^def arrayInvert(array):$/;"	f
+asList	game.py	/^  def asList(self, key = True):$/;"	m	class:Grid
+astar	search.py	/^astar = aStarSearch$/;"	v
+begin_graphics	graphicsUtils.py	/^def begin_graphics(width=640, height=480, color=formatColor(0, 0, 0), title=None):$/;"	f
+better	multiAgents.py	/^better = betterEvaluationFunction$/;"	v
+betterEvaluationFunction	multiAgents.py	/^def betterEvaluationFunction(currentGameState):$/;"	f
+bfs	search.py	/^bfs = breadthFirstSearch$/;"	v
+breadthFirstSearch	search.py	/^def breadthFirstSearch(problem):$/;"	f
+canKill	pacman.py	/^  canKill = staticmethod( canKill )$/;"	v	class:GhostRules
+canKill	pacman.py	/^  def canKill( pacmanPosition, ghostPosition ):$/;"	m	class:GhostRules
+changeColor	graphicsUtils.py	/^def changeColor(id, newColor):$/;"	f
+changeText	graphicsUtils.py	/^def changeText(id, newText, font=None, size=12, style='normal'):$/;"	f
+checkDeath	pacman.py	/^  checkDeath = staticmethod( checkDeath )$/;"	v	class:GhostRules
+checkDeath	pacman.py	/^  def checkDeath( state, agentIndex):$/;"	m	class:GhostRules
+chooseFromDistribution	util.py	/^def chooseFromDistribution( distribution ):$/;"	f
+circle	graphicsUtils.py	/^def circle(pos, r, outlineColor, fillColor, endpoints=None, style='pieslice', width=2):$/;"	f
+clearExpandedCells	graphicsDisplay.py	/^  def clearExpandedCells(self):$/;"	m	class:PacmanGraphics
+clearIcon	graphicsDisplay.py	/^  def clearIcon(self):$/;"	m	class:InfoPane
+clearMessage	graphicsDisplay.py	/^  def clearMessage(self):$/;"	m	class:InfoPane
+clear_screen	graphicsUtils.py	/^def clear_screen(background=None):$/;"	f
+collide	pacman.py	/^  collide = staticmethod( collide )$/;"	v	class:GhostRules
+collide	pacman.py	/^  def collide( state, ghostState, agentIndex):$/;"	m	class:GhostRules
+colorToVector	graphicsUtils.py	/^def colorToVector(color):$/;"	f
+consume	pacman.py	/^  consume = staticmethod( consume )$/;"	v	class:PacmanRules
+consume	pacman.py	/^  def consume( position, state ):$/;"	m	class:PacmanRules
+copy	game.py	/^  def copy( self ):$/;"	m	class:AgentState
+copy	game.py	/^  def copy(self):$/;"	m	class:Grid
+copy	util.py	/^  def copy(self):$/;"	m	class:Counter
+copyAgentStates	game.py	/^  def copyAgentStates( self, agentStates ):$/;"	m	class:GameStateData
+count	game.py	/^  def count(self, item =True ):$/;"	m	class:Grid
+decrementTimer	pacman.py	/^  decrementTimer = staticmethod( decrementTimer )$/;"	v	class:GhostRules
+decrementTimer	pacman.py	/^  def decrementTimer( ghostState):$/;"	m	class:GhostRules
+deepCopy	game.py	/^  def deepCopy( self ):$/;"	m	class:GameStateData
+deepCopy	game.py	/^  def deepCopy(self):$/;"	m	class:Grid
+deepCopy	layout.py	/^  def deepCopy(self):$/;"	m	class:Layout
+deepCopy	pacman.py	/^  def deepCopy( self ):$/;"	m	class:GameState
+default	pacman.py	/^def default(str):$/;"	f
+depthFirstSearch	search.py	/^def depthFirstSearch(problem):$/;"	f
+dfs	search.py	/^dfs = depthFirstSearch$/;"	v
+directionToVector	game.py	/^  def directionToVector(direction, speed = 1.0):$/;"	m	class:Actions
+directionToVector	game.py	/^  directionToVector = staticmethod(directionToVector)$/;"	v	class:Actions
+divideAll	util.py	/^  def divideAll(self, divisor):$/;"	m	class:Counter
+draw	textDisplay.py	/^  def draw(self, state):$/;"	m	class:NullGraphics
+draw	textDisplay.py	/^  def draw(self, state):$/;"	m	class:PacmanGraphics
+drawAgentObjects	graphicsDisplay.py	/^  def drawAgentObjects(self, state):$/;"	m	class:PacmanGraphics
+drawCapsules	graphicsDisplay.py	/^  def drawCapsules(self, capsules ):$/;"	m	class:PacmanGraphics
+drawDistributions	graphicsDisplay.py	/^  def drawDistributions(self, state):$/;"	m	class:PacmanGraphics
+drawExpandedCells	graphicsDisplay.py	/^  def drawExpandedCells(self, cells):$/;"	m	class:PacmanGraphics
+drawFood	graphicsDisplay.py	/^  def drawFood(self, foodMatrix ):$/;"	m	class:PacmanGraphics
+drawGhost	graphicsDisplay.py	/^  def drawGhost(self):$/;"	m	class:InfoPane
+drawGhost	graphicsDisplay.py	/^  def drawGhost(self, ghost, agentIndex):$/;"	m	class:PacmanGraphics
+drawPacman	graphicsDisplay.py	/^  def drawPacman(self):$/;"	m	class:InfoPane
+drawPacman	graphicsDisplay.py	/^  def drawPacman(self, pacman, index):$/;"	m	class:PacmanGraphics
+drawPane	graphicsDisplay.py	/^  def drawPane(self):$/;"	m	class:InfoPane
+drawStaticObjects	graphicsDisplay.py	/^  def drawStaticObjects(self, state):$/;"	m	class:PacmanGraphics
+drawWalls	graphicsDisplay.py	/^  def drawWalls(self, wallMatrix):$/;"	m	class:PacmanGraphics
+drawWarning	graphicsDisplay.py	/^  def drawWarning(self):$/;"	m	class:InfoPane
+draw_background	graphicsUtils.py	/^def draw_background():$/;"	f
+edit	graphicsUtils.py	/^def edit(id, *args):$/;"	f
+end_graphics	graphicsUtils.py	/^def end_graphics():$/;"	f
+evaluationFunction	multiAgents.py	/^  def evaluationFunction(self, currentGameState, action):$/;"	m	class:ReflexAgent
+finish	graphicsDisplay.py	/^  def finish(self):$/;"	m	class:PacmanGraphics
+finish	textDisplay.py	/^  def finish(self):$/;"	m	class:NullGraphics
+finish	textDisplay.py	/^  def finish(self):$/;"	m	class:PacmanGraphics
+flipCoin	util.py	/^def flipCoin( p ):$/;"	f
+formatColor	graphicsUtils.py	/^def formatColor(r, g, b):$/;"	f
+g	graphicsUtils.py	/^  g = polygon(ghost_shape, formatColor(1, 1, 1))$/;"	v
+generatePacmanSuccessor	pacman.py	/^  def generatePacmanSuccessor( self, action ):$/;"	m	class:GameState
+generateSuccessor	game.py	/^  def generateSuccessor(self, vector):$/;"	m	class:Configuration
+generateSuccessor	pacman.py	/^  def generateSuccessor( self, agentIndex, action):$/;"	m	class:GameState
+getAction	game.py	/^  def getAction(self, state):$/;"	m	class:Agent
+getAction	ghostAgents.py	/^  def getAction( self, state ):$/;"	m	class:GhostAgent
+getAction	keyboardAgents.py	/^  def getAction( self, state):$/;"	m	class:KeyboardAgent
+getAction	multiAgents.py	/^  def getAction(self, gameState):$/;"	m	class:AlphaBetaAgent
+getAction	multiAgents.py	/^  def getAction(self, gameState):$/;"	m	class:ContestAgent
+getAction	multiAgents.py	/^  def getAction(self, gameState):$/;"	m	class:ExpectimaxAgent
+getAction	multiAgents.py	/^  def getAction(self, gameState):$/;"	m	class:MinimaxAgent
+getAction	multiAgents.py	/^  def getAction(self, gameState):$/;"	m	class:ReflexAgent
+getAction	pacmanAgents.py	/^  def getAction(self, state):$/;"	m	class:GreedyAgent
+getAction	pacmanAgents.py	/^  def getAction(self, state):$/;"	m	class:LeftTurnAgent
+getCapsules	pacman.py	/^  def getCapsules(self):$/;"	m	class:GameState
+getCostOfActions	search.py	/^  def getCostOfActions(self, actions):$/;"	m	class:SearchProblem
+getDirection	game.py	/^  def getDirection(self):$/;"	m	class:AgentState
+getDirection	game.py	/^  def getDirection(self):$/;"	m	class:Configuration
+getDirection	graphicsDisplay.py	/^  def getDirection(self, agentState):$/;"	m	class:PacmanGraphics
+getDistribution	ghostAgents.py	/^  def getDistribution( self, state ):$/;"	m	class:DirectionalGhost
+getDistribution	ghostAgents.py	/^  def getDistribution( self, state ):$/;"	m	class:RandomGhost
+getDistribution	ghostAgents.py	/^  def getDistribution(self, state):$/;"	m	class:GhostAgent
+getEndpoints	graphicsDisplay.py	/^  def getEndpoints(self, direction, position=(0,0)):$/;"	m	class:PacmanGraphics
+getFood	pacman.py	/^  def getFood(self):$/;"	m	class:GameState
+getFurthestCorner	layout.py	/^  def getFurthestCorner(self, pacPos):$/;"	m	class:Layout
+getGhostColor	graphicsDisplay.py	/^  def getGhostColor(self, ghost, ghostIndex):$/;"	m	class:FirstPersonPacmanGraphics
+getGhostColor	graphicsDisplay.py	/^  def getGhostColor(self, ghost, ghostIndex):$/;"	m	class:PacmanGraphics
+getGhostPosition	pacman.py	/^  def getGhostPosition( self, agentIndex ):$/;"	m	class:GameState
+getGhostPositions	pacman.py	/^  def getGhostPositions(self):$/;"	m	class:GameState
+getGhostState	pacman.py	/^  def getGhostState( self, agentIndex ):$/;"	m	class:GameState
+getGhostStates	pacman.py	/^  def getGhostStates( self ):$/;"	m	class:GameState
+getLayout	layout.py	/^def getLayout(name, back = 2):$/;"	f
+getLegalActions	pacman.py	/^  def getLegalActions( self, agentIndex=0 ):$/;"	m	class:GameState
+getLegalActions	pacman.py	/^  def getLegalActions( state ):$/;"	m	class:PacmanRules
+getLegalActions	pacman.py	/^  def getLegalActions( state, ghostIndex ):$/;"	m	class:GhostRules
+getLegalActions	pacman.py	/^  getLegalActions = staticmethod( getLegalActions )$/;"	v	class:GhostRules
+getLegalActions	pacman.py	/^  getLegalActions = staticmethod( getLegalActions )$/;"	v	class:PacmanRules
+getLegalNeighbors	game.py	/^  def getLegalNeighbors(position, walls):$/;"	m	class:Actions
+getLegalNeighbors	game.py	/^  getLegalNeighbors = staticmethod(getLegalNeighbors)$/;"	v	class:Actions
+getLegalPacmanActions	pacman.py	/^  def getLegalPacmanActions( self ):$/;"	m	class:GameState
+getMaxStartupTime	pacman.py	/^  def getMaxStartupTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMaxTimeWarnings	pacman.py	/^  def getMaxTimeWarnings(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMaxTotalTime	pacman.py	/^  def getMaxTotalTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMove	keyboardAgents.py	/^  def getMove(self, legal):$/;"	m	class:KeyboardAgent
+getMove	keyboardAgents.py	/^  def getMove(self, legal):$/;"	m	class:KeyboardAgent2
+getMoveTimeout	pacman.py	/^  def getMoveTimeout(self, agentIndex):$/;"	m	class:ClassicGameRules
+getMoveWarningTime	pacman.py	/^  def getMoveWarningTime(self, agentIndex):$/;"	m	class:ClassicGameRules
+getNumAgents	pacman.py	/^  def getNumAgents( self ):$/;"	m	class:GameState
+getNumFood	pacman.py	/^  def getNumFood( self ):$/;"	m	class:GameState
+getNumGhosts	layout.py	/^  def getNumGhosts(self):$/;"	m	class:Layout
+getPacmanPosition	pacman.py	/^  def getPacmanPosition( self ):$/;"	m	class:GameState
+getPacmanState	pacman.py	/^  def getPacmanState( self ):$/;"	m	class:GameState
+getPosition	game.py	/^  def getPosition(self):$/;"	m	class:AgentState
+getPosition	game.py	/^  def getPosition(self):$/;"	m	class:Configuration
+getPosition	graphicsDisplay.py	/^  def getPosition(self, agentState):$/;"	m	class:PacmanGraphics
+getPosition	graphicsDisplay.py	/^  def getPosition(self, ghostState):$/;"	m	class:FirstPersonPacmanGraphics
+getPossibleActions	game.py	/^  def getPossibleActions(config, walls):$/;"	m	class:Actions
+getPossibleActions	game.py	/^  getPossibleActions = staticmethod(getPossibleActions)$/;"	v	class:Actions
+getProbability	util.py	/^def getProbability(value, distribution, values):$/;"	f
+getProgress	game.py	/^  def getProgress(self):$/;"	m	class:Game
+getProgress	pacman.py	/^  def getProgress(self, game):$/;"	m	class:ClassicGameRules
+getRandomCorner	layout.py	/^  def getRandomCorner(self):$/;"	m	class:Layout
+getRandomLegalPosition	layout.py	/^  def getRandomLegalPosition(self):$/;"	m	class:Layout
+getScore	pacman.py	/^  def getScore( self ):$/;"	m	class:GameState
+getStartState	search.py	/^  def getStartState(self):$/;"	m	class:SearchProblem
+getSuccessor	game.py	/^  def getSuccessor(position, action):$/;"	m	class:Actions
+getSuccessor	game.py	/^  getSuccessor = staticmethod(getSuccessor)$/;"	v	class:Actions
+getSuccessors	search.py	/^  def getSuccessors(self, state):$/;"	m	class:SearchProblem
+getWalls	pacman.py	/^  def getWalls(self):$/;"	m	class:GameState
+ghost_shape	graphicsUtils.py	/^  ghost_shape = [(x * 10 + 20, y * 10 + 20) for x, y in ghost_shape]$/;"	v
+ghost_shape	graphicsUtils.py	/^ghost_shape = [                $/;"	v
+handle_timeout	util.py	/^    def handle_timeout(self, signum, frame):$/;"	m	class:TimeoutFunction
+hasFood	pacman.py	/^  def hasFood(self, x, y):$/;"	m	class:GameState
+hasWall	pacman.py	/^  def hasWall(self, x, y):$/;"	m	class:GameState
+image	graphicsUtils.py	/^def image(pos, file="..\/..\/blueghost.gif"):$/;"	f
+incrementAll	util.py	/^  def incrementAll(self, keys, count):$/;"	m	class:Counter
+initialize	game.py	/^  def initialize( self, layout, numGhostAgents ):$/;"	m	class:GameStateData
+initialize	graphicsDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:FirstPersonPacmanGraphics
+initialize	graphicsDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:PacmanGraphics
+initialize	pacman.py	/^  def initialize( self, layout, numGhostAgents=1000 ):$/;"	m	class:GameState
+initialize	textDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:NullGraphics
+initialize	textDisplay.py	/^  def initialize(self, state, isBlue = False):$/;"	m	class:PacmanGraphics
+initializeGhostDistances	graphicsDisplay.py	/^  def initializeGhostDistances(self, distances):$/;"	m	class:InfoPane
+initializeVisibilityMatrix	layout.py	/^  def initializeVisibilityMatrix(self):$/;"	m	class:Layout
+initializer	util.py	/^    PriorityQueue.__init__(self)        # super-class initializer$/;"	c	function:PriorityQueueWithFunction.__init__
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:PriorityQueue
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:Queue
+isEmpty	util.py	/^  def isEmpty(self):$/;"	m	class:Stack
+isGoalState	search.py	/^  def isGoalState(self, state):$/;"	m	class:SearchProblem
+isInteger	game.py	/^  def isInteger(self):$/;"	m	class:Configuration
+isLose	pacman.py	/^  def isLose( self ):$/;"	m	class:GameState
+isVisibleFrom	layout.py	/^  def isVisibleFrom(self, ghostPos, pacPos, pacDirection):$/;"	m	class:Layout
+isWall	graphicsDisplay.py	/^  def isWall(self, x, y, walls):$/;"	m	class:PacmanGraphics
+isWall	layout.py	/^  def isWall(self, pos):$/;"	m	class:Layout
+isWin	pacman.py	/^  def isWin( self ):$/;"	m	class:GameState
+keys_pressed	graphicsUtils.py	/^def keys_pressed(d_o_e=Tkinter.tkinter.dooneevent,$/;"	f
+keys_waiting	graphicsUtils.py	/^def keys_waiting():$/;"	f
+line	graphicsUtils.py	/^def line(here, there, color=formatColor(0, 0, 0), width=2):$/;"	f
+loadAgent	pacman.py	/^def loadAgent(pacman, nographics):$/;"	f
+lookAhead	graphicsDisplay.py	/^  def lookAhead(self, config, state):$/;"	m	class:FirstPersonPacmanGraphics
+lookup	util.py	/^def lookup(name, namespace):$/;"	f
+lose	pacman.py	/^  def lose( self, state, game ):$/;"	m	class:ClassicGameRules
+make_window	graphicsDisplay.py	/^  def make_window(self, width, height):$/;"	m	class:PacmanGraphics
+manhattanDistance	util.py	/^def manhattanDistance( xy1, xy2 ):$/;"	f
+matrixAsList	util.py	/^def matrixAsList( matrix, value = True ):$/;"	f
+moveCircle	graphicsUtils.py	/^def moveCircle(id, pos, r, endpoints=None):$/;"	f
+moveEyes	graphicsDisplay.py	/^  def moveEyes(self, pos, dir, eyes):$/;"	m	class:PacmanGraphics
+moveGhost	graphicsDisplay.py	/^  def moveGhost(self, ghost, ghostIndex, prevGhost, ghostImageParts):$/;"	m	class:PacmanGraphics
+movePacman	graphicsDisplay.py	/^  def movePacman(self, position, direction, image):$/;"	m	class:PacmanGraphics
+move_by	graphicsUtils.py	/^def move_by(object, x, y=None,$/;"	f
+move_to	graphicsUtils.py	/^def move_to(object, x, y=None,$/;"	f
+mute	game.py	/^  def mute(self):$/;"	m	class:Game
+nSample	util.py	/^def nSample(distribution, values, n):$/;"	f
+nearestPoint	util.py	/^def nearestPoint( pos ):$/;"	f
+newGame	pacman.py	/^  def newGame( self, layout, pacmanAgent, ghostAgents, display, quiet = False, catchExceptions=False):$/;"	m	class:ClassicGameRules
+normalize	util.py	/^  def normalize(self):$/;"	m	class:Counter
+normalize	util.py	/^def normalize(vectorOrCounter):$/;"	f
+nullHeuristic	search.py	/^def nullHeuristic(state, problem=None):$/;"	f
+packBits	game.py	/^  def packBits(self):$/;"	m	class:Grid
+parseAgentArgs	pacman.py	/^def parseAgentArgs(str):$/;"	f
+pause	textDisplay.py	/^  def pause(self):$/;"	m	class:NullGraphics
+pause	textDisplay.py	/^  def pause(self):$/;"	m	class:PacmanGraphics
+pause	util.py	/^def pause():$/;"	f
+placeGhost	pacman.py	/^  def placeGhost(state, ghostState):$/;"	m	class:GhostRules
+placeGhost	pacman.py	/^  placeGhost = staticmethod( placeGhost )$/;"	v	class:GhostRules
+polygon	graphicsUtils.py	/^def polygon(coords, outlineColor, fillColor=None, filled=1, smoothed=1, behind=0, width=1):$/;"	f
+pop	util.py	/^  def pop(self):$/;"	m	class:PriorityQueue
+pop	util.py	/^  def pop(self):$/;"	m	class:Queue
+pop	util.py	/^  def pop(self):$/;"	m	class:Stack
+process	pacman.py	/^  def process(self, state, game):$/;"	m	class:ClassicGameRules
+processLayoutChar	layout.py	/^  def processLayoutChar(self, x, y, layoutChar):$/;"	m	class:Layout
+processLayoutText	layout.py	/^  def processLayoutText(self, layoutText):$/;"	m	class:Layout
+push	util.py	/^  def push(self, item):$/;"	m	class:PriorityQueueWithFunction
+push	util.py	/^  def push(self, item, priority):$/;"	m	class:PriorityQueue
+push	util.py	/^  def push(self,item):$/;"	m	class:Queue
+push	util.py	/^  def push(self,item):$/;"	m	class:Stack
+raiseNotDefined	util.py	/^def raiseNotDefined():$/;"	f
+readCommand	pacman.py	/^def readCommand( argv ):$/;"	f
+reconstituteGrid	game.py	/^def reconstituteGrid(bitRep):$/;"	f
+refresh	graphicsUtils.py	/^def refresh():$/;"	f
+remap_arrows	graphicsUtils.py	/^def remap_arrows(event):$/;"	f
+removeCapsule	graphicsDisplay.py	/^  def removeCapsule(self, cell, capsuleImages ):$/;"	m	class:PacmanGraphics
+removeFood	graphicsDisplay.py	/^  def removeFood(self, cell, foodImages ):$/;"	m	class:PacmanGraphics
+remove_from_screen	graphicsUtils.py	/^def remove_from_screen(x,$/;"	f
+replayGame	pacman.py	/^def replayGame( layout, actions, display ):$/;"	f
+reverseDirection	game.py	/^  def reverseDirection(action):$/;"	m	class:Actions
+reverseDirection	game.py	/^  reverseDirection = staticmethod(reverseDirection)$/;"	v	class:Actions
+run	game.py	/^  def run( self ):$/;"	m	class:Game
+runGames	pacman.py	/^def runGames( layout, pacman, ghosts, display, numGames, record, numTraining = 0, catchExceptions=False, timeout=30 ):$/;"	f
+sample	util.py	/^def sample(distribution, values = None):$/;"	f
+sampleFromCounter	util.py	/^def sampleFromCounter(ctr):$/;"	f
+saveFrame	graphicsDisplay.py	/^def saveFrame():$/;"	f
+scoreEvaluation	pacmanAgents.py	/^def scoreEvaluation(state):$/;"	f
+scoreEvaluationFunction	multiAgents.py	/^def scoreEvaluationFunction(currentGameState):$/;"	f
+setTeam	graphicsDisplay.py	/^  def setTeam(self, isBlue):$/;"	m	class:InfoPane
+shallowCopy	game.py	/^  def shallowCopy(self):$/;"	m	class:Grid
+sign	util.py	/^def sign( x ):$/;"	f
+sleep	graphicsUtils.py	/^def sleep(secs):$/;"	f
+sortedKeys	util.py	/^  def sortedKeys(self):$/;"	m	class:Counter
+square	graphicsUtils.py	/^def square(pos, r, color, filled=1, behind=0):$/;"	f
+startGraphics	graphicsDisplay.py	/^  def startGraphics(self, state):$/;"	m	class:PacmanGraphics
+swapImages	graphicsDisplay.py	/^  def swapImages(self, agentIndex, newState):$/;"	m	class:PacmanGraphics
+text	graphicsUtils.py	/^def text(pos, color, contents, font='Helvetica', size=12, style='normal', anchor="nw"):$/;"	f
+tinyMazeSearch	search.py	/^def tinyMazeSearch(problem):$/;"	f
+toScreen	graphicsDisplay.py	/^  def toScreen(self, pos, y = None):$/;"	m	class:InfoPane
+to_screen	graphicsDisplay.py	/^  def to_screen(self, point):$/;"	m	class:PacmanGraphics
+to_screen2	graphicsDisplay.py	/^  def to_screen2(self, point):$/;"	m	class:PacmanGraphics
+totalCount	util.py	/^  def totalCount(self):$/;"	m	class:Counter
+tryToLoad	layout.py	/^def tryToLoad(fullname):$/;"	f
+ucs	search.py	/^ucs = uniformCostSearch$/;"	v
+uniformCostSearch	search.py	/^def uniformCostSearch(problem):$/;"	f
+unmute	game.py	/^  def unmute(self):$/;"	m	class:Game
+update	graphicsDisplay.py	/^  def update(self, newState):$/;"	m	class:PacmanGraphics
+update	textDisplay.py	/^  def update(self, state):$/;"	m	class:NullGraphics
+update	textDisplay.py	/^  def update(self, state):$/;"	m	class:PacmanGraphics
+updateDistributions	graphicsDisplay.py	/^  def updateDistributions(self, distributions):$/;"	m	class:PacmanGraphics
+updateGhostDistances	graphicsDisplay.py	/^  def updateGhostDistances(self, distances):$/;"	m	class:InfoPane
+updateMessage	graphicsDisplay.py	/^  def updateMessage(self, message):$/;"	m	class:InfoPane
+updateScore	graphicsDisplay.py	/^  def updateScore(self, score):$/;"	m	class:InfoPane
+vectorToDirection	game.py	/^  def vectorToDirection(vector):$/;"	m	class:Actions
+vectorToDirection	game.py	/^  vectorToDirection = staticmethod(vectorToDirection)$/;"	v	class:Actions
+wait_for_click	graphicsUtils.py	/^def wait_for_click():$/;"	f
+wait_for_keys	graphicsUtils.py	/^def wait_for_keys():$/;"	f
+win	pacman.py	/^  def win( self, state, game ):$/;"	m	class:ClassicGameRules
+writePostscript	graphicsUtils.py	/^def writePostscript(filename):$/;"	f
