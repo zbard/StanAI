@@ -247,6 +247,63 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
   """
     Your expectimax agent (question 4)
   """
+  def getValue(self,gameState,agent,current_depth,alpha,beta):
+      val = None
+      
+      if agent >= gameState.getNumAgents() :
+          agent = agent % gameState.getNumAgents()
+          current_depth += 1
+      
+      # if max depth is reached
+      if current_depth > self.depth:
+          val = self.evaluationFunction(gameState)
+
+      # if leaf node:
+      if gameState.isWin() or gameState.isLose():
+          val = self.evaluationFunction(gameState)
+
+      if not val == None:
+          return val
+
+      # identify next level of nodes; increase depth if needed
+      if agent == 0:
+          val = self.maxValue(gameState,agent,current_depth,alpha,beta)
+      else:
+          val = self.stochasticValue(gameState,agent,current_depth,alpha,beta)
+      
+      return val
+
+  def maxValue(self,gameState,agent,current_depth,alpha,beta,return_best_action=0):
+      best_action = Directions.STOP
+
+      pos_actions = gameState.getLegalActions(agent)
+      pos_actions.remove(Directions.STOP)
+
+      for action in pos_actions:
+          newState = gameState.generateSuccessor(agent,action)
+          value = self.getValue(newState,agent+1,current_depth,alpha,beta)
+          alpha = max([alpha,value])
+          if (return_best_action) and (alpha == value):
+              # Should randomly break ties ?
+              best_action = action
+          if alpha >= beta:
+              if return_best_action : return best_action
+              else : return alpha
+   
+      if return_best_action: return best_action
+      else: return alpha
+
+
+  def stochasticValue(self,gameState,agent,current_depth,alpha,beta):
+      pos_actions = gameState.getLegalActions(agent)
+      prob = 1.0 / (len(pos_actions))
+      value = 0
+
+      for action in pos_actions:
+          newState = gameState.generateSuccessor(agent,action)
+          value += prob*self.getValue(newState,agent+1,current_depth,alpha,beta)
+      
+      return value
 
   def getAction(self, gameState):
     """
@@ -255,8 +312,7 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
       All ghosts should be modeled as choosing uniformly at random from their
       legal moves.
     """
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    return self.maxValue(gameState,0,1,-10000, +10000, 1)
 
 def betterEvaluationFunction(currentGameState):
   """
