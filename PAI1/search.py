@@ -84,7 +84,6 @@ def depthFirstSearch(problem):
   print "Start's successors:", problem.getSuccessors(problem.getStartState())
   """
   "*** YOUR CODE HERE ***"
-  from game import Directions
   from util import Stack
   Explored = {}
   Frontier = Stack()
@@ -128,7 +127,6 @@ def breadthFirstSearch(problem):
   [2nd Edition: p 73, 3rd Edition: p 82]
   """
   "*** YOUR CODE HERE ***"
-  from game import Directions
   from util import Queue
   Explored = {}
   Frontier = Queue()
@@ -169,7 +167,6 @@ def breadthFirstSearch(problem):
 def uniformCostSearch(problem):
   "Search the node of least total cost first. "
   "*** YOUR CODE HERE ***"
-  from game import Directions
   from util import PriorityQueue
   Explored = {}
   Frontier = PriorityQueue()
@@ -219,7 +216,6 @@ def nullHeuristic(state, problem=None):
 def aStarSearch(problem, heuristic=nullHeuristic):
   "Search the node that has the lowest combined cost and heuristic first."
   "*** YOUR CODE HERE ***"
-  from game import Directions
   from util import PriorityQueue
   Explored = {}
   Frontier = PriorityQueue()
