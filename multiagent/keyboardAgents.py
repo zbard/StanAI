@@ -48,6 +48,11 @@ class KeyboardAgent(Agent):
       move = random.choice(legal)
       
     self.lastMove = move
+
+    # Debugging
+    import multiAgents
+    print "val of state :",multiAgents.betterEvaluationFunction(state)
+
     return move
 
   def getMove(self, legal):

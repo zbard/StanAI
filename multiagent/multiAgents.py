@@ -103,7 +103,8 @@ class MultiAgentSearchAgent(Agent):
 
   def __init__(self, evalFn = 'scoreEvaluationFunction', depth = '2'):
     self.index = 0 # Pacman is always agent index 0
-    self.evaluationFunction = util.lookup(evalFn, globals())
+    #self.evaluationFunction = util.lookup(evalFn, globals())
+    self.evaluationFunction = util.lookup('betterEvaluationFunction', globals())
     self.depth = int(depth)
 
 class MinimaxAgent(MultiAgentSearchAgent):
@@ -241,7 +242,8 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
     """
       Returns the minimax action using self.depth and self.evaluationFunction
     """
-    return self.maxValue(gameState,0,1,-10000, +10000, 1)
+    print self.maxValue(gameState,0,1,-100000, +100000, 0)
+    return self.maxValue(gameState,0,1,-100000, +100000, 1)
 
 class ExpectimaxAgent(MultiAgentSearchAgent):
   """
@@ -294,12 +296,17 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
 
   def stochasticValue(self,gameState,agent,current_depth,alpha,beta):
       pos_actions = gameState.getLegalActions(agent)
-      prob = 1.0 / (len(pos_actions))
+      #prob = 1.0 / (len(pos_actions))
       value = 0
+      
+      # HARD coding this BITCH : as BITCH to get ghost type 
+      import ghostAgents
+      ghost = ghostAgents.DirectionalGhost(agent)
+      dist  = ghost.getDistribution(gameState)
 
       for action in pos_actions:
           newState = gameState.generateSuccessor(agent,action)
-          value += prob*self.getValue(newState,agent+1,current_depth,alpha,beta)
+          value += dist[action]*self.getValue(newState,agent+1,current_depth,alpha,beta)
       
       return value
 
@@ -326,7 +333,8 @@ def betterEvaluationFunction(state):
     next_y = y
 
     features = util.Counter()
-    features["bias"] = 1.0
+    # Random bias for local optima :
+    features["bias"] = random.choice(range(100)) / 100.0
     features["#-of-ghosts-1-step-away"] = sum(
             (next_x, next_y) in Actions.getLegalNeighbors(g, walls) for g in ghosts)
     dist = featureExtractors.closestFood((next_x, next_y), food, walls)
@@ -381,6 +389,7 @@ def betterEvaluationFunction(state):
     #features["no-of-close-ghosts"] *=  -583.724761197
     features["no-of-close-ghosts"] *=  0
     #features["bias"] *= 95.0220236622
+    #features["bias"] *= 0.01
     features["bias"] *= 0
     features[" #-of-ghosts-1-step-away"] *=  -10
     #features[" #-of-ghosts-1-step-away"] *=  0
@@ -392,7 +401,7 @@ def betterEvaluationFunction(state):
     if state.isWin():
         features["is-win"] = 100
 
-    features["#-of-food-left"] = 100/(1.0+len(foodpos))
+    features["#-of-food-left"] = ((-10.0)*len(foodpos))/(walls.width * walls.height)
     
     return features.totalCount()
 
